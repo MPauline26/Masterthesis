@@ -10,7 +10,7 @@
 
 \addtokomafont{captionlabel}{\bfseries}
 
-\KOMAoptions{chapterprefix=true}
+\KOMAoptions{chapterprefix=false}
 \KOMAoptions{parskip=false,headinclude=true,
 captions=tableheading,numbers=noenddot}
 
@@ -75,11 +75,13 @@ headsepline,
 automark
 ]{scrlayer-scrpage}
 
+\newcommand{\authornamee}{2110613012 – Meikee Pagsinohin}
+
 \pagestyle{scrheadings}
 \clearpairofpagestyles
-\ihead{\headmark}
-\ohead{\thepage}
-%\cfoot{\thepage}
+%\ihead{\headmark}
+\ohead{\authornamee}
+\ofoot{\thepage}
 
 \RequirePackage{setspace}
 

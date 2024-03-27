@@ -1,7 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Masterthesis.aux
-The style file: habbrv.bst
 A level-1 auxiliary file: Abstract.aux
 A level-1 auxiliary file: Introduction.aux
 A level-1 auxiliary file: M_CreditRisk_PD.aux
@@ -12,6 +11,7 @@ A level-1 auxiliary file: M_Validation.aux
 A level-1 auxiliary file: M_Interpretability.aux
 A level-1 auxiliary file: R_Results.aux
 A level-1 auxiliary file: R_Conclusio.aux
+The style file: habbrv.bst
 A level-1 auxiliary file: Annex.aux
 Database file #1: Literature.bib
 Warning--entry type for "SecMortMark:2023" isn't style-file defined

@@ -5,7 +5,7 @@
 \newcommand{\thesistitle}{PD Model Development using Boosted Decision Trees}
 \newcommand{\thesistitletranslated}{PD Modelentwicklung mit Boosted Decision Trees}
 \newcommand{\titelvorgestellt}{}
-\newcommand{\authorname}{Meikee Pagsinohin}
+\newcommand{\authorname}{2110613012 – Meikee Pagsinohin}
 \newcommand{\titelnachgestellt}{, BSc}
 \newcommand{\MatrNr}{01327477}
 \newcommand{\gender}{F}
@@ -13,7 +13,7 @@
 
 \date{August 2023}
 
-\documentclass[11pt,twoside=true]{scrreprt}
+\documentclass[12pt,twoside=false,headheight=-10pt, bibliography=numbered, egregdoesnotlikesansseriftitles]{scrreprt} %, listof=totoc
 \usepackage[utf8]{inputenc}
 \usepackage{TUWBUIDADISS}
 
@@ -56,7 +56,6 @@
 \newcolumntype{L}{>{\raggedright\arraybackslash}p{4cm}}
 \newcolumntype{R}{>{\raggedright\arraybackslash}p{2cm}}
 
-\bibliographystyle{habbrv}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{
@@ -65,6 +64,89 @@
     citecolor={blue!50!black},
     urlcolor={blue!80!black}
 }
+
+\addtokomafont{disposition}{\rmfamily}
+\setkomafont{disposition}{\normalcolor\bfseries}
+
+\setkomafont{chapter}{\fontsize{16}{19.2}\selectfont}
+\setkomafont{section}{\fontsize{14}{16.8}\selectfont}   
+\setkomafont{subsection}{\fontsize{13}{15.6}\selectfont}
+\setkomafont{subsection}{\fontsize{12}{14.4}\selectfont}
+
+\usepackage[sfdefault]{roboto} %font
+\linespread{1.25} %linespacing
+\renewcommand\chapterheadstartvskip{}
+%\renewcommand\chapterheadendvskip{} %remove vertical space
+\renewcommand{\chapterpagestyle}{scrheadings} %header in new chapter page
+\setkomafont{pageheadfoot}{\sffamily\upshape} %not slanted header
+\addtokomafont{headsepline}{\color{gray}} %color in separation line
+\addtokomafont{pageheadfoot}{\color{gray}} %color in header and footer
+\usepackage{tocloft} %dots in TOC
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} %dots in TOC
+\usepackage{csquotes}
+\renewcaptionname{english}{\contentsname}{Table of Contents}
+\renewcaptionname{english}{\bibname}{References}
+
+%\setlength{\cftbeforetoctitleskip}{-3em}
+\renewcommand{\cftbeforetoctitleskip}{-0.25in} % Title is 1in from top
+\renewcommand{\cftaftertoctitleskip}{1.0\baselineskip}% 1 double space after title
+\renewcommand{\cftbeforelottitleskip}{-0.25in} % Title is 1in from top
+\renewcommand{\cftafterlottitleskip}{1.0\baselineskip}% 1 double space after title
+\renewcommand{\cftbeforeloftitleskip}{-0.25in} % Title is 1in from top
+\renewcommand{\cftafterloftitleskip}{1.0\baselineskip}% 1 double space after title
+
+\newcommand\appendicesname{Appendices}
+\newcommand\listofloaname{List of \appendicesname}
+\newcommand*{\listofappendices}{\listoftoc{loa}}
+\setuptoc{loa}{totoc}
+
+\makeatletter
+\g@addto@macro\appendix{%
+\let\oldaddcontentsline\addcontentsline
+\newcommand\hackedaddcontentsline[3]{\oldaddcontentsline{loa}{#2}{#3}}
+\let\oldpart\part
+\renewcommand*\part[1]{%
+  \let\addcontentsline\hackedaddcontentsline%
+  \oldpart{#1}%
+  \let\addcontentsline\oldaddcontentsline%
+}
+\let\oldchapter\chapter
+\renewcommand*\chapter[1]{%
+  \let\addcontentsline\hackedaddcontentsline%
+  \oldchapter{#1}%
+  \let\addcontentsline\oldaddcontentsline%
+}
+\let\oldsection\section
+\renewcommand*\section[1]{%
+  \let\addcontentsline\hackedaddcontentsline%
+  \oldsection{#1}%
+  \let\addcontentsline\oldaddcontentsline%
+}
+\let\oldsubsection\subsection
+\renewcommand*\subsection[1]{%
+  \let\addcontentsline\hackedaddcontentsline%
+  \oldsubsection{#1}%
+  \let\addcontentsline\oldaddcontentsline%
+}
+\let\oldsubsubsection\subsubsection
+\renewcommand*\subsubsection[1]{%
+  \let\addcontentsline\hackedaddcontentsline%
+  \oldsubsubsection{#1}%
+  \let\addcontentsline\oldaddcontentsline%
+}
+}
+\makeatother
+
+
+
+
+
+
+
+
+
+
+
 
 \usepackage{acro}
 \input{Acronyms}
@@ -100,6 +182,8 @@ list-final-separator={ und }}
 \begin{document}       		%% start of the document
 %\maketitle             		%% places the title with above information
 
+\renewcommand{\thepage}{\Roman{page}}
+
 \begin{titlepage}
 	\centering
 	%\includegraphics[width=0.5\textwidth]{figures/FHlogo.png}\par\vspace{1cm}
@@ -124,17 +208,34 @@ list-final-separator={ und }}
 
 \end{titlepage}
 
+\selectlanguage{english}
 
-\selectlanguage{english}  	%% for german abstract: ngerman
-\printacronyms
-\include{Abstract}      		%% german abstract (about 1 page)
-
-%\cleardoublepage
 \selectlanguage{english} 
 \pagestyle{scrheadings} 
 
-%% insert table of contents
+\begin{singlespace}
+
 \tableofcontents
+
+\listofappendices
+\newpage
+
+\listoffigures
+\newpage
+
+\listoftables
+\newpage
+
+\printacronyms
+\newpage
+
+\end{singlespace}
+
+\include{Abstract}
+
+\clearpage
+
+\pagenumbering{arabic}
 
 \include{Introduction}
 
@@ -154,9 +255,13 @@ list-final-separator={ und }}
 
 \include{R_Conclusio}
 
-\include{Annex}
-
 \newpage
+\bibliographystyle{habbrv}
+\begingroup
+\renewcommand{\section}[2]{}%
 \bibliography{Literature}
+\endgroup
+
+\include{Annex}
 
 \end{document}

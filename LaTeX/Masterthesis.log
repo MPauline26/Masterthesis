@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.11)  24 MAR 2024 21:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.11)  24 MAR 2024 21:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -41,17 +41,17 @@ Package: tocbasic 2021/11/13 v3.35 KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: babel extension for `toc' omitted
 (tocbasic)             because of missing \bbl@set@language on input line 137.
-Package scrreprt Info: You've used standard option `11pt'.
+Package scrreprt Info: You've used standard option `12pt'.
 (scrreprt)             This is correct!
-(scrreprt)             Internally I'm using `fontsize=11pt'.
+(scrreprt)             Internally I'm using `fontsize=12pt'.
 (scrreprt)             If you'd like to set the option with \KOMAoptions,
-(scrreprt)             you'd have to use `fontsize=11pt' there
-(scrreprt)             instead of `11pt', too.
-Class scrreprt Info: File `scrsize11pt.clo' used to setup font sizes on input l
+(scrreprt)             you'd have to use `fontsize=12pt' there
+(scrreprt)             instead of `12pt', too.
+Class scrreprt Info: File `scrsize12pt.clo' used to setup font sizes on input l
 ine 2487.
 
-(/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
-File: scrsize11pt.clo 2021/11/13 v3.35 KOMA-Script font size class option (11pt
+(/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
+File: scrsize12pt.clo 2021/11/13 v3.35 KOMA-Script font size class option (12pt
 )
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/typearea.sty
@@ -63,21 +63,21 @@ Package: typearea 2021/11/13 v3.35 KOMA-Script package (type area)
 \ta@temp=\skip51
 \footheight=\skip52
 Package typearea Info: These are the values describing the layout:
-(typearea)             DIV  = 10
+(typearea)             DIV  = 12
 (typearea)             BCOR = 0.0pt
 (typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 418.25555pt
+(typearea)              \textwidth      = 448.13095pt
 (typearea)              DIV departure   = -6%
-(typearea)              \evensidemargin = 47.2316pt
-(typearea)              \oddsidemargin  = -12.5192pt
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
 (typearea)             \paperheight     = 845.04694pt
-(typearea)              \textheight     = 595.80026pt
-(typearea)              \topmargin      = -25.16531pt
-(typearea)              \headheight     = 17.0pt
-(typearea)              \headsep        = 20.40001pt
-(typearea)              \topskip        = 11.0pt
-(typearea)              \footskip       = 47.6pt
-(typearea)              \baselineskip   = 13.6pt
+(typearea)              \textheight     = 635.5pt
+(typearea)              \topmargin      = -13.59941pt
+(typearea)              \headheight     = -10.0pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
 (typearea)              on input line 1743.
 )
 \c@part=\count186
@@ -709,12 +709,12 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))<<umsa.cmap>>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
 
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )<<umsb.cmap>>
-LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
 
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -853,7 +853,7 @@ Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \c@LT@chunks=\count321
 \LT@p@ftn=\toks32
 )
-Class scrreprt Info: longtable captions redefined on input line 106.
+Class scrreprt Info: longtable captions redefined on input line 108.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
@@ -1060,15 +1060,101 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@loff=\dimen303
 \@vwid@roff=\dimen304
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 67.
+Package hyperref Info: Option `colorlinks' set `true' on input line 66.
 
+(/usr/local/texlive/2022/texmf-dist/tex/latex/roboto/roboto.sty
+Package: roboto 2019/12/11 (Bob Tennent) Supports Roboto fonts for all LaTeX en
+gines.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)<<t1.cmap>>)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+Package: fontaxes 2020/07/21 v1.0e Font selection axes
+LaTeX Info: Redefining \upshape on input line 29.
+LaTeX Info: Redefining \itshape on input line 31.
+LaTeX Info: Redefining \slshape on input line 33.
+LaTeX Info: Redefining \swshape on input line 35.
+LaTeX Info: Redefining \scshape on input line 37.
+LaTeX Info: Redefining \sscshape on input line 39.
+LaTeX Info: Redefining \ulcshape on input line 41.
+LaTeX Info: Redefining \textsw on input line 47.
+LaTeX Info: Redefining \textssc on input line 48.
+LaTeX Info: Redefining \textulc on input line 49.
+))
+
+Class scrreprt Warning: Usage of package `tocloft' together
+(scrreprt)              with a KOMA-Script class is not recommended.
+(scrreprt)              I'd suggest to use options like `listof=entryprefix',
+(scrreprt)              commands like `\listoflofentryname' or
+(scrreprt)              `\listoflotentryname', and `\DeclareTOCStyleEntry' or
+(scrreprt)              `\RedeclareSectionCommand' instead of this package,
+(scrreprt)              because it breaks several KOMA-Script features of
+(scrreprt)              the list of figures, list of tables and table of
+(scrreprt)              contents, i.e., options like `listof=numbered',
+(scrreprt)              `listof=flat or `toc=flat', commands like
+(scrreprt)              `\BeforeTOCHead{...}' and `\AfterTOCHead{...}',
+(scrreprt)              `\BeforeStartingTOC{...}' and \AfterStartingTOC{...}',
+(scrreprt)              all features of `\DeclareTOCStyleEntry',
+(scrreprt)              and the ToC entry features of `\DeclareSecionCommand'
+(scrreprt)              and `\RedeclareSectionCommand' of levels
+(scrreprt)              `part', `section', `subsection',
+(scrreprt)              `subsubsection', `paragraph' and `subparagraph'.
+(scrreprt)              Nevertheless, using requested
+(scrreprt)              package `tocloft' on input line 85.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip99
+\cftbeforetoctitleskip=\skip100
+\cftaftertoctitleskip=\skip101
+\cftbeforepartskip=\skip102
+\cftpartnumwidth=\skip103
+\cftpartindent=\skip104
+\cftbeforechapskip=\skip105
+\cftchapindent=\skip106
+\cftchapnumwidth=\skip107
+\cftbeforesecskip=\skip108
+\cftsecindent=\skip109
+\cftsecnumwidth=\skip110
+\cftbeforesubsecskip=\skip111
+\cftsubsecindent=\skip112
+\cftsubsecnumwidth=\skip113
+\cftbeforesubsubsecskip=\skip114
+\cftsubsubsecindent=\skip115
+\cftsubsubsecnumwidth=\skip116
+\cftbeforeparaskip=\skip117
+\cftparaindent=\skip118
+\cftparanumwidth=\skip119
+\cftbeforesubparaskip=\skip120
+\cftsubparaindent=\skip121
+\cftsubparanumwidth=\skip122
+\cftbeforeloftitleskip=\skip123
+\cftafterloftitleskip=\skip124
+\cftbeforefigskip=\skip125
+\cftfigindent=\skip126
+\cftfignumwidth=\skip127
+\c@lofdepth=\count350
+\c@lotdepth=\count351
+\cftbeforelottitleskip=\skip128
+\cftafterlottitleskip=\skip129
+\cftbeforetabskip=\skip130
+\cfttabindent=\skip131
+\cfttabnumwidth=\skip132
+)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/acro/acro.sty
 Package: acro 2022/01/27 v3.7 typeset acronyms and other abbreviations (CN)
-\g__acro_version_int=\count350
-\l__acro_tmpa_int=\count351
-\l__acro_tmpb_int=\count352
-\l__acro_tmpc_int=\count353
-\l__acro_tmpd_int=\count354
+\g__acro_version_int=\count352
+\l__acro_tmpa_int=\count353
+\l__acro_tmpb_int=\count354
+\l__acro_tmpc_int=\count355
+\l__acro_tmpd_int=\count356
 Loading module `base' ...
 Loading module `interface' ...
 Loading module `aux' ...
@@ -1077,64 +1163,69 @@ Loading module `acronyms' ...
 Loading module `formatting' ...
 Loading module `ppfixes' ...
 Loading module `tools' ...
-\l__acro_minimal_usage_int=\count355
-\l__acro_nest_int=\count356
-\g_acro_barrier_int=\count357
-\g_acro_barrier_total_int=\count358
+\l__acro_minimal_usage_int=\count357
+\l__acro_nest_int=\count358
+\g_acro_barrier_int=\count359
+\g_acro_barrier_total_int=\count360
 Loading module `commands' ...
 Loading module `templates' ...
 Loading module `list' ...
 Loading module `pages' ...
-\l__acro_pages_seq_threshold_int=\count359
+\l__acro_pages_seq_threshold_int=\count361
 Loading module `locale' ...
 Loading module `pdfsupport' ...
 Loading module `patch' ...
 Loading module `definitions' ...
 Loading module `upgrade' ...
 ) (./Acronyms.tex
-\g__acro_PD_int=\count360
-\g__acro_DR_int=\count361
-\g__acro_ML_int=\count362
-\g__acro_RF_int=\count363
-\g__acro_ROC_int=\count364
-\g__acro_PDP_int=\count365
-\g__acro_ICE_int=\count366
-\g__acro_CRR_int=\count367
-\g__acro_DPD_int=\count368
-\g__acro_BCBS_int=\count369
-\g__acro_SA_int=\count370
-\g__acro_IRB_int=\count371
-\g__acro_IRB-F_int=\count372
-\g__acro_IRB-A_int=\count373
-\g__acro_EBA_int=\count374
-\g__acro_BDT_int=\count375
-\g__acro_kNN_int=\count376
-\g__acro_WoE_int=\count377
-\g__acro_IV_int=\count378
-\g__acro_IQR_int=\count379
-\g__acro_VIF_int=\count380
-\g__acro_HP_int=\count381
-\g__acro_OOT_int=\count382
-\g__acro_AUC_int=\count383
-\g__acro_LIME_int=\count384
-\g__acro_GSE_int=\count385
-\g__acro_MBS_int=\count386
-\g__acro_CLTV_int=\count387
-\g__acro_LTV_int=\count388
-\g__acro_DTI_int=\count389
-\g__acro_FHFA_int=\count390
-\g__acro_AIC_int=\count391
-\g__acro_BIC_int=\count392
-\g__acro_GDPR_int=\count393
+\g__acro_PD_int=\count362
+\g__acro_DR_int=\count363
+\g__acro_ML_int=\count364
+\g__acro_RF_int=\count365
+\g__acro_ROC_int=\count366
+\g__acro_PDP_int=\count367
+\g__acro_ICE_int=\count368
+\g__acro_CRR_int=\count369
+\g__acro_DPD_int=\count370
+\g__acro_BCBS_int=\count371
+\g__acro_SA_int=\count372
+\g__acro_IRB_int=\count373
+\g__acro_IRB-F_int=\count374
+\g__acro_IRB-A_int=\count375
+\g__acro_EBA_int=\count376
+\g__acro_BDT_int=\count377
+\g__acro_kNN_int=\count378
+\g__acro_WoE_int=\count379
+\g__acro_IV_int=\count380
+\g__acro_IQR_int=\count381
+\g__acro_VIF_int=\count382
+\g__acro_HP_int=\count383
+\g__acro_OOT_int=\count384
+\g__acro_AUC_int=\count385
+\g__acro_LIME_int=\count386
+\g__acro_GSE_int=\count387
+\g__acro_MBS_int=\count388
+\g__acro_CLTV_int=\count389
+\g__acro_LTV_int=\count390
+\g__acro_DTI_int=\count391
+\g__acro_FHFA_int=\count392
+\g__acro_AIC_int=\count393
+\g__acro_BIC_int=\count394
+\g__acro_GDPR_int=\count395
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 10
-0.
+LaTeX Font Info:    Trying to load font information for T1+Roboto-LF on input l
+ine 182.
 
-(/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)<<t1.cmap>>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/roboto/T1Roboto-LF.fd
+File: T1Roboto-LF.fd 2019/12/11 (autoinst) Font definitions for T1/Roboto-LF.
+)
+LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
+(Font)              `T1/Roboto-LF/regular/n' on input line 182.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 12.0pt on input line 182.
+
 (./Masterthesis.aux (./Abstract.aux) (./Introduction.aux)
 (./M_CreditRisk_PD.aux) (./M_TraditionalModels.aux) (./M_MLModels.aux
 
@@ -1148,31 +1239,31 @@ LaTeX Warning: Label `fig:re_wholesample' multiply defined.
 ) (./R_Conclusio.aux) (./Annex.aux))
 \openout1 = `Masterthesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Info: Redefining \microtypecontext on input line 100.
-Package microtype Info: Applying patch `item' on input line 100.
-Package microtype Info: Applying patch `toc' on input line 100.
-Package microtype Info: Applying patch `eqnum' on input line 100.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Info: Redefining \microtypecontext on input line 182.
+Package microtype Info: Applying patch `item' on input line 182.
+Package microtype Info: Applying patch `toc' on input line 182.
+Package microtype Info: Applying patch `eqnum' on input line 182.
 
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 100.
+Package microtype Warning: Unable to apply patch `footnote' on input line 182.
 
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -1180,27 +1271,27 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 100.
+LaTeX Info: Redefining \showhyphens on input line 182.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 Package microtype Info: Redefining babel's language switching commands.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `Roboto-LF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count394
+\scratchcounter=\count396
 \scratchdimen=\dimen305
 \scratchbox=\box89
-\nofMPsegments=\count395
-\nofMParguments=\count396
+\nofMPsegments=\count397
+\nofMParguments=\count398
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count397
+\MPscratchCnt=\count399
 \MPscratchDim=\dimen306
-\MPnumerator=\count398
-\makeMPintoPDFobject=\count399
+\MPnumerator=\count400
+\makeMPintoPDFobject=\count401
 \everyMPtoPDFconversion=\toks44
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1211,7 +1302,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 100.
+Package hyperref Info: Link coloring ON on input line 182.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1223,11 +1314,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count400
+\c@section@level=\count402
 )
-LaTeX Info: Redefining \ref on input line 100.
-LaTeX Info: Redefining \pageref on input line 100.
-LaTeX Info: Redefining \nameref on input line 100.
+LaTeX Info: Redefining \ref on input line 182.
+LaTeX Info: Redefining \pageref on input line 182.
+LaTeX Info: Redefining \nameref on input line 182.
  (./Masterthesis.out) (./Masterthesis.out)
 \@outlinefile=\write4
 \openout4 = `Masterthesis.out'.
@@ -1239,14 +1330,14 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 100.
+(scrreprt)           before \begin{document} on input line 182.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count401
+\BKM@id=\count403
 ))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1255,32 +1346,42 @@ File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: includehead twoside 
+* modes: includehead 
 * h-part:(L,W,R)=(71.13188pt, 455.24417pt, 71.13188pt)
 * v-part:(T,H,B)=(56.9055pt, 702.78317pt, 85.35826pt)
 * \paperwidth=597.50793pt
 * \paperheight=845.04694pt
 * \textwidth=455.24417pt
-* \textheight=665.38316pt
+* \textheight=691.03317pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
 * \topmargin=-15.36449pt
-* \headheight=17.0pt
-* \headsep=20.40001pt
-* \topskip=11.0pt
-* \footskip=47.6pt
-* \marginparwidth=89.62619pt
+* \headheight=-10.0pt
+* \headsep=21.75pt
+* \topskip=12.0pt
+* \footskip=50.75pt
+* \marginparwidth=49.79233pt
 * \marginparsep=12.8401pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Package scrlayer-scrpage Warning: Very small head height detected!
+(scrlayer-scrpage)                Using scrlayer-scrpage the head height
+(scrlayer-scrpage)                should be at least \baselineskip, which is
+(scrlayer-scrpage)                18.125pt currently.
+(scrlayer-scrpage)                But head height is currently -10.0pt only.
+(scrlayer-scrpage)                You may use
+(scrlayer-scrpage)                geometry option `head=18.125pt'
+(scrlayer-scrpage)                \relax to avoid this warning.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -1298,7 +1399,7 @@ File: translations-basic-dictionary-german.trsl (german translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `german'. on input line 100.
+or `german'. on input line 182.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/translations/translations-basic-d
 ictionary-english.trsl
@@ -1306,102 +1407,183 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 100.
+or `english'. on input line 182.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-\c@lstlisting=\count402
-Package scrbase Info: activating ngerman \tablename on input line 100.
-Package scrbase Info: activating ngerman \figurename on input line 100.
-Package scrbase Info: activating ngerman \bibname on input line 100.
-Package scrbase Info: activating ngerman \abstractname on input line 100.
+\c@lstlisting=\count404
+Package scrbase Info: activating ngerman \tablename on input line 182.
+Package scrbase Info: activating ngerman \figurename on input line 182.
+Package scrbase Info: activating ngerman \bibname on input line 182.
+Package scrbase Info: activating ngerman \abstractname on input line 182.
+\c@mv@tabular=\count405
+\c@mv@boldtabular=\count406
+LaTeX Font Info:    Font shape `T1/Roboto-LF/m/sc' aliased to
+(Font)              `T1/Roboto-LF/regular/sc' on input line 191.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/sc' will be
+(Font)              scaled to size 12.0pt on input line 191.
 Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             in font `T1/Roboto-LF/regular/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/m/sc' aliased to
+(Font)              `T1/Roboto-LF/regular/sc' on input line 191.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/sc' will be
+(Font)              scaled to size 20.74pt on input line 191.
 Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/17.28'.
+(microtype)             in font `T1/Roboto-LF/regular/sc/20.74'.
 (microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/m/sc' aliased to
+(Font)              `T1/Roboto-LF/regular/sc' on input line 193.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/sc' will be
+(Font)              scaled to size 17.28pt on input line 193.
 Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/14.4'.
+(microtype)             in font `T1/Roboto-LF/regular/sc/17.28'.
 (microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
+(Font)              `T1/Roboto-LF/regular/n' on input line 195.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 24.88pt on input line 195.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
+(Font)              `T1/Roboto-LF/bold/n' on input line 195.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
+(Font)              scaled to size 24.88pt on input line 195.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
+(Font)              `T1/Roboto-LF/regular/n' on input line 203.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 17.28pt on input line 203.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
+(Font)              `T1/Roboto-LF/bold/n' on input line 203.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
+(Font)              scaled to size 17.28pt on input line 203.
+
+Overfull \vbox (10.0pt too high) has occurred while \output is active []
+
  [1
 
 
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-30.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
+(Font)              `T1/Roboto-LF/regular/n' on input line 218.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 16.0pt on input line 218.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
+(Font)              `T1/Roboto-LF/bold/n' on input line 218.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
+(Font)              scaled to size 16.0pt on input line 218.
 
-(/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmss.fd
-File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmss' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-30.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
+(./Masterthesis.toc
+LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
+(Font)              `T1/Roboto-LF/bold/n' on input line 5.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
+(Font)              scaled to size 12.0pt on input line 5.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
+.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)<<ot1.cmap>>
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-30.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
+)<<ot1.cmap>> (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-cmr.cf
+g
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
+.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<oml.cmap>>
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-130.
+5.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<oms.cmap>>
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-130.
+5.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 130.
+(Font)              <12> on input line 5.
 <<omx.cmap>>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 130.
+(Font)              <8> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 130.
+(Font)              <6> on input line 5.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [2
+)
+
+Package scrlayer-scrpage Warning: \headheight to low.
+(scrlayer-scrpage)                At least 14.49998pt needed,
+(scrlayer-scrpage)                but only -10.0pt found.
+(scrlayer-scrpage)                I'll enlarge \headheight, for further
+(scrlayer-scrpage)                processing, but you should do this yourself,
+(scrlayer-scrpage)                e.g., setting geometry's option
+(scrlayer-scrpage)                `head=14.49998pt'.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 4
+6.
+
+
+Overfull \vbox (24.49998pt too high) has occurred while \output is active []
+
+
+[2])
+\tf@toc=\write5
+\openout5 = `Masterthesis.toc'.
+
+ [3] [4]
+Package tocbasic Info: character protrusion at loa deactivated on input line 22
+0.
+ (./Masterthesis.loa)
+\tf@loa=\write6
+\openout6 = `Masterthesis.loa'.
+
+ [5
+
+] (./Masterthesis.lof [6])
+\tf@lof=\write7
+\openout7 = `Masterthesis.lof'.
+
+ [7]
+(./Masterthesis.lot)
+\tf@lot=\write8
+\openout8 = `Masterthesis.lot'.
+
+ [8] [9
 
 ]
 \openout2 = `Abstract.aux'.
 
+ (./Abstract.tex)
 
-(./Abstract.tex) [3
+Package scrlayer-scrpage Warning: \headheight to low.
+(scrlayer-scrpage)                At least 18.12498pt needed,
+(scrlayer-scrpage)                but only 14.49998pt found.
+(scrlayer-scrpage)                I'll enlarge \headheight, for further
+(scrlayer-scrpage)                processing, but you should do this yourself,
+(scrlayer-scrpage)                e.g., setting geometry's option
+(scrlayer-scrpage)                `head=18.12498pt'.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 2
+34.
+
+
+Overfull \vbox (3.625pt too high) has occurred while \output is active []
+
+ [10
 
 
 ]
-Package tocbasic Info: character protrusion at toc deactivated on input line 13
-7.
- (./Masterthesis.toc [4
-
-
-
-] [5])
-\tf@toc=\write5
-\openout5 = `Masterthesis.toc'.
-
- [6]
 \openout2 = `Introduction.aux'.
 
- (./Introduction.tex
+
+(./Introduction.tex
 chapter 1.
 
 Class scrreprt Warning: \float@addtolists detected!
@@ -1418,164 +1600,182 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              a package that still implements the
 (scrreprt)              deprecated \float@addtolist interface.
 
-[7
+LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
+(Font)              `T1/Roboto-LF/bold/n' on input line 2.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
+(Font)              scaled to size 14.0pt on input line 2.
+[1
 
 
-]) [8]
+
+
+
+]) [2]
 \openout2 = `M_CreditRisk_PD.aux'.
 
  (./M_CreditRisk_PD.tex
 chapter 2.
-[9
+[3
 
 
 
 
 ]
-<Figures//./CR__ObservationPeriod.png, id=273, 637.29pt x 352.152pt>
+LaTeX Font Info:    Font shape `T1/Roboto-LF/m/it' aliased to
+(Font)              `T1/Roboto-LF/regular/it' on input line 29.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/it' will be
+(Font)              scaled to size 12.0pt on input line 29.
+<Figures//./CR__ObservationPeriod.png, id=437, 637.29pt x 352.152pt>
 File: Figures//./CR__ObservationPeriod.png Graphic file (type png)
 <use Figures//./CR__ObservationPeriod.png>
 Package pdftex.def Info: Figures//./CR__ObservationPeriod.png  used on input li
 ne 42.
 (pdftex.def)             Requested size: 284.5276pt x 157.22029pt.
- [10 <./Figures//./CR__ObservationPeriod.png>]) [11]
+ [4] [5 <./Figures//./CR__ObservationPeriod.png>]) [6]
 \openout2 = `M_TraditionalModels.aux'.
 
 
 (./M_TraditionalModels.tex
 chapter 3.
-<Figures//./TM__logistic_func.png, id=300, 341.275pt x 220.825pt>
+<Figures//./TM__logistic_func.png, id=466, 341.275pt x 220.825pt>
 File: Figures//./TM__logistic_func.png Graphic file (type png)
 <use Figures//./TM__logistic_func.png>
 Package pdftex.def Info: Figures//./TM__logistic_func.png  used on input line 2
 6.
 (pdftex.def)             Requested size: 113.81104pt x 73.64072pt.
-[12
+[7
 
 
 
 
- <./Figures//./TM__logistic_func.png>]) [13]
+ <./Figures//./TM__logistic_func.png>]) [8]
 \openout2 = `M_MLModels.aux'.
 
  (./M_MLModels.tex
 chapter 4.
-<Figures//./ML__DecTree.png, id=332, 675.396pt x 320.178pt>
+<Figures//./ML__DecTree.png, id=495, 675.396pt x 320.178pt>
 File: Figures//./ML__DecTree.png Graphic file (type png)
 <use Figures//./ML__DecTree.png>
 Package pdftex.def Info: Figures//./ML__DecTree.png  used on input line 21.
 (pdftex.def)             Requested size: 284.5276pt x 134.88422pt.
-[14
+[9
 
 
 
 
-]
-<Figures//./ML__Random_forest.png, id=347, 828.039pt x 314.046pt>
+] [10 <./Figures//./ML__DecTree.png>]
+<Figures//./ML__Random_forest.png, id=516, 828.039pt x 314.046pt>
 File: Figures//./ML__Random_forest.png Graphic file (type png)
 <use Figures//./ML__Random_forest.png>
 Package pdftex.def Info: Figures//./ML__Random_forest.png  used on input line 3
 5.
 (pdftex.def)             Requested size: 284.5276pt x 107.90991pt.
- [15 <./Figures//./ML__DecTree.png> <./Figures//./ML__Random_forest.png>]
-<Figures//./ML__MLP.png, id=358, 760.806pt x 397.485pt>
+<Figures//./ML__MLP.png, id=519, 760.806pt x 397.485pt>
 File: Figures//./ML__MLP.png Graphic file (type png)
 <use Figures//./ML__MLP.png>
 Package pdftex.def Info: Figures//./ML__MLP.png  used on input line 47.
 (pdftex.def)             Requested size: 273.14928pt x 142.70631pt.
-<Figures//./ML__kNN.png, id=360, 503.7pt x 409.53pt>
+ [11 <./Figures//./ML__Random_forest.png> <./Figures//./ML__MLP.png>]
+<Figures//./ML__kNN.png, id=527, 503.7pt x 409.53pt>
 File: Figures//./ML__kNN.png Graphic file (type png)
 <use Figures//./ML__kNN.png>
 Package pdftex.def Info: Figures//./ML__kNN.png  used on input line 58.
 (pdftex.def)             Requested size: 136.57463pt x 111.04324pt.
-)
-[16 <./Figures//./ML__MLP.png> <./Figures//./ML__kNN.png>]
+) [12 <./Figures//./ML__kNN.png>]
 \openout2 = `M_ModellingProcess.aux'.
 
 
 (./M_ModellingProcess.tex
 chapter 5.
-<Figures//./MP__encoding.png, id=373, 1852.9225pt x 424.58624pt>
+LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
+(Font)              `T1/Roboto-LF/regular/n' on input line 13.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 8.0pt on input line 13.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
+(Font)              `T1/Roboto-LF/regular/n' on input line 13.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 6.0pt on input line 13.
+<Figures//./MP__encoding.png, id=537, 1852.9225pt x 424.58624pt>
 File: Figures//./MP__encoding.png Graphic file (type png)
 <use Figures//./MP__encoding.png>
 Package pdftex.def Info: Figures//./MP__encoding.png  used on input line 25.
 (pdftex.def)             Requested size: 284.5276pt x 65.1947pt.
-[17
+[13
 
 
 
 
- <./Figures//./MP__encoding.png>]
-<Figures//./MP__boxplot.png, id=386, 8130.375pt x 8130.375pt>
+] [14 <./Figures//./MP__encoding.png>]
+<Figures//./MP__boxplot.png, id=554, 8130.375pt x 8130.375pt>
 File: Figures//./MP__boxplot.png Graphic file (type png)
 <use Figures//./MP__boxplot.png>
 Package pdftex.def Info: Figures//./MP__boxplot.png  used on input line 56.
 (pdftex.def)             Requested size: 204.85847pt x 204.82202pt.
- [18] [19 <./Figures//./MP__boxplot.png>]
-<Figures//./MP__corrmatrix.png, id=415, 437.2335pt x 367.1316pt>
+ [15 <./Figures//./MP__boxplot.png>]
+<Figures//./MP__corrmatrix.png, id=574, 437.2335pt x 367.1316pt>
 File: Figures//./MP__corrmatrix.png Graphic file (type png)
 <use Figures//./MP__corrmatrix.png>
 Package pdftex.def Info: Figures//./MP__corrmatrix.png  used on input line 96.
 (pdftex.def)             Requested size: 284.5276pt x 238.9128pt.
 
-[20 <./Figures//./MP__corrmatrix.png>] [21]
-<Figures//./MP__kFold.png, id=440, 2161.07375pt x 378.41376pt>
+[16] [17 <./Figures//./MP__corrmatrix.png>] [18] [19]
+<Figures//./MP__kFold.png, id=608, 2161.07375pt x 378.41376pt>
 File: Figures//./MP__kFold.png Graphic file (type png)
 <use Figures//./MP__kFold.png>
 Package pdftex.def Info: Figures//./MP__kFold.png  used on input line 137.
 (pdftex.def)             Requested size: 295.90593pt x 51.81119pt.
-) [22 <./Figures//./MP__kFold.png>]
+) [20 <./Figures//./MP__kFold.png>]
 \openout2 = `M_Validation.aux'.
 
-
-(./M_Validation.tex
+ (./M_Validation.tex
 chapter 6.
-<Figures//./VL__confmatrix.png, id=450, 931.48pt x 809.0225pt>
+<Figures//./VL__confmatrix.png, id=615, 931.48pt x 809.0225pt>
 File: Figures//./VL__confmatrix.png Graphic file (type png)
 <use Figures//./VL__confmatrix.png>
 Package pdftex.def Info: Figures//./VL__confmatrix.png  used on input line 16.
 (pdftex.def)             Requested size: 204.85847pt x 177.92378pt.
-[23
+[21
 
 
 
 
-] [24 <./Figures//./VL__confmatrix.png>]
-<Figures//./VL__ROC_curve.png, id=479, 781.83pt x 521.877pt>
+] [22 <./Figures//./VL__confmatrix.png>] [23]
+<Figures//./VL__ROC_curve.png, id=650, 781.83pt x 521.877pt>
 File: Figures//./VL__ROC_curve.png Graphic file (type png)
 <use Figures//./VL__ROC_curve.png>
 Package pdftex.def Info: Figures//./VL__ROC_curve.png  used on input line 51.
 (pdftex.def)             Requested size: 227.62209pt x 151.93768pt.
-) [25 <./Figures//./VL__ROC_curve.png>]
+) [24 <./Figures//./VL__ROC_curve.png>]
 \openout2 = `M_Interpretability.aux'.
 
  (./M_Interpretability.tex
 chapter 7.
-[26
+[25
 
 
 
 
 ]
-<Figures//./IN__featureimp.png, id=499, 638.8668pt x 393.8715pt>
+<Figures//./IN__featureimp.png, id=666, 638.8668pt x 393.8715pt>
 File: Figures//./IN__featureimp.png Graphic file (type png)
 <use Figures//./IN__featureimp.png>
 Package pdftex.def Info: Figures//./IN__featureimp.png  used on input line 34.
 (pdftex.def)             Requested size: 284.5276pt x 175.41951pt.
-<Figures//./plot/ML/PDP_fico.png, id=502, 429.2838pt x 312.2064pt>
+ [26]
+<Figures//./plot/ML/PDP_fico.png, id=673, 429.2838pt x 312.2064pt>
 File: Figures//./plot/ML/PDP_fico.png Graphic file (type png)
 <use Figures//./plot/ML/PDP_fico.png>
 Package pdftex.def Info: Figures//./plot/ML/PDP_fico.png  used on input line 45
 .
 (pdftex.def)             Requested size: 204.85847pt x 148.98558pt.
-<Figures//./plot/ML/ICE_fico.png, id=503, 430.7292pt x 312.2064pt>
+<Figures//./plot/ML/ICE_fico.png, id=674, 430.7292pt x 312.2064pt>
 File: Figures//./plot/ML/ICE_fico.png Graphic file (type png)
 <use Figures//./plot/ML/ICE_fico.png>
 Package pdftex.def Info: Figures//./plot/ML/ICE_fico.png  used on input line 51
 .
 (pdftex.def)             Requested size: 204.85847pt x 148.49013pt.
- [27 <./Figures//./IN__featureimp.png>]) [28 <./Figures//./plot/ML/PDP_fico.png
-> <./Figures//./plot/ML/ICE_fico.png>]
+ [27 <./Figures//./IN__featureimp.png> <./Figures//./plot/ML/PDP_fico.png> <./F
+igures//./plot/ML/ICE_fico.png>]) [28]
 \openout2 = `R_Results.aux'.
 
  (./R_Results.tex
@@ -1585,26 +1785,57 @@ chapter 8.
 
 
 
-] [30] [31]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
-7.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+]
+Overfull \hbox (3.2531pt too wide) in paragraph at lines 31--31
+[]|\T1/Roboto-LF/regular/n/12 (-20) Homebuyer 
+ []
+
+
+Overfull \hbox (1.13pt too wide) in paragraph at lines 34--34
+[]|\T1/Roboto-LF/regular/n/12 (-20) Occupancy|  
+ []
+
+
+Underfull \hbox (badness 1708) in paragraph at lines 43--43
+[]|\T1/Roboto-LF/regular/n/12 (+20) Contains val-ues "Condo", "PUD", "Man-u-
+ []
+
+
+Overfull \hbox (6.47507pt too wide) in paragraph at lines 52--52
+[]|\T1/Roboto-LF/regular/n/12 (-20) Delinquency 
+ []
+
+[30] [31] [32]
+LaTeX Font Info:    Trying to load font information for TS1+Roboto-LF on input 
+line 87.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/roboto/TS1Roboto-LF.fd
+File: TS1Roboto-LF.fd 2019/12/11 (autoinst) Font definitions for TS1/Roboto-LF.
+
 )
-[32]
-<Figures//./FullSample.png, id=563, 1100.43837pt x 460.557pt>
+LaTeX Font Info:    Font shape `TS1/Roboto-LF/m/n' aliased to
+(Font)              `TS1/Roboto-LF/regular/n' on input line 87.
+LaTeX Font Info:    Font shape `TS1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 12.0pt on input line 87.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `Roboto-LF' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [33]
+[34]
+<Figures//./FullSample.png, id=739, 1100.43837pt x 460.557pt>
 File: Figures//./FullSample.png Graphic file (type png)
 <use Figures//./FullSample.png>
 Package pdftex.def Info: Figures//./FullSample.png  used on input line 131.
 (pdftex.def)             Requested size: 455.24417pt x 190.53024pt.
-<Figures//./DevelopmentSample.png, id=564, 1100.43837pt x 460.557pt>
+<Figures//./DevelopmentSample.png, id=740, 1100.43837pt x 460.557pt>
 File: Figures//./DevelopmentSample.png Graphic file (type png)
 <use Figures//./DevelopmentSample.png>
 Package pdftex.def Info: Figures//./DevelopmentSample.png  used on input line 1
 37.
 (pdftex.def)             Requested size: 455.24417pt x 190.53024pt.
- [33] [34 <./Figures//./FullSample.png> <./Figures//./DevelopmentSample.png>]
-<Figures//./plot/Distribution/Main/RE_NUM_fico_DISTRIBUTION_ALL.png, id=585, 60
+ [35 <./Figures//./FullSample.png> <./Figures//./DevelopmentSample.png>]
+<Figures//./plot/Distribution/Main/RE_NUM_fico_DISTRIBUTION_ALL.png, id=752, 60
 2.25pt x 451.6875pt>
 File: Figures//./plot/Distribution/Main/RE_NUM_fico_DISTRIBUTION_ALL.png Graphi
 c file (type png)
@@ -1612,7 +1843,7 @@ c file (type png)
 Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_fico_DISTRIBU
 TION_ALL.png  used on input line 152.
 (pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/Main/RE_NUM_orig_upb_DISTRIBUTION_ALL.png, id=586
+<Figures//./plot/Distribution/Main/RE_NUM_orig_upb_DISTRIBUTION_ALL.png, id=753
 , 602.25pt x 451.6875pt>
 File: Figures//./plot/Distribution/Main/RE_NUM_orig_upb_DISTRIBUTION_ALL.png Gr
 aphic file (type png)
@@ -1620,7 +1851,7 @@ aphic file (type png)
 Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_orig_upb_DIST
 RIBUTION_ALL.png  used on input line 156.
 (pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/Main/RE_NUM_cltv_DISTRIBUTION_ALL.png, id=587, 60
+<Figures//./plot/Distribution/Main/RE_NUM_cltv_DISTRIBUTION_ALL.png, id=754, 60
 2.25pt x 451.6875pt>
 File: Figures//./plot/Distribution/Main/RE_NUM_cltv_DISTRIBUTION_ALL.png Graphi
 c file (type png)
@@ -1628,7 +1859,7 @@ c file (type png)
 Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_cltv_DISTRIBU
 TION_ALL.png  used on input line 164.
 (pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/Main/RE_NUM_dti_DISTRIBUTION_ALL.png, id=588, 602
+<Figures//./plot/Distribution/Main/RE_NUM_dti_DISTRIBUTION_ALL.png, id=755, 602
 .25pt x 451.6875pt>
 File: Figures//./plot/Distribution/Main/RE_NUM_dti_DISTRIBUTION_ALL.png Graphic
  file (type png)
@@ -1636,7 +1867,7 @@ File: Figures//./plot/Distribution/Main/RE_NUM_dti_DISTRIBUTION_ALL.png Graphic
 Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_dti_DISTRIBUT
 ION_ALL.png  used on input line 168.
 (pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/Main/RE_NUM_cnt_borr_DISTRIBUTION_ALL.png, id=589
+<Figures//./plot/Distribution/Main/RE_NUM_cnt_borr_DISTRIBUTION_ALL.png, id=756
 , 602.25pt x 451.6875pt>
 File: Figures//./plot/Distribution/Main/RE_NUM_cnt_borr_DISTRIBUTION_ALL.png Gr
 aphic file (type png)
@@ -1645,7 +1876,7 @@ Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_cnt_borr_DIST
 RIBUTION_ALL.png  used on input line 176.
 (pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
 <Figures//./plot/Distribution/Main/RE_IND_flag_orig_loan_term_HEQ_360M_DISTRIBU
-TION_ALL.png, id=590, 602.25pt x 451.6875pt>
+TION_ALL.png, id=757, 602.25pt x 451.6875pt>
 File: Figures//./plot/Distribution/Main/RE_IND_flag_orig_loan_term_HEQ_360M_DIS
 TRIBUTION_ALL.png Graphic file (type png)
 <use Figures//./plot/Distribution/Main/RE_IND_flag_orig_loan_term_HEQ_360M_DIST
@@ -1653,7 +1884,10 @@ RIBUTION_ALL.png>
 Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_IND_flag_orig_loa
 n_term_HEQ_360M_DISTRIBUTION_ALL.png  used on input line 180.
 (pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/Main/RE_CAT_us_reg_DISTRIBUTION_ALL.png, id=591, 
+
+[36 <./Figures//./plot/Distribution/Main/RE_NUM_fico_DISTRIBUTION_ALL.png> <./F
+igures//./plot/Distribution/Main/RE_NUM_orig_upb_DISTRIBUTION_ALL.png>]
+<Figures//./plot/Distribution/Main/RE_CAT_us_reg_DISTRIBUTION_ALL.png, id=764, 
 602.25pt x 451.6875pt>
 File: Figures//./plot/Distribution/Main/RE_CAT_us_reg_DISTRIBUTION_ALL.png Grap
 hic file (type png)
@@ -1661,7 +1895,7 @@ hic file (type png)
 Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_CAT_us_reg_DISTRI
 BUTION_ALL.png  used on input line 188.
 (pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/Main/RE_CAT_channel_DISTRIBUTION_ALL.png, id=592,
+<Figures//./plot/Distribution/Main/RE_CAT_channel_DISTRIBUTION_ALL.png, id=765,
  602.25pt x 451.6875pt>
 File: Figures//./plot/Distribution/Main/RE_CAT_channel_DISTRIBUTION_ALL.png Gra
 phic file (type png)
@@ -1669,13 +1903,14 @@ phic file (type png)
 Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_CAT_channel_DISTR
 IBUTION_ALL.png  used on input line 192.
 (pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
- [35 <./Figures//./plot/Distribution/Main/RE_NUM_fico_DISTRIBUTION_ALL.png> <./
-Figures//./plot/Distribution/Main/RE_NUM_orig_upb_DISTRIBUTION_ALL.png> <./Figu
-res//./plot/Distribution/Main/RE_NUM_cltv_DISTRIBUTION_ALL.png> <./Figures//./p
-lot/Distribution/Main/RE_NUM_dti_DISTRIBUTION_ALL.png> <./Figures//./plot/Distr
-ibution/Main/RE_NUM_cnt_borr_DISTRIBUTION_ALL.png> <./Figures//./plot/Distribut
-ion/Main/RE_IND_flag_orig_loan_term_HEQ_360M_DISTRIBUTION_ALL.png>]
-<Figures//./plot/Boxplot/Main/NUM_fico_BOXPLOT_ALL1.png, id=616, 569.0058pt x 4
+
+[37 <./Figures//./plot/Distribution/Main/RE_NUM_cltv_DISTRIBUTION_ALL.png> <./F
+igures//./plot/Distribution/Main/RE_NUM_dti_DISTRIBUTION_ALL.png> <./Figures//.
+/plot/Distribution/Main/RE_NUM_cnt_borr_DISTRIBUTION_ALL.png> <./Figures//./plo
+t/Distribution/Main/RE_IND_flag_orig_loan_term_HEQ_360M_DISTRIBUTION_ALL.png> <
+./Figures//./plot/Distribution/Main/RE_CAT_us_reg_DISTRIBUTION_ALL.png> <./Figu
+res//./plot/Distribution/Main/RE_CAT_channel_DISTRIBUTION_ALL.png>]
+<Figures//./plot/Boxplot/Main/NUM_fico_BOXPLOT_ALL1.png, id=785, 569.0058pt x 4
 26.8748pt>
 File: Figures//./plot/Boxplot/Main/NUM_fico_BOXPLOT_ALL1.png Graphic file (type
  png)
@@ -1683,7 +1918,7 @@ File: Figures//./plot/Boxplot/Main/NUM_fico_BOXPLOT_ALL1.png Graphic file (type
 Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_fico_BOXPLOT_ALL1.png
   used on input line 204.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/Boxplot/Main/NUM_orig_upb_BOXPLOT_ALL1.png, id=617, 569.0058pt
+<Figures//./plot/Boxplot/Main/NUM_orig_upb_BOXPLOT_ALL1.png, id=786, 569.0058pt
  x 426.8748pt>
 File: Figures//./plot/Boxplot/Main/NUM_orig_upb_BOXPLOT_ALL1.png Graphic file (
 type png)
@@ -1691,7 +1926,7 @@ type png)
 Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_orig_upb_BOXPLOT_ALL1
 .png  used on input line 208.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/Boxplot/Main/NUM_cltv_BOXPLOT_ALL1.png, id=618, 569.0058pt x 4
+<Figures//./plot/Boxplot/Main/NUM_cltv_BOXPLOT_ALL1.png, id=787, 569.0058pt x 4
 26.8748pt>
 File: Figures//./plot/Boxplot/Main/NUM_cltv_BOXPLOT_ALL1.png Graphic file (type
  png)
@@ -1699,7 +1934,7 @@ File: Figures//./plot/Boxplot/Main/NUM_cltv_BOXPLOT_ALL1.png Graphic file (type
 Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_cltv_BOXPLOT_ALL1.png
   used on input line 216.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/Boxplot/Main/NUM_dti_BOXPLOT_ALL1.png, id=619, 569.0058pt x 42
+<Figures//./plot/Boxplot/Main/NUM_dti_BOXPLOT_ALL1.png, id=788, 569.0058pt x 42
 6.8748pt>
 File: Figures//./plot/Boxplot/Main/NUM_dti_BOXPLOT_ALL1.png Graphic file (type 
 png)
@@ -1707,7 +1942,7 @@ png)
 Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_dti_BOXPLOT_ALL1.png 
  used on input line 220.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/Boxplot/Main/NUM_cnt_borr_BOXPLOT_ALL1.png, id=620, 569.0058pt
+<Figures//./plot/Boxplot/Main/NUM_cnt_borr_BOXPLOT_ALL1.png, id=789, 569.0058pt
  x 426.8748pt>
 File: Figures//./plot/Boxplot/Main/NUM_cnt_borr_BOXPLOT_ALL1.png Graphic file (
 type png)
@@ -1715,7 +1950,7 @@ type png)
 Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_cnt_borr_BOXPLOT_ALL1
 .png  used on input line 228.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/Boxplot/Main/NUM_orig_loan_term_BOXPLOT_ALL1.png, id=621, 569.
+<Figures//./plot/Boxplot/Main/NUM_orig_loan_term_BOXPLOT_ALL1.png, id=790, 569.
 0058pt x 426.8748pt>
 File: Figures//./plot/Boxplot/Main/NUM_orig_loan_term_BOXPLOT_ALL1.png Graphic 
 file (type png)
@@ -1723,14 +1958,12 @@ file (type png)
 Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_orig_loan_term_BOXPLO
 T_ALL1.png  used on input line 232.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
- [36 <./Figures//./plot/Distribution/Main/RE_CAT_us_reg_DISTRIBUTION_ALL.png> <
-./Figures//./plot/Distribution/Main/RE_CAT_channel_DISTRIBUTION_ALL.png> <./Fig
-ures//./plot/Boxplot/Main/NUM_fico_BOXPLOT_ALL1.png (PNG copy)> <./Figures//./p
-lot/Boxplot/Main/NUM_orig_upb_BOXPLOT_ALL1.png (PNG copy)>] [37 <./Figures//./p
-lot/Boxplot/Main/NUM_cltv_BOXPLOT_ALL1.png (PNG copy)> <./Figures//./plot/Boxpl
-ot/Main/NUM_dti_BOXPLOT_ALL1.png (PNG copy)> <./Figures//./plot/Boxplot/Main/NU
-M_cnt_borr_BOXPLOT_ALL1.png (PNG copy)> <./Figures//./plot/Boxplot/Main/NUM_ori
-g_loan_term_BOXPLOT_ALL1.png (PNG copy)>]
+ [38 <./Figures//./plot/Boxplot/Main/NUM_fico_BOXPLOT_ALL1.png (PNG copy)> <./F
+igures//./plot/Boxplot/Main/NUM_orig_upb_BOXPLOT_ALL1.png (PNG copy)> <./Figure
+s//./plot/Boxplot/Main/NUM_cltv_BOXPLOT_ALL1.png (PNG copy)> <./Figures//./plot
+/Boxplot/Main/NUM_dti_BOXPLOT_ALL1.png (PNG copy)>] [39 <./Figures//./plot/Boxp
+lot/Main/NUM_cnt_borr_BOXPLOT_ALL1.png (PNG copy)> <./Figures//./plot/Boxplot/M
+ain/NUM_orig_loan_term_BOXPLOT_ALL1.png (PNG copy)>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 244.
@@ -1739,32 +1972,38 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 264.
 
-[38]
-Underfull \hbox (badness 1968) in paragraph at lines 298--298
-[]|\T1/lmr/m/n/10.95 (+20) Grouped Vari-able, Orig-i-nal Loan Term is
+[40]
+Underfull \hbox (badness 1210) in paragraph at lines 297--297
+[]|\T1/Roboto-LF/regular/n/12 (+20) Indicator, that Orig-i-nal Loan Term >360
  []
 
-
-Underfull \hbox (badness 1009) in paragraph at lines 302--302
-[]|\T1/lmr/m/n/10.95 (+20) Original Loan-to-Value (LTV) af-ter Out-lier
- []
-
-[39
+[41
 
 
-]
+] [42]
+LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
+(Font)              `T1/Roboto-LF/regular/n' on input line 317.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 10.0pt on input line 317.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
+(Font)              `T1/Roboto-LF/bold/n' on input line 320.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
+(Font)              scaled to size 10.0pt on input line 320.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 356.
+(Font)              <10> on input line 356.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 356.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 356.
-<Figures//./plot/ROC/Main/NUM_fico_ROC_ALL5.png, id=658, 569.0058pt x 426.8748p
+ [43]
+<Figures//./plot/ROC/Main/NUM_fico_ROC_ALL5.png, id=825, 569.0058pt x 426.8748p
 t>
 File: Figures//./plot/ROC/Main/NUM_fico_ROC_ALL5.png Graphic file (type png)
 <use Figures//./plot/ROC/Main/NUM_fico_ROC_ALL5.png>
 Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_fico_ROC_ALL5.png  used o
 n input line 379.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/Main/NUM_orig_upb_ROC_ALL5.png, id=659, 569.0058pt x 426.8
+<Figures//./plot/ROC/Main/NUM_orig_upb_ROC_ALL5.png, id=826, 569.0058pt x 426.8
 748pt>
 File: Figures//./plot/ROC/Main/NUM_orig_upb_ROC_ALL5.png Graphic file (type png
 )
@@ -1772,22 +2011,21 @@ File: Figures//./plot/ROC/Main/NUM_orig_upb_ROC_ALL5.png Graphic file (type png
 Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_orig_upb_ROC_ALL5.png  us
 ed on input line 383.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/Main/NUM_cltv_ROC_ALL5.png, id=660, 569.0058pt x 426.8748p
+<Figures//./plot/ROC/Main/NUM_cltv_ROC_ALL5.png, id=827, 569.0058pt x 426.8748p
 t>
 File: Figures//./plot/ROC/Main/NUM_cltv_ROC_ALL5.png Graphic file (type png)
 <use Figures//./plot/ROC/Main/NUM_cltv_ROC_ALL5.png>
 Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_cltv_ROC_ALL5.png  used o
 n input line 391.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/Main/NUM_dti_ROC_ALL5.png, id=661, 569.0058pt x 426.8748pt
+<Figures//./plot/ROC/Main/NUM_dti_ROC_ALL5.png, id=828, 569.0058pt x 426.8748pt
 >
 File: Figures//./plot/ROC/Main/NUM_dti_ROC_ALL5.png Graphic file (type png)
 <use Figures//./plot/ROC/Main/NUM_dti_ROC_ALL5.png>
 Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_dti_ROC_ALL5.png  used on
  input line 395.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
- [40]
-<Figures//./plot/ROC/Main/NUM_cnt_borr_ROC_ALL5.png, id=669, 569.0058pt x 426.8
+<Figures//./plot/ROC/Main/NUM_cnt_borr_ROC_ALL5.png, id=829, 569.0058pt x 426.8
 748pt>
 File: Figures//./plot/ROC/Main/NUM_cnt_borr_ROC_ALL5.png Graphic file (type png
 )
@@ -1795,7 +2033,7 @@ File: Figures//./plot/ROC/Main/NUM_cnt_borr_ROC_ALL5.png Graphic file (type png
 Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_cnt_borr_ROC_ALL5.png  us
 ed on input line 403.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/Main/IND_flag_orig_loan_term_HEQ_360M_ROC_ALL5.png, id=670
+<Figures//./plot/ROC/Main/IND_flag_orig_loan_term_HEQ_360M_ROC_ALL5.png, id=830
 , 569.0058pt x 426.8748pt>
 File: Figures//./plot/ROC/Main/IND_flag_orig_loan_term_HEQ_360M_ROC_ALL5.png Gr
 aphic file (type png)
@@ -1803,7 +2041,7 @@ aphic file (type png)
 Package pdftex.def Info: Figures//./plot/ROC/Main/IND_flag_orig_loan_term_HEQ_3
 60M_ROC_ALL5.png  used on input line 407.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/Main/CAT_us_reg__Midwest_ROC_ALL5.png, id=671, 569.0058pt 
+<Figures//./plot/ROC/Main/CAT_us_reg__Midwest_ROC_ALL5.png, id=831, 569.0058pt 
 x 426.8748pt>
 File: Figures//./plot/ROC/Main/CAT_us_reg__Midwest_ROC_ALL5.png Graphic file (t
 ype png)
@@ -1811,7 +2049,7 @@ ype png)
 Package pdftex.def Info: Figures//./plot/ROC/Main/CAT_us_reg__Midwest_ROC_ALL5.
 png  used on input line 415.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/Main/CAT_channel__C_ROC_ALL5.png, id=672, 569.0058pt x 426
+<Figures//./plot/ROC/Main/CAT_channel__C_ROC_ALL5.png, id=832, 569.0058pt x 426
 .8748pt>
 File: Figures//./plot/ROC/Main/CAT_channel__C_ROC_ALL5.png Graphic file (type p
 ng)
@@ -1819,157 +2057,187 @@ ng)
 Package pdftex.def Info: Figures//./plot/ROC/Main/CAT_channel__C_ROC_ALL5.png  
 used on input line 419.
 (pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
- [41 <./Figures//./plot/ROC/Main/NUM_fico_ROC_ALL5.png (PNG copy)> <./Figures//
+ [44 <./Figures//./plot/ROC/Main/NUM_fico_ROC_ALL5.png (PNG copy)> <./Figures//
 ./plot/ROC/Main/NUM_orig_upb_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/Ma
 in/NUM_cltv_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/Main/NUM_dti_ROC_AL
-L5.png (PNG copy)> <./Figures//./plot/ROC/Main/NUM_cnt_borr_ROC_ALL5.png (PNG c
-opy)> <./Figures//./plot/ROC/Main/IND_flag_orig_loan_term_HEQ_360M_ROC_ALL5.png
- (PNG copy)>] [42 <./Figures//./plot/ROC/Main/CAT_us_reg__Midwest_ROC_ALL5.png 
+L5.png (PNG copy)>] [45 <./Figures//./plot/ROC/Main/NUM_cnt_borr_ROC_ALL5.png (
+PNG copy)> <./Figures//./plot/ROC/Main/IND_flag_orig_loan_term_HEQ_360M_ROC_ALL
+5.png (PNG copy)> <./Figures//./plot/ROC/Main/CAT_us_reg__Midwest_ROC_ALL5.png 
 (PNG copy)> <./Figures//./plot/ROC/Main/CAT_channel__C_ROC_ALL5.png (PNG copy)>
-] [43] [44]
-Underfull \hbox (badness 2689) in paragraph at lines 567--568
-[]|\T1/lmr/m/n/10.95 (+20) Prop Val Method =
+] [46] [47] [48]
+Underfull \hbox (badness 10000) in paragraph at lines 567--568
+[]|\T1/Roboto-LF/regular/n/12 (+20) Prop Val Method
  []
 
-[45]
-<Figures//./plot/ML/RE_RandomSearch.png, id=716, 536.0025pt x 152.57pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 567--568
+\T1/Roboto-LF/regular/n/12 (+20) = Other Ap-praisals
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 567--568
+\T1/Roboto-LF/regular/n/12 (+20) (Desk-top, driveby,
+ []
+
+
+Underfull \hbox (badness 2961) in paragraph at lines 568--569
+[]|\T1/Roboto-LF/regular/n/12 (+20) Prop Val Method =
+ []
+
+
+Underfull \hbox (badness 2443) in paragraph at lines 570--571
+[]|\T1/Roboto-LF/regular/n/12 (+20) US Re-gion = North-
+ []
+
+[49] [50]
+<Figures//./plot/ML/RE_RandomSearch.png, id=877, 536.0025pt x 152.57pt>
 File: Figures//./plot/ML/RE_RandomSearch.png Graphic file (type png)
 <use Figures//./plot/ML/RE_RandomSearch.png>
 Package pdftex.def Info: Figures//./plot/ML/RE_RandomSearch.png  used on input 
 line 614.
 (pdftex.def)             Requested size: 286.80061pt x 81.63461pt.
-<Figures//./plot/ML/RE_GridSearch.png, id=717, 203.76125pt x 152.57pt>
+<Figures//./plot/ML/RE_GridSearch.png, id=878, 203.76125pt x 152.57pt>
 File: Figures//./plot/ML/RE_GridSearch.png Graphic file (type png)
 <use Figures//./plot/ML/RE_GridSearch.png>
 Package pdftex.def Info: Figures//./plot/ML/RE_GridSearch.png  used on input li
 ne 618.
 (pdftex.def)             Requested size: 122.91632pt x 92.03624pt.
- [46 <./Figures//./plot/ML/RE_RandomSearch.png> <./Figures//./plot/ML/RE_GridSe
-arch.png>]
-<Figures//./plot/ML/ROC_HyperParTuning.png, id=728, 395.3169pt x 298.4751pt>
+
+Overfull \hbox (16.21124pt too wide) in paragraph at lines 626--637
+ [][] 
+ []
+
+[51 <./Figures//./plot/ML/RE_RandomSearch.png> <./Figures//./plot/ML/RE_GridSea
+rch.png>]
+<Figures//./plot/ML/ROC_HyperParTuning.png, id=886, 395.3169pt x 298.4751pt>
 File: Figures//./plot/ML/ROC_HyperParTuning.png Graphic file (type png)
 <use Figures//./plot/ML/ROC_HyperParTuning.png>
 Package pdftex.def Info: Figures//./plot/ML/ROC_HyperParTuning.png  used on inp
 ut line 643.
 (pdftex.def)             Requested size: 295.90593pt x 223.41855pt.
- [47 <./Figures//./plot/ML/ROC_HyperParTuning.png>]
-<Figures//./plot/ML/ROC_Comp_Train.png, id=740, 395.3169pt x 298.4751pt>
+ [52 <./Figures//./plot/ML/ROC_HyperParTuning.png>]
+<Figures//./plot/ML/ROC_Comp_Train.png, id=895, 395.3169pt x 298.4751pt>
 File: Figures//./plot/ML/ROC_Comp_Train.png Graphic file (type png)
 <use Figures//./plot/ML/ROC_Comp_Train.png>
 Package pdftex.def Info: Figures//./plot/ML/ROC_Comp_Train.png  used on input l
 ine 669.
 (pdftex.def)             Requested size: 204.85847pt x 154.67508pt.
-<Figures//./plot/ML/ROC_Comp_Test.png, id=741, 395.3169pt x 298.4751pt>
+<Figures//./plot/ML/ROC_Comp_Test.png, id=896, 395.3169pt x 298.4751pt>
 File: Figures//./plot/ML/ROC_Comp_Test.png Graphic file (type png)
 <use Figures//./plot/ML/ROC_Comp_Test.png>
 Package pdftex.def Info: Figures//./plot/ML/ROC_Comp_Test.png  used on input li
 ne 673.
 (pdftex.def)             Requested size: 204.85847pt x 154.67508pt.
-<Figures//./plot/ML/ROC_Comp_Validation.png, id=742, 395.3169pt x 298.4751pt>
+<Figures//./plot/ML/ROC_Comp_Validation.png, id=897, 395.3169pt x 298.4751pt>
 File: Figures//./plot/ML/ROC_Comp_Validation.png Graphic file (type png)
 <use Figures//./plot/ML/ROC_Comp_Validation.png>
 Package pdftex.def Info: Figures//./plot/ML/ROC_Comp_Validation.png  used on in
 put line 681.
 (pdftex.def)             Requested size: 295.90593pt x 223.41855pt.
- [48 <./Figures//./plot/ML/ROC_Comp_Train.png> <./Figures//./plot/ML/ROC_Comp_T
+ [53 <./Figures//./plot/ML/ROC_Comp_Train.png> <./Figures//./plot/ML/ROC_Comp_T
 est.png> <./Figures//./plot/ML/ROC_Comp_Validation.png>]
-<Figures//./plot/ML/ConfMatrix_Train_Log.png, id=754, 353.4003pt x 380.1402pt>
+<Figures//./plot/ML/ConfMatrix_Train_Log.png, id=908, 353.4003pt x 380.1402pt>
 File: Figures//./plot/ML/ConfMatrix_Train_Log.png Graphic file (type png)
 <use Figures//./plot/ML/ConfMatrix_Train_Log.png>
 Package pdftex.def Info: Figures//./plot/ML/ConfMatrix_Train_Log.png  used on i
 nput line 722.
 (pdftex.def)             Requested size: 204.85847pt x 220.35965pt.
-<Figures//./plot/ML/ConfMatrix_Train_RF.png, id=755, 353.4003pt x 380.1402pt>
+<Figures//./plot/ML/ConfMatrix_Train_RF.png, id=909, 353.4003pt x 380.1402pt>
 File: Figures//./plot/ML/ConfMatrix_Train_RF.png Graphic file (type png)
 <use Figures//./plot/ML/ConfMatrix_Train_RF.png>
 Package pdftex.def Info: Figures//./plot/ML/ConfMatrix_Train_RF.png  used on in
 put line 726.
 (pdftex.def)             Requested size: 204.85847pt x 220.35965pt.
-<Figures//./plot/ML/ConfMatrix_Test_Log.png, id=756, 353.4003pt x 380.1402pt>
+<Figures//./plot/ML/ConfMatrix_Test_Log.png, id=910, 353.4003pt x 380.1402pt>
 File: Figures//./plot/ML/ConfMatrix_Test_Log.png Graphic file (type png)
 <use Figures//./plot/ML/ConfMatrix_Test_Log.png>
 Package pdftex.def Info: Figures//./plot/ML/ConfMatrix_Test_Log.png  used on in
 put line 734.
 (pdftex.def)             Requested size: 204.85847pt x 220.35965pt.
-<Figures//./plot/ML/ConfMatrix_Test_RF.png, id=757, 353.4003pt x 380.1402pt>
+<Figures//./plot/ML/ConfMatrix_Test_RF.png, id=911, 353.4003pt x 380.1402pt>
 File: Figures//./plot/ML/ConfMatrix_Test_RF.png Graphic file (type png)
 <use Figures//./plot/ML/ConfMatrix_Test_RF.png>
 Package pdftex.def Info: Figures//./plot/ML/ConfMatrix_Test_RF.png  used on inp
 ut line 738.
 (pdftex.def)             Requested size: 204.85847pt x 220.35965pt.
- [49]
-<Figures//./plot/ML/ConfMatrix_Val_Log.png, id=765, 353.4003pt x 380.1402pt>
+ [54]
+<Figures//./plot/ML/ConfMatrix_Val_Log.png, id=916, 353.4003pt x 380.1402pt>
 File: Figures//./plot/ML/ConfMatrix_Val_Log.png Graphic file (type png)
 <use Figures//./plot/ML/ConfMatrix_Val_Log.png>
 Package pdftex.def Info: Figures//./plot/ML/ConfMatrix_Val_Log.png  used on inp
 ut line 746.
 (pdftex.def)             Requested size: 204.85847pt x 220.35965pt.
-<Figures//./plot/ML/ConfMatrix_Val_RF.png, id=766, 353.4003pt x 380.1402pt>
+<Figures//./plot/ML/ConfMatrix_Val_RF.png, id=917, 353.4003pt x 380.1402pt>
 File: Figures//./plot/ML/ConfMatrix_Val_RF.png Graphic file (type png)
 <use Figures//./plot/ML/ConfMatrix_Val_RF.png>
 Package pdftex.def Info: Figures//./plot/ML/ConfMatrix_Val_RF.png  used on inpu
 t line 750.
 (pdftex.def)             Requested size: 204.85847pt x 220.35965pt.
- [50 <./Figures//./plot/ML/ConfMatrix_Train_Log.png> <./Figures//./plot/ML/Conf
+ [55 <./Figures//./plot/ML/ConfMatrix_Train_Log.png> <./Figures//./plot/ML/Conf
 Matrix_Train_RF.png> <./Figures//./plot/ML/ConfMatrix_Test_Log.png> <./Figures/
 /./plot/ML/ConfMatrix_Test_RF.png>]
-<Figures//./Stability_LOG.png, id=778, 395.3169pt x 298.4751pt>
+<Figures//./Stability_LOG.png, id=928, 395.3169pt x 298.4751pt>
 File: Figures//./Stability_LOG.png Graphic file (type png)
 <use Figures//./Stability_LOG.png>
 Package pdftex.def Info: Figures//./Stability_LOG.png  used on input line 775.
 (pdftex.def)             Requested size: 204.85847pt x 154.67508pt.
-<Figures//./Stability_RF.png, id=779, 395.3169pt x 298.4751pt>
+<Figures//./Stability_RF.png, id=929, 395.3169pt x 298.4751pt>
 File: Figures//./Stability_RF.png Graphic file (type png)
 <use Figures//./Stability_RF.png>
 Package pdftex.def Info: Figures//./Stability_RF.png  used on input line 779.
 (pdftex.def)             Requested size: 204.85847pt x 154.67508pt.
- [51 <./Figures//./plot/ML/ConfMatrix_Val_Log.png> <./Figures//./plot/ML/ConfMa
-trix_Val_RF.png>]
-<Figures//./plot/ML/RatingGrades.png, id=790, 578.16pt x 355.218pt>
+
+[56 <./Figures//./plot/ML/ConfMatrix_Val_Log.png> <./Figures//./plot/ML/ConfMat
+rix_Val_RF.png>]
+<Figures//./plot/ML/RatingGrades.png, id=938, 578.16pt x 355.218pt>
 File: Figures//./plot/ML/RatingGrades.png Graphic file (type png)
 <use Figures//./plot/ML/RatingGrades.png>
 Package pdftex.def Info: Figures//./plot/ML/RatingGrades.png  used on input lin
 e 809.
 (pdftex.def)             Requested size: 409.71696pt x 251.72415pt.
- [52 <./Figures//./Stability_LOG.png> <./Figures//./Stability_RF.png>]
-<Figures//./plot/ML/FeatureImportanceSplit.png, id=802, 754.4988pt x 393.8715pt
+ [57 <./Figures//./Stability_LOG.png> <./Figures//./Stability_RF.png>]
+<Figures//./plot/ML/FeatureImportanceSplit.png, id=949, 754.4988pt x 393.8715pt
 >
 File: Figures//./plot/ML/FeatureImportanceSplit.png Graphic file (type png)
 <use Figures//./plot/ML/FeatureImportanceSplit.png>
 Package pdftex.def Info: Figures//./plot/ML/FeatureImportanceSplit.png  used on
  input line 823.
 (pdftex.def)             Requested size: 455.24417pt x 237.65894pt.
- [53 <./Figures//./plot/ML/RatingGrades.png>]
-<Figures//./plot/ML/FeatureImportanceGain.png, id=810, 763.8939pt x 393.8715pt>
+ [58 <./Figures//./plot/ML/RatingGrades.png>]
+<Figures//./plot/ML/FeatureImportanceGain.png, id=955, 763.8939pt x 393.8715pt>
 
 File: Figures//./plot/ML/FeatureImportanceGain.png Graphic file (type png)
 <use Figures//./plot/ML/FeatureImportanceGain.png>
 Package pdftex.def Info: Figures//./plot/ML/FeatureImportanceGain.png  used on 
 input line 830.
 (pdftex.def)             Requested size: 455.24417pt x 234.73207pt.
- [54 <./Figures//./plot/ML/FeatureImportanceSplit.png> <./Figures//./plot/ML/Fe
+ [59 <./Figures//./plot/ML/FeatureImportanceSplit.png> <./Figures//./plot/ML/Fe
 atureImportanceGain.png>]
-<Figures//./plot/ML/LIME_minDiff.png, id=823, 583.9416pt x 312.9291pt>
+Overfull \hbox (12.89545pt too wide) in paragraph at lines 842--854
+ [][] 
+ []
+
+<Figures//./plot/ML/LIME_minDiff.png, id=966, 583.9416pt x 312.9291pt>
 File: Figures//./plot/ML/LIME_minDiff.png Graphic file (type png)
 <use Figures//./plot/ML/LIME_minDiff.png>
 Package pdftex.def Info: Figures//./plot/ML/LIME_minDiff.png  used on input lin
 e 860.
 (pdftex.def)             Requested size: 409.71696pt x 219.56454pt.
-<Figures//./plot/ML/LIME_maxDiff.png, id=824, 583.9416pt x 312.9291pt>
+<Figures//./plot/ML/LIME_maxDiff.png, id=967, 583.9416pt x 312.9291pt>
 File: Figures//./plot/ML/LIME_maxDiff.png Graphic file (type png)
 <use Figures//./plot/ML/LIME_maxDiff.png>
 Package pdftex.def Info: Figures//./plot/ML/LIME_maxDiff.png  used on input lin
 e 867.
 (pdftex.def)             Requested size: 409.71696pt x 219.56454pt.
- [55 <./Figures//./plot/ML/LIME_minDiff.png>]
-<Figures//./plot/ML/IndDecTree1.png, id=838, 1716.4125pt x 950.55125pt>
+[60 <./Figures//./plot/ML/LIME_minDiff.png>]
+<Figures//./plot/ML/IndDecTree1.png, id=980, 1716.4125pt x 950.55125pt>
 File: Figures//./plot/ML/IndDecTree1.png Graphic file (type png)
 <use Figures//./plot/ML/IndDecTree1.png>
 Package pdftex.def Info: Figures//./plot/ML/IndDecTree1.png  used on input line
  877.
 (pdftex.def)             Requested size: 409.71696pt x 226.88959pt.
- [56 <./Figures//./plot/ML/LIME_maxDiff.png>]
-<Figures//./plot/ML/IndDecTree2.png, id=851, 1247.15938pt x 664.98438pt>
+ [61 <./Figures//./plot/ML/LIME_maxDiff.png>]
+<Figures//./plot/ML/IndDecTree2.png, id=986, 1247.15938pt x 664.98438pt>
 File: Figures//./plot/ML/IndDecTree2.png Graphic file (type png)
 <use Figures//./plot/ML/IndDecTree2.png>
 Package pdftex.def Info: Figures//./plot/ML/IndDecTree2.png  used on input line
@@ -1980,34 +2248,34 @@ File: Figures//./plot/ML/PDP_fico.png Graphic file (type png)
 Package pdftex.def Info: Figures//./plot/ML/PDP_fico.png  used on input line 89
 4.
 (pdftex.def)             Requested size: 204.85847pt x 148.98558pt.
-<Figures//./plot/ML/PDP_orig_upb.png, id=852, 429.2838pt x 312.9291pt>
+<Figures//./plot/ML/PDP_orig_upb.png, id=987, 429.2838pt x 312.9291pt>
 File: Figures//./plot/ML/PDP_orig_upb.png Graphic file (type png)
 <use Figures//./plot/ML/PDP_orig_upb.png>
 Package pdftex.def Info: Figures//./plot/ML/PDP_orig_upb.png  used on input lin
 e 898.
 (pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
- [57 <./Figures//./plot/ML/IndDecTree1.png> <./Figures//./plot/ML/IndDecTree2.p
+ [62 <./Figures//./plot/ML/IndDecTree1.png> <./Figures//./plot/ML/IndDecTree2.p
 ng>]
-<Figures//./plot/ML/PDP_cltv.png, id=859, 422.7795pt x 312.2064pt>
+<Figures//./plot/ML/PDP_cltv.png, id=994, 422.7795pt x 312.2064pt>
 File: Figures//./plot/ML/PDP_cltv.png Graphic file (type png)
 <use Figures//./plot/ML/PDP_cltv.png>
 Package pdftex.def Info: Figures//./plot/ML/PDP_cltv.png  used on input line 90
 7.
 (pdftex.def)             Requested size: 204.85847pt x 151.28177pt.
-<Figures//./plot/ML/PDP_dti.png, id=860, 422.7795pt x 315.0972pt>
+<Figures//./plot/ML/PDP_dti.png, id=995, 422.7795pt x 315.0972pt>
 File: Figures//./plot/ML/PDP_dti.png Graphic file (type png)
 <use Figures//./plot/ML/PDP_dti.png>
 Package pdftex.def Info: Figures//./plot/ML/PDP_dti.png  used on input line 911
 .
 (pdftex.def)             Requested size: 204.85847pt x 152.68251pt.
-<Figures//./plot/ML/PDP_cd_ppty_val_type__2.png, id=861, 429.2838pt x 312.9291p
+<Figures//./plot/ML/PDP_cd_ppty_val_type__2.png, id=996, 429.2838pt x 312.9291p
 t>
 File: Figures//./plot/ML/PDP_cd_ppty_val_type__2.png Graphic file (type png)
 <use Figures//./plot/ML/PDP_cd_ppty_val_type__2.png>
 Package pdftex.def Info: Figures//./plot/ML/PDP_cd_ppty_val_type__2.png  used o
 n input line 920.
 (pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
-<Figures//./plot/ML/PDP_loan_purpose__C.png, id=862, 429.2838pt x 312.9291pt>
+<Figures//./plot/ML/PDP_loan_purpose__C.png, id=997, 429.2838pt x 312.9291pt>
 File: Figures//./plot/ML/PDP_loan_purpose__C.png Graphic file (type png)
 <use Figures//./plot/ML/PDP_loan_purpose__C.png>
 Package pdftex.def Info: Figures//./plot/ML/PDP_loan_purpose__C.png  used on in
@@ -2018,906 +2286,43 @@ File: Figures//./plot/ML/ICE_fico.png Graphic file (type png)
 Package pdftex.def Info: Figures//./plot/ML/ICE_fico.png  used on input line 93
 3.
 (pdftex.def)             Requested size: 204.85847pt x 148.49013pt.
-<Figures//./plot/ML/ICE_orig_upb.png, id=863, 429.2838pt x 312.9291pt>
+<Figures//./plot/ML/ICE_orig_upb.png, id=998, 429.2838pt x 312.9291pt>
 File: Figures//./plot/ML/ICE_orig_upb.png Graphic file (type png)
 <use Figures//./plot/ML/ICE_orig_upb.png>
 Package pdftex.def Info: Figures//./plot/ML/ICE_orig_upb.png  used on input lin
 e 937.
 (pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
- [58 <./Figures//./plot/ML/PDP_orig_upb.png> <./Figures//./plot/ML/PDP_cltv.png
+ [63 <./Figures//./plot/ML/PDP_orig_upb.png> <./Figures//./plot/ML/PDP_cltv.png
 > <./Figures//./plot/ML/PDP_dti.png> <./Figures//./plot/ML/PDP_cd_ppty_val_type
 __2.png> <./Figures//./plot/ML/PDP_loan_purpose__C.png>]
-<Figures//./plot/ML/ICE_cltv.png, id=874, 416.2752pt x 312.2064pt>
+<Figures//./plot/ML/ICE_cltv.png, id=1009, 416.2752pt x 312.2064pt>
 File: Figures//./plot/ML/ICE_cltv.png Graphic file (type png)
 <use Figures//./plot/ML/ICE_cltv.png>
 Package pdftex.def Info: Figures//./plot/ML/ICE_cltv.png  used on input line 94
 6.
 (pdftex.def)             Requested size: 204.85847pt x 153.64465pt.
-<Figures//./plot/ML/ICE_dti.png, id=875, 422.7795pt x 312.2064pt>
+<Figures//./plot/ML/ICE_dti.png, id=1010, 422.7795pt x 312.2064pt>
 File: Figures//./plot/ML/ICE_dti.png Graphic file (type png)
 <use Figures//./plot/ML/ICE_dti.png>
 Package pdftex.def Info: Figures//./plot/ML/ICE_dti.png  used on input line 950
 .
 (pdftex.def)             Requested size: 204.85847pt x 151.28177pt.
 )
-[59 <./Figures//./plot/ML/ICE_orig_upb.png> <./Figures//./plot/ML/ICE_cltv.png>
+[64 <./Figures//./plot/ML/ICE_orig_upb.png> <./Figures//./plot/ML/ICE_cltv.png>
  <./Figures//./plot/ML/ICE_dti.png>]
 \openout2 = `R_Conclusio.aux'.
 
  (./R_Conclusio.tex
 chapter 9.
-) [60
+) [65
 
 
 
 
-]
-\openout2 = `Annex.aux'.
-
- (./Annex.tex
-chapter A.
-[61
-
-
-
-
-] [62]
-chapter B.
-[63
-
-] [64] [65] [66] [67] [68] [69]
-chapter C.
-File: Figures//./plot/Distribution/Main/RE_NUM_fico_DISTRIBUTION_ALL.png Graphi
-c file (type png)
-<use Figures//./plot/Distribution/Main/RE_NUM_fico_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_fico_DISTRIBU
-TION_ALL.png  used on input line 381.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-File: Figures//./plot/Distribution/Main/RE_NUM_orig_upb_DISTRIBUTION_ALL.png Gr
-aphic file (type png)
-<use Figures//./plot/Distribution/Main/RE_NUM_orig_upb_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_orig_upb_DIST
-RIBUTION_ALL.png  used on input line 385.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-File: Figures//./plot/Distribution/Main/RE_NUM_cltv_DISTRIBUTION_ALL.png Graphi
-c file (type png)
-<use Figures//./plot/Distribution/Main/RE_NUM_cltv_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_cltv_DISTRIBU
-TION_ALL.png  used on input line 393.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/NUM_ltv_DISTRIBUTION_ALL.png, id=927, 602.25pt x 
-451.6875pt>
-File: Figures//./plot/Distribution/NUM_ltv_DISTRIBUTION_ALL.png Graphic file (t
-ype png)
-<use Figures//./plot/Distribution/NUM_ltv_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/NUM_ltv_DISTRIBUTION_ALL.
-png  used on input line 397.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-File: Figures//./plot/Distribution/Main/RE_NUM_dti_DISTRIBUTION_ALL.png Graphic
- file (type png)
-<use Figures//./plot/Distribution/Main/RE_NUM_dti_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_dti_DISTRIBUT
-ION_ALL.png  used on input line 405.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-File: Figures//./plot/Distribution/Main/RE_NUM_cnt_borr_DISTRIBUTION_ALL.png Gr
-aphic file (type png)
-<use Figures//./plot/Distribution/Main/RE_NUM_cnt_borr_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_cnt_borr_DIST
-RIBUTION_ALL.png  used on input line 409.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-[70
-
- <./Figures//./plot/Distribution/NUM_ltv_DISTRIBUTION_ALL.png>]
-<Figures//./plot/Distribution/NUM_orig_loan_term_DISTRIBUTION_ALL.png, id=935, 
-602.25pt x 451.6875pt>
-File: Figures//./plot/Distribution/NUM_orig_loan_term_DISTRIBUTION_ALL.png Grap
-hic file (type png)
-<use Figures//./plot/Distribution/NUM_orig_loan_term_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/NUM_orig_loan_term_DISTRI
-BUTION_ALL.png  used on input line 417.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/NUM_mi_pct_DISTRIBUTION_ALL.png, id=936, 602.25pt
- x 451.6875pt>
-File: Figures//./plot/Distribution/NUM_mi_pct_DISTRIBUTION_ALL.png Graphic file
- (type png)
-<use Figures//./plot/Distribution/NUM_mi_pct_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/NUM_mi_pct_DISTRIBUTION_A
-LL.png  used on input line 421.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/NUM_cnt_units_DISTRIBUTION_ALL.png, id=937, 602.2
-5pt x 451.6875pt>
-File: Figures//./plot/Distribution/NUM_cnt_units_DISTRIBUTION_ALL.png Graphic f
-ile (type png)
-<use Figures//./plot/Distribution/NUM_cnt_units_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/NUM_cnt_units_DISTRIBUTIO
-N_ALL.png  used on input line 428.
-(pdftex.def)             Requested size: 227.62209pt x 170.71947pt.
-<Figures//./plot/Distribution/CAT_occpy_sts_DISTRIBUTION_ALL.png, id=938, 602.2
-5pt x 451.6875pt>
-File: Figures//./plot/Distribution/CAT_occpy_sts_DISTRIBUTION_ALL.png Graphic f
-ile (type png)
-<use Figures//./plot/Distribution/CAT_occpy_sts_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/CAT_occpy_sts_DISTRIBUTIO
-N_ALL.png  used on input line 437.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/CAT_loan_purpose_DISTRIBUTION_ALL.png, id=939, 60
-2.25pt x 451.6875pt>
-File: Figures//./plot/Distribution/CAT_loan_purpose_DISTRIBUTION_ALL.png Graphi
-c file (type png)
-<use Figures//./plot/Distribution/CAT_loan_purpose_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/CAT_loan_purpose_DISTRIBU
-TION_ALL.png  used on input line 441.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
- [71 <./Figures//./plot/Distribution/NUM_orig_loan_term_DISTRIBUTION_ALL.png> <
-./Figures//./plot/Distribution/NUM_mi_pct_DISTRIBUTION_ALL.png> <./Figures//./p
-lot/Distribution/NUM_cnt_units_DISTRIBUTION_ALL.png>]
-<Figures//./plot/Distribution/CAT_prop_type_DISTRIBUTION_ALL.png, id=950, 602.2
-5pt x 451.6875pt>
-File: Figures//./plot/Distribution/CAT_prop_type_DISTRIBUTION_ALL.png Graphic f
-ile (type png)
-<use Figures//./plot/Distribution/CAT_prop_type_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/CAT_prop_type_DISTRIBUTIO
-N_ALL.png  used on input line 449.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/CAT_cd_ppty_val_type_DISTRIBUTION_ALL.png, id=951
-, 602.25pt x 451.6875pt>
-File: Figures//./plot/Distribution/CAT_cd_ppty_val_type_DISTRIBUTION_ALL.png Gr
-aphic file (type png)
-<use Figures//./plot/Distribution/CAT_cd_ppty_val_type_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/CAT_cd_ppty_val_type_DIST
-RIBUTION_ALL.png  used on input line 453.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/CAT_ind_afdl_DISTRIBUTION_ALL.png, id=952, 602.25
-pt x 451.6875pt>
-File: Figures//./plot/Distribution/CAT_ind_afdl_DISTRIBUTION_ALL.png Graphic fi
-le (type png)
-<use Figures//./plot/Distribution/CAT_ind_afdl_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/CAT_ind_afdl_DISTRIBUTION
-_ALL.png  used on input line 461.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/CAT_amrtzn_type_DISTRIBUTION_ALL.png, id=953, 602
-.25pt x 451.6875pt>
-File: Figures//./plot/Distribution/CAT_amrtzn_type_DISTRIBUTION_ALL.png Graphic
- file (type png)
-<use Figures//./plot/Distribution/CAT_amrtzn_type_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/CAT_amrtzn_type_DISTRIBUT
-ION_ALL.png  used on input line 465.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-File: Figures//./plot/Distribution/Main/RE_CAT_us_reg_DISTRIBUTION_ALL.png Grap
-hic file (type png)
-<use Figures//./plot/Distribution/Main/RE_CAT_us_reg_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_CAT_us_reg_DISTRI
-BUTION_ALL.png  used on input line 473.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/CAT_orig_loan_term_3grp_DISTRIBUTION_ALL.png, id=
-954, 602.25pt x 451.6875pt>
-File: Figures//./plot/Distribution/CAT_orig_loan_term_3grp_DISTRIBUTION_ALL.png
- Graphic file (type png)
-<use Figures//./plot/Distribution/CAT_orig_loan_term_3grp_DISTRIBUTION_ALL.png>
-
-Package pdftex.def Info: Figures//./plot/Distribution/CAT_orig_loan_term_3grp_D
-ISTRIBUTION_ALL.png  used on input line 477.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
- [72 <./Figures//./plot/Distribution/CAT_occpy_sts_DISTRIBUTION_ALL.png> <./Fig
-ures//./plot/Distribution/CAT_loan_purpose_DISTRIBUTION_ALL.png> <./Figures//./
-plot/Distribution/CAT_prop_type_DISTRIBUTION_ALL.png> <./Figures//./plot/Distri
-bution/CAT_cd_ppty_val_type_DISTRIBUTION_ALL.png> <./Figures//./plot/Distributi
-on/CAT_ind_afdl_DISTRIBUTION_ALL.png> <./Figures//./plot/Distribution/CAT_amrtz
-n_type_DISTRIBUTION_ALL.png>]
-File: Figures//./plot/Distribution/Main/RE_CAT_channel_DISTRIBUTION_ALL.png Gra
-phic file (type png)
-<use Figures//./plot/Distribution/Main/RE_CAT_channel_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_CAT_channel_DISTR
-IBUTION_ALL.png  used on input line 484.
-(pdftex.def)             Requested size: 227.62209pt x 170.71947pt.
-File: Figures//./plot/Distribution/Main/RE_IND_flag_orig_loan_term_HEQ_360M_DIS
-TRIBUTION_ALL.png Graphic file (type png)
-<use Figures//./plot/Distribution/Main/RE_IND_flag_orig_loan_term_HEQ_360M_DIST
-RIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_IND_flag_orig_loa
-n_term_HEQ_360M_DISTRIBUTION_ALL.png  used on input line 493.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/IND_flag_mi_DISTRIBUTION_ALL.png, id=968, 602.25p
-t x 451.6875pt>
-File: Figures//./plot/Distribution/IND_flag_mi_DISTRIBUTION_ALL.png Graphic fil
-e (type png)
-<use Figures//./plot/Distribution/IND_flag_mi_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_mi_DISTRIBUTION_
-ALL.png  used on input line 497.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/IND_flag_orig_loan_term_HI_360M_DISTRIBUTION_ALL.
-png, id=969, 602.25pt x 451.6875pt>
-File: Figures//./plot/Distribution/IND_flag_orig_loan_term_HI_360M_DISTRIBUTION
-_ALL.png Graphic file (type png)
-<use Figures//./plot/Distribution/IND_flag_orig_loan_term_HI_360M_DISTRIBUTION_
-ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_orig_loan_term_H
-I_360M_DISTRIBUTION_ALL.png  used on input line 505.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/IND_flag_orig_loan_term_EQ_360M_DISTRIBUTION_ALL.
-png, id=970, 602.25pt x 451.6875pt>
-File: Figures//./plot/Distribution/IND_flag_orig_loan_term_EQ_360M_DISTRIBUTION
-_ALL.png Graphic file (type png)
-<use Figures//./plot/Distribution/IND_flag_orig_loan_term_EQ_360M_DISTRIBUTION_
-ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_orig_loan_term_E
-Q_360M_DISTRIBUTION_ALL.png  used on input line 509.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
- [73 <./Figures//./plot/Distribution/CAT_orig_loan_term_3grp_DISTRIBUTION_ALL.p
-ng> <./Figures//./plot/Distribution/IND_flag_mi_DISTRIBUTION_ALL.png>]
-<Figures//./plot/Distribution/IND_flag_sc_DISTRIBUTION_ALL.png, id=981, 602.25p
-t x 451.6875pt>
-File: Figures//./plot/Distribution/IND_flag_sc_DISTRIBUTION_ALL.png Graphic fil
-e (type png)
-<use Figures//./plot/Distribution/IND_flag_sc_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_sc_DISTRIBUTION_
-ALL.png  used on input line 517.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/IND_ind_harp_DISTRIBUTION_ALL.png, id=982, 602.25
-pt x 451.6875pt>
-File: Figures//./plot/Distribution/IND_ind_harp_DISTRIBUTION_ALL.png Graphic fi
-le (type png)
-<use Figures//./plot/Distribution/IND_ind_harp_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/IND_ind_harp_DISTRIBUTION
-_ALL.png  used on input line 521.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/IND_ppmt_pnlty_DISTRIBUTION_ALL.png, id=983, 602.
-25pt x 451.6875pt>
-File: Figures//./plot/Distribution/IND_ppmt_pnlty_DISTRIBUTION_ALL.png Graphic 
-file (type png)
-<use Figures//./plot/Distribution/IND_ppmt_pnlty_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/IND_ppmt_pnlty_DISTRIBUTI
-ON_ALL.png  used on input line 529.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/IND_flag_int_only_DISTRIBUTION_ALL.png, id=984, 6
-02.25pt x 451.6875pt>
-File: Figures//./plot/Distribution/IND_flag_int_only_DISTRIBUTION_ALL.png Graph
-ic file (type png)
-<use Figures//./plot/Distribution/IND_flag_int_only_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_int_only_DISTRIB
-UTION_ALL.png  used on input line 533.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/IND_flag_fthb_DISTRIBUTION_ALL.png, id=985, 602.2
-5pt x 451.6875pt>
-File: Figures//./plot/Distribution/IND_flag_fthb_DISTRIBUTION_ALL.png Graphic f
-ile (type png)
-<use Figures//./plot/Distribution/IND_flag_fthb_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_fthb_DISTRIBUTIO
-N_ALL.png  used on input line 541.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
-<Figures//./plot/Distribution/IND_flag_cnt_units_DISTRIBUTION_ALL.png, id=986, 
-602.25pt x 451.6875pt>
-File: Figures//./plot/Distribution/IND_flag_cnt_units_DISTRIBUTION_ALL.png Grap
-hic file (type png)
-<use Figures//./plot/Distribution/IND_flag_cnt_units_DISTRIBUTION_ALL.png>
-Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_cnt_units_DISTRI
-BUTION_ALL.png  used on input line 545.
-(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
- [74 <./Figures//./plot/Distribution/IND_flag_orig_loan_term_HI_360M_DISTRIBUTI
-ON_ALL.png> <./Figures//./plot/Distribution/IND_flag_orig_loan_term_EQ_360M_DIS
-TRIBUTION_ALL.png> <./Figures//./plot/Distribution/IND_flag_sc_DISTRIBUTION_ALL
-.png> <./Figures//./plot/Distribution/IND_ind_harp_DISTRIBUTION_ALL.png> <./Fig
-ures//./plot/Distribution/IND_ppmt_pnlty_DISTRIBUTION_ALL.png> <./Figures//./pl
-ot/Distribution/IND_flag_int_only_DISTRIBUTION_ALL.png>]
-File: Figures//./plot/Boxplot/Main/NUM_fico_BOXPLOT_ALL1.png Graphic file (type
- png)
-<use Figures//./plot/Boxplot/Main/NUM_fico_BOXPLOT_ALL1.png>
-Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_fico_BOXPLOT_ALL1.png
-  used on input line 557.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-File: Figures//./plot/Boxplot/Main/NUM_orig_upb_BOXPLOT_ALL1.png Graphic file (
-type png)
-<use Figures//./plot/Boxplot/Main/NUM_orig_upb_BOXPLOT_ALL1.png>
-Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_orig_upb_BOXPLOT_ALL1
-.png  used on input line 561.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-File: Figures//./plot/Boxplot/Main/NUM_cltv_BOXPLOT_ALL1.png Graphic file (type
- png)
-<use Figures//./plot/Boxplot/Main/NUM_cltv_BOXPLOT_ALL1.png>
-Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_cltv_BOXPLOT_ALL1.png
-  used on input line 569.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/Boxplot/NUM_ltv_BOXPLOT_ALL1.png, id=1000, 569.0058pt x 426.87
-48pt>
-File: Figures//./plot/Boxplot/NUM_ltv_BOXPLOT_ALL1.png Graphic file (type png)
-<use Figures//./plot/Boxplot/NUM_ltv_BOXPLOT_ALL1.png>
-Package pdftex.def Info: Figures//./plot/Boxplot/NUM_ltv_BOXPLOT_ALL1.png  used
- on input line 573.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-File: Figures//./plot/Boxplot/Main/NUM_dti_BOXPLOT_ALL1.png Graphic file (type 
-png)
-<use Figures//./plot/Boxplot/Main/NUM_dti_BOXPLOT_ALL1.png>
-Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_dti_BOXPLOT_ALL1.png 
- used on input line 581.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-File: Figures//./plot/Boxplot/Main/NUM_cnt_borr_BOXPLOT_ALL1.png Graphic file (
-type png)
-<use Figures//./plot/Boxplot/Main/NUM_cnt_borr_BOXPLOT_ALL1.png>
-Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_cnt_borr_BOXPLOT_ALL1
-.png  used on input line 585.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
- [75 <./Figures//./plot/Distribution/IND_flag_fthb_DISTRIBUTION_ALL.png> <./Fig
-ures//./plot/Distribution/IND_flag_cnt_units_DISTRIBUTION_ALL.png> <./Figures//
-./plot/Boxplot/NUM_ltv_BOXPLOT_ALL1.png (PNG copy)>]
-File: Figures//./plot/Boxplot/Main/NUM_orig_loan_term_BOXPLOT_ALL1.png Graphic 
-file (type png)
-<use Figures//./plot/Boxplot/Main/NUM_orig_loan_term_BOXPLOT_ALL1.png>
-Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_orig_loan_term_BOXPLO
-T_ALL1.png  used on input line 593.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/Boxplot/NUM_mi_pct_BOXPLOT_ALL1.png, id=1010, 569.0058pt x 426
-.8748pt>
-File: Figures//./plot/Boxplot/NUM_mi_pct_BOXPLOT_ALL1.png Graphic file (type pn
-g)
-<use Figures//./plot/Boxplot/NUM_mi_pct_BOXPLOT_ALL1.png>
-Package pdftex.def Info: Figures//./plot/Boxplot/NUM_mi_pct_BOXPLOT_ALL1.png  u
-sed on input line 597.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/Boxplot/NUM_cnt_units_BOXPLOT_ALL1.png, id=1011, 569.0058pt x 
-426.8748pt>
-File: Figures//./plot/Boxplot/NUM_cnt_units_BOXPLOT_ALL1.png Graphic file (type
- png)
-<use Figures//./plot/Boxplot/NUM_cnt_units_BOXPLOT_ALL1.png>
-Package pdftex.def Info: Figures//./plot/Boxplot/NUM_cnt_units_BOXPLOT_ALL1.png
-  used on input line 604.
-(pdftex.def)             Requested size: 227.62209pt x 170.75992pt.
-File: Figures//./plot/ROC/Main/NUM_fico_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/Main/NUM_fico_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_fico_ROC_ALL5.png  used o
-n input line 616.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-File: Figures//./plot/ROC/Main/NUM_orig_upb_ROC_ALL5.png Graphic file (type png
-)
-<use Figures//./plot/ROC/Main/NUM_orig_upb_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_orig_upb_ROC_ALL5.png  us
-ed on input line 620.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
- [76 <./Figures//./plot/Boxplot/NUM_mi_pct_BOXPLOT_ALL1.png (PNG copy)> <./Figu
-res//./plot/Boxplot/NUM_cnt_units_BOXPLOT_ALL1.png (PNG copy)>]
-File: Figures//./plot/ROC/Main/NUM_cltv_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/Main/NUM_cltv_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_cltv_ROC_ALL5.png  used o
-n input line 628.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/NUM_ltv_ROC_ALL5.png, id=1019, 569.0058pt x 426.8748pt>
-File: Figures//./plot/ROC/NUM_ltv_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/NUM_ltv_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/NUM_ltv_ROC_ALL5.png  used on inpu
-t line 632.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-File: Figures//./plot/ROC/Main/NUM_dti_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/Main/NUM_dti_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_dti_ROC_ALL5.png  used on
- input line 640.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-File: Figures//./plot/ROC/Main/NUM_cnt_borr_ROC_ALL5.png Graphic file (type png
-)
-<use Figures//./plot/ROC/Main/NUM_cnt_borr_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_cnt_borr_ROC_ALL5.png  us
-ed on input line 644.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/NUM_orig_loan_term_ROC_ALL5.png, id=1020, 569.0058pt x 426
-.8748pt>
-File: Figures//./plot/ROC/NUM_orig_loan_term_ROC_ALL5.png Graphic file (type pn
-g)
-<use Figures//./plot/ROC/NUM_orig_loan_term_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/NUM_orig_loan_term_ROC_ALL5.png  u
-sed on input line 652.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/NUM_mi_pct_ROC_ALL5.png, id=1021, 569.0058pt x 426.8748pt>
-
-File: Figures//./plot/ROC/NUM_mi_pct_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/NUM_mi_pct_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/NUM_mi_pct_ROC_ALL5.png  used on i
-nput line 656.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-
-[77 <./Figures//./plot/ROC/NUM_ltv_ROC_ALL5.png (PNG copy)>]
-<Figures//./plot/ROC/NUM_cnt_units_ROC_ALL5.png, id=1030, 569.0058pt x 426.8748
-pt>
-File: Figures//./plot/ROC/NUM_cnt_units_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/NUM_cnt_units_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/NUM_cnt_units_ROC_ALL5.png  used o
-n input line 663.
-(pdftex.def)             Requested size: 227.62209pt x 170.75992pt.
-File: Figures//./plot/ROC/Main/CAT_channel__C_ROC_ALL5.png Graphic file (type p
-ng)
-<use Figures//./plot/ROC/Main/CAT_channel__C_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/Main/CAT_channel__C_ROC_ALL5.png  
-used on input line 672.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_channel__B_ROC_ALL5.png, id=1031, 569.0058pt x 426.874
-8pt>
-File: Figures//./plot/ROC/CAT_channel__B_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/CAT_channel__B_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_channel__B_ROC_ALL5.png  used 
-on input line 676.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_channel__R_ROC_ALL5.png, id=1032, 569.0058pt x 426.874
-8pt>
-File: Figures//./plot/ROC/CAT_channel__R_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/CAT_channel__R_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_channel__R_ROC_ALL5.png  used 
-on input line 684.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_channel__9_ROC_ALL5.png, id=1033, 569.0058pt x 426.874
-8pt>
-File: Figures//./plot/ROC/CAT_channel__9_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/CAT_channel__9_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_channel__9_ROC_ALL5.png  used 
-on input line 688.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
- [78 <./Figures//./plot/ROC/NUM_orig_loan_term_ROC_ALL5.png (PNG copy)> <./Figu
-res//./plot/ROC/NUM_mi_pct_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/NUM_
-cnt_units_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_channel__B_ROC_AL
-L5.png (PNG copy)>]
-File: Figures//./plot/ROC/Main/CAT_us_reg__Midwest_ROC_ALL5.png Graphic file (t
-ype png)
-<use Figures//./plot/ROC/Main/CAT_us_reg__Midwest_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/Main/CAT_us_reg__Midwest_ROC_ALL5.
-png  used on input line 696.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_us_reg__Northeast_ROC_ALL5.png, id=1041, 569.0058pt x 
-426.8748pt>
-File: Figures//./plot/ROC/CAT_us_reg__Northeast_ROC_ALL5.png Graphic file (type
- png)
-<use Figures//./plot/ROC/CAT_us_reg__Northeast_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_us_reg__Northeast_ROC_ALL5.png
-  used on input line 700.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_us_reg__South_ROC_ALL5.png, id=1042, 569.0058pt x 426.
-8748pt>
-File: Figures//./plot/ROC/CAT_us_reg__South_ROC_ALL5.png Graphic file (type png
-)
-<use Figures//./plot/ROC/CAT_us_reg__South_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_us_reg__South_ROC_ALL5.png  us
-ed on input line 708.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_us_reg__West_ROC_ALL5.png, id=1043, 569.0058pt x 426.8
-748pt>
-File: Figures//./plot/ROC/CAT_us_reg__West_ROC_ALL5.png Graphic file (type png)
-
-<use Figures//./plot/ROC/CAT_us_reg__West_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_us_reg__West_ROC_ALL5.png  use
-d on input line 712.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_us_reg__Other_ROC_ALL5.png, id=1044, 569.0058pt x 426.
-8748pt>
-File: Figures//./plot/ROC/CAT_us_reg__Other_ROC_ALL5.png Graphic file (type png
-)
-<use Figures//./plot/ROC/CAT_us_reg__Other_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_us_reg__Other_ROC_ALL5.png  us
-ed on input line 720.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_occpy_sts__I_ROC_ALL5.png, id=1045, 569.0058pt x 426.8
-748pt>
-File: Figures//./plot/ROC/CAT_occpy_sts__I_ROC_ALL5.png Graphic file (type png)
-
-<use Figures//./plot/ROC/CAT_occpy_sts__I_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_occpy_sts__I_ROC_ALL5.png  use
-d on input line 724.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-[79 <./Figures//./plot/ROC/CAT_channel__R_ROC_ALL5.png (PNG copy)> <./Figures//
-./plot/ROC/CAT_channel__9_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_u
-s_reg__Northeast_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_us_reg__So
-uth_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_us_reg__West_ROC_ALL5.p
-ng (PNG copy)>]
-<Figures//./plot/ROC/CAT_occpy_sts__P_ROC_ALL5.png, id=1054, 569.0058pt x 426.8
-748pt>
-File: Figures//./plot/ROC/CAT_occpy_sts__P_ROC_ALL5.png Graphic file (type png)
-
-<use Figures//./plot/ROC/CAT_occpy_sts__P_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_occpy_sts__P_ROC_ALL5.png  use
-d on input line 732.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_occpy_sts__S_ROC_ALL5.png, id=1055, 569.0058pt x 426.8
-748pt>
-File: Figures//./plot/ROC/CAT_occpy_sts__S_ROC_ALL5.png Graphic file (type png)
-
-<use Figures//./plot/ROC/CAT_occpy_sts__S_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_occpy_sts__S_ROC_ALL5.png  use
-d on input line 736.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_cd_ppty_val_type__1_ROC_ALL5.png, id=1056, 569.0058pt 
-x 426.8748pt>
-File: Figures//./plot/ROC/CAT_cd_ppty_val_type__1_ROC_ALL5.png Graphic file (ty
-pe png)
-<use Figures//./plot/ROC/CAT_cd_ppty_val_type__1_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_cd_ppty_val_type__1_ROC_ALL5.p
-ng  used on input line 744.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_cd_ppty_val_type__2_ROC_ALL5.png, id=1057, 569.0058pt 
-x 426.8748pt>
-File: Figures//./plot/ROC/CAT_cd_ppty_val_type__2_ROC_ALL5.png Graphic file (ty
-pe png)
-<use Figures//./plot/ROC/CAT_cd_ppty_val_type__2_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_cd_ppty_val_type__2_ROC_ALL5.p
-ng  used on input line 748.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_cd_ppty_val_type__3_ROC_ALL5.png, id=1058, 569.0058pt 
-x 426.8748pt>
-File: Figures//./plot/ROC/CAT_cd_ppty_val_type__3_ROC_ALL5.png Graphic file (ty
-pe png)
-<use Figures//./plot/ROC/CAT_cd_ppty_val_type__3_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_cd_ppty_val_type__3_ROC_ALL5.p
-ng  used on input line 756.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_cd_ppty_val_type__9_ROC_ALL5.png, id=1059, 569.0058pt 
-x 426.8748pt>
-File: Figures//./plot/ROC/CAT_cd_ppty_val_type__9_ROC_ALL5.png Graphic file (ty
-pe png)
-<use Figures//./plot/ROC/CAT_cd_ppty_val_type__9_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_cd_ppty_val_type__9_ROC_ALL5.p
-ng  used on input line 760.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
- [80 <./Figures//./plot/ROC/CAT_us_reg__Other_ROC_ALL5.png (PNG copy)> <./Figur
-es//./plot/ROC/CAT_occpy_sts__I_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC
-/CAT_occpy_sts__P_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_occpy_sts
-__S_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_cd_ppty_val_type__1_ROC
-_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_cd_ppty_val_type__2_ROC_ALL5.p
-ng (PNG copy)>]
-<Figures//./plot/ROC/CAT_ind_afdl__F_ROC_ALL5.png, id=1067, 569.0058pt x 426.87
-48pt>
-File: Figures//./plot/ROC/CAT_ind_afdl__F_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/CAT_ind_afdl__F_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_ind_afdl__F_ROC_ALL5.png  used
- on input line 768.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_ind_afdl__H_ROC_ALL5.png, id=1068, 569.0058pt x 426.87
-48pt>
-File: Figures//./plot/ROC/CAT_ind_afdl__H_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/CAT_ind_afdl__H_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_ind_afdl__H_ROC_ALL5.png  used
- on input line 772.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_ind_afdl__9_ROC_ALL5.png, id=1069, 569.0058pt x 426.87
-48pt>
-File: Figures//./plot/ROC/CAT_ind_afdl__9_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/CAT_ind_afdl__9_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_ind_afdl__9_ROC_ALL5.png  used
- on input line 780.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_amrtzn_type__FRM_ROC_ALL5.png, id=1070, 569.0058pt x 4
-26.8748pt>
-File: Figures//./plot/ROC/CAT_amrtzn_type__FRM_ROC_ALL5.png Graphic file (type 
-png)
-<use Figures//./plot/ROC/CAT_amrtzn_type__FRM_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_amrtzn_type__FRM_ROC_ALL5.png 
- used on input line 784.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_prop_type__CO_ROC_ALL5.png, id=1071, 569.0058pt x 426.
-8748pt>
-File: Figures//./plot/ROC/CAT_prop_type__CO_ROC_ALL5.png Graphic file (type png
-)
-<use Figures//./plot/ROC/CAT_prop_type__CO_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_prop_type__CO_ROC_ALL5.png  us
-ed on input line 793.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_prop_type__CP_ROC_ALL5.png, id=1072, 569.0058pt x 426.
-8748pt>
-File: Figures//./plot/ROC/CAT_prop_type__CP_ROC_ALL5.png Graphic file (type png
-)
-<use Figures//./plot/ROC/CAT_prop_type__CP_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_prop_type__CP_ROC_ALL5.png  us
-ed on input line 797.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
- [81 <./Figures//./plot/ROC/CAT_cd_ppty_val_type__3_ROC_ALL5.png (PNG copy)> <.
-/Figures//./plot/ROC/CAT_cd_ppty_val_type__9_ROC_ALL5.png (PNG copy)> <./Figure
-s//./plot/ROC/CAT_ind_afdl__F_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/C
-AT_ind_afdl__H_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_ind_afdl__9_
-ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_amrtzn_type__FRM_ROC_ALL5.p
-ng (PNG copy)>]
-<Figures//./plot/ROC/CAT_prop_type__MH_ROC_ALL5.png, id=1080, 569.0058pt x 426.
-8748pt>
-File: Figures//./plot/ROC/CAT_prop_type__MH_ROC_ALL5.png Graphic file (type png
-)
-<use Figures//./plot/ROC/CAT_prop_type__MH_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_prop_type__MH_ROC_ALL5.png  us
-ed on input line 805.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_prop_type__PU_ROC_ALL5.png, id=1081, 569.0058pt x 426.
-8748pt>
-File: Figures//./plot/ROC/CAT_prop_type__PU_ROC_ALL5.png Graphic file (type png
-)
-<use Figures//./plot/ROC/CAT_prop_type__PU_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_prop_type__PU_ROC_ALL5.png  us
-ed on input line 809.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_prop_type__SF_ROC_ALL5.png, id=1082, 569.0058pt x 426.
-8748pt>
-File: Figures//./plot/ROC/CAT_prop_type__SF_ROC_ALL5.png Graphic file (type png
-)
-<use Figures//./plot/ROC/CAT_prop_type__SF_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_prop_type__SF_ROC_ALL5.png  us
-ed on input line 817.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_orig_loan_term_3grp__EQ_360M_ROC_ALL5.png, id=1083, 56
-9.0058pt x 426.8748pt>
-File: Figures//./plot/ROC/CAT_orig_loan_term_3grp__EQ_360M_ROC_ALL5.png Graphic
- file (type png)
-<use Figures//./plot/ROC/CAT_orig_loan_term_3grp__EQ_360M_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_orig_loan_term_3grp__EQ_360M_R
-OC_ALL5.png  used on input line 821.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_orig_loan_term_3grp__HI_360M_ROC_ALL5.png, id=1084, 56
-9.0058pt x 426.8748pt>
-File: Figures//./plot/ROC/CAT_orig_loan_term_3grp__HI_360M_ROC_ALL5.png Graphic
- file (type png)
-<use Figures//./plot/ROC/CAT_orig_loan_term_3grp__HI_360M_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_orig_loan_term_3grp__HI_360M_R
-OC_ALL5.png  used on input line 829.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/CAT_orig_loan_term_3grp__LE_360M_ROC_ALL5.png, id=1085, 56
-9.0058pt x 426.8748pt>
-File: Figures//./plot/ROC/CAT_orig_loan_term_3grp__LE_360M_ROC_ALL5.png Graphic
- file (type png)
-<use Figures//./plot/ROC/CAT_orig_loan_term_3grp__LE_360M_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/CAT_orig_loan_term_3grp__LE_360M_R
-OC_ALL5.png  used on input line 833.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
- [82 <./Figures//./plot/ROC/CAT_prop_type__CO_ROC_ALL5.png (PNG copy)> <./Figur
-es//./plot/ROC/CAT_prop_type__CP_ROC_ALL5.png (PNG copy)> <./Figures//./plot/RO
-C/CAT_prop_type__MH_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_prop_ty
-pe__PU_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_prop_type__SF_ROC_AL
-L5.png (PNG copy)> <./Figures//./plot/ROC/CAT_orig_loan_term_3grp__EQ_360M_ROC_
-ALL5.png (PNG copy)>]
-File: Figures//./plot/ROC/Main/IND_flag_orig_loan_term_HEQ_360M_ROC_ALL5.png Gr
-aphic file (type png)
-<use Figures//./plot/ROC/Main/IND_flag_orig_loan_term_HEQ_360M_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/Main/IND_flag_orig_loan_term_HEQ_3
-60M_ROC_ALL5.png  used on input line 843.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/IND_flag_cnt_units_ROC_ALL5.png, id=1093, 569.0058pt x 426
-.8748pt>
-File: Figures//./plot/ROC/IND_flag_cnt_units_ROC_ALL5.png Graphic file (type pn
-g)
-<use Figures//./plot/ROC/IND_flag_cnt_units_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/IND_flag_cnt_units_ROC_ALL5.png  u
-sed on input line 847.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/IND_flag_fthb_ROC_ALL5.png, id=1094, 569.0058pt x 426.8748
-pt>
-File: Figures//./plot/ROC/IND_flag_fthb_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/IND_flag_fthb_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/IND_flag_fthb_ROC_ALL5.png  used o
-n input line 855.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/IND_flag_int_only_ROC_ALL5.png, id=1095, 569.0058pt x 426.
-8748pt>
-File: Figures//./plot/ROC/IND_flag_int_only_ROC_ALL5.png Graphic file (type png
-)
-<use Figures//./plot/ROC/IND_flag_int_only_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/IND_flag_int_only_ROC_ALL5.png  us
-ed on input line 859.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/IND_flag_mi_ROC_ALL5.png, id=1096, 569.0058pt x 426.8748pt
->
-File: Figures//./plot/ROC/IND_flag_mi_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/IND_flag_mi_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/IND_flag_mi_ROC_ALL5.png  used on 
-input line 867.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/IND_flag_sc_ROC_ALL5.png, id=1097, 569.0058pt x 426.8748pt
->
-File: Figures//./plot/ROC/IND_flag_sc_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/IND_flag_sc_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/IND_flag_sc_ROC_ALL5.png  used on 
-input line 871.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
- [83 <./Figures//./plot/ROC/CAT_orig_loan_term_3grp__HI_360M_ROC_ALL5.png (PNG 
-copy)> <./Figures//./plot/ROC/CAT_orig_loan_term_3grp__LE_360M_ROC_ALL5.png (PN
-G copy)> <./Figures//./plot/ROC/IND_flag_cnt_units_ROC_ALL5.png (PNG copy)> <./
-Figures//./plot/ROC/IND_flag_fthb_ROC_ALL5.png (PNG copy)> <./Figures//./plot/R
-OC/IND_flag_int_only_ROC_ALL5.png (PNG copy)>]
-<Figures//./plot/ROC/IND_ind_harp_ROC_ALL5.png, id=1105, 569.0058pt x 426.8748p
-t>
-File: Figures//./plot/ROC/IND_ind_harp_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/IND_ind_harp_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/IND_ind_harp_ROC_ALL5.png  used on
- input line 879.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/IND_ppmt_pnlty_ROC_ALL5.png, id=1106, 569.0058pt x 426.874
-8pt>
-File: Figures//./plot/ROC/IND_ppmt_pnlty_ROC_ALL5.png Graphic file (type png)
-<use Figures//./plot/ROC/IND_ppmt_pnlty_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/IND_ppmt_pnlty_ROC_ALL5.png  used 
-on input line 883.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/IND_flag_orig_loan_term_EQ_360M_ROC_ALL5.png, id=1107, 569
-.0058pt x 426.8748pt>
-File: Figures//./plot/ROC/IND_flag_orig_loan_term_EQ_360M_ROC_ALL5.png Graphic 
-file (type png)
-<use Figures//./plot/ROC/IND_flag_orig_loan_term_EQ_360M_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/IND_flag_orig_loan_term_EQ_360M_RO
-C_ALL5.png  used on input line 891.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-<Figures//./plot/ROC/IND_flag_orig_loan_term_HI_360M_ROC_ALL5.png, id=1108, 569
-.0058pt x 426.8748pt>
-File: Figures//./plot/ROC/IND_flag_orig_loan_term_HI_360M_ROC_ALL5.png Graphic 
-file (type png)
-<use Figures//./plot/ROC/IND_flag_orig_loan_term_HI_360M_ROC_ALL5.png>
-Package pdftex.def Info: Figures//./plot/ROC/IND_flag_orig_loan_term_HI_360M_RO
-C_ALL5.png  used on input line 895.
-(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
-File: Figures//./plot/ML/PDP_fico.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_fico.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_fico.png  used on input line 90
-8.
-(pdftex.def)             Requested size: 204.85847pt x 148.98558pt.
-File: Figures//./plot/ML/PDP_orig_upb.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_orig_upb.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_orig_upb.png  used on input lin
-e 912.
-(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
- [84 <./Figures//./plot/ROC/IND_flag_mi_ROC_ALL5.png (PNG copy)> <./Figures//./
-plot/ROC/IND_flag_sc_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/IND_ind_ha
-rp_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/IND_ppmt_pnlty_ROC_ALL5.png 
-(PNG copy)> <./Figures//./plot/ROC/IND_flag_orig_loan_term_EQ_360M_ROC_ALL5.png
- (PNG copy)> <./Figures//./plot/ROC/IND_flag_orig_loan_term_HI_360M_ROC_ALL5.pn
-g (PNG copy)>]
-<Figures//./plot/ML/PDP_ltv.png, id=1116, 429.2838pt x 312.2064pt>
-File: Figures//./plot/ML/PDP_ltv.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_ltv.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_ltv.png  used on input line 920
-.
-(pdftex.def)             Requested size: 204.85847pt x 148.98558pt.
-File: Figures//./plot/ML/PDP_cltv.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_cltv.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_cltv.png  used on input line 92
-4.
-(pdftex.def)             Requested size: 204.85847pt x 151.28177pt.
-File: Figures//./plot/ML/PDP_dti.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_dti.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_dti.png  used on input line 932
-.
-(pdftex.def)             Requested size: 204.85847pt x 152.68251pt.
-<Figures//./plot/ML/PDP_mi_pct.png, id=1117, 429.2838pt x 312.9291pt>
-File: Figures//./plot/ML/PDP_mi_pct.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_mi_pct.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_mi_pct.png  used on input line 
-936.
-(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
-<Figures//./plot/ML/PDP_cnt_borr.png, id=1118, 429.2838pt x 312.9291pt>
-File: Figures//./plot/ML/PDP_cnt_borr.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_cnt_borr.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_cnt_borr.png  used on input lin
-e 944.
-(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
-<Figures//./plot/ML/PDP_cnt_units.png, id=1119, 430.0065pt x 312.9291pt>
-File: Figures//./plot/ML/PDP_cnt_units.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_cnt_units.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_cnt_units.png  used on input li
-ne 948.
-(pdftex.def)             Requested size: 204.85847pt x 149.08214pt.
- [85 <./Figures//./plot/ML/PDP_ltv.png> <./Figures//./plot/ML/PDP_mi_pct.png>]
-<Figures//./plot/ML/PDP_orig_loan_term.png, id=1130, 429.2838pt x 312.9291pt>
-File: Figures//./plot/ML/PDP_orig_loan_term.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_orig_loan_term.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_orig_loan_term.png  used on inp
-ut line 955.
-(pdftex.def)             Requested size: 227.62209pt x 165.92323pt.
-<Figures//./plot/ML/PDP_us_reg__Midwest.png, id=1131, 429.2838pt x 312.9291pt>
-File: Figures//./plot/ML/PDP_us_reg__Midwest.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_us_reg__Midwest.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_us_reg__Midwest.png  used on in
-put line 964.
-(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
-<Figures//./plot/ML/PDP_us_reg__Northeast.png, id=1132, 435.0654pt x 312.9291pt
->
-File: Figures//./plot/ML/PDP_us_reg__Northeast.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_us_reg__Northeast.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_us_reg__Northeast.png  used on 
-input line 968.
-(pdftex.def)             Requested size: 204.85847pt x 147.34885pt.
-<Figures//./plot/ML/PDP_us_reg__South.png, id=1133, 435.0654pt x 312.9291pt>
-File: Figures//./plot/ML/PDP_us_reg__South.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_us_reg__South.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_us_reg__South.png  used on inpu
-t line 976.
-(pdftex.def)             Requested size: 204.85847pt x 147.34885pt.
-<Figures//./plot/ML/PDP_us_reg__West.png, id=1134, 435.0654pt x 312.2064pt>
-File: Figures//./plot/ML/PDP_us_reg__West.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_us_reg__West.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_us_reg__West.png  used on input
- line 980.
-(pdftex.def)             Requested size: 204.85847pt x 147.00856pt.
- [86 <./Figures//./plot/ML/PDP_cnt_borr.png> <./Figures//./plot/ML/PDP_cnt_unit
-s.png> <./Figures//./plot/ML/PDP_orig_loan_term.png> <./Figures//./plot/ML/PDP_
-us_reg__Midwest.png> <./Figures//./plot/ML/PDP_us_reg__Northeast.png>]
-<Figures//./plot/ML/PDP_us_reg__Other.png, id=1147, 429.2838pt x 312.9291pt>
-File: Figures//./plot/ML/PDP_us_reg__Other.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_us_reg__Other.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_us_reg__Other.png  used on inpu
-t line 988.
-(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
-<Figures//./plot/ML/PDP_channel__B.png, id=1148, 448.074pt x 312.9291pt>
-File: Figures//./plot/ML/PDP_channel__B.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_channel__B.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_channel__B.png  used on input l
-ine 992.
-(pdftex.def)             Requested size: 204.85847pt x 143.07054pt.
-<Figures//./plot/ML/PDP_channel__R.png, id=1149, 435.0654pt x 312.9291pt>
-File: Figures//./plot/ML/PDP_channel__R.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_channel__R.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_channel__R.png  used on input l
-ine 1000.
-(pdftex.def)             Requested size: 204.85847pt x 147.34885pt.
-<Figures//./plot/ML/PDP_channel__9.png, id=1150, 429.2838pt x 312.9291pt>
-File: Figures//./plot/ML/PDP_channel__9.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_channel__9.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_channel__9.png  used on input l
-ine 1004.
-(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
-File: Figures//./plot/ML/PDP_loan_purpose__C.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_loan_purpose__C.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_loan_purpose__C.png  used on in
-put line 1012.
-(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
-<Figures//./plot/ML/PDP_loan_purpose__N.png, id=1151, 441.5697pt x 312.9291pt>
-File: Figures//./plot/ML/PDP_loan_purpose__N.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_loan_purpose__N.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_loan_purpose__N.png  used on in
-put line 1016.
-(pdftex.def)             Requested size: 204.85847pt x 145.17627pt.
- [87 <./Figures//./plot/ML/PDP_us_reg__South.png> <./Figures//./plot/ML/PDP_us_
-reg__West.png> <./Figures//./plot/ML/PDP_us_reg__Other.png> <./Figures//./plot/
-ML/PDP_channel__B.png> <./Figures//./plot/ML/PDP_channel__R.png> <./Figures//./
-plot/ML/PDP_channel__9.png>]
-<Figures//./plot/ML/PDP_loan_purpose__P.png, id=1165, 429.2838pt x 315.8199pt>
-File: Figures//./plot/ML/PDP_loan_purpose__P.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_loan_purpose__P.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_loan_purpose__P.png  used on in
-put line 1024.
-(pdftex.def)             Requested size: 204.85847pt x 150.70995pt.
-<Figures//./plot/ML/PDP_cd_ppty_val_type__1.png, id=1166, 429.2838pt x 312.9291
-pt>
-File: Figures//./plot/ML/PDP_cd_ppty_val_type__1.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_cd_ppty_val_type__1.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_cd_ppty_val_type__1.png  used o
-n input line 1028.
-(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
-File: Figures//./plot/ML/PDP_cd_ppty_val_type__2.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_cd_ppty_val_type__2.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_cd_ppty_val_type__2.png  used o
-n input line 1036.
-(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
-<Figures//./plot/ML/PDP_cd_ppty_val_type__3.png, id=1167, 435.0654pt x 312.9291
-pt>
-File: Figures//./plot/ML/PDP_cd_ppty_val_type__3.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_cd_ppty_val_type__3.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_cd_ppty_val_type__3.png  used o
-n input line 1040.
-(pdftex.def)             Requested size: 204.85847pt x 147.34885pt.
-<Figures//./plot/ML/PDP_cd_ppty_val_type__9.png, id=1168, 429.2838pt x 312.9291
-pt>
-File: Figures//./plot/ML/PDP_cd_ppty_val_type__9.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_cd_ppty_val_type__9.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_cd_ppty_val_type__9.png  used o
-n input line 1047.
-(pdftex.def)             Requested size: 227.62209pt x 165.92323pt.
- [88 <./Figures//./plot/ML/PDP_loan_purpose__N.png> <./Figures//./plot/ML/PDP_l
-oan_purpose__P.png> <./Figures//./plot/ML/PDP_cd_ppty_val_type__1.png> <./Figur
-es//./plot/ML/PDP_cd_ppty_val_type__3.png>]
-<Figures//./plot/ML/PDP_flag_mi.png, id=1180, 435.0654pt x 312.9291pt>
-File: Figures//./plot/ML/PDP_flag_mi.png Graphic file (type png)
-<use Figures//./plot/ML/PDP_flag_mi.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_flag_mi.png  used on input line
- 1056.
-(pdftex.def)             Requested size: 204.85847pt x 147.34885pt.
-<Figures//./plot/ML/PDP_flag_orig_loan_term_HEQ_360M.png, id=1181, 435.0654pt x
- 312.9291pt>
-File: Figures//./plot/ML/PDP_flag_orig_loan_term_HEQ_360M.png Graphic file (typ
-e png)
-<use Figures//./plot/ML/PDP_flag_orig_loan_term_HEQ_360M.png>
-Package pdftex.def Info: Figures//./plot/ML/PDP_flag_orig_loan_term_HEQ_360M.pn
-g  used on input line 1060.
-(pdftex.def)             Requested size: 204.85847pt x 147.34885pt.
-) [89 <./Figures//./plot/ML/PDP_cd_ppty_val_type__9.png> <./Figures//./plot/ML/
-PDP_flag_mi.png> <./Figures//./plot/ML/PDP_flag_orig_loan_term_HEQ_360M.png>] (
-./Masterthesis.bbl
+] (./Masterthesis.bbl
+chapter 10.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 6.
-
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -2927,45 +2332,916 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 Underfull \hbox (badness 10000) in paragraph at lines 25--30
-\T1/lmtt/m/n/10.95 default / documents / files / document _ library / Publicati
-ons / Reports / 2023 / 1061483 /
+[]\T1/Roboto-LF/regular/n/12 (+20) European Bank-ing Au-thor-ity.  \T1/Roboto-L
+F/regular/it/12 (+20) Follow-Up Re-port from the Con-sul-ta-tion
+ []
+
+
+Underfull \hbox (badness 7064) in paragraph at lines 25--30
+\T1/Roboto-LF/regular/it/12 (+20) on the Dis-cus-sion Pa-per on Ma-chine Learn-
+ing for IRB Mod-els\T1/Roboto-LF/regular/n/12 (+20) .  URL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--30
+[][]$\T1/lmtt/m/n/12 https : / / www . eba . europa . eu / sites / default / do
+cuments / files / document _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--30
+\T1/lmtt/m/n/12 library / Publications / Reports / 2023 / 1061483 / Follow-[]up
+ % 20report % 20on %
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 83--88
-[]\T1/lmr/m/n/10.95 (+20) Y. E. Khal.  \T1/lmr/m/it/10.95 (+20) Con-fu-sion ma-
-trix, AUC and ROC curve and
+[]\T1/Roboto-LF/regular/n/12 (+20) Y. E. Khal.  \T1/Roboto-LF/regular/it/12 (+2
+0) Con-fu-sion ma-trix, AUC and ROC curve and Gini
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 83--88
-\T1/lmr/m/it/10.95 (+20) Gini clearly ex-plained\T1/lmr/m/n/10.95 (+20) .  URL 
-[][]$\T1/lmtt/m/n/10.95 https : / / yassineelkhal . medium . com /
+\T1/Roboto-LF/regular/it/12 (+20) clearly ex-plained\T1/Roboto-LF/regular/n/12 
+(+20) .  URL [][]$\T1/lmtt/m/n/12 https : / / yassineelkhal . medium . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--88
-\T1/lmtt/m/n/10.95 confusion-[]matrix-[]auc-[]and-[]roc-[]curve-[]and-[]gini-[]
-clearly-[]explained-[]221788618eb2$[][]\T1/lmr/m/n/10.95 (+20) .
+Overfull \hbox (31.99884pt too wide) in paragraph at lines 83--88
+\T1/lmtt/m/n/12 confusion-[]matrix-[]auc-[]and-[]roc-[]curve-[]and-[]gini-[]cle
+arly-[]explained-[]221788618eb2$[][]\T1/Roboto-LF/regular/n/12 (-20) .
  []
 
-[90
+[66
 
 
 
-]
-Underfull \hbox (badness 2689) in paragraph at lines 110--114
-[]\T1/lmr/m/n/10.95 (+20) Federal Home Loan Mort-gage Cor-po-ra-tion.  \T1/lmr/
-m/it/10.95 (+20) Single-Family Loan Level Dataset
- []
+]) [67]
+\openout2 = `Annex.aux'.
+
+ (./Annex.tex
+chapter A.
+[68
 
 
-Underfull \hbox (badness 7344) in paragraph at lines 110--114
-\T1/lmr/m/it/10.95 (+20) Gen-eral User Guide\T1/lmr/m/n/10.95 (+20) .  URL [][]
-$\T1/lmtt/m/n/10.95 https : / / www . freddiemac . com / research / datasets /
- []
+] [69]
+chapter B.
+[70
 
-) [91] (./Masterthesis.aux (./Abstract.aux) (./Introduction.aux)
+] [71] [72] [73] [74] [75] [76] [77]
+chapter C.
+File: Figures//./plot/Distribution/Main/RE_NUM_fico_DISTRIBUTION_ALL.png Graphi
+c file (type png)
+<use Figures//./plot/Distribution/Main/RE_NUM_fico_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_fico_DISTRIBU
+TION_ALL.png  used on input line 384.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+File: Figures//./plot/Distribution/Main/RE_NUM_orig_upb_DISTRIBUTION_ALL.png Gr
+aphic file (type png)
+<use Figures//./plot/Distribution/Main/RE_NUM_orig_upb_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_orig_upb_DIST
+RIBUTION_ALL.png  used on input line 388.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+File: Figures//./plot/Distribution/Main/RE_NUM_cltv_DISTRIBUTION_ALL.png Graphi
+c file (type png)
+<use Figures//./plot/Distribution/Main/RE_NUM_cltv_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_cltv_DISTRIBU
+TION_ALL.png  used on input line 396.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/NUM_ltv_DISTRIBUTION_ALL.png, id=1096, 602.25pt x
+ 451.6875pt>
+File: Figures//./plot/Distribution/NUM_ltv_DISTRIBUTION_ALL.png Graphic file (t
+ype png)
+<use Figures//./plot/Distribution/NUM_ltv_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/NUM_ltv_DISTRIBUTION_ALL.
+png  used on input line 400.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+File: Figures//./plot/Distribution/Main/RE_NUM_dti_DISTRIBUTION_ALL.png Graphic
+ file (type png)
+<use Figures//./plot/Distribution/Main/RE_NUM_dti_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_dti_DISTRIBUT
+ION_ALL.png  used on input line 408.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+File: Figures//./plot/Distribution/Main/RE_NUM_cnt_borr_DISTRIBUTION_ALL.png Gr
+aphic file (type png)
+<use Figures//./plot/Distribution/Main/RE_NUM_cnt_borr_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_NUM_cnt_borr_DIST
+RIBUTION_ALL.png  used on input line 412.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+[78
+
+ <./Figures//./plot/Distribution/NUM_ltv_DISTRIBUTION_ALL.png>]
+<Figures//./plot/Distribution/NUM_orig_loan_term_DISTRIBUTION_ALL.png, id=1104,
+ 602.25pt x 451.6875pt>
+File: Figures//./plot/Distribution/NUM_orig_loan_term_DISTRIBUTION_ALL.png Grap
+hic file (type png)
+<use Figures//./plot/Distribution/NUM_orig_loan_term_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/NUM_orig_loan_term_DISTRI
+BUTION_ALL.png  used on input line 420.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/NUM_mi_pct_DISTRIBUTION_ALL.png, id=1105, 602.25p
+t x 451.6875pt>
+File: Figures//./plot/Distribution/NUM_mi_pct_DISTRIBUTION_ALL.png Graphic file
+ (type png)
+<use Figures//./plot/Distribution/NUM_mi_pct_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/NUM_mi_pct_DISTRIBUTION_A
+LL.png  used on input line 424.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/NUM_cnt_units_DISTRIBUTION_ALL.png, id=1106, 602.
+25pt x 451.6875pt>
+File: Figures//./plot/Distribution/NUM_cnt_units_DISTRIBUTION_ALL.png Graphic f
+ile (type png)
+<use Figures//./plot/Distribution/NUM_cnt_units_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/NUM_cnt_units_DISTRIBUTIO
+N_ALL.png  used on input line 431.
+(pdftex.def)             Requested size: 227.62209pt x 170.71947pt.
+<Figures//./plot/Distribution/CAT_occpy_sts_DISTRIBUTION_ALL.png, id=1107, 602.
+25pt x 451.6875pt>
+File: Figures//./plot/Distribution/CAT_occpy_sts_DISTRIBUTION_ALL.png Graphic f
+ile (type png)
+<use Figures//./plot/Distribution/CAT_occpy_sts_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/CAT_occpy_sts_DISTRIBUTIO
+N_ALL.png  used on input line 440.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/CAT_loan_purpose_DISTRIBUTION_ALL.png, id=1108, 6
+02.25pt x 451.6875pt>
+File: Figures//./plot/Distribution/CAT_loan_purpose_DISTRIBUTION_ALL.png Graphi
+c file (type png)
+<use Figures//./plot/Distribution/CAT_loan_purpose_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/CAT_loan_purpose_DISTRIBU
+TION_ALL.png  used on input line 444.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+ [79 <./Figures//./plot/Distribution/NUM_orig_loan_term_DISTRIBUTION_ALL.png> <
+./Figures//./plot/Distribution/NUM_mi_pct_DISTRIBUTION_ALL.png> <./Figures//./p
+lot/Distribution/NUM_cnt_units_DISTRIBUTION_ALL.png>]
+<Figures//./plot/Distribution/CAT_prop_type_DISTRIBUTION_ALL.png, id=1119, 602.
+25pt x 451.6875pt>
+File: Figures//./plot/Distribution/CAT_prop_type_DISTRIBUTION_ALL.png Graphic f
+ile (type png)
+<use Figures//./plot/Distribution/CAT_prop_type_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/CAT_prop_type_DISTRIBUTIO
+N_ALL.png  used on input line 452.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/CAT_cd_ppty_val_type_DISTRIBUTION_ALL.png, id=112
+0, 602.25pt x 451.6875pt>
+File: Figures//./plot/Distribution/CAT_cd_ppty_val_type_DISTRIBUTION_ALL.png Gr
+aphic file (type png)
+<use Figures//./plot/Distribution/CAT_cd_ppty_val_type_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/CAT_cd_ppty_val_type_DIST
+RIBUTION_ALL.png  used on input line 456.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/CAT_ind_afdl_DISTRIBUTION_ALL.png, id=1121, 602.2
+5pt x 451.6875pt>
+File: Figures//./plot/Distribution/CAT_ind_afdl_DISTRIBUTION_ALL.png Graphic fi
+le (type png)
+<use Figures//./plot/Distribution/CAT_ind_afdl_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/CAT_ind_afdl_DISTRIBUTION
+_ALL.png  used on input line 464.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/CAT_amrtzn_type_DISTRIBUTION_ALL.png, id=1122, 60
+2.25pt x 451.6875pt>
+File: Figures//./plot/Distribution/CAT_amrtzn_type_DISTRIBUTION_ALL.png Graphic
+ file (type png)
+<use Figures//./plot/Distribution/CAT_amrtzn_type_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/CAT_amrtzn_type_DISTRIBUT
+ION_ALL.png  used on input line 468.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+File: Figures//./plot/Distribution/Main/RE_CAT_us_reg_DISTRIBUTION_ALL.png Grap
+hic file (type png)
+<use Figures//./plot/Distribution/Main/RE_CAT_us_reg_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_CAT_us_reg_DISTRI
+BUTION_ALL.png  used on input line 476.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/CAT_orig_loan_term_3grp_DISTRIBUTION_ALL.png, id=
+1123, 602.25pt x 451.6875pt>
+File: Figures//./plot/Distribution/CAT_orig_loan_term_3grp_DISTRIBUTION_ALL.png
+ Graphic file (type png)
+<use Figures//./plot/Distribution/CAT_orig_loan_term_3grp_DISTRIBUTION_ALL.png>
+
+Package pdftex.def Info: Figures//./plot/Distribution/CAT_orig_loan_term_3grp_D
+ISTRIBUTION_ALL.png  used on input line 480.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+ [80 <./Figures//./plot/Distribution/CAT_occpy_sts_DISTRIBUTION_ALL.png> <./Fig
+ures//./plot/Distribution/CAT_loan_purpose_DISTRIBUTION_ALL.png> <./Figures//./
+plot/Distribution/CAT_prop_type_DISTRIBUTION_ALL.png> <./Figures//./plot/Distri
+bution/CAT_cd_ppty_val_type_DISTRIBUTION_ALL.png> <./Figures//./plot/Distributi
+on/CAT_ind_afdl_DISTRIBUTION_ALL.png> <./Figures//./plot/Distribution/CAT_amrtz
+n_type_DISTRIBUTION_ALL.png>]
+File: Figures//./plot/Distribution/Main/RE_CAT_channel_DISTRIBUTION_ALL.png Gra
+phic file (type png)
+<use Figures//./plot/Distribution/Main/RE_CAT_channel_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_CAT_channel_DISTR
+IBUTION_ALL.png  used on input line 487.
+(pdftex.def)             Requested size: 227.62209pt x 170.71947pt.
+File: Figures//./plot/Distribution/Main/RE_IND_flag_orig_loan_term_HEQ_360M_DIS
+TRIBUTION_ALL.png Graphic file (type png)
+<use Figures//./plot/Distribution/Main/RE_IND_flag_orig_loan_term_HEQ_360M_DIST
+RIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/Main/RE_IND_flag_orig_loa
+n_term_HEQ_360M_DISTRIBUTION_ALL.png  used on input line 496.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/IND_flag_mi_DISTRIBUTION_ALL.png, id=1137, 602.25
+pt x 451.6875pt>
+File: Figures//./plot/Distribution/IND_flag_mi_DISTRIBUTION_ALL.png Graphic fil
+e (type png)
+<use Figures//./plot/Distribution/IND_flag_mi_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_mi_DISTRIBUTION_
+ALL.png  used on input line 500.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/IND_flag_orig_loan_term_HI_360M_DISTRIBUTION_ALL.
+png, id=1138, 602.25pt x 451.6875pt>
+File: Figures//./plot/Distribution/IND_flag_orig_loan_term_HI_360M_DISTRIBUTION
+_ALL.png Graphic file (type png)
+<use Figures//./plot/Distribution/IND_flag_orig_loan_term_HI_360M_DISTRIBUTION_
+ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_orig_loan_term_H
+I_360M_DISTRIBUTION_ALL.png  used on input line 508.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/IND_flag_orig_loan_term_EQ_360M_DISTRIBUTION_ALL.
+png, id=1139, 602.25pt x 451.6875pt>
+File: Figures//./plot/Distribution/IND_flag_orig_loan_term_EQ_360M_DISTRIBUTION
+_ALL.png Graphic file (type png)
+<use Figures//./plot/Distribution/IND_flag_orig_loan_term_EQ_360M_DISTRIBUTION_
+ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_orig_loan_term_E
+Q_360M_DISTRIBUTION_ALL.png  used on input line 512.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+ [81 <./Figures//./plot/Distribution/CAT_orig_loan_term_3grp_DISTRIBUTION_ALL.p
+ng> <./Figures//./plot/Distribution/IND_flag_mi_DISTRIBUTION_ALL.png>]
+<Figures//./plot/Distribution/IND_flag_sc_DISTRIBUTION_ALL.png, id=1150, 602.25
+pt x 451.6875pt>
+File: Figures//./plot/Distribution/IND_flag_sc_DISTRIBUTION_ALL.png Graphic fil
+e (type png)
+<use Figures//./plot/Distribution/IND_flag_sc_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_sc_DISTRIBUTION_
+ALL.png  used on input line 520.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/IND_ind_harp_DISTRIBUTION_ALL.png, id=1151, 602.2
+5pt x 451.6875pt>
+File: Figures//./plot/Distribution/IND_ind_harp_DISTRIBUTION_ALL.png Graphic fi
+le (type png)
+<use Figures//./plot/Distribution/IND_ind_harp_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/IND_ind_harp_DISTRIBUTION
+_ALL.png  used on input line 524.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/IND_ppmt_pnlty_DISTRIBUTION_ALL.png, id=1152, 602
+.25pt x 451.6875pt>
+File: Figures//./plot/Distribution/IND_ppmt_pnlty_DISTRIBUTION_ALL.png Graphic 
+file (type png)
+<use Figures//./plot/Distribution/IND_ppmt_pnlty_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/IND_ppmt_pnlty_DISTRIBUTI
+ON_ALL.png  used on input line 532.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/IND_flag_int_only_DISTRIBUTION_ALL.png, id=1153, 
+602.25pt x 451.6875pt>
+File: Figures//./plot/Distribution/IND_flag_int_only_DISTRIBUTION_ALL.png Graph
+ic file (type png)
+<use Figures//./plot/Distribution/IND_flag_int_only_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_int_only_DISTRIB
+UTION_ALL.png  used on input line 536.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/IND_flag_fthb_DISTRIBUTION_ALL.png, id=1154, 602.
+25pt x 451.6875pt>
+File: Figures//./plot/Distribution/IND_flag_fthb_DISTRIBUTION_ALL.png Graphic f
+ile (type png)
+<use Figures//./plot/Distribution/IND_flag_fthb_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_fthb_DISTRIBUTIO
+N_ALL.png  used on input line 544.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+<Figures//./plot/Distribution/IND_flag_cnt_units_DISTRIBUTION_ALL.png, id=1155,
+ 602.25pt x 451.6875pt>
+File: Figures//./plot/Distribution/IND_flag_cnt_units_DISTRIBUTION_ALL.png Grap
+hic file (type png)
+<use Figures//./plot/Distribution/IND_flag_cnt_units_DISTRIBUTION_ALL.png>
+Package pdftex.def Info: Figures//./plot/Distribution/IND_flag_cnt_units_DISTRI
+BUTION_ALL.png  used on input line 548.
+(pdftex.def)             Requested size: 204.85847pt x 153.64063pt.
+ [82 <./Figures//./plot/Distribution/IND_flag_orig_loan_term_HI_360M_DISTRIBUTI
+ON_ALL.png> <./Figures//./plot/Distribution/IND_flag_orig_loan_term_EQ_360M_DIS
+TRIBUTION_ALL.png> <./Figures//./plot/Distribution/IND_flag_sc_DISTRIBUTION_ALL
+.png> <./Figures//./plot/Distribution/IND_ind_harp_DISTRIBUTION_ALL.png> <./Fig
+ures//./plot/Distribution/IND_ppmt_pnlty_DISTRIBUTION_ALL.png> <./Figures//./pl
+ot/Distribution/IND_flag_int_only_DISTRIBUTION_ALL.png>]
+File: Figures//./plot/Boxplot/Main/NUM_fico_BOXPLOT_ALL1.png Graphic file (type
+ png)
+<use Figures//./plot/Boxplot/Main/NUM_fico_BOXPLOT_ALL1.png>
+Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_fico_BOXPLOT_ALL1.png
+  used on input line 560.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+File: Figures//./plot/Boxplot/Main/NUM_orig_upb_BOXPLOT_ALL1.png Graphic file (
+type png)
+<use Figures//./plot/Boxplot/Main/NUM_orig_upb_BOXPLOT_ALL1.png>
+Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_orig_upb_BOXPLOT_ALL1
+.png  used on input line 564.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+File: Figures//./plot/Boxplot/Main/NUM_cltv_BOXPLOT_ALL1.png Graphic file (type
+ png)
+<use Figures//./plot/Boxplot/Main/NUM_cltv_BOXPLOT_ALL1.png>
+Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_cltv_BOXPLOT_ALL1.png
+  used on input line 572.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/Boxplot/NUM_ltv_BOXPLOT_ALL1.png, id=1169, 569.0058pt x 426.87
+48pt>
+File: Figures//./plot/Boxplot/NUM_ltv_BOXPLOT_ALL1.png Graphic file (type png)
+<use Figures//./plot/Boxplot/NUM_ltv_BOXPLOT_ALL1.png>
+Package pdftex.def Info: Figures//./plot/Boxplot/NUM_ltv_BOXPLOT_ALL1.png  used
+ on input line 576.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+File: Figures//./plot/Boxplot/Main/NUM_dti_BOXPLOT_ALL1.png Graphic file (type 
+png)
+<use Figures//./plot/Boxplot/Main/NUM_dti_BOXPLOT_ALL1.png>
+Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_dti_BOXPLOT_ALL1.png 
+ used on input line 584.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+File: Figures//./plot/Boxplot/Main/NUM_cnt_borr_BOXPLOT_ALL1.png Graphic file (
+type png)
+<use Figures//./plot/Boxplot/Main/NUM_cnt_borr_BOXPLOT_ALL1.png>
+Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_cnt_borr_BOXPLOT_ALL1
+.png  used on input line 588.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+ [83 <./Figures//./plot/Distribution/IND_flag_fthb_DISTRIBUTION_ALL.png> <./Fig
+ures//./plot/Distribution/IND_flag_cnt_units_DISTRIBUTION_ALL.png> <./Figures//
+./plot/Boxplot/NUM_ltv_BOXPLOT_ALL1.png (PNG copy)>]
+File: Figures//./plot/Boxplot/Main/NUM_orig_loan_term_BOXPLOT_ALL1.png Graphic 
+file (type png)
+<use Figures//./plot/Boxplot/Main/NUM_orig_loan_term_BOXPLOT_ALL1.png>
+Package pdftex.def Info: Figures//./plot/Boxplot/Main/NUM_orig_loan_term_BOXPLO
+T_ALL1.png  used on input line 596.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/Boxplot/NUM_mi_pct_BOXPLOT_ALL1.png, id=1179, 569.0058pt x 426
+.8748pt>
+File: Figures//./plot/Boxplot/NUM_mi_pct_BOXPLOT_ALL1.png Graphic file (type pn
+g)
+<use Figures//./plot/Boxplot/NUM_mi_pct_BOXPLOT_ALL1.png>
+Package pdftex.def Info: Figures//./plot/Boxplot/NUM_mi_pct_BOXPLOT_ALL1.png  u
+sed on input line 600.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/Boxplot/NUM_cnt_units_BOXPLOT_ALL1.png, id=1180, 569.0058pt x 
+426.8748pt>
+File: Figures//./plot/Boxplot/NUM_cnt_units_BOXPLOT_ALL1.png Graphic file (type
+ png)
+<use Figures//./plot/Boxplot/NUM_cnt_units_BOXPLOT_ALL1.png>
+Package pdftex.def Info: Figures//./plot/Boxplot/NUM_cnt_units_BOXPLOT_ALL1.png
+  used on input line 607.
+(pdftex.def)             Requested size: 227.62209pt x 170.75992pt.
+File: Figures//./plot/ROC/Main/NUM_fico_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/Main/NUM_fico_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_fico_ROC_ALL5.png  used o
+n input line 619.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+File: Figures//./plot/ROC/Main/NUM_orig_upb_ROC_ALL5.png Graphic file (type png
+)
+<use Figures//./plot/ROC/Main/NUM_orig_upb_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_orig_upb_ROC_ALL5.png  us
+ed on input line 623.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+ [84 <./Figures//./plot/Boxplot/NUM_mi_pct_BOXPLOT_ALL1.png (PNG copy)> <./Figu
+res//./plot/Boxplot/NUM_cnt_units_BOXPLOT_ALL1.png (PNG copy)>]
+File: Figures//./plot/ROC/Main/NUM_cltv_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/Main/NUM_cltv_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_cltv_ROC_ALL5.png  used o
+n input line 631.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/NUM_ltv_ROC_ALL5.png, id=1188, 569.0058pt x 426.8748pt>
+File: Figures//./plot/ROC/NUM_ltv_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/NUM_ltv_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/NUM_ltv_ROC_ALL5.png  used on inpu
+t line 635.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+File: Figures//./plot/ROC/Main/NUM_dti_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/Main/NUM_dti_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_dti_ROC_ALL5.png  used on
+ input line 643.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+File: Figures//./plot/ROC/Main/NUM_cnt_borr_ROC_ALL5.png Graphic file (type png
+)
+<use Figures//./plot/ROC/Main/NUM_cnt_borr_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/Main/NUM_cnt_borr_ROC_ALL5.png  us
+ed on input line 647.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/NUM_orig_loan_term_ROC_ALL5.png, id=1189, 569.0058pt x 426
+.8748pt>
+File: Figures//./plot/ROC/NUM_orig_loan_term_ROC_ALL5.png Graphic file (type pn
+g)
+<use Figures//./plot/ROC/NUM_orig_loan_term_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/NUM_orig_loan_term_ROC_ALL5.png  u
+sed on input line 655.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/NUM_mi_pct_ROC_ALL5.png, id=1190, 569.0058pt x 426.8748pt>
+
+File: Figures//./plot/ROC/NUM_mi_pct_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/NUM_mi_pct_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/NUM_mi_pct_ROC_ALL5.png  used on i
+nput line 659.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+
+[85 <./Figures//./plot/ROC/NUM_ltv_ROC_ALL5.png (PNG copy)>]
+<Figures//./plot/ROC/NUM_cnt_units_ROC_ALL5.png, id=1198, 569.0058pt x 426.8748
+pt>
+File: Figures//./plot/ROC/NUM_cnt_units_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/NUM_cnt_units_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/NUM_cnt_units_ROC_ALL5.png  used o
+n input line 666.
+(pdftex.def)             Requested size: 227.62209pt x 170.75992pt.
+File: Figures//./plot/ROC/Main/CAT_channel__C_ROC_ALL5.png Graphic file (type p
+ng)
+<use Figures//./plot/ROC/Main/CAT_channel__C_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/Main/CAT_channel__C_ROC_ALL5.png  
+used on input line 675.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_channel__B_ROC_ALL5.png, id=1199, 569.0058pt x 426.874
+8pt>
+File: Figures//./plot/ROC/CAT_channel__B_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/CAT_channel__B_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_channel__B_ROC_ALL5.png  used 
+on input line 679.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_channel__R_ROC_ALL5.png, id=1200, 569.0058pt x 426.874
+8pt>
+File: Figures//./plot/ROC/CAT_channel__R_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/CAT_channel__R_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_channel__R_ROC_ALL5.png  used 
+on input line 687.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_channel__9_ROC_ALL5.png, id=1201, 569.0058pt x 426.874
+8pt>
+File: Figures//./plot/ROC/CAT_channel__9_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/CAT_channel__9_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_channel__9_ROC_ALL5.png  used 
+on input line 691.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+ [86 <./Figures//./plot/ROC/NUM_orig_loan_term_ROC_ALL5.png (PNG copy)> <./Figu
+res//./plot/ROC/NUM_mi_pct_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/NUM_
+cnt_units_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_channel__B_ROC_AL
+L5.png (PNG copy)>]
+File: Figures//./plot/ROC/Main/CAT_us_reg__Midwest_ROC_ALL5.png Graphic file (t
+ype png)
+<use Figures//./plot/ROC/Main/CAT_us_reg__Midwest_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/Main/CAT_us_reg__Midwest_ROC_ALL5.
+png  used on input line 699.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_us_reg__Northeast_ROC_ALL5.png, id=1209, 569.0058pt x 
+426.8748pt>
+File: Figures//./plot/ROC/CAT_us_reg__Northeast_ROC_ALL5.png Graphic file (type
+ png)
+<use Figures//./plot/ROC/CAT_us_reg__Northeast_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_us_reg__Northeast_ROC_ALL5.png
+  used on input line 703.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_us_reg__South_ROC_ALL5.png, id=1210, 569.0058pt x 426.
+8748pt>
+File: Figures//./plot/ROC/CAT_us_reg__South_ROC_ALL5.png Graphic file (type png
+)
+<use Figures//./plot/ROC/CAT_us_reg__South_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_us_reg__South_ROC_ALL5.png  us
+ed on input line 711.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_us_reg__West_ROC_ALL5.png, id=1211, 569.0058pt x 426.8
+748pt>
+File: Figures//./plot/ROC/CAT_us_reg__West_ROC_ALL5.png Graphic file (type png)
+
+<use Figures//./plot/ROC/CAT_us_reg__West_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_us_reg__West_ROC_ALL5.png  use
+d on input line 715.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_us_reg__Other_ROC_ALL5.png, id=1212, 569.0058pt x 426.
+8748pt>
+File: Figures//./plot/ROC/CAT_us_reg__Other_ROC_ALL5.png Graphic file (type png
+)
+<use Figures//./plot/ROC/CAT_us_reg__Other_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_us_reg__Other_ROC_ALL5.png  us
+ed on input line 723.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_occpy_sts__I_ROC_ALL5.png, id=1213, 569.0058pt x 426.8
+748pt>
+File: Figures//./plot/ROC/CAT_occpy_sts__I_ROC_ALL5.png Graphic file (type png)
+
+<use Figures//./plot/ROC/CAT_occpy_sts__I_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_occpy_sts__I_ROC_ALL5.png  use
+d on input line 727.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+[87 <./Figures//./plot/ROC/CAT_channel__R_ROC_ALL5.png (PNG copy)> <./Figures//
+./plot/ROC/CAT_channel__9_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_u
+s_reg__Northeast_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_us_reg__So
+uth_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_us_reg__West_ROC_ALL5.p
+ng (PNG copy)>]
+<Figures//./plot/ROC/CAT_occpy_sts__P_ROC_ALL5.png, id=1222, 569.0058pt x 426.8
+748pt>
+File: Figures//./plot/ROC/CAT_occpy_sts__P_ROC_ALL5.png Graphic file (type png)
+
+<use Figures//./plot/ROC/CAT_occpy_sts__P_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_occpy_sts__P_ROC_ALL5.png  use
+d on input line 735.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_occpy_sts__S_ROC_ALL5.png, id=1223, 569.0058pt x 426.8
+748pt>
+File: Figures//./plot/ROC/CAT_occpy_sts__S_ROC_ALL5.png Graphic file (type png)
+
+<use Figures//./plot/ROC/CAT_occpy_sts__S_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_occpy_sts__S_ROC_ALL5.png  use
+d on input line 739.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_cd_ppty_val_type__1_ROC_ALL5.png, id=1224, 569.0058pt 
+x 426.8748pt>
+File: Figures//./plot/ROC/CAT_cd_ppty_val_type__1_ROC_ALL5.png Graphic file (ty
+pe png)
+<use Figures//./plot/ROC/CAT_cd_ppty_val_type__1_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_cd_ppty_val_type__1_ROC_ALL5.p
+ng  used on input line 747.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_cd_ppty_val_type__2_ROC_ALL5.png, id=1225, 569.0058pt 
+x 426.8748pt>
+File: Figures//./plot/ROC/CAT_cd_ppty_val_type__2_ROC_ALL5.png Graphic file (ty
+pe png)
+<use Figures//./plot/ROC/CAT_cd_ppty_val_type__2_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_cd_ppty_val_type__2_ROC_ALL5.p
+ng  used on input line 751.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_cd_ppty_val_type__3_ROC_ALL5.png, id=1226, 569.0058pt 
+x 426.8748pt>
+File: Figures//./plot/ROC/CAT_cd_ppty_val_type__3_ROC_ALL5.png Graphic file (ty
+pe png)
+<use Figures//./plot/ROC/CAT_cd_ppty_val_type__3_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_cd_ppty_val_type__3_ROC_ALL5.p
+ng  used on input line 759.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_cd_ppty_val_type__9_ROC_ALL5.png, id=1227, 569.0058pt 
+x 426.8748pt>
+File: Figures//./plot/ROC/CAT_cd_ppty_val_type__9_ROC_ALL5.png Graphic file (ty
+pe png)
+<use Figures//./plot/ROC/CAT_cd_ppty_val_type__9_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_cd_ppty_val_type__9_ROC_ALL5.p
+ng  used on input line 763.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+ [88 <./Figures//./plot/ROC/CAT_us_reg__Other_ROC_ALL5.png (PNG copy)> <./Figur
+es//./plot/ROC/CAT_occpy_sts__I_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC
+/CAT_occpy_sts__P_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_occpy_sts
+__S_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_cd_ppty_val_type__1_ROC
+_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_cd_ppty_val_type__2_ROC_ALL5.p
+ng (PNG copy)>]
+<Figures//./plot/ROC/CAT_ind_afdl__F_ROC_ALL5.png, id=1235, 569.0058pt x 426.87
+48pt>
+File: Figures//./plot/ROC/CAT_ind_afdl__F_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/CAT_ind_afdl__F_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_ind_afdl__F_ROC_ALL5.png  used
+ on input line 771.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_ind_afdl__H_ROC_ALL5.png, id=1236, 569.0058pt x 426.87
+48pt>
+File: Figures//./plot/ROC/CAT_ind_afdl__H_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/CAT_ind_afdl__H_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_ind_afdl__H_ROC_ALL5.png  used
+ on input line 775.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_ind_afdl__9_ROC_ALL5.png, id=1237, 569.0058pt x 426.87
+48pt>
+File: Figures//./plot/ROC/CAT_ind_afdl__9_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/CAT_ind_afdl__9_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_ind_afdl__9_ROC_ALL5.png  used
+ on input line 783.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_amrtzn_type__FRM_ROC_ALL5.png, id=1238, 569.0058pt x 4
+26.8748pt>
+File: Figures//./plot/ROC/CAT_amrtzn_type__FRM_ROC_ALL5.png Graphic file (type 
+png)
+<use Figures//./plot/ROC/CAT_amrtzn_type__FRM_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_amrtzn_type__FRM_ROC_ALL5.png 
+ used on input line 787.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_prop_type__CO_ROC_ALL5.png, id=1239, 569.0058pt x 426.
+8748pt>
+File: Figures//./plot/ROC/CAT_prop_type__CO_ROC_ALL5.png Graphic file (type png
+)
+<use Figures//./plot/ROC/CAT_prop_type__CO_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_prop_type__CO_ROC_ALL5.png  us
+ed on input line 796.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_prop_type__CP_ROC_ALL5.png, id=1240, 569.0058pt x 426.
+8748pt>
+File: Figures//./plot/ROC/CAT_prop_type__CP_ROC_ALL5.png Graphic file (type png
+)
+<use Figures//./plot/ROC/CAT_prop_type__CP_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_prop_type__CP_ROC_ALL5.png  us
+ed on input line 800.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+ [89 <./Figures//./plot/ROC/CAT_cd_ppty_val_type__3_ROC_ALL5.png (PNG copy)> <.
+/Figures//./plot/ROC/CAT_cd_ppty_val_type__9_ROC_ALL5.png (PNG copy)> <./Figure
+s//./plot/ROC/CAT_ind_afdl__F_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/C
+AT_ind_afdl__H_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_ind_afdl__9_
+ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_amrtzn_type__FRM_ROC_ALL5.p
+ng (PNG copy)>]
+<Figures//./plot/ROC/CAT_prop_type__MH_ROC_ALL5.png, id=1249, 569.0058pt x 426.
+8748pt>
+File: Figures//./plot/ROC/CAT_prop_type__MH_ROC_ALL5.png Graphic file (type png
+)
+<use Figures//./plot/ROC/CAT_prop_type__MH_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_prop_type__MH_ROC_ALL5.png  us
+ed on input line 808.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_prop_type__PU_ROC_ALL5.png, id=1250, 569.0058pt x 426.
+8748pt>
+File: Figures//./plot/ROC/CAT_prop_type__PU_ROC_ALL5.png Graphic file (type png
+)
+<use Figures//./plot/ROC/CAT_prop_type__PU_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_prop_type__PU_ROC_ALL5.png  us
+ed on input line 812.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_prop_type__SF_ROC_ALL5.png, id=1251, 569.0058pt x 426.
+8748pt>
+File: Figures//./plot/ROC/CAT_prop_type__SF_ROC_ALL5.png Graphic file (type png
+)
+<use Figures//./plot/ROC/CAT_prop_type__SF_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_prop_type__SF_ROC_ALL5.png  us
+ed on input line 820.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_orig_loan_term_3grp__EQ_360M_ROC_ALL5.png, id=1252, 56
+9.0058pt x 426.8748pt>
+File: Figures//./plot/ROC/CAT_orig_loan_term_3grp__EQ_360M_ROC_ALL5.png Graphic
+ file (type png)
+<use Figures//./plot/ROC/CAT_orig_loan_term_3grp__EQ_360M_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_orig_loan_term_3grp__EQ_360M_R
+OC_ALL5.png  used on input line 824.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_orig_loan_term_3grp__HI_360M_ROC_ALL5.png, id=1253, 56
+9.0058pt x 426.8748pt>
+File: Figures//./plot/ROC/CAT_orig_loan_term_3grp__HI_360M_ROC_ALL5.png Graphic
+ file (type png)
+<use Figures//./plot/ROC/CAT_orig_loan_term_3grp__HI_360M_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_orig_loan_term_3grp__HI_360M_R
+OC_ALL5.png  used on input line 832.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/CAT_orig_loan_term_3grp__LE_360M_ROC_ALL5.png, id=1254, 56
+9.0058pt x 426.8748pt>
+File: Figures//./plot/ROC/CAT_orig_loan_term_3grp__LE_360M_ROC_ALL5.png Graphic
+ file (type png)
+<use Figures//./plot/ROC/CAT_orig_loan_term_3grp__LE_360M_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/CAT_orig_loan_term_3grp__LE_360M_R
+OC_ALL5.png  used on input line 836.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+ [90 <./Figures//./plot/ROC/CAT_prop_type__CO_ROC_ALL5.png (PNG copy)> <./Figur
+es//./plot/ROC/CAT_prop_type__CP_ROC_ALL5.png (PNG copy)> <./Figures//./plot/RO
+C/CAT_prop_type__MH_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_prop_ty
+pe__PU_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/CAT_prop_type__SF_ROC_AL
+L5.png (PNG copy)> <./Figures//./plot/ROC/CAT_orig_loan_term_3grp__EQ_360M_ROC_
+ALL5.png (PNG copy)>]
+File: Figures//./plot/ROC/Main/IND_flag_orig_loan_term_HEQ_360M_ROC_ALL5.png Gr
+aphic file (type png)
+<use Figures//./plot/ROC/Main/IND_flag_orig_loan_term_HEQ_360M_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/Main/IND_flag_orig_loan_term_HEQ_3
+60M_ROC_ALL5.png  used on input line 846.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/IND_flag_cnt_units_ROC_ALL5.png, id=1262, 569.0058pt x 426
+.8748pt>
+File: Figures//./plot/ROC/IND_flag_cnt_units_ROC_ALL5.png Graphic file (type pn
+g)
+<use Figures//./plot/ROC/IND_flag_cnt_units_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/IND_flag_cnt_units_ROC_ALL5.png  u
+sed on input line 850.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/IND_flag_fthb_ROC_ALL5.png, id=1263, 569.0058pt x 426.8748
+pt>
+File: Figures//./plot/ROC/IND_flag_fthb_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/IND_flag_fthb_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/IND_flag_fthb_ROC_ALL5.png  used o
+n input line 858.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/IND_flag_int_only_ROC_ALL5.png, id=1264, 569.0058pt x 426.
+8748pt>
+File: Figures//./plot/ROC/IND_flag_int_only_ROC_ALL5.png Graphic file (type png
+)
+<use Figures//./plot/ROC/IND_flag_int_only_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/IND_flag_int_only_ROC_ALL5.png  us
+ed on input line 862.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/IND_flag_mi_ROC_ALL5.png, id=1265, 569.0058pt x 426.8748pt
+>
+File: Figures//./plot/ROC/IND_flag_mi_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/IND_flag_mi_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/IND_flag_mi_ROC_ALL5.png  used on 
+input line 870.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/IND_flag_sc_ROC_ALL5.png, id=1266, 569.0058pt x 426.8748pt
+>
+File: Figures//./plot/ROC/IND_flag_sc_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/IND_flag_sc_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/IND_flag_sc_ROC_ALL5.png  used on 
+input line 874.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+ [91 <./Figures//./plot/ROC/CAT_orig_loan_term_3grp__HI_360M_ROC_ALL5.png (PNG 
+copy)> <./Figures//./plot/ROC/CAT_orig_loan_term_3grp__LE_360M_ROC_ALL5.png (PN
+G copy)> <./Figures//./plot/ROC/IND_flag_cnt_units_ROC_ALL5.png (PNG copy)> <./
+Figures//./plot/ROC/IND_flag_fthb_ROC_ALL5.png (PNG copy)> <./Figures//./plot/R
+OC/IND_flag_int_only_ROC_ALL5.png (PNG copy)>]
+<Figures//./plot/ROC/IND_ind_harp_ROC_ALL5.png, id=1274, 569.0058pt x 426.8748p
+t>
+File: Figures//./plot/ROC/IND_ind_harp_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/IND_ind_harp_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/IND_ind_harp_ROC_ALL5.png  used on
+ input line 882.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/IND_ppmt_pnlty_ROC_ALL5.png, id=1275, 569.0058pt x 426.874
+8pt>
+File: Figures//./plot/ROC/IND_ppmt_pnlty_ROC_ALL5.png Graphic file (type png)
+<use Figures//./plot/ROC/IND_ppmt_pnlty_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/IND_ppmt_pnlty_ROC_ALL5.png  used 
+on input line 886.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/IND_flag_orig_loan_term_EQ_360M_ROC_ALL5.png, id=1276, 569
+.0058pt x 426.8748pt>
+File: Figures//./plot/ROC/IND_flag_orig_loan_term_EQ_360M_ROC_ALL5.png Graphic 
+file (type png)
+<use Figures//./plot/ROC/IND_flag_orig_loan_term_EQ_360M_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/IND_flag_orig_loan_term_EQ_360M_RO
+C_ALL5.png  used on input line 894.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+<Figures//./plot/ROC/IND_flag_orig_loan_term_HI_360M_ROC_ALL5.png, id=1277, 569
+.0058pt x 426.8748pt>
+File: Figures//./plot/ROC/IND_flag_orig_loan_term_HI_360M_ROC_ALL5.png Graphic 
+file (type png)
+<use Figures//./plot/ROC/IND_flag_orig_loan_term_HI_360M_ROC_ALL5.png>
+Package pdftex.def Info: Figures//./plot/ROC/IND_flag_orig_loan_term_HI_360M_RO
+C_ALL5.png  used on input line 898.
+(pdftex.def)             Requested size: 204.85847pt x 153.68784pt.
+File: Figures//./plot/ML/PDP_fico.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_fico.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_fico.png  used on input line 91
+1.
+(pdftex.def)             Requested size: 204.85847pt x 148.98558pt.
+File: Figures//./plot/ML/PDP_orig_upb.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_orig_upb.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_orig_upb.png  used on input lin
+e 915.
+(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
+ [92 <./Figures//./plot/ROC/IND_flag_mi_ROC_ALL5.png (PNG copy)> <./Figures//./
+plot/ROC/IND_flag_sc_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/IND_ind_ha
+rp_ROC_ALL5.png (PNG copy)> <./Figures//./plot/ROC/IND_ppmt_pnlty_ROC_ALL5.png 
+(PNG copy)> <./Figures//./plot/ROC/IND_flag_orig_loan_term_EQ_360M_ROC_ALL5.png
+ (PNG copy)> <./Figures//./plot/ROC/IND_flag_orig_loan_term_HI_360M_ROC_ALL5.pn
+g (PNG copy)>]
+<Figures//./plot/ML/PDP_ltv.png, id=1285, 429.2838pt x 312.2064pt>
+File: Figures//./plot/ML/PDP_ltv.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_ltv.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_ltv.png  used on input line 923
+.
+(pdftex.def)             Requested size: 204.85847pt x 148.98558pt.
+File: Figures//./plot/ML/PDP_cltv.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_cltv.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_cltv.png  used on input line 92
+7.
+(pdftex.def)             Requested size: 204.85847pt x 151.28177pt.
+File: Figures//./plot/ML/PDP_dti.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_dti.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_dti.png  used on input line 935
+.
+(pdftex.def)             Requested size: 204.85847pt x 152.68251pt.
+<Figures//./plot/ML/PDP_mi_pct.png, id=1286, 429.2838pt x 312.9291pt>
+File: Figures//./plot/ML/PDP_mi_pct.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_mi_pct.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_mi_pct.png  used on input line 
+939.
+(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
+<Figures//./plot/ML/PDP_cnt_borr.png, id=1287, 429.2838pt x 312.9291pt>
+File: Figures//./plot/ML/PDP_cnt_borr.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_cnt_borr.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_cnt_borr.png  used on input lin
+e 947.
+(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
+<Figures//./plot/ML/PDP_cnt_units.png, id=1288, 430.0065pt x 312.9291pt>
+File: Figures//./plot/ML/PDP_cnt_units.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_cnt_units.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_cnt_units.png  used on input li
+ne 951.
+(pdftex.def)             Requested size: 204.85847pt x 149.08214pt.
+ [93 <./Figures//./plot/ML/PDP_ltv.png> <./Figures//./plot/ML/PDP_mi_pct.png>]
+<Figures//./plot/ML/PDP_orig_loan_term.png, id=1299, 429.2838pt x 312.9291pt>
+File: Figures//./plot/ML/PDP_orig_loan_term.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_orig_loan_term.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_orig_loan_term.png  used on inp
+ut line 958.
+(pdftex.def)             Requested size: 227.62209pt x 165.92323pt.
+<Figures//./plot/ML/PDP_us_reg__Midwest.png, id=1300, 429.2838pt x 312.9291pt>
+File: Figures//./plot/ML/PDP_us_reg__Midwest.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_us_reg__Midwest.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_us_reg__Midwest.png  used on in
+put line 967.
+(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
+<Figures//./plot/ML/PDP_us_reg__Northeast.png, id=1301, 435.0654pt x 312.9291pt
+>
+File: Figures//./plot/ML/PDP_us_reg__Northeast.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_us_reg__Northeast.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_us_reg__Northeast.png  used on 
+input line 971.
+(pdftex.def)             Requested size: 204.85847pt x 147.34885pt.
+<Figures//./plot/ML/PDP_us_reg__South.png, id=1302, 435.0654pt x 312.9291pt>
+File: Figures//./plot/ML/PDP_us_reg__South.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_us_reg__South.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_us_reg__South.png  used on inpu
+t line 979.
+(pdftex.def)             Requested size: 204.85847pt x 147.34885pt.
+<Figures//./plot/ML/PDP_us_reg__West.png, id=1303, 435.0654pt x 312.2064pt>
+File: Figures//./plot/ML/PDP_us_reg__West.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_us_reg__West.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_us_reg__West.png  used on input
+ line 983.
+(pdftex.def)             Requested size: 204.85847pt x 147.00856pt.
+ [94 <./Figures//./plot/ML/PDP_cnt_borr.png> <./Figures//./plot/ML/PDP_cnt_unit
+s.png> <./Figures//./plot/ML/PDP_orig_loan_term.png> <./Figures//./plot/ML/PDP_
+us_reg__Midwest.png> <./Figures//./plot/ML/PDP_us_reg__Northeast.png>]
+<Figures//./plot/ML/PDP_us_reg__Other.png, id=1316, 429.2838pt x 312.9291pt>
+File: Figures//./plot/ML/PDP_us_reg__Other.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_us_reg__Other.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_us_reg__Other.png  used on inpu
+t line 991.
+(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
+<Figures//./plot/ML/PDP_channel__B.png, id=1317, 448.074pt x 312.9291pt>
+File: Figures//./plot/ML/PDP_channel__B.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_channel__B.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_channel__B.png  used on input l
+ine 995.
+(pdftex.def)             Requested size: 204.85847pt x 143.07054pt.
+<Figures//./plot/ML/PDP_channel__R.png, id=1318, 435.0654pt x 312.9291pt>
+File: Figures//./plot/ML/PDP_channel__R.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_channel__R.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_channel__R.png  used on input l
+ine 1003.
+(pdftex.def)             Requested size: 204.85847pt x 147.34885pt.
+<Figures//./plot/ML/PDP_channel__9.png, id=1319, 429.2838pt x 312.9291pt>
+File: Figures//./plot/ML/PDP_channel__9.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_channel__9.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_channel__9.png  used on input l
+ine 1007.
+(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
+File: Figures//./plot/ML/PDP_loan_purpose__C.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_loan_purpose__C.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_loan_purpose__C.png  used on in
+put line 1015.
+(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
+<Figures//./plot/ML/PDP_loan_purpose__N.png, id=1320, 441.5697pt x 312.9291pt>
+File: Figures//./plot/ML/PDP_loan_purpose__N.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_loan_purpose__N.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_loan_purpose__N.png  used on in
+put line 1019.
+(pdftex.def)             Requested size: 204.85847pt x 145.17627pt.
+ [95 <./Figures//./plot/ML/PDP_us_reg__South.png> <./Figures//./plot/ML/PDP_us_
+reg__West.png> <./Figures//./plot/ML/PDP_us_reg__Other.png> <./Figures//./plot/
+ML/PDP_channel__B.png> <./Figures//./plot/ML/PDP_channel__R.png> <./Figures//./
+plot/ML/PDP_channel__9.png>]
+<Figures//./plot/ML/PDP_loan_purpose__P.png, id=1334, 429.2838pt x 315.8199pt>
+File: Figures//./plot/ML/PDP_loan_purpose__P.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_loan_purpose__P.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_loan_purpose__P.png  used on in
+put line 1027.
+(pdftex.def)             Requested size: 204.85847pt x 150.70995pt.
+<Figures//./plot/ML/PDP_cd_ppty_val_type__1.png, id=1335, 429.2838pt x 312.9291
+pt>
+File: Figures//./plot/ML/PDP_cd_ppty_val_type__1.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_cd_ppty_val_type__1.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_cd_ppty_val_type__1.png  used o
+n input line 1031.
+(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
+File: Figures//./plot/ML/PDP_cd_ppty_val_type__2.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_cd_ppty_val_type__2.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_cd_ppty_val_type__2.png  used o
+n input line 1039.
+(pdftex.def)             Requested size: 204.85847pt x 149.33044pt.
+<Figures//./plot/ML/PDP_cd_ppty_val_type__3.png, id=1336, 435.0654pt x 312.9291
+pt>
+File: Figures//./plot/ML/PDP_cd_ppty_val_type__3.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_cd_ppty_val_type__3.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_cd_ppty_val_type__3.png  used o
+n input line 1043.
+(pdftex.def)             Requested size: 204.85847pt x 147.34885pt.
+<Figures//./plot/ML/PDP_cd_ppty_val_type__9.png, id=1337, 429.2838pt x 312.9291
+pt>
+File: Figures//./plot/ML/PDP_cd_ppty_val_type__9.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_cd_ppty_val_type__9.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_cd_ppty_val_type__9.png  used o
+n input line 1050.
+(pdftex.def)             Requested size: 227.62209pt x 165.92323pt.
+ [96 <./Figures//./plot/ML/PDP_loan_purpose__N.png> <./Figures//./plot/ML/PDP_l
+oan_purpose__P.png> <./Figures//./plot/ML/PDP_cd_ppty_val_type__1.png> <./Figur
+es//./plot/ML/PDP_cd_ppty_val_type__3.png>]
+<Figures//./plot/ML/PDP_flag_mi.png, id=1349, 435.0654pt x 312.9291pt>
+File: Figures//./plot/ML/PDP_flag_mi.png Graphic file (type png)
+<use Figures//./plot/ML/PDP_flag_mi.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_flag_mi.png  used on input line
+ 1059.
+(pdftex.def)             Requested size: 204.85847pt x 147.34885pt.
+<Figures//./plot/ML/PDP_flag_orig_loan_term_HEQ_360M.png, id=1350, 435.0654pt x
+ 312.9291pt>
+File: Figures//./plot/ML/PDP_flag_orig_loan_term_HEQ_360M.png Graphic file (typ
+e png)
+<use Figures//./plot/ML/PDP_flag_orig_loan_term_HEQ_360M.png>
+Package pdftex.def Info: Figures//./plot/ML/PDP_flag_orig_loan_term_HEQ_360M.pn
+g  used on input line 1063.
+(pdftex.def)             Requested size: 204.85847pt x 147.34885pt.
+) [97 <./Figures//./plot/ML/PDP_cd_ppty_val_type__9.png> <./Figures//./plot/ML/
+PDP_flag_mi.png> <./Figures//./plot/ML/PDP_flag_orig_loan_term_HEQ_360M.png>]
+
+Package acro Warning: Acronym properties may have changed. Rerun to get them
+(acro)                synchronized.
+
+(./Masterthesis.aux (./Abstract.aux) (./Introduction.aux)
 (./M_CreditRisk_PD.aux) (./M_TraditionalModels.aux) (./M_MLModels.aux)
 (./M_ModellingProcess.aux) (./M_Validation.aux) (./M_Interpretability.aux)
 (./R_Results.aux) (./R_Conclusio.aux) (./Annex.aux))
@@ -2976,41 +3252,37 @@ Package rerunfilecheck Info: File `Masterthesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 41632 strings out of 478268
- 936122 string characters out of 5846347
- 1368749 words of memory out of 5000000
- 58399 multiletter control sequences out of 15000+600000
- 572106 words of font info for 222 fonts, out of 8000000 for 9000
+ 42642 strings out of 478268
+ 960534 string characters out of 5846347
+ 1374763 words of memory out of 5000000
+ 59265 multiletter control sequences out of 15000+600000
+ 619216 words of font info for 310 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,21n,112p,10634b,2921s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,20n,106p,10634b,2906s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
-22/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2022/texmf-dist
-/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvi
-ps/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-m
-athex.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/pdftex/dummy-s
-pace.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/20
-22/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2022/texmf-
-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts
-/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
-lic/lm/lmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi
-8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texl
-ive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2022/tex
-mf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/font
-s/type1/public/lm/lmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publ
-ic/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmro
-10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/20
-22/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2022/texmf-di
-st/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Masterthesis.pdf (91 pages, 13230402 bytes).
+texlive/2022/texmf-dist/fonts/enc/dvips/roboto/rbto_ocbbsb.enc}{/usr/local/texl
+ive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf
+-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/font
+s/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvip
+s/lm/lm-mathex.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/roboto/r
+bto_b5rac7.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/roboto/rbto_
+shbyjm.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/google/roboto/Roboto
+-Bold.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/google/roboto/Roboto-
+Italic.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/google/roboto/Roboto
+-Regular.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/pdftex/dumm
+y-space.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pf
+b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2022/texmf
+-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts
+/type1/public/lm/lmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
+c/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.
+pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Masterthesis.pdf (107 pages, 13066414 bytes).
 PDF statistics:
- 1686 PDF objects out of 1728 (max. 8388607)
- 1302 compressed objects within 14 object streams
- 373 named destinations out of 1000 (max. 500000)
- 55343 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1764 PDF objects out of 2073 (max. 8388607)
+ 1367 compressed objects within 14 object streams
+ 389 named destinations out of 1000 (max. 500000)
+ 77759 words of extra memory for PDF output out of 89155 (max. 10000000)
 
