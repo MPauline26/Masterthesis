@@ -19,6 +19,7 @@ KEEP
 	cltv
 	cltv_adj
 	dti
+	dti_adj
 	ltv
 	ltv_adj
 	orig_upb
@@ -56,34 +57,28 @@ PROC LOGISTIC DATA = TRAIN_SAMPLE DESCENDING OUTEST=MODEL_COEFF;
 MODEL DEFAULT_12M =
 
 	fico
-	dti
+	dti_adj
 	cltv
-	cnt_borr
-	flag_fthb
+	orig_upb
 	flag_mi
+	cnt_borr
 	flag_orig_loan_term_HEQ_360M
 	channel__R
 	channel__B
 	channel__C
-	/*channel__T /* VARIABLE ONLY EXISTS IN 5Y DEVSAMPLE */
-	loan_purpose__C
-	loan_purpose__N
 	cd_ppty_val_type__1
 	cd_ppty_val_type__3
 	cd_ppty_val_type__2
-	orig_upb
 	us_reg__Midwest
 	us_reg__Northeast
 	us_reg__Other
 	us_reg__West
-	occpy_sts__S
-	occpy_sts__I
 
 /* REMOVED DUE TO HIGH CORRELATION */
-/*	cltv_ADJ, ltv, ltv_ADJ */
+/*	cltv_ADJ, ltv, ltv_ADJ, mi_pct, mi_pct, orig_loan_term */
 
 /* NOT INCLUDED DUE TO LINEAR COMBINATION */
-/*	channel__9, loan_purpose__P, cd_ppty_val_type__9, us_reg__South, occpy_sts__P */
+/*	channel__9, cd_ppty_val_type__9, us_reg__South */
 
 / SELECTION = STEPWISE SLSTAY=0.15 SLENTRY=0.15 STB DETAILS LACKFIT; 
 ODS OUTPUT EFFECTINMODEL =EFFECT;

@@ -250,9 +250,9 @@ RUN;
 
 /* TRANSFORMATION OF SPECIFIC VARIABLES, run after first part */
 
-*ODS GRAPHICS ON / MAXOBS=10929045;
-*ODS LISTING GPATH='C:\Users\meikee.pagsinohin\Documents\MA\plot' IMAGE_DPI = 300 STYLE=JOURNAL;
-*ODS GRAPHICS / IMAGENAME="image" RESET=INDEX IMAGEFMT=PNG WIDTH = 20CM HEIGHT = 15CM ;
+ODS GRAPHICS ON / MAXOBS=10929045;
+ODS LISTING GPATH='C:\Users\meikee.pagsinohin\Documents\MA\plot' IMAGE_DPI = 300 STYLE=JOURNAL;
+ODS GRAPHICS / IMAGENAME="image" RESET=INDEX IMAGEFMT=PNG WIDTH = 20CM HEIGHT = 15CM ;
 
 DATA &USED_DATASET.;
 SET &USED_DATASET.;
@@ -262,6 +262,9 @@ SET &USED_DATASET.;
 
 IF mi_pct > 0 THEN flag_mi = 1;
 ELSE IF mi_pct = 0 THEN flag_mi = 0;
+
+IF cnt_units > 0 THEN flag_cnt_units = 1;
+ELSE IF cnt_units = 0 THEN flag_cnt_units = 0;
 
 LENGTH orig_loan_term_3grp $ 10;
 IF orig_loan_term < 360 THEN orig_loan_term_3grp = "LE_360M";

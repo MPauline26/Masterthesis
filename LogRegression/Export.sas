@@ -1,0 +1,50 @@
+DATA DEV_SAMPLE_3Y_FINAL_EXPORT;
+SET final.DEV_SAMPLE_3Y_FINAL;
+
+DROP 
+SelectionProb
+SamplingWeight
+SelectionProb2
+SamplingWeight2
+SelectionProb3
+SamplingWeight3
+cd_msa
+cd_msa_ADJ
+orig_loan_term_ADJ
+;
+
+	MODEL_SCORE_LOG	=	-4.545702244309740
++	fico			*	-0.542021303003175
++	dti				*	0.407737989534439
++	cltv			*	0.261253300989300
++	cnt_borr		*	-0.248438417513309
++	orig_upb		*	0.340675349437970;
+
+
+PD_LOG = 1/(1+exp(-MODEL_SCORE_LOG));
+
+RUN;
+
+DATA OOF_SAMPLE_EXPORT;
+SET OOF_SAMPLE;
+
+GROUP1 = 'ALL';
+GROUP2 = '2021';
+
+DROP 
+cd_msa
+cd_msa_ADJ
+orig_loan_term_ADJ;
+
+RUN;
+
+DATA EXPORT;
+SET DEV_SAMPLE_3Y_FINAL_EXPORT OOF_SAMPLE_EXPORT;
+RUN;
+
+PROC EXPORT DATA=EXPORT
+    OUTFILE="C:\Users\meikee.pagsinohin\Documents\MA\DEV_SAMPLE3Y_OOF_SAMPLE.CSV"
+    DBMS=CSV
+    REPLACE;
+	DELIMITER=",";
+RUN;

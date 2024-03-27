@@ -1,12 +1,25 @@
+PROC SQL;
+    SELECT VARIABLE INTO :num_var SEPARATED BY " " FROM VARIABLELIST WHERE TYPE = "NUM";
+QUIT;
+
+%LET num_var = 
+	&num_var. 
+	fico_ADJ	
+	mi_pct_ADJ	
+	cnt_units_ADJ	
+	cltv_ADJ	
+	dti_ADJ	
+	orig_upb_ADJ	
+	ltv_ADJ	
+	cnt_borr_ADJ;
+
+%let num_var = %sysfunc(tranwrd(&num_var., cd_msa, %str()));
+
+%put ----------------- &num_var_test.;
+
+
 PROC CORR DATA = &USED_DATASET._FINAL OUT=CORRELATION(WHERE=(_TYPE_="CORR")) SPEARMAN;
-VAR fico
-	cltv
-	cltv_adj
-	dti
-	ltv
-	ltv_adj
-	cnt_borr
-	cnt_units;
+VAR &num_var.;
 
 RUN;
 
@@ -16,7 +29,7 @@ RUN;
 
 proc reg data=&USED_DATASET._FINAL;
     model DEFAULT_12M = fico dti cltv cnt_borr 	cnt_units
-						flag_fthb flag_mi flag_orig_loan_term_HEQ_360M
+						flag_fthb flag_mi flag_cnt_units flag_orig_loan_term_HEQ_360M 
 						channel__9 channel__B channel__C /* channel__T not exists anymore */
 						loan_purpose__C loan_purpose__N
 						cd_ppty_val_type__1 cd_ppty_val_type__3 cd_ppty_val_type__9

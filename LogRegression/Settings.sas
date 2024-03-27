@@ -42,30 +42,6 @@ RUN;
 
 /****************************************************************************************************/
 
-DATA DEV_SAMPLE_3Y;
-SET final.DEV_SAMPLE_3Y;
-
-GROUP1 = "ALL";
-GROUP2 = PUT(YEAR(DATUM),4.);
-
-RUN;
-
-DATA DEV_SAMPLE_5Y;
-SET final.DEV_SAMPLE_5Y;
-
-GROUP1 = "ALL";
-GROUP2 = PUT(YEAR(DATUM),4.);
-
-RUN;
-
-DATA DEV_SAMPLE_5Y_FINAL;
-SET final.DEV_SAMPLE_5Y_FINAL;
-RUN;
-
-PROC SQL;
-  CREATE INDEX GROUP2 ON DEV_SAMPLE_5Y(GROUP2);
-QUIT;
-
 /* add the labels */
 %macro label_data(data_set, library, ds_labels, column_name, column_label);
 
@@ -93,5 +69,38 @@ run;
 
 %mend;
 
-%label_data(DEV_SAMPLE_5Y, work, VARIABLELIST, Variable, Label);
+DATA DEV_SAMPLE_3Y;
+SET final.DEV_SAMPLE_3Y;
+
+GROUP1 = "ALL";
+GROUP2 = PUT(YEAR(DATUM),4.);
+
+RUN;
+
 %label_data(DEV_SAMPLE_3Y, work, VARIABLELIST, Variable, Label);
+
+DATA DEV_SAMPLE_3Y_FINAL;
+SET final.DEV_SAMPLE_3Y_FINAL;
+RUN;
+
+%label_data(DEV_SAMPLE_3Y_FINAL, work, VARIABLELIST, Variable, Label);
+
+DATA DEV_SAMPLE_5Y;
+SET final.DEV_SAMPLE_5Y;
+
+GROUP1 = "ALL";
+GROUP2 = PUT(YEAR(DATUM),4.);
+
+RUN;
+
+%label_data(DEV_SAMPLE_5Y, work, VARIABLELIST, Variable, Label);
+
+DATA DEV_SAMPLE_5Y_FINAL;
+SET final.DEV_SAMPLE_5Y_FINAL;
+RUN;
+
+%label_data(DEV_SAMPLE_5Y_FINAL, work, VARIABLELIST, Variable, Label);
+
+PROC SQL;
+  CREATE INDEX GROUP2 ON DEV_SAMPLE_5Y(GROUP2);
+QUIT;
