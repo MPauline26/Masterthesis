@@ -1,30 +1,29 @@
 \chapter{Used Data and Results}
+\label{ch:RE}
+\section{Freddie Mac's Single Family Loan-Level Data set}
 
-\section{Freddie Mac's Single Family Loan-Level Dataset}
+Freddie Mac, officially known as the Federal Home Loan Mortgage Corporation, is a government-sponsored enterprise (GSE) in the United states and plays a crucial role in the secondary mortgage market. In the primary market, individual customers secure mortgage loans from retail banks. Within the secondary mortgage market, the lender has the option to sell these mortgages to entities like government-sponsored enterprises, e.g., Freddie Mac. This practice provides liquidity to the primary market, subsequently making additional loans available to other customers. GSEs aggregate multiple mortgages into mortgage-backed securities (MBS), which are then sold to various investors, such as insurance companies and hedge funds. \cite{FreddieMac:2023} \cite{SecMortMark:2023}
 
-Freddie Mac, officially known as the Federal Home Loan Mortgage Corporation, is a government-sponsored enterprise (GSE) in the United states and plays a crucial role in the secondary mortgage market. In the primary market, individual customers secure mortgage loans from retail banks. Within the secondary mortgage market, the lender have the option to sell these mortgages to entities like government-sponsored enterprises, e.g. Freddie Mac. This practice provides liquidity to the primary market, subsequently making additional loans available to other customers. GSEs aggregate multiple mortgages into mortgage-backed securities (MBS), which are then sold to various investors, such as insurance companies and hedge funds. \cite{FreddieMac:2023} \cite{SecMortMark:2023}
-
-The Single Family Loan-Level Dataset encompasses a broad range of variables and some of the essential features of this dataset include:
+The Single Family Loan-Level Data set encompasses a broad range of variables and some of the essential features of this data set include:
 
 \begin{enumerate}
 \item Customer Information: This category includes borrower details such as Credit Score provided by FICO, first-time homebuyer status, occupancy status and number of borrowers.
-\item Financial Attributes: The dataset provides important financial indicators such as the (combined) loan-to-value ratio (CLTV, LTV) and debt-to-income ratio (DTI).
+\item Financial Attributes: The data set provides important financial indicators such as the (combined) loan-to-value ratio (CLTV, LTV) and debt-to-income ratio (DTI).
 \item Loan and Property Details: It also includes information about the properties associated with the loans, such as mortgage insurance percentage, number of units, original unpaid balance, original Loan Term, property type and loan purpose.
 \item Loan Performance: This section captures essential data related to historical loan performance. It includes details on delinquency status, zero balance reason codes, modification information and the current deferred unpaid balance.
-\item Expenses and Loss Information: Included in the performance data are financial details such as mortgage insurance recoveries, net sale proceeds, legal costs, and actual loss, among others.
+\item Expenses and Loss Information: Included in the performance data are financial details such as mortgage insurance recoveries, net sale proceeds, legal costs and actual loss, among others.
 \end{enumerate}
 
 \subsection{Data Quality, Limitations and Usage}
 
-Over the years, Freddie Mac has accumulated vast amounts of mortgage loan data. At the direction of the Federal Housing Finance Agency (FHFA), this data has been made publicly available to enhance transparency and assist investors in analyzing credit performance. Freddie Mac's Single Family Loan-Level Dataset is publicly available on their website, where users are required to register and agree to the dataset's terms of use before accessing the data.\cite{FreddieMacData:2023}
+Over the years, Freddie Mac has accumulated vast amounts of mortgage loan data. At the direction of the Federal Housing Finance Agency (FHFA), this data has been made publicly available to enhance transparency and assist investors in analyzing credit performance. Freddie Mac's Single Family Loan-Level Data set is publicly available on their website, where users are required to register and agree to the data set's terms of use before accessing the data. \cite{FreddieMacData:2023}
 
-While the Single Family Loan-Level Dataset offers a wealth of information, it is essential to consider its quality and limitations. Freddie Mac explicitly states  that they do not guarantee a complete or error-free data set and that it may contain potential biases.The dataset represents mortgages acquired by Freddie Mac, which may not be fully representative of the entire mortgage market. Furthermore, the dataset is subject to data protection regulations leading to the anonymization or removal of personally identifiable information. The data set is updated on a quarterly basis and thus, contain corrections or updates that may impact the analysis.\cite{FreddieMacUG:2023}
+While the Single Family Loan-Level Data set offers a wealth of information, it is essential to consider its quality and limitations. Freddie Mac explicitly states  that they do not guarantee a complete or error-free data set and that it may contain potential biases. The data set represents mortgages acquired by Freddie Mac, which may not be fully representative of the entire mortgage market. Furthermore, the data set is subject to data protection regulations leading to the anonymization or removal of personally identifiable information. The data set is updated on a quarterly basis and thus, contain corrections or updates that may impact the analysis. \cite{FreddieMacUG:2023}
 
 
+\section{Data set}
 
-\section{Dataset}
-
-The Freddie Mac Dataset consists of the origination and monthly performance data file. The former contains information about the borrower and the mortgage loan collected at the start of the contract. The latter includes monthly snapshots of the mortgage loan's payment, status and loss history. The data preparation and modeling process focuses on the origination data, as the objective is creating an application scoring model. The monthly performance data will be used to approximate a default flag, described in Chapter \ref{sec:aprox_def}. The provided data files cover all months since January 1999 and undergo continuous updates every quarter. On average, each month contains about 157.000 mortgage loans, with the highest number of mortgage loans opened in September 2003 with 577.000 accounts. Table \ref{tab:re_descr} shows the full list of relevant variables, their description and abbreviation:
+The Freddie Mac Data set consists of the origination and monthly performance data file. The former contains information about the borrower and the mortgage loan collected at the start of the contract. The latter includes monthly snapshots of the mortgage loan's payment, status and loss history. The data preparation and modeling process focuses on the origination data, as the objective is creating an application scoring model. The monthly performance data will be used to approximate a default flag, described in Chapter \ref{sec:aprox_def}. The provided data files cover all months since January 1999 and undergo continuous updates every quarter. On average, each month contains about 157.000 mortgage loans, with the highest number of mortgage loans opened in September 2003 with 577.000 accounts. Table \ref{tab:re_descr} shows the full list of relevant variables, their description and abbreviation:
 
 \begin{longtable}{ Lp{8cm}R }\toprule
 \textbf{Variable Name}                             & \textbf{Description}                                                                                                                                                                                                                                                                          & \textbf{Abbr.}       \\\midrule
@@ -63,7 +62,7 @@ Zero Balance Code                         & Reason, why the loan's balance was r
 \subsection{Approximation of default flag}
 \label{sec:aprox_def}
 
-Since the dataset does not directly contain default information, an approximation for the indicator needs to be created. This information is derived from the performance data of the mortgage loan. As a first step, the number of months between the date of the first payment and the date of being in delinquency continuously for 30/60/90/120/180 days was calculated. To imitate the definition of default described in the CRR 178(1) a (Chapter \ref{sec:dr_pd}) as closely as possible, the 90 days delinquency information was selected for further analysis. Due to data irregularities, where the 120 or 180 DPD field is filled in, but the 90 DPD is missing, the minimum of all three variables was used for the next steps. Additionally, to fulfill the definition of default stated in the CRR 178(1) b, the variable \emph{Zero Balance Code} was incorporated. It contains the reason why the loan balance was reduced to zero, displayed in Table \ref{tab:re_ZB_Descr}. Therefore, Zero Balance Codes 02, 03, 09 and 15 indicate a negative financial health and were considered in the default approximation.
+Since the data set does not directly contain default information, an approximation for the indicator needs to be created. This information is derived from the performance data of the mortgage loan. As a first step, the number of months between the date of the first payment and the date of being in delinquency continuously for 30/60/90/120/180 days was calculated. To imitate the definition of default described in the CRR 178(1a), see Chapter \ref{sec:dr_pd}, as closely as possible, the 90 \ac{DPD} delinquency information was selected for further analysis. Due to data irregularities, where the 120 \ac{DPD} or 180 \ac{DPD} field is filled in, but the 90 \ac{DPD} is missing, the minimum of all three variables was used for the next steps. Additionally, to fulfill the definition of default stated in the CRR 178(1b), the variable \emph{Zero Balance Code} was incorporated. It contains the reason why the loan balance was reduced to zero, displayed in Table \ref{tab:re_ZB_Descr}. Therefore, Zero Balance Codes 02, 03, 09 and 15 indicate a negative financial health and were considered in the default approximation.
 
 
 \begin{table}[H]
@@ -92,7 +91,7 @@ In the modeling process, a 12-month time span was chosen. Following the identifi
 \section{Sample Creation}
 
 \subsection{Data Exclusions}
-The first two months of the whole data set showed an unusually low number of observations and default events, leading to their exclusion. Given the 12-month observation period for the default flag, the final 12 months of the dataset were also omitted. Additionally, accounts that were prepaid before the 12-month observation period ended were removed. Lastly, mortgage loans without monthly performance data were also deleted because it was then impossible to approximate a default flag. The breakdown of exclusions based on each reason is detailed in Table \ref{tab:re_nr_excl}.
+The first two months of the whole data set showed an unusually low number of observations and default events, leading to their exclusion. Given the 12-month observation period for the default flag, the final 12 months of the data set were also omitted. Additionally, accounts that were prepaid before the 12-month observation period ended were removed. Lastly, mortgage loans without monthly performance data were also deleted because it was impossible to approximate a default flag. The breakdown of exclusions based on each reason is detailed in Table \ref{tab:re_nr_excl}.
 
 \begin{table}[H]
 \centering
@@ -108,9 +107,9 @@ Missing Monthly Performance data                		& 1484  				 			\\\bottomrule
 \end{table}
 
 \subsection{Training, Test and Validation Sample}
-Figure \ref{fig:re_wholesample} shows the number of observations as well as the default rate per month for the whole sample before and after data exclusions and Figure \ref{fig:re_devsample} is a separate display of the development and out-of-time sample. If the number of defaults had not been sufficient, an increase in the observation window might have been a solution. Both figures show a satisfying number of monthly defaults with an average default rate of 1,52\% in the development sample. A plausible development of the default rate is visible; it follows the expected increase of defaults during the Dot-Com crisis in the late 1990s, the financial crisis in 2007/2008 and the COVID-19 crisis in 2020/2021. 
+Figure \ref{fig:re_wholesample} shows the default rate per month for the whole sample before and after data exclusions and Figure \ref{fig:re_devsample} is a separate display of the development and out-of-time sample, also referred to as validation sample. The vertical line in Figure \ref{fig:re_devsample} separate the development sample, which is split into training and test data set and validation sample. If the number of default events had not been sufficient, an increase in the observation window might have been a solution. Both figures show a satisfying number of monthly defaults with an average default rate of 1,52\% in the development sample. A plausible development of the default rate is visible; it follows the expected increase of defaults during the Dot-Com crisis in the late 1990s, the financial crisis in 2007/2008 and the COVID-19 crisis in 2020/2021. 
 
-The development sample encompasses data from January 2018 to December 2020, offering a timeframe that covers different economic conditions, including the period before and during the COVID-19 crisis. This selection not only captures diverse economic scenarios but also limits the number of observations due to the limitation of computational power. The out-of-time sample, referred to as the validation sample, is constructed using data points from January to December 2021.
+The development sample encompasses data from January 2018 to December 2020, offering a timeframe that covers different economic conditions, including the period before and during the COVID-19 crisis. This selection not only captures diverse economic scenarios but also limits the number of observations due to the limitation of computational power. The out-of-time sample is constructed using data points from January to December 2021. 
 
 The data preparation and univariate analysis were performed on the whole development data set, then split into 70\% training and 30\% test samples. The split was stratified on the default flag and the year to ensure a balanced data set for the multivariate analysis and the modeling process of both modeling approaches. Table \ref{tab:re_devoofsample} shows the sample sizes and default rates. Complete lists of the number of accounts and defaults per month for the whole sample before and after exclusion are given in Appendix \ref{sec:DR_whole}.
 
@@ -118,7 +117,7 @@ The data preparation and univariate analysis were performed on the whole develop
 \centering
 \begin{tabular}{lrrr} \toprule       
 \textbf{Sample} & \textbf{\# Accounts} & \textbf{\# Def} & \textbf{\% Def Rate} \\\midrule
-Whole Dataset   & 39.404.062           & 208.008         & 0,53\%               \\
+Whole Data set   & 39.404.062           & 208.008         & 0,53\%               \\
 Training        & 3.789.579            & 57.510          & 1,52\%               \\
 Test            & 1.624.101            & 24.645          & 1,52\%               \\
 Out Of Time     & 4.121.718            & 16.848          & 0,41\%               \\\bottomrule
@@ -288,7 +287,7 @@ UPB          & -108500 & 599500 & 0       & 102141 & 0,00\%  & 1,89\% & 102.141 
 \subsection{Univariate Analysis}
 
 \subsubsection{New variables}
-During the outlier treatment, a few new variables were created. While analyzing the different distinct values of categorical variables, the risk factor \emph{Property states} was grouped into five \emph{US regions} according to their geographical position: Northeast, Southeast, Southwest, Midwest, West and other Regions, e.g., outside of the North American mainland. Table \ref{tab:re_descr_newvar} lists a summary of the new variables.
+During the outlier treatment, a few new variables were created. While analyzing the different distinct values of categorical variables, the risk factor \emph{Property states} was grouped into five \emph{US regions} according to their geographical position: Northeast, Southeast, Southwest, Midwest, West and other Regions, e.g., outside of the North American mainland. \cite{USRegion:2014} Table \ref{tab:re_descr_newvar} lists a summary of the new variables.
 
 \begin{table}[H]
 \centering
@@ -308,9 +307,9 @@ US Region                                                      & Grouped variabl
 \end{table}
 
 \subsubsection{Discriminatory Power}
-To assess the discriminatory power, distribution plots with default rates, ROC curves and calculations of AUC, GINI coefficients, WoE and IV were conducted. A list of all metrics is presented in Table \ref{tab:re_discr_power} and relevant variable plots are depicted in Figures \ref{fig:re_fico_upb} to \ref{fig:re_usreg_channel}. All plots are available in Appendix \ref{sec:distr_all} and \ref{sec:ROC_all}. As expected, the external \emph{Credit Score} provided by FICO shows the highest discriminatory power, followed by financial ratios such as \emph{DTI}, \emph{LTV} and \emph{CLTV}. Other numerical risk factors, except \emph{No Units}, also indicate good predictive power, making them optimal candidates for the modeling process. In contrast,  the performance of categorical and indicator risk factors proved underwhelming, with few GINI coefficients surpassing 5\% or IV exceeding 3\%. Consequently, a GINI threshold of 5\% and IV of 3\% was established for the selection process of the long list.
+To assess the discriminatory power, distribution plots with default rates, ROC curves and calculations of AUC, Gini coefficients, WoE and IV were conducted. A list of all metrics is presented in Table \ref{tab:re_discr_power} and relevant variable plots are depicted in Figures \ref{fig:re_fico_upb} to \ref{fig:re_usreg_channel}. All plots are available in Appendix \ref{sec:distr_all} and \ref{sec:ROC_all}. As expected, the external \emph{Credit Score} provided by FICO shows the highest discriminatory power, followed by financial ratios such as \emph{DTI}, \emph{LTV} and \emph{CLTV}. Other numerical risk factors, except \emph{No Units}, also indicate good predictive power, making them optimal candidates for the modeling process. In contrast,  the performance of categorical and indicator risk factors proved underwhelming, with few Gini coefficients surpassing 5\% or IV exceeding 3\%. Consequently, a Gini threshold of 5\% and IV of 3\% was established for the selection process of the long list.
 
-To summarize, all variables with a missing proportion below 20\%, outlier proportion not succeeding 20\%, GINI coefficient above 5\% and IV higher than 3\% were selected for the long list given in Tab. \ref{tab:re_ll_sl}. 
+To summarize, all variables with a missing proportion below 20\%, outlier proportion not succeeding 20\%, Gini coefficient above 5\% and IV higher than 3\% were selected for the long list given in Tab. \ref{tab:re_ll_sl}. 
 
 \newpage
 
@@ -318,7 +317,7 @@ To summarize, all variables with a missing proportion below 20\%, outlier propor
 \footnotesize
 
 \begin{longtable}{ p{3cm} p{4cm} c c c c c}\toprule      
-\textbf{Variable}           & \textbf{Value}                                     & \textbf{\% Missing} & \textbf{AUC}    & \textbf{GINI}  & \textbf{WoE} & \textbf{IV}  \\\midrule
+\textbf{Variable}           & \textbf{Value}                                     & \textbf{\% Missing} & \textbf{AUC}    & \textbf{Gini}  & \textbf{WoE} & \textbf{IV}  \\\midrule
 Amort Type                  & Fixed Rate Mortgage                                               & 0,00\%  & 0,5000 & 0,0000 & 0,0000  & 0,0000 \\\hline
 Prop Val Method             & ACE Loans                                                         & 0,07\%  & 0,5402 & 0,0805 & 0,4326  & 0,0486 \\
                             & Full Appraisal                                                    & 0,07\%  & 0,5445 & 0,0890 & -0,1126 & 0,0486 \\
@@ -425,7 +424,7 @@ UPB                         &                                                   
 
 \subsection{Multivariate Analysis}
 
-The shortlist was created using the following process: First, the correlation matrix with all numerical variables was created. Then, the variable with the highest GINI coefficient was identified and all risk factors with a correlation coefficient above +0.25 or below -0.25 were removed. This step should be repeated with the remaining variables until all features were analyzed. 
+The shortlist was created using the following process: First, the correlation matrix with all numerical variables was created. Then, the variable with the highest Gini coefficient was identified and all risk factors with a correlation coefficient above +0.25 or below -0.25 were removed. This step should be repeated with the remaining variables until all features were analyzed. 
 Table \ref{tab:re_corr_matrix} shows the correlation coefficient for all numeric variables in the long list. To account for potential interaction effects between categorical and indicator variables, the Variance Inflation Factor (VIF) was considered. A high correlation coefficient between \emph{LTV} and \emph{CLTV} is expected and a higher correlation is also visible between \emph{MI Perc}, \emph{Loan Term}, \emph{LTV} and \emph{CLTV}. Executing the described process, \emph{CLTV} was added to the shortlist, while the remaining correlated risk factors were excluded.  The VIF values, as shown in Table \ref{tab:re_vif}, do not indicate severe multicollinearity. In the final step, instead of using the raw variable, the indicator version \emph{Loan Term $\geq$ 360m} was chosen. The short list is given in Table \ref{tab:re_ll_sl}.
 
 \begin{table}[H]
@@ -481,30 +480,30 @@ Occupancy = Investment Property                                                 
 \begin{longtable}{ l c c }\toprule    
 \textbf{Variable}           & \textbf{Long List} 											& \textbf{Short List}						 \\\midrule
 Credit Score                & \cellcolor[HTML]{C0F0C0}Missing Treatment applied            & \cellcolor[HTML]{C0F0C0}                     \\
-Homebuyer Flag              & \cellcolor[HTML]{F7D9E1}Low GINI                             & -                                            \\
+Homebuyer Flag              & \cellcolor[HTML]{F7D9E1}Low Gini                             & -                                            \\
 MI Perc                     & \cellcolor[HTML]{C0F0C0}Missing Treatment applied            & \cellcolor[HTML]{F7D9E1}Correlated with CLTV \\
-No Units                    & \cellcolor[HTML]{F7D9E1}Low GINI                             & -                                            \\
-Occupancy                   & \cellcolor[HTML]{F7D9E1}Low GINI                             & -                                            \\
+No Units                    & \cellcolor[HTML]{F7D9E1}Low Gini                             & -                                            \\
+Occupancy                   & \cellcolor[HTML]{F7D9E1}Low Gini                             & -                                            \\
 CLTV                        & \cellcolor[HTML]{C0F0C0}Missing Treatment applied            & \cellcolor[HTML]{C0F0C0}                     \\
 DTI                         & \cellcolor[HTML]{C0F0C0}Missing Treatment applied            & \cellcolor[HTML]{C0F0C0}                     \\
 UPB                         & \cellcolor[HTML]{C0F0C0}                                     & \cellcolor[HTML]{C0F0C0}                     \\
 LTV                         & \cellcolor[HTML]{C0F0C0}Missing Treatment applied            & \cellcolor[HTML]{F7D9E1}Correlated with CLTV \\
 Channel                     & \cellcolor[HTML]{C0F0C0}                                     & \cellcolor[HTML]{C0F0C0}                     \\
-PPM Flag                    & \cellcolor[HTML]{F7D9E1}Low GINI                             & -                                            \\
-Amort Type                  & \cellcolor[HTML]{F7D9E1}Low GINI                             & -                                            \\
+PPM Flag                    & \cellcolor[HTML]{F7D9E1}Low Gini                             & -                                            \\
+Amort Type                  & \cellcolor[HTML]{F7D9E1}Low Gini                             & -                                            \\
 State                       & \cellcolor[HTML]{F7D9E1}Adapted Variable derived (US-region) & -                                            \\
-Prop Type                   & \cellcolor[HTML]{F7D9E1}Low GINI                             & -                                            \\
-Loan Purpose                & \cellcolor[HTML]{F7D9E1}Low GINI                             & -                                            \\
+Prop Type                   & \cellcolor[HTML]{F7D9E1}Low Gini                             & -                                            \\
+Loan Purpose                & \cellcolor[HTML]{F7D9E1}Low Gini                             & -                                            \\
 Loan Term                   & \cellcolor[HTML]{C0F0C0}                                     & \cellcolor[HTML]{F7D9E1}Correlated with CLTV \\
 No Borrowers                & \cellcolor[HTML]{C0F0C0}                                     & \cellcolor[HTML]{C0F0C0}                     \\
 Sup Conf Flag               & \cellcolor[HTML]{F7D9E1}High Missing Rate                    & -                                            \\
 Prog Flag                   & \cellcolor[HTML]{F7D9E1}High Missing Rate                    & -                                            \\
 HARP Flag                   & \cellcolor[HTML]{F7D9E1}High Missing Rate                    & -                                            \\
 Prop Val Method             & \cellcolor[HTML]{C0F0C0}                                     & \cellcolor[HTML]{C0F0C0}                     \\
-Int Only Flag               & \cellcolor[HTML]{F7D9E1}Low GINI                             & -                                            \\
+Int Only Flag               & \cellcolor[HTML]{F7D9E1}Low Gini                             & -                                            \\
 US Region                   & \cellcolor[HTML]{C0F0C0}                                     & \cellcolor[HTML]{C0F0C0}                     \\
 MI Flag                     & \cellcolor[HTML]{C0F0C0}                                     & \cellcolor[HTML]{C0F0C0}                     \\
-Loan Term \textgreater 360m & \cellcolor[HTML]{F7D9E1}Low GINI                             & -                                            \\
+Loan Term \textgreater 360m & \cellcolor[HTML]{F7D9E1}Low Gini                             & -                                            \\
 Loan Term Group             & \cellcolor[HTML]{F7D9E1}Similar Variable used                & -                                            \\
 Loan Term $\geq$ 360m       & \cellcolor[HTML]{C0F0C0}                                     & \cellcolor[HTML]{C0F0C0}                     \\
 Loan Term = 360m            & \cellcolor[HTML]{F7D9E1}Similar Variable used                & -                                           \\\bottomrule
@@ -513,7 +512,7 @@ Loan Term = 360m            & \cellcolor[HTML]{F7D9E1}Similar Variable used     
 \end{longtable}
 
 \subsection{Scaling}
-Due to the different ranges of risk factors, especially because of \emph{Original Unpaid Balance}, a standardization of all numeric variables was carried out to prevent unusually small or large coefficients. The following formula is used:
+Due to the different ranges of risk factors, especially because of \emph{Original Unpaid Balance}, a standardization of all numeric variables was carried out to prevent unusually small or large coefficients and to also enhance the comparability of the model coefficients. The following formula is used:
 
 \begin{equation}
 X_{\text{standardized}} = \frac{X - \mu}{\sigma}
@@ -528,7 +527,7 @@ where:
 \section{Modeling}
 
 \subsection{Logistic Regression}
-Employing the stepwise selection algorithm, all short list variables were inserted into the modeling process, resulting in the model presented in Table \ref{tab:re_prelLogModel}. The order of the risk factors indicates the significance in the model, with all coefficients exhibiting statistical significance indicated by low p-values. The AIC and BIC were calculated at each modeling step to limit the number of explanatory variables. Table \ref{tab:re_AICBIC} outlines the relative change per step. A noticeable drop in improvement occurs between step 5 and 6 and thus, prompting the removal of all succeeding variables, followed by a re-estimation of the model. The final model, detailed in Table \ref{tab:re_finalLogModel}, only includes numeric variables. All coefficients align with the expected economic sign; for example, a higher DTI corresponds to a higher probability of default, reflected in a positive coefficient. In contrast, an increased number of borrowers, which means more people are obligated to repay the loan, correlates with a lower probability of default, resulting in a negative coefficient. Performance metrics for the model are provided in Chapter \ref{sec:comp_model} as part of the comparison with the Random Forest model.
+Employing the forward stepwise selection algorithm, all short list variables were inserted into the modeling process, resulting in the model presented in Table \ref{tab:re_prelLogModel}. The order of the risk factors indicates the significance in the model, with all coefficients exhibiting statistical significance indicated by low p-values. The AIC and BIC were calculated at each modeling step to limit the number of explanatory variables. Table \ref{tab:re_AICBIC} outlines the relative change per step. A noticeable drop in improvement occurs between step 5 and 6 and thus, prompting the removal of all succeeding variables, followed by a re-estimation of the model. The final model, detailed in Table \ref{tab:re_finalLogModel}, only includes numeric variables. All coefficients align with the expected economic sign; for example, a higher DTI corresponds to a higher \acl{PD}, reflected in a positive coefficient. In contrast, an increased number of borrowers, which means more people are obligated to repay the loan, correlates with a lower \acl{PD}, resulting in a negative coefficient. Performance metrics for the model are provided in Chapter \ref{sec:comp_model} as part of the comparison with the Random Forest model.
 
 \begin{table}[H]
 \centering
@@ -592,9 +591,9 @@ UPB                		& 0,341                & \textless{}.0001\\\bottomrule
 
 \subsection{Random Forest}
 \label{sec:randfor}
-The same training and test sample after the data preparation process was used for the development of the Random Forest model. Due to sample size constraints and computational limitations, a 90:10 split ratio was applied to the training sample and a 2-fold cross-validation was executed during hyperparameter tuning. All variables from Table \ref{tab:re_ll_sl} were considered for modeling.
+The same training and test sample after the data preparation process was used for the development of the Random Forest model. Due to sample size constraints and computational limitations, a 90:10 split ratio was applied to the training sample and a 2-fold cross-validation was executed during hyperparameter (HP) tuning. All variables from Table \ref{tab:re_ll_sl} were considered for modeling.
 
-As a first step, a baseline Random Forest model was created using the default settings of the LGBMRegressor from the LightGBM library. A wide range for various parameters was established for the Random Search (see Figure \ref{fig:re_hpsearch}, left), exploring 75 configurations on two folds each, totaling 150 fits on the HP Tuning Sample. The best-performing configuration was then tested on the HP Evaluation sample for comparison with the Baseline model. The best Random Search configuration is detailed in the "Random Search" column of Table \ref{tab:best_rand_grid}. 
+As a first step, a Baseline Random Forest model was created using the default settings of the LGBMRegressor from the LightGBM library. A wide range for various parameters was established for the Random Search (see Figure \ref{fig:re_hpsearch}, left), exploring 75 configurations on two folds each, totaling 150 fits on the HP tuning sample. The best-performing configuration was then tested on the HP evaluation sample for comparison with the Baseline model. The best Random Search configuration is detailed in the "Random Search" column of Table \ref{tab:best_rand_grid}. 
 
 Afterward, a more narrow parameter range was defined for the Grid Search (see Figure \ref{fig:re_hpsearch}, right). Therefore, twelve configurations, each with a 2-fold cross-validation, resulting in 24 fits, were tested. The best hyperparameter settings are presented in Table \ref{tab:best_rand_grid}. AUC and Gini values for all three models are illustrated in Figure \ref{fig:re_rochp}. Based on these results, the Grid Search configuration was chosen for developing the Random Forest model.
 
@@ -650,15 +649,15 @@ Frequency for bagging                                  & 7                      
 \label{sec:comp_model}
 
 \subsection{Discriminatory power}
-The performance of both models is evaluated using both the test and an out-of-time dataset. To detect potential overfitting, performance metrics for the training sample are also provided. The Gini values are presented in Table \ref{re_ginicomp} and visually represented in Figure \ref{fig:re_roc1} - \ref{fig:re_roc2}. The Random Forest model exhibits a slightly higher performance in the training and test samples, while the logistic regression model shows a slight advantage in the validation sample. Notably, both models demonstrate higher Gini values on the validation sample, indicating no signs of overfitting.
+The performance of both models is evaluated using both the test and an out-of-time data set. To detect potential overfitting, performance metrics for the training sample are also provided. The Gini values are presented in Table \ref{re_ginicomp} and visually represented in Figure \ref{fig:re_roc1} - \ref{fig:re_roc2}. The Random Forest model exhibits a slightly higher performance in the training and test samples with a relative improvement of about 1.7\%, while the logistic regression model shows a slight advantage in the validation sample with 1.6\% relative difference. Notably, both models demonstrate higher Gini values on the validation sample, indicating no signs of overfitting.
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lrr}\toprule
-\textbf{Sample} & \textbf{Logistic Model} & \textbf{Random Forest} \\\midrule
-Training        & 0,4626                  & 0,4708                 \\
-Test            & 0,4638                  & 0,4718                 \\
-Validation      & 0,4810                  & 0,4734                \\\bottomrule
+\begin{tabular}{lrrrr}\toprule
+\textbf{Sample} & \textbf{Logistic Model} & \textbf{Random Forest} & \textbf{abs. Change} & \textbf{rel. Change}\\\midrule
+Training   & 0,4626 & 0,4708 & 0,82\%  & 1,77\%  \\
+Test       & 0,4638 & 0,4718 & 0,80\%  & 1,72\%  \\
+Validation & 0,4810 & 0,4734 & -0,76\% & -1,58\% \\\bottomrule
 \end{tabular}
 \caption{Comparison of Gini values in training, test and validation sample}
 \label{re_ginicomp}
@@ -686,7 +685,7 @@ Validation      & 0,4810                  & 0,4734                \\\bottomrule
 \end{figure}
 
 \subsection{Classification}
-To determine an optimal threshold to set a predicted default flag derived from the predicted PD, the F1-score is computed for different values. These values are detailed in Table \ref{tab:re_f1thresh}, leading to the decision to set the threshold at PD > 4\% for both models. The resulting confusion matrices for the training, test and validation sample are visualized in Figure \ref{fig:re_confmatr1} to \ref{fig:re_confmatr3}. On the x-axis, the predicted values are presented, while the y-axis represents true values. Focusing on the most critical cases, where default events are misclassified as non-default (lower left corner), the Random Forest model performs slightly worse in this regard compared to the Logistic Regression model on all samples.
+To determine an optimal threshold to set a predicted default flag derived from the predicted PD, the F1-score is computed for different values. These values are detailed in Table \ref{tab:re_f1thresh}, leading to the decision to set the threshold with the maximum F1-score at PD > 4\% for both models. The Random Forest model exhibits a slightly higher accuracy with a relative improvement of 11.08\%. The resulting confusion matrices for the training, test and validation sample are visualized in Figure \ref{fig:re_confmatr1} to \ref{fig:re_confmatr3}. On the x-axis, the predicted values are presented, while the y-axis represents true values. Focusing on the most critical cases, where default events are misclassified as non-default (lower left corner), the Random Forest model performs slightly worse in this regard compared to the logistic regression model on all samples.
 
 \begin{table}[H]
 \centering
@@ -755,7 +754,7 @@ To determine an optimal threshold to set a predicted default flag derived from t
 \end{figure}
 
 \subsection{Stability Test}
-A stability test for both models was conducted by assessing the Gini coefficient on the test and validation samples for each year, as detailed in Table \ref{tab:re_stab} and illustrated through ROC curves in Figure \ref{fig:re_rocstab}. The left side of the Figure is the logistic model, while the right side showcases the Random Forest model. Both models exhibited their lowest performance in 2019. The logistic model demonstrated its peak discriminatory power in 2018, whereas the Random Forest model excelled in the year 2020. Across the years, both models exhibit a Gini difference of up to 8.4\%, suggesting a moderate level of stability.
+A stability test for both models was conducted by assessing the Gini coefficient on the test and validation samples for each year, as detailed in Table \ref{tab:re_stab} and illustrated through ROC curves in Figure \ref{fig:re_rocstab}. The left side of the Figure is the logistic regression model, while the right side showcases the Random Forest model. Both models exhibited their lowest performance in 2019. The logistic regression model demonstrated its peak discriminatory power in 2018, whereas the Random Forest model excelled in the year 2020. Across the years, both models exhibit a Gini difference of up to 8.4\%, suggesting a moderate level of stability.
 
 \begin{table}[H]
 \centering
@@ -784,7 +783,7 @@ A stability test for both models was conducted by assessing the Gini coefficient
 \end{figure}
 
 \subsection{Binning Process}
-A binning process was executed to provide an overview of the distribution of PDs and default rates. In real-world applications, it is a standard practice to categorize PD values into distinct rating bands, distinguishing between investment and non-investment grades. A straightforward method involves employing fixed ranges for each grade. The specific ranges and the resulting distribution are detailed in Table \ref{tab:re_distrDR} and visually presented in Figure \ref{fig:re_distrDR}. These arbitrary defined ranges already provide a satisfactory distribution, accompanied by a desired upward trend in defaults. The logistic model tends to allocate a greater number of customers with PD values below 0.5\% compared to the Random Forest model. The Random Forest model exhibits a moderate concentration in the range of 1\% to 1.5\%.
+A binning process was executed to provide an overview of the distribution of PDs and default rates. In real-world applications, it is a standard practice to categorize PD values into distinct rating bands, distinguishing between investment and non-investment grades. A straightforward method involves employing fixed ranges for each grade. The specific ranges and the resulting distribution are detailed in Table \ref{tab:re_distrDR} and visually presented in Figure \ref{fig:re_distrDR}. These arbitrary defined ranges already provide a satisfactory distribution, accompanied by a desired upward trend in defaults. The logistic regression model tends to allocate a greater number of customers with PD values below 0.5\% compared to the Random Forest model. The Random Forest model exhibits a moderate concentration in the range of 1\% to 1.5\%.
 
 \begin{table}[H]
 \centering
@@ -834,9 +833,9 @@ To interpret the Random Forest model, several techniques described in Chapter \r
 \end{figure}
 
 \subsection{Local Interpretation}
-Two particular instances were selected for the Local Interpretable Model-agnostic Explanation (LIME) technique. The first observation received nearly identical PDs of 1.2547\% in both models, while the second observation received vastly different PDs of 59.0619\% in the Logit Model and 2.2576\% in the RF Model. The score composition for the former is displayed in Table \ref{tab:re_PDres} and the LIME results are visible in Figures \ref{fig:re_LIMEres_min} and \ref{fig:re_LIMEres_max}. The green bars indicate the features contributing to predicting the class "non-default" class and the red bars signify the contribution to the "default" class. 
+Two particular instances were selected for the \ac{LIME} technique. The first observation received nearly identical PDs of 1.2547\% in both models, while the second observation received vastly different PDs of 59.0619\% in the Logit Model and 2.2576\% in the Random Forest Model. The score composition for the former is displayed in Table \ref{tab:re_PDres} and the \ac{LIME} results are visible in Figures \ref{fig:re_LIMEres_min} and \ref{fig:re_LIMEres_max}. The green bars indicate the features contributing to predicting the class "non-default" class and the red bars signify the contribution to the "default" class. 
 
-While the high Credit Score mainly influences the low PD in observation 1 for both models, the lower Credit Score, as well as the higher DTI, resulted in a higher PD in the Logit model. Surprisingly, in the RF model, both features contribute to the classification of "non-default", contrasting the result seen in the first observation.
+While the high Credit Score mainly influences the low PD in observation 1 for both models, the lower Credit Score, as well as the higher DTI, resulted in a higher PD in the Logit model. Surprisingly, in the Random Forest model, both features contribute to the classification of "non-default", contrasting the result seen in the first observation.
 
 \begin{table}[H]
 \centering
@@ -844,11 +843,11 @@ While the high Credit Score mainly influences the low PD in observation 1 for bo
 \textbf{}                              & \multicolumn{3}{c}{\textbf{Observation 1}}                                                                                                                                                                        & \multicolumn{3}{c}{\textbf{Observation 2}}                                                                                                                                                                       \\
 \multicolumn{1}{l|}{\textbf{Variable}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Original\\ Value\end{tabular}}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Scaled\\ Value\end{tabular}}} & \multicolumn{1}{c|}{\textbf{Score}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Original\\ Value\end{tabular}}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Scaled\\ Value\end{tabular}}} & \multicolumn{1}{c}{\textbf{Score}} \\\midrule
 \multicolumn{1}{l|}{Intercept}         &                                                                                       &                                                                                     & \multicolumn{1}{r|}{-4,5457}        &                                                                                       &                                                                                     & -4,5457                            \\
-\multicolumn{1}{l|}{Credit Score}      & 691                                                                                   & -           1,4100                                                                  & \multicolumn{1}{r|}{0,7642}         & 309                                                                                   & -        10,1100                                                                    & 5,4796                             \\
-\multicolumn{1}{l|}{DTI}               & 29,99                                                                                 & -           0,4421                                                                  & \multicolumn{1}{r|}{-0,1802}        & 40,01                                                                                 & 0,5910                                                                              & 0,2409                             \\
-\multicolumn{1}{l|}{CLTV}              & 73,00                                                                                 & -           0,0359                                                                  & \multicolumn{1}{r|}{-0,0094}        & 30,00                                                                                 & -           2,5257                                                                  & -0,6600                            \\
-\multicolumn{1}{l|}{No Borrowers}      & 2                                                                                     & 0,9969                                                                              & \multicolumn{1}{r|}{-0,2476}        & 1                                                                                     & -           0,9326                                                                  & 0,2317                             \\
-\multicolumn{1}{l|}{UPB}               & 200.000                                                                               & -           0,4313                                                                  & \multicolumn{1}{r|}{-0,1469}        & 110.000                                                                               & -           1,1133                                                                  & -0,3793                            \\
+\multicolumn{1}{l|}{Credit Score (fico)}      & 691                                                                                   & -           1,4100                                                                  & \multicolumn{1}{r|}{0,7642}         & 309                                                                                   & -        10,1100                                                                    & 5,4796                             \\
+\multicolumn{1}{l|}{DTI (dti)}               & 29,99                                                                                 & -           0,4421                                                                  & \multicolumn{1}{r|}{-0,1802}        & 40,01                                                                                 & 0,5910                                                                              & 0,2409                             \\
+\multicolumn{1}{l|}{CLTV (cltv)}              & 73,00                                                                                 & -           0,0359                                                                  & \multicolumn{1}{r|}{-0,0094}        & 30,00                                                                                 & -           2,5257                                                                  & -0,6600                            \\
+\multicolumn{1}{l|}{No Borrowers (cnt\_borr)}      & 2                                                                                     & 0,9969                                                                              & \multicolumn{1}{r|}{-0,2476}        & 1                                                                                     & -           0,9326                                                                  & 0,2317                             \\
+\multicolumn{1}{l|}{UPB (orig\_upb)}               & 200.000                                                                               & -           0,4313                                                                  & \multicolumn{1}{r|}{-0,1469}        & 110.000                                                                               & -           1,1133                                                                  & -0,3793                            \\
 \multicolumn{1}{l|}{Model Score}       & \multicolumn{3}{c|}{-4,3656}                                                                                                                                                                                      & \multicolumn{3}{c}{0,3672}                                                                                                                                                                                       \\
 \multicolumn{1}{l|}{PD}                & \multicolumn{3}{c|}{1,25\%}                                                                                                                                                                                       & \multicolumn{3}{c}{59,08\%} \\\bottomrule                                                                                                                                                                                     
 \end{tabular}
@@ -871,7 +870,7 @@ While the high Credit Score mainly influences the low PD in observation 1 for bo
 \end{figure}
 
 \subsection{Individual Decision Trees, PDP and ICE plots}
-Two individual decision trees from the Random Forest model are presented in Figure \ref{fig:re_indtree1} and \ref{fig:re_indtree2}. Analyzing the split conditions, they reaffirm the importance of \emph{Credit Score}, \emph{UPB}, \emph{DTI} and \emph{LTV} as primary variables. To assess their influence, Partial Dependence plots of these four features, along with \emph{Prop Val Method = Full Appraisal} and \emph{Loan Purpose = Refinance - Cash Out} are showcased in Figure \ref{fig:pdp_1} to \ref{fig:pdp_2}. All plots are in Appendix \ref{sec:PDP_all}. The observed trends align with the economic rationale: increasing Credit Score corresponds to decreasing PD, while rising UPB, DTI and CLTV are associated with higher PD. Both categorical variables indicate a higher PD if the condition is fulfilled. Individual Conditional Expectation (ICE) plots were generated to further analyze the impact of the four most crucial features. Figure \ref{fig:ice_1} to \ref{fig:ice_2} provide a granular analysis of each feature's influence on individual predictions. The findings from these ICE plots also align with the anticipated relationship between the respective risk factor and the PD estimation.
+Two individual decision trees from the Random Forest model are presented in Figure \ref{fig:re_indtree1} and \ref{fig:re_indtree2}. Analyzing the split conditions, they reaffirm the importance of \emph{Credit Score}, \emph{UPB}, \emph{DTI} and \emph{LTV} as primary variables. To assess their influence, Partial Dependence plots of these four features, along with \emph{Prop Val Method = Full Appraisal} and \emph{Loan Purpose = Refinance - Cash Out} are showcased in Figure \ref{fig:pdp_1} to \ref{fig:pdp_2}. All plots are in Appendix \ref{sec:PDP_all}. The observed trends align with the economic rationale: increasing Credit Score corresponds to decreasing PD, while rising \emph{UPB}, \emph{DTI} and \emph{CLTV} are associated with higher PD. Both categorical variables indicate a higher PD if the condition is fulfilled. Individual Conditional Expectation (ICE) plots were generated to further analyze the impact of the four most crucial features \emph{Credit Score}, \emph{UPB}, \emph{CLTV} and \emph{DTI}. Figure \ref{fig:ice_1} to \ref{fig:ice_2} provide a granular analysis of each feature's influence on individual predictions. The findings from these ICE plots also align with the anticipated relationship between the respective risk factor and the PD estimation.
 
 \begin{figure}[H]
 	\centering

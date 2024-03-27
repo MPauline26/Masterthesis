@@ -1,4 +1,23 @@
 \chapter{Introduction}
-\section{Motivation}
+\section{Problem outline and significance}
+
+In the financial industry, credit risk is a critical aspect that demands diligent assessment and management. While traditional scoring models like logistic regression have enjoyed popularity for their performance and intuitive explanations, they often fall short in capturing intricate patterns, non-linear relationships of risk factors and handling unexplored forms of information such as unstructured and transactional data. As a result, there is a compelling need for innovative and sophisticated methodologies that can enhance the accuracy and reliability of predicting the \ac{PD}.
+
+By investigating the application of the Random Forest algorithm, the research aims to offer practical insights that can further advance credit risk assessment practices. The findings of this research seek to support financial institutions with a more accurate and adaptable model for assessing credit risk, enabling them to make better informed lending decisions and enhance overall portfolio management. The thesis contributes to the academic discourse by exploring the practical application of the Random Forest algorithm in a real-world financial context. It opens possibilities for further research into the interpretability and transparency of machine learning models in credit risk assessment.
+
+\section{Research Question}
+
+This master thesis addresses two pivotal research questions. Firstly, the study seeks to determine whether a model developed through the application of the Random Forest algorithm outperforms a traditional logistic regression model in the context of predicting the \ac{PD} applied on an American mortgage loan portfolio. This comparative analysis aims to provide valuable insights to enhance the accuracy of credit risk assessments. Secondly, the research investigates strategies to overcome the inherent "Black Box" nature of machine learning models, with a specific focus on increasing their interpretability. 
+
+\section{Methodology}
+
+The methodology employed in this master thesis is designed to thoroughly assess and compare the predictive performance of the Random Forest algorithm against a traditional logistic regression model in the domain of credit risk assessment. Utilizing an American mortgage loan data set, the research begins with an approximation of the default flag fulfilling the requirement stated in \ac{CRR} Article 178(1). Then, a preprocessing of the data is performed to address missing values and outliers. A portion of the data set is allocated for training the logistic regression and Random Forest models. The Random Forest model is additionally optimized through hyperparameter tuning to enhance its predictive capabilities. The models are then evaluated on separate testing and out-of-time data sets, employing key performance metrics such as the area under the Receiver Operating Characteristic curve, Gini coefficient, F1-score and confusion matrix. Additionally, the thesis incorporates an exploration of interpretability-enhancing techniques. The combined methodology ensures a comprehensive investigation into the strengths and limitations of these predictive modeling approaches.
+
 \section{Structure}
-\section{Previous Work}
+
+The structure of this master thesis is split into two parts: Theory introduction and empirical research. 
+
+Chapter \ref{ch:CR} introduces the foundational concepts of credit risk and the regulatory framework. Traditional credit risk models, such as logistic regression, are explored in Chapter \ref{ch:TM}, alongside other models like linear regression and external ratings. Chapter \ref{ch:AM} describes advanced models, including decision trees and neural networks. The modeling process is detailed in Chapter \ref{ch:MP}, covering data preparation, logistic regression and Random Forest modeling steps. Validation methods, including out-of-sample and out-of-time validation, are discussed in Chapter \ref{ch:VL}, accompanied by performance evaluation metrics and stability tests. Chapter \ref{ch:IP} addresses the crucial aspect of interpretability in machine learning models, discussing its importance and presenting methods for interpretability analysis. 
+
+Chapter \ref{ch:RE} delves into the specifics of the data used and the results obtained, utilizing Freddie Mac's Single Family Loan-Level Data set. It covers data quality, limitations, sample creation, data preparation, variable selection and the modeling process for both logistic regression and Random Forest approaches. Validation and comparison metrics are presented, followed by a detailed exploration of interpretability through global and local interpretations, individual decision trees, Partial Dependence Plots and Individual Conditional Expectation plots. 
+This well-structured framework ensures a systematic and insightful investigation into the research questions.

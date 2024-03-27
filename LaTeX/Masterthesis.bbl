@@ -15,18 +15,11 @@ J.~Witzany.
 \newblock Springer International Publishing, 2017.
 \newblock \urlprefix\url{https://books.google.at/books?id=YQ5cvgAACAAJ}.
 
-\bibitem{BCBS:2004}
+\bibitem{BCBS:2023}
 {Basel Committee on Banking Supervision}.
-\newblock {\em International Convergence of Capital Measurement and Capital
-  Standards}.
-\newblock \urlprefix\url{https://www.bis.org/publ/bcbs107.pdf}.
-
-\bibitem{FDIC:2023}
-{Federal Deposit Insurance Corporation}.
-\newblock {\em Economic Capital and the Assessment of Capital Adequacy}.
-\newblock
-  \urlprefix\url{https://www.fdic.gov/regulations/examinations/supervisory/insights/siwin04/siwinter2004-article01.html}.
-\newblock Accessed: 2021-11-13.
+\newblock {\em History of the Basel Committee}.
+\newblock \urlprefix\url{https://www.bis.org/bcbs/history.htm}.
+\newblock Accessed: 2023-11-25.
 
 \bibitem{EBA:2023}
 {European Banking Authority}.
@@ -35,12 +28,23 @@ J.~Witzany.
 \newblock
   \urlprefix\url{https://www.eba.europa.eu/sites/default/documents/files/document_library/Publications/Reports/2023/1061483/Follow-up%20report%20on%20machine%20learning%20for%20IRB%20models.pdf}.
 
+\bibitem{Kuhn:2013}
+M.~Kuhn and K.~Johnson.
+\newblock {\em Applied Predictive Modeling}.
+\newblock SpringerLink : B{\"u}cher. Springer New York, 2013.
+
 \bibitem{Roberts2022}
 T.~Roberts and S.~Tonna.
 \newblock {\em Risk Modeling: Practical Applications of Artificial
   Intelligence, Machine Learning, and Deep Learning}.
 \newblock Wiley and SAS Business Series. Wiley, 2022.
 \newblock \urlprefix\url{https://books.google.at/books?id=tqdvzgEACAAJ}.
+
+\bibitem{locatelli:2022}
+R.~Locatelli, G.~Pepe, and F.~Salis.
+\newblock {\em Artificial Intelligence and Credit Risk: The Use of Alternative
+  Data and Methods in Internal Credit Rating}.
+\newblock Springer International Publishing, 2022.
 
 \bibitem{Python:2022}
 T.~Atwan.
@@ -55,7 +59,12 @@ M.~Galarnyk.
 \newblock {\em Understanding Boxplots}.
 \newblock
   \urlprefix\url{https://www.kdnuggets.com/2019/11/understanding-boxplots.html}.
-\newblock Accessed: 2021-11-13.
+\newblock Accessed: 2023-11-13.
+
+\bibitem{FUMS:2020}
+M.~Wirth.
+\newblock {\em Fundamentals of Mathematics and Statistics}.
+\newblock Quantitative Asset and Risk Management, 2020.
 
 \bibitem{BDT}
 Y.~Coadou.
@@ -68,32 +77,32 @@ Simplilearn.
 \newblock {\em Random Forest Algorithm}.
 \newblock
   \urlprefix\url{https://www.simplilearn.com/tutorials/machine-learning-tutorial/random-forest-algorithm}.
-\newblock Accessed: 2021-11-13.
+\newblock Accessed: 2023-11-13.
 
 \bibitem{AUC:2023}
 Y.~E. Khal.
 \newblock {\em Confusion matrix, AUC and ROC curve and Gini clearly explained}.
 \newblock
   \urlprefix\url{https://yassineelkhal.medium.com/confusion-matrix-auc-and-roc-curve-and-gini-clearly-explained-221788618eb2}.
-\newblock Accessed: 2021-11-13.
+\newblock Accessed: 2023-11-13.
 
 \bibitem{FreddieMac:2023}
 P.~Chism.
 \newblock {\em Freddie Mac: What Is The Federal Home Loan Mortgage Corporation
   (FHLMC)?}
 \newblock \urlprefix\url{https://www.rocketmortgage.com/learn/freddie-mac}.
-\newblock Accessed: 2021-11-13.
+\newblock Accessed: 2023-11-13.
 
 \bibitem{SecMortMark:2023}
 A.~Dehan.
 \newblock {\em What Is The Secondary Mortgage Market And How Does It Work?}
 \newblock
   \urlprefix\url{https://www.rocketmortgage.com/learn/secondary-mortgage-market}.
-\newblock Accessed: 2021-11-13.
+\newblock Accessed: 2023-11-13.
 
 \bibitem{FreddieMacData:2023}
 {Federal Home Loan Mortgage Corporation}.
-\newblock {\em Single Family Loan-Level Dataset}.
+\newblock {\em Single Family Loan-Level Data set}.
 \newblock
   \urlprefix\url{https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset}.
 
@@ -102,5 +111,10 @@ A.~Dehan.
 \newblock {\em Single-Family Loan Level Dataset General User Guide}.
 \newblock
   \urlprefix\url{https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset}.
+
+\bibitem{USRegion:2014}
+C.~Halpert.
+\newblock {\em census-regions}.
+\newblock \url{https://github.com/cphalpert/census-regions}, 2014.
 
 \end{thebibliography}

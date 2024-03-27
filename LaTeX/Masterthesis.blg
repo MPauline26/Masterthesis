@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Masterthesis.aux
 The style file: habbrv.bst
-A level-1 auxiliary file: Summary.aux
+A level-1 auxiliary file: Abstract.aux
 A level-1 auxiliary file: Introduction.aux
 A level-1 auxiliary file: M_CreditRisk_PD.aux
 A level-1 auxiliary file: M_TraditionalModels.aux
@@ -11,67 +11,66 @@ A level-1 auxiliary file: M_ModellingProcess.aux
 A level-1 auxiliary file: M_Validation.aux
 A level-1 auxiliary file: M_Interpretability.aux
 A level-1 auxiliary file: R_Results.aux
+A level-1 auxiliary file: R_Conclusio.aux
 A level-1 auxiliary file: Annex.aux
 Database file #1: Literature.bib
-Warning--entry type for "BCBS:2004" isn't style-file defined
---line 30 of file Literature.bib
 Warning--entry type for "SecMortMark:2023" isn't style-file defined
---line 38 of file Literature.bib
+--line 64 of file Literature.bib
 Warning--entry type for "FreddieMacData:2023" isn't style-file defined
---line 46 of file Literature.bib
-Warning--entry type for "FDIC:2023" isn't style-file defined
---line 54 of file Literature.bib
+--line 72 of file Literature.bib
 Warning--entry type for "Boxplot:2019" isn't style-file defined
---line 62 of file Literature.bib
+--line 88 of file Literature.bib
 Warning--entry type for "FreddieMac:2023" isn't style-file defined
---line 70 of file Literature.bib
+--line 96 of file Literature.bib
 Warning--entry type for "FreddieMacUG:2023" isn't style-file defined
---line 78 of file Literature.bib
+--line 104 of file Literature.bib
 Warning--entry type for "RanFor:2023" isn't style-file defined
---line 94 of file Literature.bib
+--line 120 of file Literature.bib
 Warning--entry type for "AUC:2023" isn't style-file defined
---line 102 of file Literature.bib
+--line 128 of file Literature.bib
+Warning--entry type for "BCBS:2023" isn't style-file defined
+--line 136 of file Literature.bib
 Warning--entry type for "EBA:2023" isn't style-file defined
---line 131 of file Literature.bib
-You've used 14 entries,
+--line 174 of file Literature.bib
+You've used 17 entries,
             2305 wiz_defined-function locations,
-            612 strings with 6934 characters,
-and the built_in function-call counts, 2548 in all, are:
-= -- 198
-> -- 60
+            633 strings with 7272 characters,
+and the built_in function-call counts, 3128 in all, are:
+= -- 247
+> -- 83
 < -- 0
-+ -- 29
-- -- 15
-* -- 76
-:= -- 346
-add.period$ -- 53
-call.type$ -- 14
-change.case$ -- 11
++ -- 38
+- -- 21
+* -- 92
+:= -- 432
+add.period$ -- 63
+call.type$ -- 17
+change.case$ -- 12
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 141
-empty$ -- 378
-format.name$ -- 15
-if$ -- 639
+cite$ -- 17
+duplicate$ -- 176
+empty$ -- 457
+format.name$ -- 21
+if$ -- 789
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 7
-newline$ -- 92
-num.names$ -- 14
-pop$ -- 127
+int.to.str$ -- 17
+missing$ -- 11
+newline$ -- 107
+num.names$ -- 17
+pop$ -- 161
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 68
+skip$ -- 71
 stack$ -- 0
 substring$ -- 18
-swap$ -- 24
+swap$ -- 28
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 15
-width$ -- 16
-write$ -- 163
-(There were 10 warnings)
+while$ -- 18
+width$ -- 19
+write$ -- 195
+(There were 9 warnings)
