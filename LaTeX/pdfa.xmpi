@@ -62,13 +62,6 @@
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/"> 
    <dc:format>application/pdf</dc:format> 
-   <dc:title><rdf:Alt><rdf:li xml:lang="x-default">PD Model Development using Boosted Decision Trees</rdf:li></rdf:Alt></dc:title>
-   <dc:creator><rdf:Seq><rdf:li>2110613012 – Meikee Pagsinohin</rdf:li></rdf:Seq></dc:creator>
-   <dc:publisher><rdf:Bag><rdf:li>Fachhochschule BFI</rdf:li></rdf:Bag></dc:publisher>
-   <dc:language><rdf:Bag><rdf:li>en-UK</rdf:li></rdf:Bag></dc:language>
-   <dc:subject><rdf:Bag><rdf:li>diploma thesis</rdf:li>
-     <rdf:li>template</rdf:li>
-     <rdf:li>LaTeX</rdf:li></rdf:Bag></dc:subject>
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:prism="http://prismstandard.org/namespaces/basic/2.2/"> 
   </rdf:Description> 
@@ -80,15 +73,15 @@
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/"> 
    <xmp:CreatorTool>LaTeX with hyperref</xmp:CreatorTool> 
-   <xmp:ModifyDate>2024-03-24T21:46:01+01:00</xmp:ModifyDate> 
-   <xmp:CreateDate>2024-03-24T21:46:01+01:00</xmp:CreateDate> 
-   <xmp:MetadataDate>2024-03-24T21:46:01+01:00</xmp:MetadataDate> 
+   <xmp:ModifyDate>2024-03-24T21:52:46+01:00</xmp:ModifyDate> 
+   <xmp:CreateDate>2024-03-24T21:52:46+01:00</xmp:CreateDate> 
+   <xmp:MetadataDate>2024-03-24T21:52:46+01:00</xmp:MetadataDate> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpRights = "http://ns.adobe.com/xap/1.0/rights/"> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"> 
    <xmpMM:DocumentID>uuid:24B7E778-DC50-8C00-9E49-E379F35BFA58</xmpMM:DocumentID> 
-   <xmpMM:InstanceID>uuid:56B7FB01-8AD9-F4F1-53FD-00B3B30A14AD</xmpMM:InstanceID> 
+   <xmpMM:InstanceID>uuid:49E1947B-6CFA-88F8-A9BA-0B0AB05A7425</xmpMM:InstanceID> 
   </rdf:Description> 
  </rdf:RDF> 
 </x:xmpmeta> 

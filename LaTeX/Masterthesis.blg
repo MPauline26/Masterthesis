@@ -1,6 +1,8 @@
 This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Masterthesis.aux
+A level-1 auxiliary file: Signature.aux
+A level-1 auxiliary file: Signature2.aux
 A level-1 auxiliary file: Abstract.aux
 A level-1 auxiliary file: Introduction.aux
 A level-1 auxiliary file: M_CreditRisk_PD.aux
@@ -11,66 +13,47 @@ A level-1 auxiliary file: M_Validation.aux
 A level-1 auxiliary file: M_Interpretability.aux
 A level-1 auxiliary file: R_Results.aux
 A level-1 auxiliary file: R_Conclusio.aux
-The style file: habbrv.bst
+The style file: apa.bst
 A level-1 auxiliary file: Annex.aux
 Database file #1: Literature.bib
-Warning--entry type for "SecMortMark:2023" isn't style-file defined
---line 64 of file Literature.bib
-Warning--entry type for "FreddieMacData:2023" isn't style-file defined
---line 72 of file Literature.bib
-Warning--entry type for "Boxplot:2019" isn't style-file defined
---line 88 of file Literature.bib
-Warning--entry type for "FreddieMac:2023" isn't style-file defined
---line 96 of file Literature.bib
-Warning--entry type for "FreddieMacUG:2023" isn't style-file defined
---line 104 of file Literature.bib
-Warning--entry type for "RanFor:2023" isn't style-file defined
---line 120 of file Literature.bib
-Warning--entry type for "AUC:2023" isn't style-file defined
---line 128 of file Literature.bib
-Warning--entry type for "BCBS:2023" isn't style-file defined
---line 136 of file Literature.bib
-Warning--entry type for "EBA:2023" isn't style-file defined
---line 174 of file Literature.bib
 You've used 17 entries,
-            2305 wiz_defined-function locations,
-            633 strings with 7272 characters,
-and the built_in function-call counts, 3128 in all, are:
-= -- 247
-> -- 83
-< -- 0
-+ -- 38
-- -- 21
-* -- 92
-:= -- 432
-add.period$ -- 63
+            1940 wiz_defined-function locations,
+            587 strings with 6784 characters,
+and the built_in function-call counts, 4730 in all, are:
+= -- 484
+> -- 142
+< -- 16
++ -- 43
+- -- 42
+* -- 334
+:= -- 909
+add.period$ -- 62
 call.type$ -- 17
-change.case$ -- 12
-chr.to.int$ -- 0
+change.case$ -- 101
+chr.to.int$ -- 16
 cite$ -- 17
-duplicate$ -- 176
-empty$ -- 457
-format.name$ -- 21
-if$ -- 789
-int.to.chr$ -- 0
-int.to.str$ -- 17
+duplicate$ -- 194
+empty$ -- 309
+format.name$ -- 63
+if$ -- 887
+int.to.chr$ -- 2
+int.to.str$ -- 0
 missing$ -- 11
-newline$ -- 107
-num.names$ -- 17
-pop$ -- 161
+newline$ -- 97
+num.names$ -- 51
+pop$ -- 68
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 106
 quote$ -- 0
-skip$ -- 71
+skip$ -- 159
 stack$ -- 0
-substring$ -- 18
-swap$ -- 28
+substring$ -- 222
+swap$ -- 23
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 92
 warning$ -- 0
-while$ -- 18
-width$ -- 19
-write$ -- 195
-(There were 9 warnings)
+while$ -- 35
+width$ -- 0
+write$ -- 227

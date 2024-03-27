@@ -2,7 +2,7 @@
 \label{ch:RE}
 \section{Freddie Mac's Single Family Loan-Level Data set}
 
-Freddie Mac, officially known as the Federal Home Loan Mortgage Corporation, is a government-sponsored enterprise (GSE) in the United states and plays a crucial role in the secondary mortgage market. In the primary market, individual customers secure mortgage loans from retail banks. Within the secondary mortgage market, the lender has the option to sell these mortgages to entities like government-sponsored enterprises, e.g., Freddie Mac. This practice provides liquidity to the primary market, subsequently making additional loans available to other customers. GSEs aggregate multiple mortgages into mortgage-backed securities (MBS), which are then sold to various investors, such as insurance companies and hedge funds. \cite{FreddieMac:2023} \cite{SecMortMark:2023}
+Freddie Mac, officially known as the Federal Home Loan Mortgage Corporation, is a government-sponsored enterprise (GSE) in the United States and plays a crucial role in the secondary mortgage market. In the primary market, individual customers secure mortgage loans from retail banks. Within the secondary mortgage market, the lender has the option to sell these mortgages to entities like government-sponsored enterprises, e.g., Freddie Mac. This practice provides liquidity to the primary market, subsequently making additional loans available to other customers. GSEs aggregate multiple mortgages into mortgage-backed securities (MBS), which are then sold to various investors, such as insurance companies and hedge funds.\footnote{\cite{FreddieMac:2023}}\footnote{\cite{SecMortMark:2023}}
 
 The Single Family Loan-Level Data set encompasses a broad range of variables and some of the essential features of this data set include:
 
@@ -16,14 +16,16 @@ The Single Family Loan-Level Data set encompasses a broad range of variables and
 
 \subsection{Data Quality, Limitations and Usage}
 
-Over the years, Freddie Mac has accumulated vast amounts of mortgage loan data. At the direction of the Federal Housing Finance Agency (FHFA), this data has been made publicly available to enhance transparency and assist investors in analyzing credit performance. Freddie Mac's Single Family Loan-Level Data set is publicly available on their website, where users are required to register and agree to the data set's terms of use before accessing the data. \cite{FreddieMacData:2023}
+Over the years, Freddie Mac has accumulated vast amounts of mortgage loan data. At the direction of the Federal Housing Finance Agency (FHFA), this data has been made publicly available to enhance transparency and assist investors in analyzing credit performance. Freddie Mac's Single Family Loan-Level Data set is publicly available on their website, where users are required to register and agree to the data set's terms of use before accessing the data.\footnote{\cite{FreddieMacData:2023}}
 
-While the Single Family Loan-Level Data set offers a wealth of information, it is essential to consider its quality and limitations. Freddie Mac explicitly states  that they do not guarantee a complete or error-free data set and that it may contain potential biases. The data set represents mortgages acquired by Freddie Mac, which may not be fully representative of the entire mortgage market. Furthermore, the data set is subject to data protection regulations leading to the anonymization or removal of personally identifiable information. The data set is updated on a quarterly basis and thus, contain corrections or updates that may impact the analysis. \cite{FreddieMacUG:2023}
+While the Single Family Loan-Level Data set offers a wealth of information, it is essential to consider its quality and limitations. Freddie Mac explicitly states  that they do not guarantee a complete or error-free data set and that it may contain potential biases. The data set represents mortgages acquired by Freddie Mac, which may not be fully representative of the entire mortgage market. Furthermore, the data set is subject to data protection regulations leading to the anonymization or removal of personally identifiable information. The data set is updated quarterly and thus contains corrections or updates that may impact the analysis.\footnote{\cite{FreddieMacUG:2023}}
 
 
 \section{Data set}
 
-The Freddie Mac Data set consists of the origination and monthly performance data file. The former contains information about the borrower and the mortgage loan collected at the start of the contract. The latter includes monthly snapshots of the mortgage loan's payment, status and loss history. The data preparation and modeling process focuses on the origination data, as the objective is creating an application scoring model. The monthly performance data will be used to approximate a default flag, described in Chapter \ref{sec:aprox_def}. The provided data files cover all months since January 1999 and undergo continuous updates every quarter. On average, each month contains about 157.000 mortgage loans, with the highest number of mortgage loans opened in September 2003 with 577.000 accounts. Table \ref{tab:re_descr} shows the full list of relevant variables, their description and abbreviation:
+The Freddie Mac Data set consists of the origination and monthly performance data files. The former contains information about the borrower and the mortgage loan collected at the start of the contract. The latter includes monthly snapshots of the mortgage loan's payment, status and loss history. The data preparation and modeling process focuses on the origination data, as the objective is creating an application scoring model. The monthly performance data will be used to approximate a default flag, described in Chapter \ref{sec:aprox_def}. The provided data files cover all months since January 1999 and undergo continuous updates every quarter. On average, each month contains about 157.000 mortgage loans, with the highest number of mortgage loans opened in September 2003 with 577.000 accounts. Table \ref{tab:re_descr} shows the full list of relevant variables, their description and abbreviation:
+
+\newpage
 
 \begin{longtable}{ Lp{8cm}R }\toprule
 \textbf{Variable Name}                             & \textbf{Description}                                                                                                                                                                                                                                                                          & \textbf{Abbr.}       \\\midrule
@@ -91,7 +93,7 @@ In the modeling process, a 12-month time span was chosen. Following the identifi
 \section{Sample Creation}
 
 \subsection{Data Exclusions}
-The first two months of the whole data set showed an unusually low number of observations and default events, leading to their exclusion. Given the 12-month observation period for the default flag, the final 12 months of the data set were also omitted. Additionally, accounts that were prepaid before the 12-month observation period ended were removed. Lastly, mortgage loans without monthly performance data were also deleted because it was impossible to approximate a default flag. The breakdown of exclusions based on each reason is detailed in Table \ref{tab:re_nr_excl}.
+The first two months of the whole data set showed an unusually low number of observations and default events, leading to their exclusion. Given the 12-month observation period for the default flag, the final 12 months of the data set were also omitted. Additionally, accounts prepaid before the 12-month observation period ended were removed. Lastly, mortgage loans without monthly performance data were also deleted because it was impossible to approximate a default flag. The breakdown of exclusions based on each reason is detailed in Table \ref{tab:re_nr_excl}.
 
 \begin{table}[H]
 \centering
@@ -107,7 +109,7 @@ Missing Monthly Performance data                		& 1484  				 			\\\bottomrule
 \end{table}
 
 \subsection{Training, Test and Validation Sample}
-Figure \ref{fig:re_wholesample} shows the default rate per month for the whole sample before and after data exclusions and Figure \ref{fig:re_devsample} is a separate display of the development and out-of-time sample, also referred to as validation sample. The vertical line in Figure \ref{fig:re_devsample} separate the development sample, which is split into training and test data set and validation sample. If the number of default events had not been sufficient, an increase in the observation window might have been a solution. Both figures show a satisfying number of monthly defaults with an average default rate of 1,52\% in the development sample. A plausible development of the default rate is visible; it follows the expected increase of defaults during the Dot-Com crisis in the late 1990s, the financial crisis in 2007/2008 and the COVID-19 crisis in 2020/2021. 
+Figure \ref{fig:re_wholesample} shows the monthly default rate for the whole sample before and after data exclusions and Figure \ref{fig:re_devsample} is a separate display of the development and out-of-time sample, also referred to as validation sample. The vertical line in Figure \ref{fig:re_devsample} separates the development sample, which is split into training and test data set and validation sample. If the number of default events had not been sufficient, an increase in the observation window might have been a solution. Both figures show a satisfying number of monthly defaults with an average default rate of 1,52\% in the development sample. A plausible development of the default rate is visible; it follows the expected increase of defaults during the Dot-Com crisis in the late 1990s, the financial crisis in 2007/2008 and the COVID-19 crisis in 2020/2021. 
 
 The development sample encompasses data from January 2018 to December 2020, offering a timeframe that covers different economic conditions, including the period before and during the COVID-19 crisis. This selection not only captures diverse economic scenarios but also limits the number of observations due to the limitation of computational power. The out-of-time sample is constructed using data points from January to December 2021. 
 
@@ -129,7 +131,7 @@ Out Of Time     & 4.121.718            & 16.848          & 0,41\%               
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{./FullSample.png}
-    \caption{Distribution and default rate of whole sample}
+    \caption{Default rate of whole sample}
     \label{fig:re_wholesample}
 \end{figure}
 \begin{figure}[H]
@@ -141,10 +143,10 @@ Out Of Time     & 4.121.718            & 16.848          & 0,41\%               
 
 \section{Data preparation}
 \subsection{Missing and Erroneous Data Treatment}
-The variables were first split into three types: categorical, indicator/binary and numerical variables. The missing rate of all variables were determined and are given in Table \ref{tab:re_discr_power}. \emph{Program Indicator}, \emph{HARP Indicator} and \emph{Super Conforming Flag} exhibit a high proportion of missing values, exceeding 90\%, making them unsuitable for inclusion in the model. On the other hand, all other risk factors either have no missing values or possess an acceptable rate of less than 20\%. Given the low number of missing values for numerical variables such as \emph{DTI} and \emph{Credit Score} and others with a missing rate below the third decimal, imputation was performed using the median, stated in Table \ref{tab:re_descr_stat}. Missing data points for the variable \emph{Property Valuation Method} and other categorical risk factors were treated as a distinct category, while missing values for indicator variables were assigned a value of 'Y'.
+The variables were first split into three types: categorical, indicator/binary and numerical variables. All variables' missing rate were determined and given in Table \ref{tab:re_discr_power}. \emph{Program Indicator}, \emph{HARP Indicator} and \emph{Super Conforming Flag} exhibit a high proportion of missing values, exceeding 90\%, making them unsuitable for inclusion in the model. On the other hand, all other risk factors either have no missing values or possess an acceptable rate of less than 20\%. Given the low number of missing values for numerical variables such as \emph{DTI} and \emph{Credit Score} and others with a missing rate below the third decimal, imputation was performed using the median, as stated in Table \ref{tab:re_descr_stat}. Missing data points for the variable \emph{Property Valuation Method} and other categorical risk factors were treated as a distinct category while missing values for indicator variables were assigned a value of 'Y'.
 
 No treatment of erroneous data was undertaken, as data entries outside pre-defined ranges were already set as 'Not Available' or '999' by Freddie Mac. Consequently, further analysis for potential errors was deemed unnecessary.
-Figure \ref{fig:re_distr1} to \ref{fig:re_distr4} show the distribution plots of relevant risk factors, all plots are given in Appendix \ref{sec:distr_all}.
+Figures \ref{fig:re_distr1} to \ref{fig:re_distr4} show the distribution plots of relevant risk factors; all plots are given in Appendix \ref{sec:distr_all}.
 
 \begin{figure}[H]
 \begin{minipage}{.5\textwidth}
@@ -196,7 +198,7 @@ Figure \ref{fig:re_distr1} to \ref{fig:re_distr4} show the distribution plots of
 \end{figure}
 
 \subsection{Outlier Treatment}
-The interquartile approach, detailed in Chapter \ref{sec:OutlTr}, was employed to identify outliers and their presentation was visualized through boxplots (Figure \ref{fig:re_boxpl_fico_origupb} - \ref{fig:re_boxpl_noborr_loanterm}, all plots in Appendix \ref{sec:boxplot_all}). Upper and lower boundaries were determined using Equations \ref{eq:dp_iqr_boxpl2} and \ref{eq:dp_iqr_boxpl2}. Quartiles for all numerical risk factors are outlined in Table \ref{tab:re_descr_stat}, with resulting limits available in Table \ref{tab:re_iqr}. The proportion of upper and lower outliers were calculated to analyze, if a significant amount of data entries are affected and could potentially impact the modeling process. While outliers were present in all numerical variables, only the risk factor \emph{Original Loan Term} shows a concerning proportion. New risk factors were derived to circumvent this issue. Multiple versions of indicator variables were created using the definition listed in Table \ref{tab:re_descr_newvar}. Additionally, after analyzing the distribution and box plots of all risk factors, a winsorization was executed to evaluate, if outliers affected the discriminatory power negatively. Therefore, data points with values above the upper or below the lower limit, were capped at their respective thresholds. The performance of the adjusted variables did not change significantly and thus, the original versions were retained.
+The interquartile approach, detailed in Chapter \ref{sec:OutlTr}, was employed to identify outliers and their presentation was visualized through boxplots (Figure \ref{fig:re_boxpl_fico_origupb} - \ref{fig:re_boxpl_noborr_loanterm}, all plots in Appendix \ref{sec:boxplot_all}). Upper and lower boundaries were determined using Equations \ref{eq:dp_iqr_boxpl2} and \ref{eq:dp_iqr_boxpl2}. Quartiles for all numerical risk factors are outlined in Table \ref{tab:re_descr_stat}, with resulting limits available in Table \ref{tab:re_iqr}. The proportion of upper and lower outliers was calculated to analyze if a significant amount of data entries were affected and could potentially impact the modeling process. While outliers were present in all numerical variables, only the risk factor \emph{Original Loan Term} shows a concerning proportion. New risk factors were derived to circumvent this issue. Multiple versions of indicator variables were created using the definition listed in Table \ref{tab:re_descr_newvar}. Additionally, after analyzing the distribution and box plots of all risk factors, a winsorization was executed to evaluate if outliers affected the discriminatory power negatively. Therefore, data points with values above the upper or below the lower limit were capped at their respective thresholds. The performance of the adjusted variables did not change significantly, and thus, the original versions were retained.
 
 \begin{figure}[H]
 \begin{minipage}{.5\textwidth}
@@ -287,7 +289,7 @@ UPB          & -108500 & 599500 & 0       & 102141 & 0,00\%  & 1,89\% & 102.141 
 \subsection{Univariate Analysis}
 
 \subsubsection{New variables}
-During the outlier treatment, a few new variables were created. While analyzing the different distinct values of categorical variables, the risk factor \emph{Property states} was grouped into five \emph{US regions} according to their geographical position: Northeast, Southeast, Southwest, Midwest, West and other Regions, e.g., outside of the North American mainland. \cite{USRegion:2014} Table \ref{tab:re_descr_newvar} lists a summary of the new variables.
+During the outlier treatment, a few new variables were created. While analyzing the different distinct values of categorical variables, the risk factor \emph{Property states} were grouped into five \emph{US regions} according to their geographical position: Northeast, Southeast, Southwest, Midwest, West and other Regions, e.g., outside of the North American mainland.\footnote{\cite{USRegion:2014}} Table \ref{tab:re_descr_newvar} lists a summary of the new variables.
 
 \begin{table}[H]
 \centering
@@ -310,8 +312,6 @@ US Region                                                      & Grouped variabl
 To assess the discriminatory power, distribution plots with default rates, ROC curves and calculations of AUC, Gini coefficients, WoE and IV were conducted. A list of all metrics is presented in Table \ref{tab:re_discr_power} and relevant variable plots are depicted in Figures \ref{fig:re_fico_upb} to \ref{fig:re_usreg_channel}. All plots are available in Appendix \ref{sec:distr_all} and \ref{sec:ROC_all}. As expected, the external \emph{Credit Score} provided by FICO shows the highest discriminatory power, followed by financial ratios such as \emph{DTI}, \emph{LTV} and \emph{CLTV}. Other numerical risk factors, except \emph{No Units}, also indicate good predictive power, making them optimal candidates for the modeling process. In contrast,  the performance of categorical and indicator risk factors proved underwhelming, with few Gini coefficients surpassing 5\% or IV exceeding 3\%. Consequently, a Gini threshold of 5\% and IV of 3\% was established for the selection process of the long list.
 
 To summarize, all variables with a missing proportion below 20\%, outlier proportion not succeeding 20\%, Gini coefficient above 5\% and IV higher than 3\% were selected for the long list given in Tab. \ref{tab:re_ll_sl}. 
-
-\newpage
 
 {
 \footnotesize
@@ -422,10 +422,11 @@ UPB                         &                                                   
     \label{fig:re_usreg_channel}
 \end{figure}
 
+\newpage
 \subsection{Multivariate Analysis}
 
 The shortlist was created using the following process: First, the correlation matrix with all numerical variables was created. Then, the variable with the highest Gini coefficient was identified and all risk factors with a correlation coefficient above +0.25 or below -0.25 were removed. This step should be repeated with the remaining variables until all features were analyzed. 
-Table \ref{tab:re_corr_matrix} shows the correlation coefficient for all numeric variables in the long list. To account for potential interaction effects between categorical and indicator variables, the Variance Inflation Factor (VIF) was considered. A high correlation coefficient between \emph{LTV} and \emph{CLTV} is expected and a higher correlation is also visible between \emph{MI Perc}, \emph{Loan Term}, \emph{LTV} and \emph{CLTV}. Executing the described process, \emph{CLTV} was added to the shortlist, while the remaining correlated risk factors were excluded.  The VIF values, as shown in Table \ref{tab:re_vif}, do not indicate severe multicollinearity. In the final step, instead of using the raw variable, the indicator version \emph{Loan Term $\geq$ 360m} was chosen. The short list is given in Table \ref{tab:re_ll_sl}.
+Table \ref{tab:re_corr_matrix} shows the correlation coefficient for all numeric variables in the long list. To account for potential interaction effects between categorical and indicator variables, the Variance Inflation Factor (VIF) was considered. A high correlation coefficient between \emph{LTV} and \emph{CLTV} is expected and a higher correlation is also visible between \emph{MI Perc}, \emph{Loan Term}, \emph{LTV} and \emph{CLTV}. Executing the described process, \emph{CLTV} was added to the shortlist, while the remaining correlated risk factors were excluded.  The VIF values, as shown in Table \ref{tab:re_vif}, do not indicate severe multicollinearity. In the final step, the indicator version \emph{Loan Term $\geq$ 360m} was chosen instead of using the raw variable. The short list is given in Table \ref{tab:re_ll_sl}.
 
 \begin{table}[H]
 \resizebox{\textwidth}{!}{%
@@ -512,7 +513,7 @@ Loan Term = 360m            & \cellcolor[HTML]{F7D9E1}Similar Variable used     
 \end{longtable}
 
 \subsection{Scaling}
-Due to the different ranges of risk factors, especially because of \emph{Original Unpaid Balance}, a standardization of all numeric variables was carried out to prevent unusually small or large coefficients and to also enhance the comparability of the model coefficients. The following formula is used:
+Due to the different ranges of risk factors, especially because of \emph{Original Unpaid Balance}, a standardization of all numeric variables was carried out to prevent unusually small or large coefficients and enhance the comparability of the model coefficients. The following formula is used:
 
 \begin{equation}
 X_{\text{standardized}} = \frac{X - \mu}{\sigma}
@@ -589,6 +590,7 @@ UPB                		& 0,341                & \textless{}.0001\\\bottomrule
 \label{tab:re_finalLogModel}
 \end{table}
 
+\newpage
 \subsection{Random Forest}
 \label{sec:randfor}
 The same training and test sample after the data preparation process was used for the development of the Random Forest model. Due to sample size constraints and computational limitations, a 90:10 split ratio was applied to the training sample and a 2-fold cross-validation was executed during hyperparameter (HP) tuning. All variables from Table \ref{tab:re_ll_sl} were considered for modeling.
@@ -601,8 +603,8 @@ Afterward, a more narrow parameter range was defined for the Grid Search (see Fi
 \centering
 \begin{tabular}{lrrr} \toprule
 \textbf{Sample}      & \textbf{\# Accounts} & \textbf{\# Def} & \textbf{\% Def Rate} \\\midrule
-HP Tuning Sample     & 378958               & 5751            & 1,52\%               \\
-HP Evaluation Sample & 3410621              & 51759           & 1,52\%           \\\bottomrule   
+HP Tuning Sample     & 378.958               & 5.751            & 1,52\%               \\
+HP Evaluation Sample & 3.410.621              & 51.759           & 1,52\%           \\\bottomrule   
 \end{tabular}
 \caption{Hyperparameter Tuning sample}
 \label{re_hptunsample}
@@ -649,7 +651,7 @@ Frequency for bagging                                  & 7                      
 \label{sec:comp_model}
 
 \subsection{Discriminatory power}
-The performance of both models is evaluated using both the test and an out-of-time data set. To detect potential overfitting, performance metrics for the training sample are also provided. The Gini values are presented in Table \ref{re_ginicomp} and visually represented in Figure \ref{fig:re_roc1} - \ref{fig:re_roc2}. The Random Forest model exhibits a slightly higher performance in the training and test samples with a relative improvement of about 1.7\%, while the logistic regression model shows a slight advantage in the validation sample with 1.6\% relative difference. Notably, both models demonstrate higher Gini values on the validation sample, indicating no signs of overfitting.
+Both models' performance is evaluated using the test and an out-of-time data set. To detect potential overfitting, performance metrics for the training sample are also provided. The Gini values are presented in Table \ref{re_ginicomp} and visually represented in Figure \ref{fig:re_roc1} - \ref{fig:re_roc2}. The Random Forest model exhibits a slightly higher performance in the training and test samples with a relative improvement of about 1,7\%, while the logistic regression model shows a slight advantage in the validation sample with 1,6\% relative difference. Notably, both models demonstrate higher Gini values on the validation sample, indicating no signs of overfitting.
 
 \begin{table}[H]
 \centering
@@ -685,7 +687,7 @@ Validation & 0,4810 & 0,4734 & -0,76\% & -1,58\% \\\bottomrule
 \end{figure}
 
 \subsection{Classification}
-To determine an optimal threshold to set a predicted default flag derived from the predicted PD, the F1-score is computed for different values. These values are detailed in Table \ref{tab:re_f1thresh}, leading to the decision to set the threshold with the maximum F1-score at PD > 4\% for both models. The Random Forest model exhibits a slightly higher accuracy with a relative improvement of 11.08\%. The resulting confusion matrices for the training, test and validation sample are visualized in Figure \ref{fig:re_confmatr1} to \ref{fig:re_confmatr3}. On the x-axis, the predicted values are presented, while the y-axis represents true values. Focusing on the most critical cases, where default events are misclassified as non-default (lower left corner), the Random Forest model performs slightly worse in this regard compared to the logistic regression model on all samples.
+To determine an optimal threshold to set a predicted default flag derived from the predicted PD, the F1-score is computed for different values. These values are detailed in Table \ref{tab:re_f1thresh}, leading to the decision to set the threshold with the maximum F1-score at PD > 4\% for both models. The Random Forest model exhibits a slightly higher accuracy with a relative improvement of 11,08\%. The resulting confusion matrices for the training, test and validation samples are visualized in Figure \ref{fig:re_confmatr1} to \ref{fig:re_confmatr3}. On the x-axis, the predicted values are presented, while the y-axis represents true values. Focusing on the most critical cases, where default events are misclassified as non-default (lower left corner), the Random Forest model performs slightly worse in this regard compared to the logistic regression model on all samples.
 
 \begin{table}[H]
 \centering
@@ -754,7 +756,7 @@ To determine an optimal threshold to set a predicted default flag derived from t
 \end{figure}
 
 \subsection{Stability Test}
-A stability test for both models was conducted by assessing the Gini coefficient on the test and validation samples for each year, as detailed in Table \ref{tab:re_stab} and illustrated through ROC curves in Figure \ref{fig:re_rocstab}. The left side of the Figure is the logistic regression model, while the right side showcases the Random Forest model. Both models exhibited their lowest performance in 2019. The logistic regression model demonstrated its peak discriminatory power in 2018, whereas the Random Forest model excelled in the year 2020. Across the years, both models exhibit a Gini difference of up to 8.4\%, suggesting a moderate level of stability.
+A stability test for both models was conducted by assessing the Gini coefficient on the test and validation samples for each year, as detailed in Table \ref{tab:re_stab} and illustrated through ROC curves in Figure \ref{fig:re_rocstab}. The left side of the Figure is the logistic regression model, while the right side showcases the Random Forest model. Both models exhibited their lowest performance in 2019. The logistic regression model demonstrated its peak discriminatory power in 2018, whereas the Random Forest model excelled in the year 2020. Across the years, both models exhibit a Gini difference of up to 8,4\%, suggesting a moderate level of stability.
 
 \begin{table}[H]
 \centering
@@ -783,7 +785,7 @@ A stability test for both models was conducted by assessing the Gini coefficient
 \end{figure}
 
 \subsection{Binning Process}
-A binning process was executed to provide an overview of the distribution of PDs and default rates. In real-world applications, it is a standard practice to categorize PD values into distinct rating bands, distinguishing between investment and non-investment grades. A straightforward method involves employing fixed ranges for each grade. The specific ranges and the resulting distribution are detailed in Table \ref{tab:re_distrDR} and visually presented in Figure \ref{fig:re_distrDR}. These arbitrary defined ranges already provide a satisfactory distribution, accompanied by a desired upward trend in defaults. The logistic regression model tends to allocate a greater number of customers with PD values below 0.5\% compared to the Random Forest model. The Random Forest model exhibits a moderate concentration in the range of 1\% to 1.5\%.
+A binning process was executed to provide an overview of the distribution of PDs and default rates. In real-world applications, it is a standard practice to categorize PD values into distinct rating bands, distinguishing between investment and non-investment grades. A straightforward method involves employing fixed ranges for each grade. The specific ranges and the resulting distribution are detailed in Table \ref{tab:re_distrDR} and visually presented in Figure \ref{fig:re_distrDR}. These arbitrarily defined ranges already provide a satisfactory distribution, accompanied by a desired upward trend in defaults. The logistic regression model tends to allocate a greater number of customers with PD values below 0,5\% compared to the Random Forest model. The Random Forest model exhibits a moderate concentration in the range of 1\% to 1,5\%.
 
 \begin{table}[H]
 \centering
@@ -833,7 +835,7 @@ To interpret the Random Forest model, several techniques described in Chapter \r
 \end{figure}
 
 \subsection{Local Interpretation}
-Two particular instances were selected for the \ac{LIME} technique. The first observation received nearly identical PDs of 1.2547\% in both models, while the second observation received vastly different PDs of 59.0619\% in the Logit Model and 2.2576\% in the Random Forest Model. The score composition for the former is displayed in Table \ref{tab:re_PDres} and the \ac{LIME} results are visible in Figures \ref{fig:re_LIMEres_min} and \ref{fig:re_LIMEres_max}. The green bars indicate the features contributing to predicting the class "non-default" class and the red bars signify the contribution to the "default" class. 
+Two particular instances were selected for the \ac{LIME} technique. The first observation received nearly identical PDs of 1,2547\% in both models, while the second observation received vastly different PDs of 59,0619\% in the Logit Model and 2,2576\% in the Random Forest Model. The score composition for the former is displayed in Table \ref{tab:re_PDres} and the \ac{LIME} results are visible in Figures \ref{fig:re_LIMEres_min} and \ref{fig:re_LIMEres_max}. The green bars indicate the features contributing to predicting the "non-default" class and the red bars signify the contribution to the "default" class. 
 
 While the high Credit Score mainly influences the low PD in observation 1 for both models, the lower Credit Score, as well as the higher DTI, resulted in a higher PD in the Logit model. Surprisingly, in the Random Forest model, both features contribute to the classification of "non-default", contrasting the result seen in the first observation.
 
@@ -870,7 +872,7 @@ While the high Credit Score mainly influences the low PD in observation 1 for bo
 \end{figure}
 
 \subsection{Individual Decision Trees, PDP and ICE plots}
-Two individual decision trees from the Random Forest model are presented in Figure \ref{fig:re_indtree1} and \ref{fig:re_indtree2}. Analyzing the split conditions, they reaffirm the importance of \emph{Credit Score}, \emph{UPB}, \emph{DTI} and \emph{LTV} as primary variables. To assess their influence, Partial Dependence plots of these four features, along with \emph{Prop Val Method = Full Appraisal} and \emph{Loan Purpose = Refinance - Cash Out} are showcased in Figure \ref{fig:pdp_1} to \ref{fig:pdp_2}. All plots are in Appendix \ref{sec:PDP_all}. The observed trends align with the economic rationale: increasing Credit Score corresponds to decreasing PD, while rising \emph{UPB}, \emph{DTI} and \emph{CLTV} are associated with higher PD. Both categorical variables indicate a higher PD if the condition is fulfilled. Individual Conditional Expectation (ICE) plots were generated to further analyze the impact of the four most crucial features \emph{Credit Score}, \emph{UPB}, \emph{CLTV} and \emph{DTI}. Figure \ref{fig:ice_1} to \ref{fig:ice_2} provide a granular analysis of each feature's influence on individual predictions. The findings from these ICE plots also align with the anticipated relationship between the respective risk factor and the PD estimation.
+Two individual decision trees from the Random Forest model are presented in Figure \ref{fig:re_indtree1} and \ref{fig:re_indtree2}. Analyzing the split conditions, they reaffirm the importance of \emph{Credit Score}, \emph{UPB}, \emph{DTI} and \emph{LTV} as primary variables. To assess their influence, Partial Dependence plots of these four features, along with \emph{Prop Val Method = Full Appraisal} and \emph{Loan Purpose = Refinance - Cash Out} are showcased in Figures \ref{fig:pdp_1} to \ref{fig:pdp_2}. All plots are in Appendix \ref{sec:PDP_all}. The observed trends align with the economic rationale: increasing Credit Score corresponds to decreasing PD, while rising \emph{UPB}, \emph{DTI} and \emph{CLTV} are associated with higher PD. Both categorical variables indicate a higher PD if the condition is fulfilled. Individual Conditional Expectation (ICE) plots were generated to further analyze the impact of the four most crucial features \emph{Credit Score}, \emph{UPB}, \emph{CLTV} and \emph{DTI}. Figure \ref{fig:ice_1} to \ref{fig:ice_2} provide a granular analysis of each feature's influence on individual predictions. The findings from these ICE plots also align with the anticipated relationship between the respective risk factor and the PD estimation.
 
 \begin{figure}[H]
 	\centering

@@ -2,9 +2,9 @@
 \label{ch:VL}
 
 \section{Out-of-Sample and Out-of-Time Validation}
-Out-of-sample validation involves evaluating the model's performance on a data set that was not used during its development. Taking it a step further, out-of-time validation introduces new data, covering a more recent time period. The objective is to assess the model's ability to make accurate predictions on unseen data. If the performance metrics differ significantly between in-sample and out-sample data sets, it could signal overfitting. 
+Out-of-sample validation involves evaluating the model's performance on a data set not used during its development. Taking it a step further, out-of-time validation introduces new data covering a more recent time period. The objective is to assess the model's ability to make accurate predictions on unseen data. If the performance metrics differ significantly between in-sample and out-sample data sets, it could signal overfitting. 
 
-The full data set is usually split into a 70\% training and 30\% testing sample. Different ratios, such as 60/40 or 80/20, are also popular choices and mainly depend on the data set size and the number of default events. During the splitting process it is important to keep the number of default events even in both samples to prevent scenarios, where one class is disproportionally larger than the other. This method called stratification reduces the probability of a biased model training and evaluation process.
+The full data set is usually split into a 70\% training and 30\% testing sample. Different ratios, such as 60/40 or 80/20, are also popular choices and mainly depend on the data set size and the number of default events. During the splitting process, it is important to keep the number of default events even in both samples to prevent scenarios where one class is disproportionally larger than the other. This method called stratification reduces the probability of a biased model training and evaluation process.
 
 \section{Model Performance Evaluation}
 
@@ -18,8 +18,9 @@ The confusion matrix, illustrated in Figure \ref{fig:vl_confmatr}, is a table co
     \label{fig:vl_confmatr}
 \end{figure}
 
-Using the elements of the confusion matrix, the measures Accuracy, Precision, Recall, F1-Score and others can be calculated, as illustrated in Equations \ref{eq:vl_sens} to \ref{eq:vl_f1}. However, measures like Accuracy and Precision are not recommended for unbalanced data, because they can provide misleading insights about the model's performance. In instances of unbalanced data, a model might attain a high accuracy by simply predicting only the majority class. This high accuracy overshadows the model's ability to correctly identify observations of the minority class. In such scenarios, Recall and F1-score provide a more accurate evaluation of the model's performance. For the transformation from PD to a predicted default flag a threshold has to be selected. To determine an ideal cut-off, the F1-Score can be utilized, where the value is set where the F1-score attains its maximum. \cite{AUC:2023}
+Using the elements of the confusion matrix, the measures Accuracy, Precision, Recall, F1-Score and others can be calculated, as illustrated in Equations \ref{eq:vl_sens} to \ref{eq:vl_f1}. However, measures like Accuracy and Precision are not recommended for unbalanced data, because they can provide misleading insights about the model's performance. In instances of unbalanced data, a model might attain a high accuracy by simply predicting only the majority class. This high accuracy overshadows the model's ability to identify observations of the minority class correctly. In such scenarios, Recall and F1-score provide a more accurate evaluation of the model's performance. For the transformation from PD to a predicted default flag, a threshold has to be selected. To determine an ideal cut-off, the F1-Score can be utilized, where the value is set where the F1-score attains its maximum.\footnote{\cite{AUC:2023}}
 
+\begin{fleqn}
 \begin{flalign} 
 \text{Sensitivity} &= \frac{\text{True Positives}}{\text{True Positives} + \text{False Negative}} \\[10pt] \label{eq:vl_sens}
 \text{Specificity} &= \frac{\text{True Negative}}{\text{True Negative} + \text{False Positives}} \\[10pt]
@@ -29,10 +30,11 @@ Using the elements of the confusion matrix, the measures Accuracy, Precision, Re
 \text{Recall} &= \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}} \\[10pt]
 \text{F1-Score} &= 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} \label{eq:vl_f1}
 \end{flalign}
+\end{fleqn}
 
 \subsection{Receiver Operating Characteristic Curve}
 
-The \ac{ROC} Curve, see Figure \ref{fig:vl_roccurve}, is the resulting curve after plotting the proportion of False Positive along the x-axis and proportion of True Positive along the y-axis. A diagonal line between (0,0) and (0,1) represents the random model, while the perfect model's curve would be a step function that starts at (0,0) straight up and moves horizontally to (1,1). The \ac{AUC} is, as the name suggests, the area below the ROC-curve and the formula for calculating the \ac{AUC} is Equation \ref{eq:vl_auc}. \cite{AUC:2023}
+The \ac{ROC} Curve, see Figure \ref{fig:vl_roccurve}, is the resulting curve after plotting the proportion of False Positive along the x-axis and the proportion of True Positive along the y-axis. A diagonal line between (0,0) and (0,1) represents the random model, while the perfect model's curve would be a step function that starts at (0,0) straight up and moves horizontally to (1,1). The \ac{AUC} is, as the name suggests, the area below the ROC-curve and the formula for calculating the \ac{AUC} is Equation \ref{eq:vl_auc}.\footnote{\cite{AUC:2023}}
 
 \begin{equation}
 AUC = A + \frac{1}{2} \label{eq:vl_auc}
@@ -40,7 +42,7 @@ AUC = A + \frac{1}{2} \label{eq:vl_auc}
 
 \subsection{Gini coefficient}
 \label{sec:gini}
-The Gini coefficient and \ac{AUC} are connected via the given Equation \ref{eq:vl_gini} and a visual presentation is visible in Figure \ref{fig:vl_roccurve}, the areas are designated as A and B. Therefore, they relate the same information but are differently scaled and the Gini coefficient shows an improved interpretability. While the \ac{AUC} has a range between 0.5 (random model) to 1 (perfect model), the Gini coefficient takes on values between 0 (no discriminatory power) and 1 (perfect discriminatory power). In general, the \ac{AUC} can also take on a value below 0.5, but that would indicate, that the model's predictions are less accurate than the random model, indicating an issue in the model's ability to differentiate between the classes. \cite{AUC:2023}
+The Gini coefficient and \ac{AUC} are connected via the given Equation \ref{eq:vl_gini} and a visual presentation is visible in Figure \ref{fig:vl_roccurve}, the areas are designated as A and B. Therefore, they relate the same information but are differently scaled and the Gini coefficient shows an improved interpretability. While the \ac{AUC} has a range between 0.5 (random model) to 1 (perfect model), the Gini coefficient takes on values between 0 (no discriminatory power) and 1 (perfect discriminatory power). In general, the \ac{AUC} can also take on a value below 0.5, but that would indicate that the model's predictions are less accurate than the random model, indicating an issue in the model's ability to differentiate between the classes.\footnote{\cite{AUC:2023}}
 
 \begin{equation}
 GINI = \frac{A}{A + B} = \frac{A}{\frac{1}{2}} = (2 * A + 1) - 1 = 2 * \text{AUC} - 1 \label{eq:vl_gini}
@@ -54,4 +56,4 @@ GINI = \frac{A}{A + B} = \frac{A}{\frac{1}{2}} = (2 * A + 1) - 1 = 2 * \text{AUC
 \end{figure}
 
 \section{Stability Test}
-Stability testing is performed to assess the robustness and consistency of a PD model over time. It examines whether the model's performance remains stable and reliable when applied to data collected at different time periods. Stability testing helps identifying potential model deterioration or drift over time, which may be caused by changes in the underlying credit conditions or data characteristics. If significant discrepancies are detected, model recalibration or updates may be necessary to maintain its accuracy and relevance.
+Stability testing is performed to assess the robustness and consistency of a PD model over time. It examines whether the model's performance remains stable and reliable when applied to data collected at different time periods. Stability testing helps identify potential model deterioration or drift over time, which may be caused by changes in the underlying credit conditions or data characteristics. If significant discrepancies are detected, model recalibration or updates may be necessary to maintain its accuracy and relevance.

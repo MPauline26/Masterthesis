@@ -1,120 +1,112 @@
-\begin{thebibliography}{10}
-\expandafter\ifx\csname url\endcsname\relax
-  \def\url#1{\texttt{#1}}\fi
-\expandafter\ifx\csname doi\endcsname\relax
-  \def\doi#1{\burlalt{doi:#1}{http://dx.doi.org/#1}}\fi
-\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
-\expandafter\ifx\csname href\endcsname\relax
-  \def\href#1#2{#2}\fi
-\expandafter\ifx\csname burlalt\endcsname\relax
-  \def\burlalt#1#2{\href{#2}{#1}}\fi
+\begin{thebibliography}{}
 
-\bibitem{Witzany:2017}
-J.~Witzany.
-\newblock {\em Credit Risk Management: Pricing, Measurement, and Modeling}.
-\newblock Springer International Publishing, 2017.
-\newblock \urlprefix\url{https://books.google.at/books?id=YQ5cvgAACAAJ}.
-
-\bibitem{BCBS:2023}
-{Basel Committee on Banking Supervision}.
-\newblock {\em History of the Basel Committee}.
-\newblock \urlprefix\url{https://www.bis.org/bcbs/history.htm}.
-\newblock Accessed: 2023-11-25.
-
-\bibitem{EBA:2023}
-{European Banking Authority}.
-\newblock {\em Follow-Up Report from the Consultation on the Discussion Paper
-  on Machine Learning for IRB Models}.
-\newblock
-  \urlprefix\url{https://www.eba.europa.eu/sites/default/documents/files/document_library/Publications/Reports/2023/1061483/Follow-up%20report%20on%20machine%20learning%20for%20IRB%20models.pdf}.
-
-\bibitem{Kuhn:2013}
-M.~Kuhn and K.~Johnson.
-\newblock {\em Applied Predictive Modeling}.
-\newblock SpringerLink : B{\"u}cher. Springer New York, 2013.
-
-\bibitem{Roberts2022}
-T.~Roberts and S.~Tonna.
-\newblock {\em Risk Modeling: Practical Applications of Artificial
-  Intelligence, Machine Learning, and Deep Learning}.
-\newblock Wiley and SAS Business Series. Wiley, 2022.
-\newblock \urlprefix\url{https://books.google.at/books?id=tqdvzgEACAAJ}.
-
-\bibitem{locatelli:2022}
-R.~Locatelli, G.~Pepe, and F.~Salis.
-\newblock {\em Artificial Intelligence and Credit Risk: The Use of Alternative
-  Data and Methods in Internal Credit Rating}.
-\newblock Springer International Publishing, 2022.
-
-\bibitem{Python:2022}
-T.~Atwan.
+\bibitem[\protect\astroncite{Atwan}{2022}]{Python:2022}
+Atwan, T. (2022).
 \newblock {\em Time Series Analysis with Python Cookbook: Practical Recipes for
   Exploratory Data Analysis, Data Preparation, Forecasting, and Model
   Evaluation}.
-\newblock Packt Publishing, 2022.
-\newblock \urlprefix\url{https://books.google.at/books?id=MmE6zwEACAAJ}.
+\newblock Packt Publishing.
 
-\bibitem{Boxplot:2019}
-M.~Galarnyk.
-\newblock {\em Understanding Boxplots}.
-\newblock
-  \urlprefix\url{https://www.kdnuggets.com/2019/11/understanding-boxplots.html}.
+\bibitem[\protect\astroncite{{Basel Committee on Banking
+  Supervision}}{nd}]{BCBS:2023}
+{Basel Committee on Banking Supervision} (n.d.).
+\newblock History of the basel committee.
+\newblock \url{https://www.bis.org/bcbs/history.htm}.
+\newblock Accessed: 2023-11-25.
+
+\bibitem[\protect\astroncite{Chism}{2023}]{FreddieMac:2023}
+Chism, P. (2023).
+\newblock Freddie mac: What is the federal home loan mortgage corporation
+  (fhlmc)?
+\newblock \url{https://www.rocketmortgage.com/learn/freddie-mac}.
 \newblock Accessed: 2023-11-13.
 
-\bibitem{FUMS:2020}
-M.~Wirth.
-\newblock {\em Fundamentals of Mathematics and Statistics}.
-\newblock Quantitative Asset and Risk Management, 2020.
-
-\bibitem{BDT}
-Y.~Coadou.
-\newblock {\em Boosted Decision Trees and Applications}.
-\newblock EPJ Web of Conferences, 55:02004--, 07 2013.
-\newblock \doi{10.1051/epjconf/20135502004}.
-
-\bibitem{RanFor:2023}
-Simplilearn.
-\newblock {\em Random Forest Algorithm}.
+\bibitem[\protect\astroncite{Coadou}{2013}]{BDT}
+Coadou, Y. (2013).
+\newblock Boosted decision trees and applications.
+\newblock {\em EPJ Web of Conferences}, 55:02004--.
 \newblock
-  \urlprefix\url{https://www.simplilearn.com/tutorials/machine-learning-tutorial/random-forest-algorithm}.
+  \url{https://www.researchgate.net/publication/260633214_Boosted_Decision_Trees_and_Applications}.
+
+\bibitem[\protect\astroncite{Dehan}{2023}]{SecMortMark:2023}
+Dehan, A. (2023).
+\newblock What is the secondary mortgage market and how does it work?
+\newblock \url{https://www.rocketmortgage.com/learn/secondary-mortgage-market}.
 \newblock Accessed: 2023-11-13.
 
-\bibitem{AUC:2023}
-Y.~E. Khal.
-\newblock {\em Confusion matrix, AUC and ROC curve and Gini clearly explained}.
+\bibitem[\protect\astroncite{{European Banking Authority}}{2023}]{EBA:2023}
+{European Banking Authority} (2023).
+\newblock Follow-up report from the consultation on the discussion paper on
+  machine learning for irb models.
 \newblock
-  \urlprefix\url{https://yassineelkhal.medium.com/confusion-matrix-auc-and-roc-curve-and-gini-clearly-explained-221788618eb2}.
+  \url{https://www.eba.europa.eu/sites/default/documents/files/document_library/Publications/Reports/2023/1061483/Follow-up%20report%20on%20machine%20learning%20for%20IRB%20models.pdf}.
+
+\bibitem[\protect\astroncite{{Federal Home Loan Mortgage
+  Corporation}}{2023a}]{FreddieMacData:2023}
+{Federal Home Loan Mortgage Corporation} (2023a).
+\newblock Single family loan-level data set.
+\newblock
+  \url{https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset}.
+\newblock Accessed: 2023-04-01.
+
+\bibitem[\protect\astroncite{{Federal Home Loan Mortgage
+  Corporation}}{2023b}]{FreddieMacUG:2023}
+{Federal Home Loan Mortgage Corporation} (2023b).
+\newblock Single-family loan level dataset general user guide.
+\newblock
+  \url{https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset}.
+\newblock Accessed: 2023-04-01.
+
+\bibitem[\protect\astroncite{Galarnyk}{2019}]{Boxplot:2019}
+Galarnyk, M. (2019).
+\newblock Understanding boxplots.
+\newblock \url{https://www.kdnuggets.com/2019/11/understanding-boxplots.html}.
 \newblock Accessed: 2023-11-13.
 
-\bibitem{FreddieMac:2023}
-P.~Chism.
-\newblock {\em Freddie Mac: What Is The Federal Home Loan Mortgage Corporation
-  (FHLMC)?}
-\newblock \urlprefix\url{https://www.rocketmortgage.com/learn/freddie-mac}.
+\bibitem[\protect\astroncite{Halpert}{2014}]{USRegion:2014}
+Halpert, C. (2014).
+\newblock census-regions.
+\newblock \url{https://github.com/cphalpert/census-regions}.
+
+\bibitem[\protect\astroncite{Khal}{2021}]{AUC:2023}
+Khal, Y.~E. (2021).
+\newblock Confusion matrix, auc and roc curve and gini clearly explained.
+\newblock
+  \url{https://yassineelkhal.medium.com/confusion-matrix-auc-and-roc-curve-and-gini-clearly-explained-221788618eb2}.
 \newblock Accessed: 2023-11-13.
 
-\bibitem{SecMortMark:2023}
-A.~Dehan.
-\newblock {\em What Is The Secondary Mortgage Market And How Does It Work?}
+\bibitem[\protect\astroncite{Kuhn and Johnson}{2013}]{Kuhn:2013}
+Kuhn, M. and Johnson, K. (2013).
+\newblock {\em Applied Predictive Modeling}.
+\newblock SpringerLink : B{\"u}cher. Springer New York.
+
+\bibitem[\protect\astroncite{Locatelli et~al.}{2022}]{locatelli:2022}
+Locatelli, R., Pepe, G., and Salis, F. (2022).
+\newblock {\em Artificial Intelligence and Credit Risk: The Use of Alternative
+  Data and Methods in Internal Credit Rating}.
+\newblock Springer International Publishing.
+
+\bibitem[\protect\astroncite{Roberts and Tonna}{2022}]{Roberts2022}
+Roberts, T. and Tonna, S. (2022).
+\newblock {\em Risk Modeling: Practical Applications of Artificial
+  Intelligence, Machine Learning, and Deep Learning}.
+\newblock Wiley and SAS Business Series. Wiley.
+
+\bibitem[\protect\astroncite{Simplilearn}{2023}]{RanFor:2023}
+Simplilearn (2023).
+\newblock Random forest algorithm.
 \newblock
-  \urlprefix\url{https://www.rocketmortgage.com/learn/secondary-mortgage-market}.
+  \url{https://www.simplilearn.com/tutorials/machine-learning-tutorial/random-forest-algorithm}.
 \newblock Accessed: 2023-11-13.
 
-\bibitem{FreddieMacData:2023}
-{Federal Home Loan Mortgage Corporation}.
-\newblock {\em Single Family Loan-Level Data set}.
-\newblock
-  \urlprefix\url{https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset}.
+\bibitem[\protect\astroncite{Wirth}{2020}]{FUMS:2020}
+Wirth, M. (2020).
+\newblock Fundamentals of mathematics and statistics.
+\newblock Quantitative Asset and Risk Management.
 
-\bibitem{FreddieMacUG:2023}
-{Federal Home Loan Mortgage Corporation}.
-\newblock {\em Single-Family Loan Level Dataset General User Guide}.
-\newblock
-  \urlprefix\url{https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset}.
-
-\bibitem{USRegion:2014}
-C.~Halpert.
-\newblock {\em census-regions}.
-\newblock \url{https://github.com/cphalpert/census-regions}, 2014.
+\bibitem[\protect\astroncite{Witzany}{2017}]{Witzany:2017}
+Witzany, J. (2017).
+\newblock {\em Credit Risk Management: Pricing, Measurement, and Modeling}.
+\newblock Springer International Publishing.
 
 \end{thebibliography}

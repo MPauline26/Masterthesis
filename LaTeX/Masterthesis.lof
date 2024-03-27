@@ -10,7 +10,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Decision Tree incl. Pruning\relax }}{10}{figure.caption.6}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Random Forest\relax }}{11}{figure.caption.7}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Neural Network\relax }}{11}{figure.caption.8}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Neural Network\relax }}{12}{figure.caption.8}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces k-nearest Neighbour with k = 3\relax }}{12}{figure.caption.9}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Dummy encoding, Omission of one dummy column\relax }}{14}{figure.caption.10}%
@@ -25,39 +25,39 @@
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Partial Dependence Plots\relax }}{27}{figure.caption.17}%
 \contentsline {figure}{\numberline {7.3}{\ignorespaces Individual Conditional Expectation\relax }}{27}{figure.caption.17}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Distribution and default rate of whole sample\relax }}{35}{figure.caption.21}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Distribution and default rate of development and validation sample\relax }}{35}{figure.caption.22}%
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Distribution of Credit Score (fico) and Original UPB\relax }}{36}{figure.caption.23}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Default rate of whole sample\relax }}{36}{figure.caption.21}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Distribution and default rate of development and validation sample\relax }}{36}{figure.caption.22}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Distribution of Credit Score (fico) and Original UPB\relax }}{37}{figure.caption.23}%
 \contentsline {figure}{\numberline {8.4}{\ignorespaces Distribution of CLTV and DTI\relax }}{37}{figure.caption.24}%
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Distribution of Number of borrowers and Flag Original Loan Term $\geq $ 360 months\relax }}{37}{figure.caption.25}%
-\contentsline {figure}{\numberline {8.6}{\ignorespaces Distribution of US region and Channel\relax }}{37}{figure.caption.26}%
-\contentsline {figure}{\numberline {8.7}{\ignorespaces Boxplot of Credit Score (fico) and Original UPB\relax }}{38}{figure.caption.27}%
-\contentsline {figure}{\numberline {8.8}{\ignorespaces Boxplot of CLTV and DTI\relax }}{38}{figure.caption.28}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Distribution of Number of borrowers and Flag Original Loan Term $\geq $ 360 months\relax }}{38}{figure.caption.25}%
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Distribution of US region and Channel\relax }}{38}{figure.caption.26}%
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Boxplot of Credit Score (fico) and Original UPB\relax }}{39}{figure.caption.27}%
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Boxplot of CLTV and DTI\relax }}{39}{figure.caption.28}%
 \contentsline {figure}{\numberline {8.9}{\ignorespaces Boxplot of Numner of Borrowers and Original Loan Term\relax }}{39}{figure.caption.29}%
-\contentsline {figure}{\numberline {8.10}{\ignorespaces ROC-curve of Credit Score (fico) and Original UPB\relax }}{44}{figure.caption.33}%
+\contentsline {figure}{\numberline {8.10}{\ignorespaces ROC-curve of Credit Score (fico) and Original UPB\relax }}{43}{figure.caption.33}%
 \contentsline {figure}{\numberline {8.11}{\ignorespaces ROC-curve of CLTV and DTI\relax }}{44}{figure.caption.34}%
-\contentsline {figure}{\numberline {8.12}{\ignorespaces ROC-curve of Number of Borrowers and Original Loan Term $\geq $ 360 months\relax }}{45}{figure.caption.35}%
-\contentsline {figure}{\numberline {8.13}{\ignorespaces ROC-curve of US region = Midwest and Channel = Correspondent\relax }}{45}{figure.caption.36}%
-\contentsline {figure}{\numberline {8.14}{\ignorespaces Parameter ranges for Random and Grid Search\relax }}{51}{figure.caption.43}%
-\contentsline {figure}{\numberline {8.15}{\ignorespaces Performance comparison for Hyperparameter Tuning\relax }}{52}{figure.caption.45}%
-\contentsline {figure}{\numberline {8.16}{\ignorespaces AUC comparison in training and test sample\relax }}{53}{figure.caption.47}%
-\contentsline {figure}{\numberline {8.17}{\ignorespaces AUC comparison in Validation sample\relax }}{53}{figure.caption.48}%
-\contentsline {figure}{\numberline {8.18}{\ignorespaces Confusionmatrix in training sample\relax }}{55}{figure.caption.50}%
-\contentsline {figure}{\numberline {8.19}{\ignorespaces Confusionmatrix in test sample\relax }}{55}{figure.caption.51}%
-\contentsline {figure}{\numberline {8.20}{\ignorespaces Confusionmatrix in validation sample\relax }}{56}{figure.caption.52}%
-\contentsline {figure}{\numberline {8.21}{\ignorespaces ROC curve of stability test over time\relax }}{57}{figure.caption.54}%
-\contentsline {figure}{\numberline {8.22}{\ignorespaces Distribution Plot of PDs and Default Rates for Logistic Regression and Random Forest Model\relax }}{58}{figure.caption.56}%
-\contentsline {figure}{\numberline {8.23}{\ignorespaces Feature Importance by Split\relax }}{59}{figure.caption.57}%
-\contentsline {figure}{\numberline {8.24}{\ignorespaces Feature Importance by Gain\relax }}{59}{figure.caption.58}%
-\contentsline {figure}{\numberline {8.25}{\ignorespaces LIME Result of Random Forest, minimum difference in PD\relax }}{60}{figure.caption.60}%
-\contentsline {figure}{\numberline {8.26}{\ignorespaces LIME Result of Random Forest, maximum difference in PD\relax }}{61}{figure.caption.61}%
-\contentsline {figure}{\numberline {8.27}{\ignorespaces Individual Decision Tree 1 of Random Forest\relax }}{62}{figure.caption.62}%
-\contentsline {figure}{\numberline {8.28}{\ignorespaces Individual Decision Tree 2 of Random Forest\relax }}{62}{figure.caption.63}%
-\contentsline {figure}{\numberline {8.29}{\ignorespaces Partial Dependence Plots for Credit score and UPB\relax }}{63}{figure.caption.64}%
-\contentsline {figure}{\numberline {8.30}{\ignorespaces Partial Dependence Plots for CLTV and DTI\relax }}{63}{figure.caption.65}%
-\contentsline {figure}{\numberline {8.31}{\ignorespaces Partial Dependence Plots for Prop Val Method = Full Appraisal and Loan Purpose = Refinance - Cash Out\relax }}{63}{figure.caption.66}%
-\contentsline {figure}{\numberline {8.32}{\ignorespaces Individual Conditional Expectation Plots for Credit Score and UPB\relax }}{64}{figure.caption.67}%
-\contentsline {figure}{\numberline {8.33}{\ignorespaces Individual Conditional Expectation Plots for CLTV and DTI\relax }}{64}{figure.caption.68}%
+\contentsline {figure}{\numberline {8.12}{\ignorespaces ROC-curve of Number of Borrowers and Original Loan Term $\geq $ 360 months\relax }}{44}{figure.caption.35}%
+\contentsline {figure}{\numberline {8.13}{\ignorespaces ROC-curve of US region = Midwest and Channel = Correspondent\relax }}{44}{figure.caption.36}%
+\contentsline {figure}{\numberline {8.14}{\ignorespaces Parameter ranges for Random and Grid Search\relax }}{50}{figure.caption.43}%
+\contentsline {figure}{\numberline {8.15}{\ignorespaces Performance comparison for Hyperparameter Tuning\relax }}{51}{figure.caption.45}%
+\contentsline {figure}{\numberline {8.16}{\ignorespaces AUC comparison in training and test sample\relax }}{52}{figure.caption.47}%
+\contentsline {figure}{\numberline {8.17}{\ignorespaces AUC comparison in Validation sample\relax }}{52}{figure.caption.48}%
+\contentsline {figure}{\numberline {8.18}{\ignorespaces Confusionmatrix in training sample\relax }}{54}{figure.caption.50}%
+\contentsline {figure}{\numberline {8.19}{\ignorespaces Confusionmatrix in test sample\relax }}{54}{figure.caption.51}%
+\contentsline {figure}{\numberline {8.20}{\ignorespaces Confusionmatrix in validation sample\relax }}{55}{figure.caption.52}%
+\contentsline {figure}{\numberline {8.21}{\ignorespaces ROC curve of stability test over time\relax }}{56}{figure.caption.54}%
+\contentsline {figure}{\numberline {8.22}{\ignorespaces Distribution Plot of PDs and Default Rates for Logistic Regression and Random Forest Model\relax }}{57}{figure.caption.56}%
+\contentsline {figure}{\numberline {8.23}{\ignorespaces Feature Importance by Split\relax }}{58}{figure.caption.57}%
+\contentsline {figure}{\numberline {8.24}{\ignorespaces Feature Importance by Gain\relax }}{58}{figure.caption.58}%
+\contentsline {figure}{\numberline {8.25}{\ignorespaces LIME Result of Random Forest, minimum difference in PD\relax }}{59}{figure.caption.60}%
+\contentsline {figure}{\numberline {8.26}{\ignorespaces LIME Result of Random Forest, maximum difference in PD\relax }}{60}{figure.caption.61}%
+\contentsline {figure}{\numberline {8.27}{\ignorespaces Individual Decision Tree 1 of Random Forest\relax }}{61}{figure.caption.62}%
+\contentsline {figure}{\numberline {8.28}{\ignorespaces Individual Decision Tree 2 of Random Forest\relax }}{61}{figure.caption.63}%
+\contentsline {figure}{\numberline {8.29}{\ignorespaces Partial Dependence Plots for Credit score and UPB\relax }}{62}{figure.caption.64}%
+\contentsline {figure}{\numberline {8.30}{\ignorespaces Partial Dependence Plots for CLTV and DTI\relax }}{62}{figure.caption.65}%
+\contentsline {figure}{\numberline {8.31}{\ignorespaces Partial Dependence Plots for Prop Val Method = Full Appraisal and Loan Purpose = Refinance - Cash Out\relax }}{62}{figure.caption.66}%
+\contentsline {figure}{\numberline {8.32}{\ignorespaces Individual Conditional Expectation Plots for Credit Score and UPB\relax }}{63}{figure.caption.67}%
+\contentsline {figure}{\numberline {8.33}{\ignorespaces Individual Conditional Expectation Plots for CLTV and DTI\relax }}{63}{figure.caption.68}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -1,9 +1,11 @@
 
 \pdfminorversion=7
-\newcommand{\thesistype}{DA} 
+
+% needed for pachage TUWBUIDADISS
+\newcommand{\thesistype}{MA} 
 \newcommand{\thesislanguage}{en-UK}
-\newcommand{\thesistitle}{PD Model Development using Boosted Decision Trees}
-\newcommand{\thesistitletranslated}{PD Modelentwicklung mit Boosted Decision Trees}
+\newcommand{\thesistitle}{Predicting the Probability of Default using the Random Forest Algorithm}
+\newcommand{\thesistitletranslated}{Predicting the Probability of Default using the Random Forest Algorithm}
 \newcommand{\titelvorgestellt}{}
 \newcommand{\authorname}{2110613012 – Meikee Pagsinohin}
 \newcommand{\titelnachgestellt}{, BSc}
@@ -13,39 +15,33 @@
 
 \date{August 2023}
 
-\documentclass[12pt,twoside=false,headheight=-10pt, bibliography=numbered, egregdoesnotlikesansseriftitles]{scrreprt} %, listof=totoc
-\usepackage[utf8]{inputenc}
-\usepackage{TUWBUIDADISS}
+\documentclass[12pt,twoside=false,headheight=-10pt, bibliography=numbered]{scrreprt} %, listof=totoc
 
 \raggedbottom 
 
-\begin{filecontents}[overwrite]{\jobname.xmpdata}
-\Title{\thesistitle}
-\Author{\authorname}
-\Language{\thesislanguage}
-\Keywords{diploma thesis\sep template\sep LaTeX}
-\Publisher{Fachhochschule BFI}
-\end{filecontents}
+\usepackage{TUWBUIDADISS}
+\usepackage{float} 								% for tables
+\usepackage{longtable}							% for long tables
+\usepackage{multirow}							% for multicell in tables
+\usepackage[normalem]{ulem}						% underline of tet
+\usepackage{lscape}								% landscape
+\usepackage[toc,page]{appendix}					% appendix
+\usepackage{setspace}							% Linespacing
+\usepackage{tabularx}							% beautiful tables
+\usepackage{booktabs}							% beautiful tables
+\usepackage{array}								% matrix
+\usepackage[table]{xcolor}						% color in tables
+\usepackage{adjustbox}							% adjust boxcontent
+\usepackage{acro}								% acronyms
 
-%\usepackage[style=numeric-comp,backend=biber,maxcitenames=2]{biblatex}
-%\ExecuteBibliographyOptions{%
-%  giveninits=true,maxbibnames=99}%
-%\DefineBibliographyStrings{ngerman}{andothers={et\;al\adddot},
-%urlseen = {Zugriff am}}
-%\addbibresource{Literature.bib}
+\usepackage{tocloft} 							% dots in TOC
+\usepackage{csquotes}							% remove warnings
+\usepackage{hyperref}							% hyperlinks, has to be before natbib
+\usepackage[sfdefault]{roboto} 					% font
+\usepackage{natbib}								% for bibsyle apa
+\usepackage{nccmath, mathtools}					% for titlepage
 
-\usepackage{float}
-\usepackage{longtable}
-\usepackage{multirow}
-\usepackage[normalem]{ulem}
-\usepackage{lscape}
-\usepackage[toc,page]{appendix}
-\usepackage{setspace}
-\usepackage{tabularx}
-\usepackage{booktabs}
-\usepackage{array}
-\usepackage[table]{xcolor}
-\usepackage{adjustbox}
+% new environment for table
 \newenvironment{conditions}
   {\par\vspace{\abovedisplayskip}\noindent\begin{tabular}{>{$}l<{$} @{${}={}$} l}}
   {\end{tabular}\par\vspace{\belowdisplayskip}}
@@ -56,7 +52,7 @@
 \newcolumntype{L}{>{\raggedright\arraybackslash}p{4cm}}
 \newcolumntype{R}{>{\raggedright\arraybackslash}p{2cm}}
 
-\usepackage{hyperref}
+% hyperlinks incl. color
 \usepackage{xcolor}
 \hypersetup{
     colorlinks,
@@ -65,40 +61,67 @@
     urlcolor={blue!80!black}
 }
 
-\addtokomafont{disposition}{\rmfamily}
+% chapter titles use set font
+%\addtokomafont{disposition}{\rmfamily}
 \setkomafont{disposition}{\normalcolor\bfseries}
 
-\setkomafont{chapter}{\fontsize{16}{19.2}\selectfont}
-\setkomafont{section}{\fontsize{14}{16.8}\selectfont}   
-\setkomafont{subsection}{\fontsize{13}{15.6}\selectfont}
-\setkomafont{subsection}{\fontsize{12}{14.4}\selectfont}
+% set font size
+\setkomafont{chapter}{\fontsize{16}{16}\selectfont} %19.2
+\setkomafont{section}{\fontsize{14}{14}\selectfont}  %16.8
+\setkomafont{subsection}{\fontsize{13}{13}\selectfont} %15.6
+\setkomafont{subsubsection}{\fontsize{12}{12}\selectfont} %
 
-\usepackage[sfdefault]{roboto} %font
-\linespread{1.25} %linespacing
-\renewcommand\chapterheadstartvskip{}
-%\renewcommand\chapterheadendvskip{} %remove vertical space
-\renewcommand{\chapterpagestyle}{scrheadings} %header in new chapter page
-\setkomafont{pageheadfoot}{\sffamily\upshape} %not slanted header
-\addtokomafont{headsepline}{\color{gray}} %color in separation line
-\addtokomafont{pageheadfoot}{\color{gray}} %color in header and footer
-\usepackage{tocloft} %dots in TOC
-\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} %dots in TOC
-\usepackage{csquotes}
-\renewcaptionname{english}{\contentsname}{Table of Contents}
-\renewcaptionname{english}{\bibname}{References}
 
-%\setlength{\cftbeforetoctitleskip}{-3em}
-\renewcommand{\cftbeforetoctitleskip}{-0.25in} % Title is 1in from top
-\renewcommand{\cftaftertoctitleskip}{1.0\baselineskip}% 1 double space after title
-\renewcommand{\cftbeforelottitleskip}{-0.25in} % Title is 1in from top
-\renewcommand{\cftafterlottitleskip}{1.0\baselineskip}% 1 double space after title
-\renewcommand{\cftbeforeloftitleskip}{-0.25in} % Title is 1in from top
-\renewcommand{\cftafterloftitleskip}{1.0\baselineskip}% 1 double space after title
+\linespread{1.25} 												% linespacing
+\renewcommand\chapterheadstartvskip{}							% remove vertical space from chapter titles (above)
+\renewcommand\chapterheadendvskip{} 							% remove vertical space from chapter titles (below)
+\renewcommand{\chapterpagestyle}{scrheadings} 					% add header in chapter page
+\renewcommand{\mkbegdispquote}[2]{\itshape}						% italics quotes
+\BeforeStartingTOC{\thispagestyle{scrheadings}}					% add header to TOC, LOF page
+\setkomafont{pageheadfoot}{\sffamily\upshape} 					% not slanted header
+\addtokomafont{headsepline}{\color{gray}} 						% color in separation line
+\addtokomafont{pageheadfoot}{\color{gray}} 						% color in header and footer
+\counterwithout{footnote}{chapter}								% continuous footnote numbering
+
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} 			% dots in TOC
+\tocloftpagestyle{scrheadings}
+
+\renewcaptionname{english}{\contentsname}{\hfill Table of Contents \hfill}	% change title of table of contents
+\renewcaptionname{english}{\listfigurename}{\hfill List of Figures \hfill}	% change title of List of Figures
+\renewcaptionname{english}{\listtablename}{\hfill List of Tables \hfill}	% change title of Tables
+\renewcaptionname{english}{\bibname}{References}				% change title of references
+
+\renewcommand{\cftbeforetoctitleskip}{-0.25in} 					% Title is 1in from top
+\renewcommand{\cftaftertoctitleskip}{2.0\baselineskip}			% 1 double space after title
+\renewcommand{\cftbeforelottitleskip}{-0.25in} 					% Title is 1in from top
+\renewcommand{\cftafterlottitleskip}{2.0\baselineskip}			% 1 double space after title
+\renewcommand{\cftbeforeloftitleskip}{-0.25in} 					% Title is 1in from top
+\renewcommand{\cftafterloftitleskip}{2.0\baselineskip}			% 1 double space after title
+
+%\setlength\parindent{0pt}										
+\usepackage[skip=10pt plus1pt, indent=0pt]{parskip}				%no paragraphindent
+
+\newcommand\signature[2]{% Name; Department
+\noindent\begin{minipage}{3cm}
+    \noindent\vspace{3cm}\par
+    \noindent\rule{4cm}{1pt}\par
+    \noindent#1\par
+    \noindent#2%
+\end{minipage}}
+\newcommand\signaturee[2]{% Name; Department
+\noindent\begin{minipage}{7cm}
+    \noindent\vspace{3cm}\par
+    \noindent\rule{7cm}{1pt}\par
+    \noindent#1\par
+    \noindent#2%
+\end{minipage}}
+
+% set List of Appendices -----------------------------------------------------------------------
 
 \newcommand\appendicesname{Appendices}
-\newcommand\listofloaname{List of \appendicesname}
+\newcommand\listofloaname{\hfill List of \appendicesname \hfill \vspace*{0cm}} %\vspace*{-0.5cm}
 \newcommand*{\listofappendices}{\listoftoc{loa}}
-\setuptoc{loa}{totoc}
+%\setuptoc{loa}{totoc}
 
 \makeatletter
 \g@addto@macro\appendix{%
@@ -137,26 +160,9 @@
 }
 \makeatother
 
+% -----------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-\usepackage{acro}
-\input{Acronyms}
-
-%% Einstellungen für Zeilenumbrüche von Weblinks im url-Paket
-%\setcounter{biburllcpenalty}{9000}% Kleinbuchstaben
-%\setcounter{biburlucpenalty}{9000}% Großbuchstaben
-%% Quelle: https://texwelt.de/fragen/7008/zeilenumbruche-in-bibliografielinks
-
-%% ===== additional settings =============
+% additional settings
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 \sisetup{output-decimal-marker = {,},
@@ -167,44 +173,83 @@ list-final-separator={ und }}
 
 \graphicspath{{Figures/}}
 
-%% examples for useful shortcuts in German
-\newcommand{\zB}{\mbox{z.\,B.}\xspace}
-\newcommand{\Name}[1]{\textsc{#1}}
+\input{Acronyms}
 
-\newcommand{\vKTxv}{\mathbf{v}_1^T\tilde{\mathbf{K}}_{T},_{\xi}\mathbf{v}_1}
-\newcommand{\vKTxxv}{\mathbf{v}_1^T\tilde{\mathbf{K}}_{T},_{\xi\xi}\mathbf{v}_1}
+% ----------------------------------------------------------------------------------------------- BEGINNING
 
-%\renewcommand{\thesection}{\arabic{section}}
-
-%% activate for double space between the lines (correction mode) 
-%\doublespacing
-
-\begin{document}       		%% start of the document
-%\maketitle             		%% places the title with above information
+\begin{document}
+%\maketitle
 
 \renewcommand{\thepage}{\Roman{page}}
 
 \begin{titlepage}
-	\centering
-	%\includegraphics[width=0.5\textwidth]{figures/FHlogo.png}\par\vspace{1cm}
-	\vspace{1cm}
-	{\scshape\LARGE Masterthesis \par}
-	\vspace{1cm}
-	{\scshape\Large \par}
-	\vspace{1.5cm}
-	{\huge\bfseries Predicting the Probability of Default using the Random Forest Algorithm \par}
-	\vspace{2cm}
-	%{\Large Ausgeführt am Institut für Hochenergiephysik der Österreichischen Akademie der Wissenschaften \par}
-	\vspace{2cm}
-	%{\Large unter der Anleitung von \par}
-	%{\Large\bfseries Dipl.-Ing. Dr.techn. Robert Schöfbeck \par}	
-	\vspace{2cm}
-	%{\Large durch \par}	
-	{\Large\bfseries Meikee PAGSINOHIN \par}	
-	\vfill
-	{\Large Matrikelnummer: 01327477 \par}
 
-	\vfill
+\begin{flushright}
+\includegraphics[width=0.4\textwidth]{figures/FHlogo2.jpeg}\par
+\end{flushright}
+
+\vspace{0.7cm}
+
+\begin{flushleft}
+
+\fontsize{12}{12}\selectfont
+\textbf{Degree Programme and Code of the degree programme:}
+
+\fontsize{14}{14}\selectfont
+\textbf{Quantitative Asset and Risk Management - 0613}
+
+\vspace{0.7cm}
+
+\fontsize{20}{20}\selectfont
+\textbf{Master Thesis}
+
+\vspace{0.7cm}
+
+\fontsize{12}{12}\selectfont
+To obtain the academic degree:\par
+\textbf{Master of Arts in Business (MA)}
+
+\end{flushleft}
+
+\vspace{1cm}
+
+\begin{center}
+
+\fontsize{16}{16}\selectfont
+\textbf{Predicting the Probability of Default using} \par
+\textbf{the Random Forest Algorithm}
+
+\end{center}
+
+\vspace{0.3cm}
+
+
+\begin{fleqn}
+\begin{align*}
+& \text{Subject:} 		&& \text{Risk Measurement/ALM and Risk Management for Banks} 	\\
+& \text{Submited by:} 	&& \text{Meikee Pagsinohin} 		\\
+& \text{Student ID:} 	&& \text{2110613012} 				\\
+& \text{Supervisor:} 	&& \text{Dr. Manuel Lingo}
+\end{align*}
+\end{fleqn}
+
+\vspace{0.5cm}
+
+\begin{fleqn}
+\begin{align*}
+& \text{Providing body:} 		&& \text{University of Applied Sciences BFI Vienna} 	\\
+& 					 			&& \text{Wohlmutstraße 22} 		\\
+& 					 			&& \text{1020 Vienna} 			
+\end{align*}
+\end{fleqn}
+
+\vfill
+
+\begin{flushleft}
+
+Vienna, 30.11.2023
+
+\end{flushleft}
 
 \end{titlepage}
 
@@ -213,6 +258,10 @@ list-final-separator={ und }}
 \selectlanguage{english} 
 \pagestyle{scrheadings} 
 
+\include{Signature}
+
+\include{Signature2}
+
 \begin{singlespace}
 
 \tableofcontents
@@ -220,13 +269,14 @@ list-final-separator={ und }}
 \listofappendices
 \newpage
 
+%\addcontentsline{toc}{section}{List of Figures}
 \listoffigures
 \newpage
 
 \listoftables
 \newpage
 
-\printacronyms
+\printacronyms[name={\centering List of Abbreviations \vspace{0.8cm}}]
 \newpage
 
 \end{singlespace}
@@ -256,7 +306,8 @@ list-final-separator={ und }}
 \include{R_Conclusio}
 
 \newpage
-\bibliographystyle{habbrv}
+%\bibliographystyle{habbrv}
+\bibliographystyle{apa}
 \begingroup
 \renewcommand{\section}[2]{}%
 \bibliography{Literature}

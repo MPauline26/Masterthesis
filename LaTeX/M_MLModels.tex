@@ -1,20 +1,20 @@
 \chapter{Advanced Models}
 \label{ch:AM}
-Stimulated by the surge in data availability and advancements in computational power, alongside the growing popularity of advanced machine learning models, financial institutions are increasingly motivated to leverage advanced models for predicting the \acl{PD}. The objectives include enhancing model performance and uncovering previously unseen interactions among risk factors. However, challenges such as limited transparency in explaining individual predictions and constraints imposed by regulatory requirements and data protection laws, as discussed in Chapter \ref{sec:ref_leg}, force financial institutions to be hesitant to implement these algorithms in the calculation of regulatory capital. \cite[p. 4]{EBA:2023}
+Stimulated by the surge in data availability and advancements in computational power, alongside the growing popularity of advanced machine learning models, financial institutions are increasingly motivated to leverage advanced models for predicting the \acl{PD}. The objectives include enhancing model performance and uncovering previously unseen interactions among risk factors. However, challenges such as limited transparency in explaining individual predictions and constraints imposed by regulatory requirements and data protection laws, as discussed in Chapter \ref{sec:ref_leg}, force financial institutions to be hesitant to implement these algorithms in the calculation of regulatory capital.\footnote{\cite{EBA:2023} p.~4}
 
-These advanced models can be broadly classified into three categories \cite[p. 43-45]{Roberts2022}:
+These advanced models can be broadly classified into three categories\footnote{\cite{Roberts2022} pp.~43-45}:
 
 \begin{enumerate}
   \item Supervised Learning: In this category, a target variable is provided and utilized during the training process. Boosting methods are employed to improve the classification of misidentified observations. Decision trees and Random Forests are prominent examples.
 \item Unsupervised Learning: Here, unlabeled data is used for training, relying solely on features to uncover underlying patterns or relationships within the data without explicit guidance. Examples include the kNN algorithm and Clustering.
-\item Unsupervised Learning: In this paradigm, an "agent" learns to make decisions by interacting with an environment. It receives feedback in the form of rewards or punishments based on the actions it takes, allowing it to learn the optimal strategy to maximize cumulative rewards over time.
+\item Unsupervised Learning: In this paradigm, an "agent" learns by interacting with an environment. It receives feedback by being rewarded or punished depending on its actions. 
 \end{enumerate}
 
 \section{Decision Trees}
 \label{sec:dectrees}
 Classification trees are used to separate the categories (default, non-default) as best as possible using explanatory factors. The split is determined by maximizing the homogeneity of the resulting subgroups, so-called branches. The algorithm calculates the measure for each possible threshold for numeric variables, while for categorical variables, it determines it for each unique value. This step is repeated until a stopping condition is met and the final subgroup is called a leaf. 
 
-To avoid overfitting, the decision tree may be "pruned", where some branches are removed. The preliminary decision tree is applied on a separate data set, i.e., the validation sample, and to improve its performance, redundant splits are cut off. An example of a decision tree and the pruning process is visible in Figure \ref{fig:ml_dectree}. A separate validation should then be performed on a third data set since the validation sample became part of the modeling process. 
+To avoid overfitting, the decision tree may be "pruned", where some branches are removed. The preliminary decision tree is applied on a separate data set, i.e., the validation sample, and redundant splits are cut off to improve its performance. An example of a decision tree and the pruning process is visible in Figure \ref{fig:ml_dectree}. A separate validation should then be performed on a third data set since the validation sample became part of the modeling process. 
 
 \begin{figure}[H]
 	\centering
@@ -23,12 +23,12 @@ To avoid overfitting, the decision tree may be "pruned", where some branches are
     \label{fig:ml_dectree}
 \end{figure}
 
-The estimated PD is the average default rate per leaf and each terminal node can be classified into default or non-default class using a defined threshold. Popular statistics to measure homogeneity are the Gini index and Entropy index. The Gini index assumes a value between 0 and 1, where 0 means complete purity, 0.5 represents an equal distribution of all classes and 1 shows a random distribution across all classes. Decision trees offer the advantage of a simple and easily interpretable structure, but it is sensitive to small changes in the training data set, which can affect individual thresholds and even change splitting variables. \cite[pp.~21-22]{locatelli:2022}
+The estimated PD is the average default rate per leaf and each terminal node can be classified into default or non-default class using a defined threshold. Popular statistics to measure homogeneity are the Gini index and Entropy index. The Gini index assumes a value between 0 and 1, where 0 means complete purity, 0.5 represents an equal distribution of all classes and 1 shows a random distribution across all classes. Decision trees offer the advantage of a simple and easily interpretable structure, but they are sensitive to small changes in the training data set, which can affect individual thresholds and even change splitting variables.\footnote{\cite{locatelli:2022} pp.~21-22}
 
 \subsection{Boosted Decision Trees and Random Forests} 
 Boosted Decision Trees (BDT) or Gradient Boosted Decision Trees combine decision trees with boosting techniques to achieve higher predictive performance. This algorithm iteratively builds decision trees, placing more weight on misclassified observations in each iteration, resulting in a better model. First, the residual error of the base model is calculated, which serves as the target information for a subsequent decision tree using the same variables. The residual error of both trees is combined and the process is repeated until a predefined stopping criterion is reached, ultimately leading to a more refined and accurate model.
 
-Random Forests are an ensemble learning method that combines multiple decision trees to make predictions. However, unlike Boosted Decision Trees, Random Forests build each tree independently, without sequential corrections (Figure \ref{fig:ml_ranforest}). Additional tools may be utilized to further lower the correlation between the trees, like bootstrap aggregation and selecting only a portion of the variables for the building process. A more detailed explanation is in Chapter \ref{sec:mp_rf}. These measures allow for a balanced ensemble model, where correct predictions from a portion of the trees compensate for incorrect predictions and they reduce the risk of overfitting and the variance of results. \cite[pp.~22-24]{locatelli:2022}
+A Random Forest is an ensemble learning method which combines multiple decision trees to make predictions. However, unlike Boosted Decision Trees, Random Forests build each tree independently, without sequential corrections (Figure \ref{fig:ml_ranforest}). Additional tools may be utilized to lower the correlation between the trees further, like bootstrap aggregation and selecting only a portion of the variables for the building process. A more detailed explanation is in Chapter \ref{sec:mp_rf}. These measures allow for a balanced ensemble model, where correct predictions from a portion of the trees compensate for incorrect predictions and reduce the risk of overfitting and the variance of results.\footnote{\cite{locatelli:2022} pp.~22-24}
 
 \begin{figure}[H]
 	\centering
@@ -40,22 +40,22 @@ Random Forests are an ensemble learning method that combines multiple decision t
 \section{Other Models}
 
 \subsection{Neural Networks}
-Neural networks, inspired by the structure and function of a biological brain, can learn intricate patterns and nonlinear relationships in data. They consist of multiple layers of interconnected nodes, also called neurons, where each neuron is assigned a simple computation and uses activation functions to pass along a value. The result of the model is a numerical or classification value. The initial layer is referred to as the input layer, the final layer as the output layer and those in-between are known as hidden layers. An illustration is visible in Figure \ref{fig:ml_neurnet}. A deep neural network is constructed, if the model consists of at least two hidden layers. During the learning phase, the neural network is modifying its own structure, meaning the weight coefficients in the weight matrices of the hidden layers, to minimize the error between the predicted and observed value. \cite[pp.~24-25]{locatelli:2022}
+Neural networks, inspired by the structure and function of a biological brain, can learn intricate patterns and nonlinear relationships in data. They consist of multiple layers of interconnected nodes, also called neurons, where each neuron is assigned a simple computation and uses activation functions to pass along a value. The result of the model is a numerical or classification value. The initial layer is referred to as the input layer, the final layer as the output layer and those in-between are known as hidden layers. An illustration is visible in Figure \ref{fig:ml_neurnet}. A deep neural network is constructed if the model consists of at least two hidden layers. During the learning phase, the neural network is modifying its structure, meaning the weight coefficients in the weight matrices of the hidden layers, to minimize the error between the predicted and observed values.\footnote{\cite{locatelli:2022} pp.~24-25}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{./ML__MLP.png}
+	\includegraphics[width=0.625\textwidth]{./ML__MLP.png}
     \caption{Neural Network}
     \label{fig:ml_neurnet}
 \end{figure}
 
 \subsection{k-Nearest Neighbour}
 \label{sec:kNN}
-Based on a data set with explanatory factors and observed default events, the unknown PD of a new data entry can be estimated by taking the nearest data points determined via their risk factors and calculating the average default rate of the new data point. The Euclidean metric or Manhattan Distance can be used: The Euclidean distance measures the straight-line distance between two points. In comparison, the Manhattan distance is the sum of the absolute differences between two points in a space, where it can only move along coordinate axes. The number of nearest neighbors "k" is a hyper-parameter. The advantages of this model are the simple approach and the possibility to update new and outdated data entries dynamically and if k is set as a low number, a credit analyst can view individual scorings manually. \cite[p.~83]{Witzany:2017}
+Based on a data set with explanatory factors and observed default events, the unknown PD of a new data entry can be estimated by taking the nearest data points determined via their risk factors and calculating the average default rate of the new data point. The Euclidean metric or Manhattan Distance can be used: The Euclidean distance measures the straight-line distance between two points. In comparison, the Manhattan distance is the sum of the absolute differences between two points in a space, where it can only move along coordinate axes. The number of nearest neighbors, "k", is a hyper-parameter. The advantages of this model are the simple approach and the possibility of updating new and outdated data entries dynamically. If k is set as a low number, a credit analyst can view individual scorings manually.\footnote{\cite{Witzany:2017} p.~83}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.3\textwidth]{./ML__kNN.png}
+	\includegraphics[width=0.5\textwidth]{./ML__kNN.png}
     \caption{k-nearest Neighbour with k = 3}
     \label{fig:ml_neurnet}
 \end{figure}

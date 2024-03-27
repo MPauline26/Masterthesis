@@ -10,30 +10,30 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces Description of variables\relax }}{32}{table.8.1}%
-\contentsline {table}{\numberline {8.2}{\ignorespaces Description of Zero Balance Code\relax }}{33}{table.caption.18}%
+\contentsline {table}{\numberline {8.1}{\ignorespaces Description of variables\relax }}{33}{table.8.1}%
+\contentsline {table}{\numberline {8.2}{\ignorespaces Description of Zero Balance Code\relax }}{34}{table.caption.18}%
 \contentsline {table}{\numberline {8.3}{\ignorespaces Number of exclusions\relax }}{34}{table.caption.19}%
 \contentsline {table}{\numberline {8.4}{\ignorespaces Development and Validation sample\relax }}{35}{table.caption.20}%
 \contentsline {table}{\numberline {8.5}{\ignorespaces Descriptive statistics\relax }}{40}{table.caption.30}%
 \contentsline {table}{\numberline {8.6}{\ignorespaces Interquartile range\relax }}{40}{table.caption.31}%
 \contentsline {table}{\numberline {8.7}{\ignorespaces Description of new variables\relax }}{41}{table.caption.32}%
-\contentsline {table}{\numberline {8.8}{\ignorespaces Discriminatory power\relax }}{44}{table.8.8}%
-\contentsline {table}{\numberline {8.9}{\ignorespaces Correlation matrix\relax }}{46}{table.caption.37}%
+\contentsline {table}{\numberline {8.8}{\ignorespaces Discriminatory power\relax }}{43}{table.8.8}%
+\contentsline {table}{\numberline {8.9}{\ignorespaces Correlation matrix\relax }}{45}{table.caption.37}%
 \contentsline {table}{\numberline {8.10}{\ignorespaces Variance Inflation Factor\relax }}{46}{table.caption.38}%
 \contentsline {table}{\numberline {8.11}{\ignorespaces Long list and Short list\relax }}{47}{table.8.11}%
-\contentsline {table}{\numberline {8.12}{\ignorespaces Preliminary Logit Model\relax }}{49}{table.caption.39}%
-\contentsline {table}{\numberline {8.13}{\ignorespaces AIC and BIC per step\relax }}{50}{table.caption.40}%
-\contentsline {table}{\numberline {8.14}{\ignorespaces Final Logit Model\relax }}{50}{table.caption.41}%
-\contentsline {table}{\numberline {8.15}{\ignorespaces Hyperparameter Tuning sample\relax }}{51}{table.caption.42}%
-\contentsline {table}{\numberline {8.16}{\ignorespaces Best Parameter Settings of Random and Grid Search\relax }}{52}{table.caption.44}%
-\contentsline {table}{\numberline {8.17}{\ignorespaces Comparison of Gini values in training, test and validation sample\relax }}{53}{table.caption.46}%
-\contentsline {table}{\numberline {8.18}{\ignorespaces F1 score for different threshold values\relax }}{54}{table.caption.49}%
-\contentsline {table}{\numberline {8.19}{\ignorespaces Stability test over time\relax }}{56}{table.caption.53}%
-\contentsline {table}{\numberline {8.20}{\ignorespaces Distribution Table of PDs and Default Rates for Logistic Regression and Random Forest Model\relax }}{57}{table.caption.55}%
-\contentsline {table}{\numberline {8.21}{\ignorespaces PD Result of Logistic Regression model\relax }}{60}{table.caption.59}%
+\contentsline {table}{\numberline {8.12}{\ignorespaces Preliminary Logit Model\relax }}{48}{table.caption.39}%
+\contentsline {table}{\numberline {8.13}{\ignorespaces AIC and BIC per step\relax }}{49}{table.caption.40}%
+\contentsline {table}{\numberline {8.14}{\ignorespaces Final Logit Model\relax }}{49}{table.caption.41}%
+\contentsline {table}{\numberline {8.15}{\ignorespaces Hyperparameter Tuning sample\relax }}{50}{table.caption.42}%
+\contentsline {table}{\numberline {8.16}{\ignorespaces Best Parameter Settings of Random and Grid Search\relax }}{51}{table.caption.44}%
+\contentsline {table}{\numberline {8.17}{\ignorespaces Comparison of Gini values in training, test and validation sample\relax }}{52}{table.caption.46}%
+\contentsline {table}{\numberline {8.18}{\ignorespaces F1 score for different threshold values\relax }}{53}{table.caption.49}%
+\contentsline {table}{\numberline {8.19}{\ignorespaces Stability test over time\relax }}{55}{table.caption.53}%
+\contentsline {table}{\numberline {8.20}{\ignorespaces Distribution Table of PDs and Default Rates for Logistic Regression and Random Forest Model\relax }}{56}{table.caption.55}%
+\contentsline {table}{\numberline {8.21}{\ignorespaces PD Result of Logistic Regression model\relax }}{59}{table.caption.59}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Variable Name in data set with description\relax }}{69}{table.A.1}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Variable Name in data set with description\relax }}{68}{table.A.1}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
