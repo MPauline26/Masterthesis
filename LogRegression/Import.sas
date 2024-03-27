@@ -1,18 +1,3 @@
-options work='C:\Users\meikee.pagsinohin\Documents\MA\work';
-
-
-OPTIONS COMPRESS=YES REUSE=YES;
-
-data _null_; 
-      rc=dlgcdir("C:\Users\meikee.pagsinohin\Documents\MA\work");
-      put rc=;
-run;
-
-
-%put %sysfunc(pathname(work));
-
-libname user 'C:\Users\meikee.pagsinohin\Documents\MA\work';
-
 * Process flow;
 * Step 1 : Read Origination & Performance files for all available quarters;
 * Step 2 : Identify the first instances of loan being ever d30, ever d60, ever d90, ever d120, ever d180;
@@ -22,48 +7,44 @@ libname user 'C:\Users\meikee.pagsinohin\Documents\MA\work';
 * Step 6 : Create format variables in the master dataset;
 
 
-option ERRORS=0;
-
 /* PART1 */
-libname tmp 'C:\Users\meikee.pagsinohin\Documents\MA\data_2003_1999';
-%let dir=C:\Users\meikee.pagsinohin\Documents\MA\data_2003_1999;
-%let outdir=C:\Users\meikee.pagsinohin\Documents\MA\data_2003_1999;
+*libname tmp 'C:\Users\meikee.pagsinohin\Documents\MA\data_2003_1999';
+*%let dir C:\Users\meikee.pagsinohin\Documents\MA\data_2003_1999;
+*%let outdir C:\Users\meikee.pagsinohin\Documents\MA\data_2003_1999;
 
-%let endd='31DEC2003'd;  *Set this to the orign file quarter end date;
-%let nqtr= 20;           *Set this to the number of quarters between Q11999 and orign quarter end date;
+*%let endd '31DEC2003'd;  
+*%let nqtr  20;           
 
 /* PART2 */
-*libname tmp 'C:\Users\meikee.pagsinohin\Documents\MA\data_2010_2004';
-*%let dir=C:\Users\meikee.pagsinohin\Documents\MA\data_2010_2004;
-*%let outdir=C:\Users\meikee.pagsinohin\Documents\MA\data_2010_2004;
+libname tmp 'C:\Users\meikee.pagsinohin\Documents\MA\data_2010_2004';
+%let dir C:\Users\meikee.pagsinohin\Documents\MA\data_2010_2004;
+%let outdir C:\Users\meikee.pagsinohin\Documents\MA\data_2010_2004;
 
-*%let endd='31DEC2010'd;  *Set this to the orign file quarter end date;
-*%let nqtr= 28;           *Set this to the number of quarters between Q11999 and orign quarter end date;
+%let endd '31DEC2010'd;  
+%let nqtr  28;          
 
 /* PART3 */
 *libname tmp 'C:\Users\meikee.pagsinohin\Documents\MA\data_2022_2011';
-*%let dir=C:\Users\meikee.pagsinohin\Documents\MA\data_2022_2011;
-*%let outdir=C:\Users\meikee.pagsinohin\Documents\MA\data_2022_2011;
+*%let dir C:\Users\meikee.pagsinohin\Documents\MA\data_2022_2011;
+*%let outdir C:\Users\meikee.pagsinohin\Documents\MA\data_2022_2011;
 
-*%let endd='31DEC2022'd;  *Set this to the orign file quarter end date;
-*%let nqtr= 48;           *Set this to the number of quarters between Q11999 and orign quarter end date;
+*%let endd '31DEC2022'd;  
+*%let nqtr  48;           
 
-/* FINAL */
+/* FINAL DATASET */
 libname part1 'C:\Users\meikee.pagsinohin\Documents\MA\data_2003_1999';
 libname part2 'C:\Users\meikee.pagsinohin\Documents\MA\data_2010_2004';
 libname part3 'C:\Users\meikee.pagsinohin\Documents\MA\data_2022_2011';
 
-libname final 'C:\Users\meikee.pagsinohin\Documents\MA\data_fin';
-
 %macro obscnt(dsn);
 %global nobs dsnid;
-%let nobs=.;
+%let nobs .;
 
-%let dsnid = %sysfunc(open(&dsn));
+%let dsnid   %sysfunc(open(&dsn));
 
 %if &dsnid %then %do;
-  %let nobs=%sysfunc(attrn(&dsnid,nlobs));
-  %let rc  =%sysfunc(close(&dsnid));
+  %let nobs %sysfunc(attrn(&dsnid,nlobs));
+  %let rc   %sysfunc(close(&dsnid));
 %end;
 %else %do;
   %put Unable to open &dsn - %sysfunc(sysmsg());
@@ -73,7 +54,7 @@ libname final 'C:\Users\meikee.pagsinohin\Documents\MA\data_fin';
 %macro extract(qtr_prd);
 
 data svcg_&qtr_prd.;
-infile "&dir./historical_data_time_&qtr_prd..txt"  dlm='|' MISSOVER DSD lrecl=32767 firstobs=1;
+infile &dir./historical_data_time_&qtr_prd..txt  dlm '|' MISSOVER DSD lrecl 32767 firstobs 1;
 input
 id_loan              : $12.
 period               : 8.
@@ -111,7 +92,7 @@ amt_int_brng_upb     : 12.;
 run;
 
 data orig_&qtr_prd.;
-infile "&dir./historical_data_&qtr_prd..txt" dlm='|' MISSOVER DSD lrecl=32767 firstobs=1 ;
+infile &dir./historical_data_&qtr_prd..txt dlm '|' MISSOVER DSD lrecl 32767 firstobs 1 ;
 
 input
 fico            : 8.
@@ -148,7 +129,7 @@ flag_int_only   : $1.
 ind_mi_cncl     : $1.;
 run;
 
-proc sort data=svcg_&qtr_prd.;
+proc sort data svcg_&qtr_prd.;
 by id_loan period;
 run;
 
@@ -157,46 +138,46 @@ create table svcg_dtls_&qtr_prd. as
 select distinct a.*, b.orig_upb 
 from  
 svcg_&qtr_prd. a, orig_&qtr_prd. b
-where a.id_loan  = b.id_loan
+where a.id_loan    b.id_loan
 order by a.id_loan, a.period;
 run;
 
 data svcg_dtls_&qtr_prd.;
 set  svcg_dtls_&qtr_prd.;
 by id_loan period;
-lag_id_loan          = lag(id_loan);
-lag2_id_loan         = lag2(id_loan);
-lag_curr_act_upb     = lag(curr_act_upb);
-lag_delq_sts         = lag(delq_sts);
-lag2_delq_sts        = lag2(delq_sts);
-lag_period           = lag(period);
-lag_cur_int_rt       = lag(cur_int_rt); 
-lag_non_int_brng_upb = lag(cur_dfrd_upb);
+lag_id_loan            lag(id_loan);
+lag2_id_loan           lag2(id_loan);
+lag_curr_act_upb       lag(curr_act_upb);
+lag_delq_sts           lag(delq_sts);
+lag2_delq_sts          lag2(delq_sts);
+lag_period             lag(period);
+lag_cur_int_rt         lag(cur_int_rt); 
+lag_non_int_brng_upb   lag(cur_dfrd_upb);
 
 if first.id_loan then do;
-  prior_upb=0; 
-  prior_int_rt=cur_int_rt;
-  prior_delq_sts='00';
-  prior_delq_sts_2='00';
-  prior_period=.;
-  prior_frb_upb = .;
+  prior_upb 0; 
+  prior_int_rt cur_int_rt;
+  prior_delq_sts '00';
+  prior_delq_sts_2 '00';
+  prior_period .;
+  prior_frb_upb   .;
 end;
 else do;
-  prior_delq_sts=lag_delq_sts;
-  if id_loan=lag2_id_loan then prior_delq_sts_2=lag2_delq_sts;
-  prior_period=lag_period;
-  prior_upb=lag_curr_act_upb;
-  prior_int_rt=lag_cur_int_rt; 
-  prior_frb_upb = lag_non_int_brng_upb;
+  prior_delq_sts lag_delq_sts;
+  if id_loan lag2_id_loan then prior_delq_sts_2 lag2_delq_sts;
+  prior_period lag_period;
+  prior_upb lag_curr_act_upb;
+  prior_int_rt lag_cur_int_rt; 
+  prior_frb_upb   lag_non_int_brng_upb;
 end;
 
-if delq_sts ne 'RA' then delq_sts_new = put(delq_sts,$6.) ; 
+if delq_sts ne 'RA' then delq_sts_new   put(delq_sts,$6.) ; 
 
-period_diff= -1* intck('month',mdy( substr(put(period,$6.),5,2),1, substr(put(period,$6.),1,4) ) , mdy( substr(put(prior_period,$6.),5,2),1, substr(put(prior_period,$6.),1,4) ));
+period_diff  -1* intck('month',mdy( substr(put(period,$6.),5,2),1, substr(put(period,$6.),1,4) ) , mdy( substr(put(prior_period,$6.),5,2),1, substr(put(prior_period,$6.),1,4) ));
 
-if delq_sts='RA' and period_diff = 1 and prior_delq_sts='5' then delq_sts_new = '6';
-if delq_sts='RA' and period_diff = 1 and prior_delq_sts='3' then delq_sts_new = '4';
-if delq_sts='RA' and period_diff = 1 and prior_delq_sts='2' then delq_sts_new = '3';
+if delq_sts 'RA' and period_diff   1 and prior_delq_sts '5' then delq_sts_new   '6';
+if delq_sts 'RA' and period_diff   1 and prior_delq_sts '3' then delq_sts_new   '4';
+if delq_sts 'RA' and period_diff   1 and prior_delq_sts '2' then delq_sts_new   '3';
 
 drop lag_curr_act_upb lag2_id_loan lag_delq_sts lag2_delq_sts lag_period lag_cur_int_rt ;
 
@@ -204,11 +185,11 @@ run;
 
 %macro min_dlq(i);
 
-%let dlq_bkt=&i.;
+%let dlq_bkt &i.;
 
 data pop_&dlq_bkt.plus;
 set  svcg_dtls_&qtr_prd.;
-where delq_sts_new="&dlq_bkt.";
+where delq_sts_new &dlq_bkt.;
 run;
 
 proc sql;
@@ -217,20 +198,20 @@ select a.*, 1 as dlq_ind_&dlq_bkt.
 from pop_&dlq_bkt.plus a,
 (select id_loan, min(period) as period from pop_&dlq_bkt.plus
 group by id_loan) b
-where a.id_loan=b.id_loan and a.period=b.period;
+where a.id_loan b.id_loan and a.period b.period;
 run;
 
-proc sort data=pop_&dlq_bkt._&qtr_prd. noduprecs;
+proc sort data pop_&dlq_bkt._&qtr_prd. noduprecs;
 by id_loan; run;
 
 data pop_&dlq_bkt._&qtr_prd.;
 set  pop_&dlq_bkt._&qtr_prd.;
-if curr_act_upb not in (0,.) then dlq_upb_&dlq_bkt = curr_act_upb;
-else if prior_upb not in (0,.) then dlq_upb_&dlq_bkt = prior_upb;
-else dlq_upb_&dlq_bkt. = orig_upb;
+if curr_act_upb not in (0,.) then dlq_upb_&dlq_bkt   curr_act_upb;
+else if prior_upb not in (0,.) then dlq_upb_&dlq_bkt   prior_upb;
+else dlq_upb_&dlq_bkt.   orig_upb;
 run;
 
-proc append base=tmp.pop_&dlq_bkt._final data=pop_&dlq_bkt._&qtr_prd.; 
+proc append base tmp.pop_&dlq_bkt._final data pop_&dlq_bkt._&qtr_prd.; 
 run;
 
 %mend;
@@ -245,29 +226,29 @@ run;
 
 data d180_&qtr_prd.;
 set svcg_dtls_&qtr_prd.;
-if delq_sts_new='6';
+if delq_sts_new '6';
 run;
 
-proc sort data=svcg_dtls_&qtr_prd.;
+proc sort data svcg_dtls_&qtr_prd.;
 by id_loan period;
 run;
 
 data pred180_&qtr_prd.;
 set  svcg_dtls_&qtr_prd.;
 by id_loan period;
- if cd_zero_bal in ('02','03','15') or  delq_sts='RA';
- if cd_zero_bal in ('02','03','15') and delq_sts_new >= 6 then delete;
- if delq_sts = 'RA'                 and delq_sts_new >= 6 then delete;
+ if cd_zero_bal in ('02','03','15') or  delq_sts 'RA';
+ if cd_zero_bal in ('02','03','15') and delq_sts_new >  6 then delete;
+ if delq_sts   'RA'                 and delq_sts_new >  6 then delete;
 run;
 
-proc sort data=pred180_&qtr_prd.;
+proc sort data pred180_&qtr_prd.;
 by id_loan period; run;
 
 
-proc append base=d180_pr_&qtr_prd. data=d180_&qtr_prd. force; run;
-proc append base=d180_pr_&qtr_prd. data=pred180_&qtr_prd. force; run;
+proc append base d180_pr_&qtr_prd. data d180_&qtr_prd. force; run;
+proc append base d180_pr_&qtr_prd. data pred180_&qtr_prd. force; run;
 
-proc sort data=d180_pr_&qtr_prd. noduprecs; by id_loan; run;
+proc sort data d180_pr_&qtr_prd. noduprecs; by id_loan; run;
 
 proc sql;
 create table pd180_&qtr_prd. as
@@ -275,31 +256,31 @@ select a.*
 from d180_pr_&qtr_prd. a,
 (select id_loan, min(period) as period from d180_pr_&qtr_prd.
 group by id_loan) b
-where a.id_loan=b.id_loan and a.period=b.period;
+where a.id_loan b.id_loan and a.period b.period;
 run;
 
 data pd180_&qtr_prd.;
 set pd180_&qtr_prd.;
-if curr_act_upb not in (0,.) then pd_d180_upb=curr_act_upb;
+if curr_act_upb not in (0,.) then pd_d180_upb curr_act_upb;
 else if  curr_act_upb in (0,.) then do;
-if  prior_upb not in (0,.) then pd_d180_upb=prior_upb;
-else pd_d180_upb =orig_upb;
+if  prior_upb not in (0,.) then pd_d180_upb prior_upb;
+else pd_d180_upb  orig_upb;
 end;
-pd_d180_ind=1;
+pd_d180_ind 1;
 run;
 
 * Create a dataset containing D180 instance or pre-d180 default instance for every loan;
 
-proc append base=tmp.pd_d180 data=pd180_&qtr_prd. force; run;
+proc append base tmp.pd_d180 data pd180_&qtr_prd. force; run;
 
 * Create a dataset containing modification records;
 
 Proc sql;
 create table mod_loan_&qtr_prd. as
 SELECT distinct a.*,  c.orig_upb
-FROM svcg_dtls_&qtr_prd. A , (SELECT ID_LOAN FROM svcg_dtls_&qtr_prd. WHERE FLAG_MOD='Y' ) B , orig_&qtr_prd. C
- WHERE A.ID_LOAN = B.ID_LOAN
- and   B.ID_LOAN = C.ID_LOAN
+FROM svcg_dtls_&qtr_prd. A , (SELECT ID_LOAN FROM svcg_dtls_&qtr_prd. WHERE FLAG_MOD 'Y' ) B , orig_&qtr_prd. C
+ WHERE A.ID_LOAN   B.ID_LOAN
+ and   B.ID_LOAN   C.ID_LOAN
  order by a.id_loan, a.period;
  run;
 
@@ -310,24 +291,24 @@ FROM svcg_dtls_&qtr_prd. A , (SELECT ID_LOAN FROM svcg_dtls_&qtr_prd. WHERE FLAG
 data mod_loan_&qtr_prd.;
 set  mod_loan_&qtr_prd.;
 by id_loan period;
-prior_upb = lag(curr_act_upb);
-mod_ind=1;
-if flag_mod='Y' then output;
+prior_upb   lag(curr_act_upb);
+mod_ind 1;
+if flag_mod 'Y' then output;
 run;
 
-proc sort data=mod_loan_&qtr_prd.;
+proc sort data mod_loan_&qtr_prd.;
 by id_loan period; run;
 
 data mod_loan_&qtr_prd.;
 set  mod_loan_&qtr_prd.;
 by id_loan period;
 if first.id_loan then output;
-if curr_act_upb not in (0,.) then mod_upb=curr_act_upb;
-else if prior_upb not in (0,.) then mod_upb=prior_upb;
-else mod_upb = orig_upb;
+if curr_act_upb not in (0,.) then mod_upb curr_act_upb;
+else if prior_upb not in (0,.) then mod_upb prior_upb;
+else mod_upb   orig_upb;
 run;
 
-proc append base=tmp.mod_rcd data=mod_loan_&qtr_prd.; 
+proc append base tmp.mod_rcd data mod_loan_&qtr_prd.; 
 run;
 
 %end;
@@ -341,87 +322,63 @@ run;
 data trm_rcd_&qtr_prd.;
 set  trm_rcd_&qtr_prd.;
 if cd_zero_bal in ('02','03','09','15') then do;
-  if curr_act_upb not in (0,.) then default_upb=curr_act_upb;
+  if curr_act_upb not in (0,.) then default_upb curr_act_upb;
   else if curr_act_upb in (0,.) then do;
-    if prior_upb in (0,.) then default_upb=orig_upb;
-    else if prior_upb not in (0,.) then default_upb=prior_upb;
+    if prior_upb in (0,.) then default_upb orig_upb;
+    else if prior_upb not in (0,.) then default_upb prior_upb;
   end;
 end;
 
-delq_string = prior_delq_sts ||" to "|| delq_sts;
-month_string=put(prior_period,$6.) || " to " || put(period,$6.);
+delq_string   prior_delq_sts || to || delq_sts;
+month_string put(prior_period,$6.) ||  to  || put(period,$6.);
 
-     if cur_int_rt not in (0,.) then current_int_rt=cur_int_rt;
-else if cur_int_rt in (0,.) then current_int_rt=prior_int_rt;
+     if cur_int_rt not in (0,.) then current_int_rt cur_int_rt;
+else if cur_int_rt in (0,.) then current_int_rt prior_int_rt;
 
-orign_qtr="&qtr_prd.";
-vintage = substr(id_loan,3,2);
+orign_qtr &qtr_prd.;
+vintage   substr(id_loan,3,2);
 run;
 
 data dflt_&qtr_prd.;
 set  trm_rcd_&qtr_prd.;
 if cd_zero_bal in ('02','03','09','15');
-if cd_zero_bal in ('02','03','15') then dflt_delq_sts=delq_sts;
-else if cd_zero_bal='09' then do;
-    if prior_delq_sts ne 'RA' then dflt_delq_sts=prior_delq_sts;
-    else dflt_delq_sts=prior_delq_sts_2;
-    if prior_delq_sts ne 'RA' then acqn_to_dispn=0;
-    else acqn_to_dispn=intck('month', mdy( substr(put(prior_period,$6.),5,2), 1,substr(put(prior_period,$6.),1,4)) , mdy( substr(put(period,$6.),5,2), 1,substr(put(period,$6.),1,4)) );
+if cd_zero_bal in ('02','03','15') then dflt_delq_sts delq_sts;
+else if cd_zero_bal '09' then do;
+    if prior_delq_sts ne 'RA' then dflt_delq_sts prior_delq_sts;
+    else dflt_delq_sts prior_delq_sts_2;
+    if prior_delq_sts ne 'RA' then acqn_to_dispn 0;
+    else acqn_to_dispn intck('month', mdy( substr(put(prior_period,$6.),5,2), 1,substr(put(prior_period,$6.),1,4)) , mdy( substr(put(period,$6.),5,2), 1,substr(put(period,$6.),1,4)) );
 end;
 
-mths_dlq_dflt_dispn=sum(dflt_delq_sts, acqn_to_dispn);
-mths_dlq_dflt_acqn=sum(dflt_delq_sts,0);
-frb_upb = prior_frb_upb ;
+mths_dlq_dflt_dispn sum(dflt_delq_sts, acqn_to_dispn);
+mths_dlq_dflt_acqn sum(dflt_delq_sts,0);
+frb_upb   prior_frb_upb ;
 
-vintage=substr(id_loan,3,2);
+vintage substr(id_loan,3,2);
 run;
 
-proc append base=tmp.all_orign data=orig_&qtr_prd.;run;
-proc append base=tmp.all_dflt data=dflt_&qtr_prd. force; run;
-proc append base=tmp.all_trm_rcd data=trm_rcd_&qtr_prd. force; run;
+proc append base tmp.all_orign data orig_&qtr_prd.;run;
+proc append base tmp.all_dflt data dflt_&qtr_prd. force; run;
+proc append base tmp.all_trm_rcd data trm_rcd_&qtr_prd. force; run;
 
-proc datasets lib=work nolist kill; quit; run
+proc datasets lib work nolist kill; quit; run
 
 %mend extract;
 
 %macro loopthru();
 
-%do i = 1 %to &nqtr.;
+%do i   1 %to &nqtr.;
 
  data _null_;
-   qtr_beg1=intnx('quarter',&endd.,1-&i,'b');
-   qtr_end1=intnx('quarter',&endd.,1-&i,'e');
-   qtr_prd = strip(year(qtr_end1))||'Q'||strip(qtr(qtr_end1));
-   call symput('qtr_beg',"'"||put(qtr_beg1,mmddyy10.)||"'");
-   call symput('qtr_end',"'"||put(qtr_end1,mmddyy10.)||"'");
+   qtr_beg1 intnx('quarter',&endd.,1-&i,'b');
+   qtr_end1 intnx('quarter',&endd.,1-&i,'e');
+   qtr_prd   strip(year(qtr_end1))||'Q'||strip(qtr(qtr_end1));
+   call symput('qtr_beg','||put(qtr_beg1,mmddyy10.)||');
+   call symput('qtr_end','||put(qtr_end1,mmddyy10.)||');
    call symput('qtr_prd',qtr_prd);
  run;
 
 %extract(&qtr_prd.);
-
-proc sql;
-drop table 
-	svcg_&qtr_prd.,
-	orig_&qtr_prd.,
-	svcg_dtls_&qtr_prd.,
-	pop_1plus,
-	pop_1_&qtr_prd.,
-	pop_2plus,
-	pop_2_&qtr_prd.,
-	pop_3plus,
-	pop_3_&qtr_prd.,
-	pop_4plus,
-	pop_4_&qtr_prd.,
-	pop_6plus,
-	pop_6_&qtr_prd.,
-	d180_&qtr_prd.,
-	pred180_&qtr_prd.,
-	pd180_&qtr_prd.,
-	d180_pr_&qtr_prd.,
-	mod_loan_&qtr_prd.,
-	trm_rcd_&qtr_prd.,
-	dflt_&qtr_prd.;
-quit;
 
 %end;
 
@@ -497,35 +454,35 @@ from
 left join
   &libname..all_trm_rcd f
   on
-  a.id_loan = f.id_loan
+  a.id_loan   f.id_loan
 left join
   &libname..pop_1_final a1
   on
-  a.id_loan = a1.id_loan
+  a.id_loan   a1.id_loan
 left join
   &libname..pop_2_final a2
   on
-  a.id_loan = a2.id_loan
+  a.id_loan   a2.id_loan
 left join
   &libname..pop_3_final a3
   on
-  a.id_loan = a3.id_loan
+  a.id_loan   a3.id_loan
 left join
   &libname..pop_4_final a4
   on
-  a.id_loan = a4.id_loan
+  a.id_loan   a4.id_loan
 left join
   &libname..pop_6_final a5
   on
-  a.id_loan = a5.id_loan
+  a.id_loan   a5.id_loan
 left join
   &libname..mod_rcd m
   on
-  a.id_loan = m.id_loan
+  a.id_loan   m.id_loan
 left join
   &libname..pd_d180 n
   on
-  a.id_loan = n.id_loan 
+  a.id_loan   n.id_loan 
 order by
   a.id_loan
 ; quit;
@@ -550,7 +507,7 @@ FROM (SELECT SUBSTR(id_loan,1,5) AS SUB FROM final.all_orign_dtl_part2)
 GROUP BY SUB
 ORDER BY 1;
 
-CREATE TABLE ANZAHL2 AS 
+CREATE TABLE ANZAHL3 AS 
 SELECT SUB, COUNT(*) AS ANZ
 FROM (SELECT SUBSTR(id_loan,1,5) AS SUB FROM final.all_orign_dtl_part3)
 GROUP BY SUB
@@ -559,18 +516,16 @@ ORDER BY 1;
 QUIT;
 
 DATA final.FINAL_DATASET;
-SET final.all_orign_dtl_part1(WHERE=(SUBSTR(id_loan,1,5) NOT IN ('F01Q2','F03Q3','F03Q4')))
-	final.all_orign_dtl_part2(WHERE=(SUBSTR(id_loan,1,5) NOT IN ('F05Q4')));
+SET final.all_orign_dtl_part1
+	final.all_orign_dtl_part2
+	final.all_orign_dtl_part3;
 RUN;
 
 PROC SQL;
 
-CREATE TABLE ANZAHL3 AS 
 SELECT SUB, COUNT(*) AS ANZ
 FROM (SELECT SUBSTR(id_loan,1,5) AS SUB FROM final.FINAL_DATASET)
 GROUP BY SUB
 ORDER BY 1;
 
 QUIT;
-
-* 2003Q3;
