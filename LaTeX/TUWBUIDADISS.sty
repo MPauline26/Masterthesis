@@ -1,0 +1,272 @@
+%% 
+%% Template for dissertation and diploma thesis 
+%% at the faculty of civil engineering, TU Wien
+%% 
+%% Created 2022-10-01
+%% Christian Schranz, Sebastian Pech
+%% tested for pdflatex
+%% 
+\ProvidesPackage{TUWBUIDADISS}[2022/09/01]
+
+\addtokomafont{captionlabel}{\bfseries}
+
+\KOMAoptions{chapterprefix=true}
+\KOMAoptions{parskip=false,headinclude=true,
+captions=tableheading,numbers=noenddot}
+
+\renewcommand*{\chaptermarkformat}{%
+  \thechapter\autodot\enskip%
+}  % no "Chapter" (or "Kapitel" in header)
+
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+\RequirePackage[babel]{microtype}     % improves the micro-typographic layout
+\RequirePackage[english,ngerman]{babel} %% englisch and austrian language
+\PassOptionsToPackage{table}{xcolor}
+% \RequirePackage{xcolor} %% improvement to the color package, included by pdfx 
+% muss jetzt vor pdfx geladen werden
+
+\input{glyphtounicode.tex}    %Part of modern distribution
+\input{glyphtounicode-cmr.tex}     %Additionnal glyph: You must grab it from pdfx package
+\pdfgentounicode=1
+\pdfinterwordspaceon
+\RequirePackage[a-2u,pdf17]{pdfx}
+\pdfomitcharset 1
+\RequirePackage{colorprofiles}
+\RequirePackage{cmap}
+
+\hypersetup{ % Setzt einige Werte die in den Eigenschaften des PDF gespeichert sind.
+  bookmarksnumbered,
+%   % pdfdisplaydoctitle = true,
+   colorlinks, % Für Druck auf "false" setzen!
+   linkcolor={black}, % auch keine grellen Rahmen im View
+   citecolor={black},
+   urlcolor={black}
+}
+
+%% lines at - see: http://www.komascript.de/chapterwithlines
+%\renewcommand{\chapterlineswithprefixformat}[3]{%
+%  {\raggedleft #2}\nobreak
+%  \rule[.5\baselineskip]{\textwidth}{1pt}\\*
+%  #3\par\nobreak
+%  \rule[-.5\baselineskip]{\textwidth}{1pt}%
+%}
+%% Linien bei Überschriften - Ende
+
+%% Absatzkontrolle
+\clubpenalty10000
+\widowpenalty10000
+\displaywidowpenalty=10000
+
+\RequirePackage{graphicx} 
+
+%% 2 definitions of margins - choose the one you like
+%% new definitions of margins - variant 1
+\RequirePackage[left=2.5cm,right=2.5cm,top=2.0cm,bottom=3.0cm,includehead]{geometry}
+%%
+%% new definitions of page size - variant 2
+%% Bindekorrektur=10mm, textwidth=155mm, textheight=242mm
+%%\areaset[10mm]{160mm}{247mm} 
+
+%% header and foot
+\RequirePackage[
+headsepline,
+automark
+]{scrlayer-scrpage}
+
+\pagestyle{scrheadings}
+\clearpairofpagestyles
+\ihead{\headmark}
+\ohead{\thepage}
+%\cfoot{\thepage}
+
+\RequirePackage{setspace}
+
+\RequirePackage[absolute]{textpos} %% for positioning the tu-logo
+
+\RequirePackage[list=true]{subcaption}
+
+\RequirePackage{mathtools} %% extension of amsmath (also loads amstext)
+\RequirePackage{amssymb}   %% for complex formulas
+%Correct UTF8 mapping for ams fonts
+\ifdefined\pdffontattr% \ifdefined is part of the e-TeX extension, which is part of any modern LaTeX compiler.
+  \immediate\pdfobj stream file {umsa.cmap}
+  {\usefont{U}{msa}{m}{n}\pdffontattr\font{/ToUnicode \the\pdflastobj\space 0 R}}
+  \immediate\pdfobj stream file {umsb.cmap}
+  {\usefont{U}{msb}{m}{n}\pdffontattr\font{/ToUnicode \the\pdflastobj\space 0 R}}
+\fi
+\RequirePackage{xfrac}  %% diagonals fractions - e.g. numbers
+\RequirePackage{siunitx} %% SI Units
+
+\RequirePackage{booktabs} %% for better looking tables 
+
+\RequirePackage{ragged2e,tabularx}
+\RequirePackage{longtable}
+\RequirePackage[para,flushleft]{threeparttable}
+\RequirePackage{multirow}
+
+\RequirePackage{url} %% links inside the document as well as to websites
+
+\RequirePackage{pdfpages} %% to include pdf pages
+
+\RequirePackage{textcomp} %% additional symbols
+\RequirePackage{marvosym} %% additional symbols
+\RequirePackage{pifont}   %% additional symbols
+\RequirePackage{eurosym} %% for correct Euro-Symbol with \officialeuro{}
+
+\RequirePackage[babel,austrian=quotes,english=american]{csquotes}   %% context sensitives quotations
+
+\RequirePackage{xspace}  %% for intelligent spacing after commands \xspace
+
+\RequirePackage{enumitem}  %% to customize itemize, enumerate, description
+
+\RequirePackage{listings} %% syntax highlighting - for program code
+
+% Eigene Sprachabhängige Begriffe
+\renewcaptionname{ngerman}{\tablename}{Tab.}
+\renewcaptionname{ngerman}{\figurename}{Abb.}
+\renewcaptionname{ngerman}{\bibname}{Literaturverzeichnis}
+\renewcaptionname{ngerman}{\abstractname}{Kurzfassung}
+
+\renewcaptionname{english}{\tablename}{Tab.}
+\renewcaptionname{english}{\figurename}{Fig.}
+
+%% Typografische Einstellungen zu Gleitobjekten
+\renewcommand{\floatpagefraction}{0.6}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\topfraction}{0.8}
+\renewcommand{\bottomfraction}{0.5}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{5}
+
+
+%% Customize Listing
+\lstset{
+	basicstyle = \footnotesize\ttfamily,
+	keywordstyle=\color{blue}\bfseries,
+	tabsize=3,
+	breaklines=true,
+	showstringspaces = false,
+	upquote = true,
+	xleftmargin=4mm,
+	xrightmargin=.25in,
+	aboveskip=15pt,
+	belowskip=12pt,
+	belowcaptionskip=12pt,
+	numbers=left,
+	numberstyle=\tiny,
+	frame=tb,
+	moredelim=**[is][\color{blue}]{@}{@}
+} 
+\lstset{literate=%
+   {Ö}{{\"O}}1
+   {Ä}{{\"A}}1
+   {Ü}{{\"U}}1
+   {ß}{{\ss}}1
+   {ü}{{\"u}}1
+   {ä}{{\"a}}1
+   {ö}{{\"o}}1
+}
+\renewcommand{\lstlistingname}{Program Code}
+
+%%
+%% Customize Titlepage for Department of Civil Engineering
+%%
+\RequirePackage{ifthen}
+
+\newcommand{\titleDAen}[1]{{\large Diploma Thesis} \\[3ex]
+{\LARGE \textbf{#1
+}
+\\[3.0ex]}
+{\large
+submitted in satisfaction of the requirements for the degree
+\\[1ex]
+\ifthenelse{\equal{\gender}{M}}{Diplom-Ingenieur}{Diplom-Ingenieurin}
+\\[1ex]
+of the TU Wien, Faculty of Civil and Environmental Engineering
+}}
+
+\newcommand{\titleDAde}[1]{{\large Diplomarbeit} 
+\\[3ex]
+{\LARGE \textbf{#1}
+\\[3.0ex]}
+{\large
+ausgeführt zum Zwecke der Erlangung des akademischen Grads
+\\[1ex]
+\ifthenelse{\equal{\gender}{M}}{Diplom-Ingenieur}{Diplom-Ingenieurin}
+\\[1ex]
+eingereicht an der TU Wien, Fakultät für Bau- und Umweltingenieurwesen
+}}
+
+\newcommand{\titleDISSen}[1]{{\large PhD Thesis} \\[3ex]
+{\LARGE \textbf{#1
+}
+\\[3.0ex]}
+{\large
+submitted in satisfaction of the requirements for the degree
+\\[1ex]
+\ifthenelse{\equal{\gender}{M}}{Doctor of Science in Civil Engineering}{Doctor of Science in Civil Engineering}
+\\[1ex]
+of the TU Wien, Faculty of Civil and Environmental Engineering
+}}
+
+\newcommand{\titleDISSde}[1]{{\large Dissertation} 
+\\[3ex]
+{\LARGE \textbf{#1}
+\\[3.0ex]}
+{\large
+ausgeführt zum Zwecke der Erlangung des akademischen Grads
+\\[1ex]
+\ifthenelse{\equal{\gender}{M}}{Doktor der technischen Wissenschaften}{Doktorin der technischen Wissenschaften}
+\\[1ex]
+eingereicht an der TU Wien, Fakultät für Bau- und Umweltingenieurwesen
+}}
+
+\renewcommand{\maketitle}{%
+\begin{titlepage}
+%
+\begin{textblock*}{4cm}(157mm,7mm)
+\includegraphics[width=4cm]{./tuw-bui-logo-2022.pdf}
+\end{textblock*}
+
+\begin{singlespace*}
+\begin{center}
+  \ifthenelse{\equal{\thesistype}{DISS}}
+    {\ifthenelse{\equal{\thesislanguage}{de-AT}}{\titleDISSde{\thesistitle}}{\titleDISSen{\thesistitle}}}
+    {\ifthenelse{\equal{\thesislanguage}{de-AT}}{\titleDAde{\thesistitle}}{\titleDAen{\thesistitle}}}
+\\[1.5ex]
+\rule{\linewidth}{0.2mm}
+\\[1.5ex]
+  \ifthenelse{\equal{\thesistype}{DISS}}
+    {\ifthenelse{\equal{\thesislanguage}{de-AT}}{\titleDISSen{\thesistitletranslated}}{\titleDISSde{\thesistitletranslated}}}
+    {\ifthenelse{\equal{\thesislanguage}{de-AT}}{\titleDAen{\thesistitletranslated}}{\titleDAde{\thesistitletranslated}}}
+\\[10ex]
+{\Large
+\titelvorgestellt{} \textbf{\authorname}\titelnachgestellt}
+\\[3ex]
+Matr.Nr.: \MatrNr
+
+\end{center}
+
+\vfill
+
+{\large
+
+\begin{tabularx}{\linewidth}{l>{\small\RaggedRight}X@{}} 
+Betreuung: & \supervisor \\[2ex]
+\ifthenelse{\equal{\thesistype}{DISS}}{Begutachtung: & \gutachterA \\[2ex]
+Begutachtung: & \gutachterB \\[2ex]
+}{}
+\end{tabularx}
+
+
+\vfill
+
+Wien, im \@date \hfill \line(1,0){165}
+}
+\end{singlespace*}
+\end{titlepage}}
+%%
+%% end customizing title page
+%%

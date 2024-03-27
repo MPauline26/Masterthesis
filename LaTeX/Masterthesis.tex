@@ -1,0 +1,159 @@
+
+\pdfminorversion=7
+\newcommand{\thesistype}{DA} 
+\newcommand{\thesislanguage}{en-UK}
+\newcommand{\thesistitle}{PD Model Development using Boosted Decision Trees}
+\newcommand{\thesistitletranslated}{PD Modelentwicklung mit Boosted Decision Trees}
+\newcommand{\titelvorgestellt}{}
+\newcommand{\authorname}{Meikee Pagsinohin}
+\newcommand{\titelnachgestellt}{, BSc}
+\newcommand{\MatrNr}{01327477}
+\newcommand{\gender}{F}
+\newcommand{\supervisor}{Dr. \textbf{Manuel Lingo}\newline}
+
+\date{August 2023}
+
+\documentclass[11pt,twoside=true]{scrreprt}
+\usepackage[utf8]{inputenc}
+\usepackage{TUWBUIDADISS}
+
+\raggedbottom 
+
+\begin{filecontents}[overwrite]{\jobname.xmpdata}
+\Title{\thesistitle}
+\Author{\authorname}
+\Language{\thesislanguage}
+\Keywords{diploma thesis\sep template\sep LaTeX}
+\Publisher{Fachhochschule BFI}
+\end{filecontents}
+
+\usepackage[style=numeric-comp,backend=biber,maxcitenames=2]{biblatex}
+\ExecuteBibliographyOptions{%
+  giveninits=true,maxbibnames=99}%
+\DefineBibliographyStrings{ngerman}{andothers={et\;al\adddot},
+urlseen = {Zugriff am}}
+\addbibresource{Literature.bib}
+
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\usepackage{lscape}
+\usepackage[toc,page]{appendix}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{adjustbox}
+\newenvironment{conditions}
+  {\par\vspace{\abovedisplayskip}\noindent\begin{tabular}{>{$}l<{$} @{${}={}$} l}}
+  {\end{tabular}\par\vspace{\belowdisplayskip}}
+\newenvironment{conditions*}
+  {\par\vspace{\abovedisplayskip}\noindent
+   \tabularx{\columnwidth}{>{$}l<{$} @{${}={}$} >{\raggedright\arraybackslash}X}}
+  {\endtabularx\par\vspace{\belowdisplayskip}}
+\newcolumntype{L}{>{\raggedright\arraybackslash}p{4cm}}
+\newcolumntype{R}{>{\raggedright\arraybackslash}p{2cm}}
+
+\usepackage{acro}
+\input{Acronyms}
+
+%% Einstellungen für Zeilenumbrüche von Weblinks im url-Paket
+\setcounter{biburllcpenalty}{9000}% Kleinbuchstaben
+\setcounter{biburlucpenalty}{9000}% Großbuchstaben
+%% Quelle: https://texwelt.de/fragen/7008/zeilenumbruche-in-bibliografielinks
+
+%% ===== additional settings =============
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\sisetup{output-decimal-marker = {,},
+range-phrase = --,
+group-separator = {~},
+per-mode = symbol, 
+list-final-separator={ und }}
+
+\graphicspath{{Figures/}}
+
+%% examples for useful shortcuts in German
+\newcommand{\zB}{\mbox{z.\,B.}\xspace}
+\newcommand{\Name}[1]{\textsc{#1}}
+
+\newcommand{\vKTxv}{\mathbf{v}_1^T\tilde{\mathbf{K}}_{T},_{\xi}\mathbf{v}_1}
+\newcommand{\vKTxxv}{\mathbf{v}_1^T\tilde{\mathbf{K}}_{T},_{\xi\xi}\mathbf{v}_1}
+
+%\renewcommand{\thesection}{\arabic{section}}
+
+%% activate for double space between the lines (correction mode) 
+%\doublespacing
+
+\begin{document}       		%% start of the document
+%\maketitle             		%% places the title with above information
+
+\begin{titlepage}
+	\centering
+	%\includegraphics[width=0.5\textwidth]{figures/FHlogo.png}\par\vspace{1cm}
+	\vspace{1cm}
+	{\scshape\LARGE Masterthesis \par}
+	\vspace{1cm}
+	{\scshape\Large \par}
+	\vspace{1.5cm}
+	{\huge\bfseries Predicting the Probability of Default using the Random Forest Algorithm \par}
+	\vspace{2cm}
+	%{\Large Ausgeführt am Institut für Hochenergiephysik der Österreichischen Akademie der Wissenschaften \par}
+	\vspace{2cm}
+	%{\Large unter der Anleitung von \par}
+	%{\Large\bfseries Dipl.-Ing. Dr.techn. Robert Schöfbeck \par}	
+	\vspace{2cm}
+	%{\Large durch \par}	
+	{\Large\bfseries Meikee PAGSINOHIN \par}	
+	\vfill
+	{\Large Matrikelnummer: 01327477 \par}
+
+	\vfill
+
+\end{titlepage}
+
+\cleardoublepage
+\selectlanguage{english}  	%% for german abstract: ngerman
+\include{Summary}      		%% german abstract (about 1 page)
+
+\cleardoublepage
+\selectlanguage{english}    %% for english abstract
+\include{Abstract}         	%% english abstract (about 1 page)
+
+%\cleardoublepage
+\selectlanguage{english} 
+\pagestyle{scrheadings} 
+
+%% insert table of contents
+\tableofcontents
+
+
+\include{Introduction}
+
+\include{M_CreditRisk_PD}
+
+\include{M_TraditionalModels}
+
+\include{M_MLModels}
+
+\include{M_ModellingProcess}
+
+\include{M_Validation}
+
+\include{M_Interpretability}
+
+\include{R_Results}
+
+
+\chapter{Summary and Conclusion}
+
+\include{Annex}
+
+%% insert bibliography, adds chapter heading with chapter number
+%\printbibliography
+
+
+
+\end{document}
