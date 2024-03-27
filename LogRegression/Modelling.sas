@@ -10,12 +10,19 @@ RUN;
 
 PROC LOGISTIC DATA = TRAIN_SAMPLE DESCENDING OUTEST=MODEL_COEFF;
 MODEL DEFAULT_12M =
+
+fico
+dti
+cltv
+cnt_borr
+orig_upb
+
+/*
 	fico
 	dti
 	cltv
 	cnt_borr
-	cnt_units
-/*	flag_fthb*/
+	flag_fthb
 	flag_mi
 	flag_orig_loan_term_HEQ_360M
 	channel__R
@@ -27,12 +34,15 @@ MODEL DEFAULT_12M =
 	cd_ppty_val_type__1
 	cd_ppty_val_type__3
 	cd_ppty_val_type__2
+	orig_upb
 	us_reg__Midwest
 	us_reg__Northeast
 	us_reg__Other
 	us_reg__West
 	occpy_sts__S
 	occpy_sts__I
+*/
+
 
 /* REMOVED DUE TO HIGH CORRELATION */
 /*	cltv_ADJ, ltv, ltv_ADJ */
@@ -178,8 +188,8 @@ RUN;
 
 %MEND;
 
-*ODS GRAPHICS ON / MAXOBS=10929045;
-*ODS LISTING GPATH='C:\Users\meikee.pagsinohin\Documents\MA\plot' IMAGE_DPI = 300 STYLE=JOURNAL;
+ODS GRAPHICS ON / MAXOBS=10929045;
+ODS LISTING GPATH='C:\Users\meikee.pagsinohin\Documents\MA\plot' IMAGE_DPI = 300 STYLE=JOURNAL;
 
 %GINI_AUC_MODEL(SAMPLE=LOGIT_TRAINING, DATA_OUT=ROC_TRAINING);
 %GINI_AUC_MODEL(SAMPLE=LOGIT_TEST, DATA_OUT=ROC_TEST);
