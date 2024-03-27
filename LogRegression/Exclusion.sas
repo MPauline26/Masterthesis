@@ -124,8 +124,8 @@ CREATE TABLE final.DEV_SAMPLE_5Y AS
 	FROM final.CT_SAMPLE ct
 	LEFT JOIN USregions reg
 	ON ct.st = reg.'State Code'n
-	WHERE ct.dt_first_pi >= &START_DATE_DEV. 
-	AND ct.dt_first_pi <= &END_DATE.;
+	WHERE ct.dt_first_pi >= &START_DATE_DEV_5Y. 
+	AND ct.dt_first_pi <= &END_DATE_DEV_5Y.;
 ;
 
 QUIT;

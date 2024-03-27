@@ -61,6 +61,7 @@
 %END;
 
 %MEND;
+
 /*
 DATA UNIQUE_VALUES_ALLVAR;
 LENGTH TYPE $ 5 VARIABLE $ 50 VALUE $ 100;
@@ -71,6 +72,7 @@ RUN;
 %UNIQUE_VALUES_ALLVAR(DATA=&USED_DATASET., TYPE_VAR=NUM);
 %UNIQUE_VALUES_ALLVAR(DATA=&USED_DATASET., TYPE_VAR=MAN, VAR=st);
 */
+
 DATA &USED_DATASET.;
 SET &USED_DATASET.(RENAME=(	cnt_borr 		= cnt_borr_raw 
 						flag_fthb 		= flag_fthb_raw 
@@ -122,6 +124,9 @@ RENAME cnt_borr_temp = cnt_borr;
 /* TRANSFORMATION OF MI_PCT AND orig_loan_term , added afterwards */
 IF mi_pct > 0 THEN flag_mi = 1;
 ELSE IF mi_pct = 0 THEN flag_mi = 0;
+
+IF cnt_units > 0 THEN flag_cnt_units = 1;
+ELSE IF cnt_units = 0 THEN flag_cnt_units = 0;
 
 LENGTH orig_loan_term_3grp $ 10;
 IF orig_loan_term < 360 THEN orig_loan_term_3grp = "LE_360M";

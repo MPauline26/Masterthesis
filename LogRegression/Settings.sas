@@ -6,8 +6,9 @@ libname final 'C:\Users\meikee.pagsinohin\Documents\MA\data_fin';
 libname plot 'C:\Users\meikee.pagsinohin\Documents\MA\plot';
 
 %LET START_DATE = 199903;
-%LET START_DATE_DEV = 201701;
-%LET END_DATE = 202112;
+
+%LET START_DATE_DEV_5Y = 201701;
+%LET END_DATE_DEV_5Y = 202112;
 
 %LET START_DATE_DEV_3Y = 201801;
 %LET END_DATE_DEV_3Y = 202012;
@@ -19,13 +20,9 @@ libname plot 'C:\Users\meikee.pagsinohin\Documents\MA\plot';
 %LET USED_DATASET = DEV_SAMPLE_3Y;
 %LET VAL_DATASET = VAL_SAMPLE_1Y;
 
-*%LET SELECTED_SPLIT = SELECTED_70_30;
+%LET SELECTED_SPLIT = SELECTED_70_30;
 *%LET SELECTED_SPLIT = SELECTED_50_50;
-%LET SELECTED_SPLIT = SELECTED_90_10;
-
-
-
-
+*%LET SELECTED_SPLIT = SELECTED_90_10;
 
 PROC IMPORT DATAFILE="C:\Users\meikee.pagsinohin\Documents\MA\VARIABLES.csv"
 	OUT=WORK.VARIABLELIST
@@ -35,6 +32,15 @@ PROC IMPORT DATAFILE="C:\Users\meikee.pagsinohin\Documents\MA\VARIABLES.csv"
 	guessingrows=ALL; 
 	DELIMITER=";";
 RUN;
+
+
+
+
+
+
+
+
+/****************************************************************************************************/
 
 DATA DEV_SAMPLE_3Y;
 SET final.DEV_SAMPLE_3Y;

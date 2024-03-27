@@ -136,6 +136,11 @@ SET &USED_DATASET._FINAL;
 	IF flag_mi_ADJ = . THEN flag_mi_ADJ = 1;
 
 	IF flag_mi = . THEN flag_mi = 1;
+
+	flag_cnt_units_ADJ = flag_cnt_units;
+	IF flag_cnt_units_ADJ = . THEN flag_cnt_units_ADJ = 1;
+
+	IF flag_cnt_units = . THEN flag_cnt_units = 1;
 RUN;
 
 
