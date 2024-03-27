@@ -9,6 +9,10 @@ libname plot 'C:\Users\meikee.pagsinohin\Documents\MA\plot';
 %LET START_DATE_DEV = 201701;
 %LET END_DATE = 202112;
 
+%LET USED_DATASET = DEV_SAMPLE_5Y;
+
+
+
 PROC IMPORT DATAFILE="C:\Users\meikee.pagsinohin\Documents\MA\VARIABLES.csv"
 	OUT=WORK.VARIABLELIST
 	DBMS=DLM 
@@ -24,6 +28,10 @@ SET final.DEV_SAMPLE_5Y;
 GROUP1 = "ALL";
 GROUP2 = PUT(YEAR(DATUM),4.);
 
+RUN;
+
+DATA DEV_SAMPLE_5Y_FINAL;
+SET final.DEV_SAMPLE_5Y_FINAL;
 RUN;
 
 PROC SQL;

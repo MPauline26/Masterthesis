@@ -5,21 +5,23 @@ VAR fico
 	dti
 	ltv
 	ltv_adj
-	cnt_borr;
+	cnt_borr
+	cnt_units;
 
 RUN;
 
 /* VARIABLES cltv_ADJ, ltv, ltv_ADJ removed due to high correlation */
 
-/* VARIABLES channel__R, loan_purpose__P, cd_ppty_val_type__2, us_reg__South not included due to linear combination */
+/* VARIABLES channel__R, loan_purpose__P, cd_ppty_val_type__2, us_reg__South, occpy_sts__P not included due to linear combination */
 
 proc reg data=&USED_DATASET._FINAL;
-    model DEFAULT_12M = fico dti cltv cnt_borr 
+    model DEFAULT_12M = fico dti cltv cnt_borr 	cnt_units
 						flag_fthb flag_mi flag_orig_loan_term_HEQ_360M
 						channel__9 channel__B channel__C channel__T
 						loan_purpose__C loan_purpose__N
 						cd_ppty_val_type__1 cd_ppty_val_type__3 cd_ppty_val_type__9
 						us_reg__Midwest us_reg__Northeast us_reg__Other us_reg__West
+						occpy_sts__S occpy_sts__I
 	/ vif;
 run;
 

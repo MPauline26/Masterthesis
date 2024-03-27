@@ -12,15 +12,22 @@ PROC SURVEYSELECT
     STRATA DEFAULT_12M GROUP2; /*SPECIFY VARIABLE TO USE FOR STRATIFICATION*/
 RUN;
 
+DATA final.&USED_DATASET._FINAL;
+SET &USED_DATASET._FINAL;
+RUN;
+
 DATA final.TRAIN_SAMPLE final.TEST_SAMPLE;
 SET &USED_DATASET._FINAL;
 
 KEEP 
+	SELECTED
 	DATUM
 	id_loan
 	loan_age_noMod
 	KEEP_FLAG
 	DEFAULT_12M
+	GROUP1
+	GROUP2
 	fico
 	flag_fthb
 	cltv
@@ -47,7 +54,11 @@ KEEP
 	us_reg__South
 	us_reg__West
 	flag_mi
-	flag_orig_loan_term_HEQ_360M;
+	flag_orig_loan_term_HEQ_360M
+	cnt_units
+	occpy_sts__S
+	occpy_sts__P
+	occpy_sts__I;
 
 IF SELECTED = 1 THEN OUTPUT final.TRAIN_SAMPLE;
 ELSE OUTPUT final.TEST_SAMPLE;
