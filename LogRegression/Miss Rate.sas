@@ -2,14 +2,14 @@
 %LET USED_DATASET = DEV_SAMPLE_5Y;
 
 /* ANALYSE DISTINCT VALUES AND DETERMINE MISSING RATE FOR ALL TYPES OF VARIABLES */
-%MACRO MISS_VAR(DATA, TYPE_VAR, VAR=XXX);
+%MACRO UNIQUE_VALUES_ALLVAR(DATA, TYPE_VAR, VAR=XXX);
 
 %IF &VAR. = XXX %THEN %DO;
 
 	PROC SQL NOPRINT;
 
-		SELECT COUNT(*) INTO :TOTAL TRIMMED FROM VARIABLELIST WHERE TYPE = "&TYPE_VAR.";
-		SELECT VARIABLE INTO :VAR1-:VAR&TOTAL. FROM VARIABLELIST WHERE TYPE = "&TYPE_VAR.";
+		SELECT COUNT(*) INTO :TOTAL TRIMMED FROM VARIABLELIST WHERE TYPE = "&TYPE_VAR." AND VARIABLE NOT IN ('flag_mi','flag_orig_loan_term_HI_360M','orig_loan_term_3grp','flag_orig_loan_term_HEQ_360M','flag_orig_loan_term_EQ_360M');
+		SELECT VARIABLE INTO :VAR1-:VAR&TOTAL. FROM VARIABLELIST WHERE TYPE = "&TYPE_VAR." AND VARIABLE NOT IN ('flag_mi','flag_orig_loan_term_HI_360M','orig_loan_term_3grp','flag_orig_loan_term_HEQ_360M','flag_orig_loan_term_EQ_360M');
 
 	QUIT;
 
@@ -28,8 +28,8 @@
 		
 		QUIT;
 
-		DATA MISS_VAR;
-		SET MISS_VAR TEMP;
+		DATA UNIQUE_VALUES_ALLVAR;
+		SET UNIQUE_VALUES_ALLVAR TEMP;
 		IF Variable = '' THEN DELETE;
 		RUN;
 
@@ -53,8 +53,8 @@
 		
 		QUIT;
 
-		DATA MISS_VAR;
-		SET MISS_VAR TEMP;
+		DATA UNIQUE_VALUES_ALLVAR;
+		SET UNIQUE_VALUES_ALLVAR TEMP;
 		IF Variable = '' THEN DELETE;
 		RUN;
 
@@ -63,16 +63,16 @@
 %END;
 
 %MEND;
+/*
+DATA UNIQUE_VALUES_ALLVAR;
+LENGTH TYPE $ 5 VARIABLE $ 50 VALUE $ 100;
+RUN;
 
-*DATA MISS_VAR;
-*LENGTH TYPE $ 5 VARIABLE $ 50 VALUE $ 100;
-*RUN;
-
-*%MISS_VAR(DATA=&USED_DATASET., TYPE_VAR=CAT);
-*%MISS_VAR(DATA=&USED_DATASET., TYPE_VAR=IND);
-*%MISS_VAR(DATA=&USED_DATASET., TYPE_VAR=NUM);
-*%MISS_VAR(DATA=&USED_DATASET., TYPE_VAR=MAN, VAR=st);
-
+%UNIQUE_VALUES_ALLVAR(DATA=&USED_DATASET., TYPE_VAR=CAT);
+%UNIQUE_VALUES_ALLVAR(DATA=&USED_DATASET., TYPE_VAR=IND);
+%UNIQUE_VALUES_ALLVAR(DATA=&USED_DATASET., TYPE_VAR=NUM);
+%UNIQUE_VALUES_ALLVAR(DATA=&USED_DATASET., TYPE_VAR=MAN, VAR=st);
+*/
 DATA &USED_DATASET.;
 SET &USED_DATASET.(RENAME=(	cnt_borr 		= cnt_borr_raw 
 						flag_fthb 		= flag_fthb_raw 
@@ -120,6 +120,26 @@ IF ltv = 999				THEN ltv = .; /* no case found */
 cnt_borr_temp = input(cnt_borr_raw, 8.);
 IF cnt_borr_raw = '99' THEN cnt_borr_temp = .;
 RENAME cnt_borr_temp = cnt_borr;
+
+/* TRANSFORMATION OF MI_PCT AND orig_loan_term , added afterwards */
+IF mi_pct > 0 THEN flag_mi = 1;
+ELSE IF mi_pct = 0 THEN flag_mi = 0;
+
+LENGTH orig_loan_term_3grp $ 10;
+IF orig_loan_term < 360 THEN orig_loan_term_3grp = "LE_360M";
+ELSE IF orig_loan_term = 360 THEN orig_loan_term_3grp = "EQ_360M";
+ELSE IF orig_loan_term > 360 THEN orig_loan_term_3grp = "HI_360M";
+
+IF orig_loan_term <= 360 THEN flag_orig_loan_term_HI_360M = 0;
+ELSE IF orig_loan_term > 360 THEN flag_orig_loan_term_HI_360M = 1;
+
+IF orig_loan_term < 360 THEN flag_orig_loan_term_HEQ_360M = 0;
+ELSE IF orig_loan_term >= 360 THEN flag_orig_loan_term_HEQ_360M = 1;
+
+IF orig_loan_term = 360 THEN flag_orig_loan_term_EQ_360M = 1;
+ELSE flag_orig_loan_term_EQ_360M = 0;
+
+IF cd_ppty_val_type = '9' THEN cd_ppty_val_type = '9';
 
 RUN;
 

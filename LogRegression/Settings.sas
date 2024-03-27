@@ -14,6 +14,7 @@ PROC IMPORT DATAFILE="C:\Users\meikee.pagsinohin\Documents\MA\VARIABLES.csv"
 	DBMS=DLM 
 	REPLACE;
 	GETNAMES=YES;
+	guessingrows=ALL; 
 	DELIMITER=";";
 RUN;
 
@@ -39,7 +40,6 @@ data _null_;
      call symput('label' || trim(left(_N_)), trim(left(&column_label))); 
      call symput('nobs', trim(left(_N_))); 
 run;
-
 
 * use PROC DATASETS to change the labels;
 proc datasets 
