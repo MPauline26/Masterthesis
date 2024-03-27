@@ -1,9 +1,11 @@
 \chapter{Interpretability}
+\label{sec:interpret}
 
 \section{Importance of Interpretability}
-Interpretability refers to the capability to explain and understand how a model arrives at its predictions or decisions. Regression models and decision trees are simple to understand and thus very popular in the banking industry. In contrary, more advanced machine learning models show a black box nature, their model logic and output are difficult to explain. Machine learning models' complex structure have advantages and disadvantages. While they can detect non-linear relationships and correlations, and may show improved accuracy or efficiency, they are prone to overfitting and lack explainability. Their black box nature stems from the model's numerous transformation of input variables, as well as their optimization process. 
+Interpretability refers to the capability to explain and understand how a model arrives at its predictions or decisions. Regression models and decision trees are simple to understand and thus very popular in the banking industry. In contrary, more advanced machine learning models show a black box nature; their model logic and output are difficult to explain. Machine learning models' complex structure have advantages and disadvantages. While they can detect non-linear relationships and correlations, and may show improved accuracy or efficiency, they are also prone to overfitting and lack explainability. Their black box nature stems from the model's numerous transformation of input variables, as well as their optimization process. \cite[p.~56]{Roberts2022}
 
-\subsection{Regulatory and legal requirements}
+\subsection{Regulatory and Legal Requirements}
+\label{sec:ref_leg}
 
 Interpretability enables compliance with regulations and consumer protection laws such as the Capital Requirements Regulation (CRR) and General Data Protection Regulation (GDPR). Data protection principles such as purpose limitation, data minimisation and limitation on automated decisions are evident obstacles for complex AI models. In the CRR (Capital Requirements Regulation, Article 144(1)(a)), a requirement of the PD model development is stated as:
 
@@ -13,17 +15,16 @@ Interpretability enables compliance with regulations and consumer protection law
 
 \end{quote}
 
-Regulations therefore require model developers and users to provide explanations for credit-related decisions to their customers. Modellers, internal and external audit are obligated to validate the model structure and their result, whether the model aligns with domain knowledge and expectations. Interpretability helps identify potential biases, data issues, or model limitations. Additionally, a model, which is unexplainable but is used in production, increases operational risk due to the difficulty to assess possible consequences (bias, fariness) and if the result was correctly calculated or contains a system error. To avoid the limitation of regulation requirements and consumer protection laws, machine learning models can be employed in areas, where the model structure and output are not of the highest priority, such as collection process or fraud detection. 
+Regulations mandate that both model developers and users provide explanations for credit-related decisions to their customers. Modelers, along with internal and external auditors, are obligated to validate not only the model's structure but also its results, ensuring whether the model aligns with domain knowledge and expectations. Interpretability helps identifying potential biases, data issues or model limitations. Additionally, a unexplainable model used in production increases operational risk, as it becomes challenging to assess potential consequences, such as bias or fairness, and verify the accuracy of results or detect system errors. To circumvent the constraints imposed by regulatory requirements and consumer protection laws, machine learning models may find application in areas where the model's structure and output are not of utmost priority, such as in the collection process or fraud detection. \cite[pp.~57, 58]{Roberts2022} \cite[p.~89]{Witzany:2017}
 
 \subsection{Data Management}
-Before the development or deployment of machine learning models, a sound data management process has to be established. The training data must be unbiased and accurately reflect the population the model will be deployed on, meaning that minority groups should not be over- or underrepresented. If the data used during the training phase or in production are not corrected and validated, this can lead to unexpected results or to a biased model. Machine learning algorithms are able to amplify the errors, as a popular saying goes "Garbage In - Garbage Out". 
+Before the development or deployment of machine learning models, a sound data management process has to be established. The training data must be unbiased and accurately reflect the population the model will be deployed on, meaning that individual groups should not be over- or underrepresented. Failure to correct and validate the data utilized during the training phase or in production can yield unexpected outcomes or result in a biased model. Machine learning algorithms have the potential to amplify errors, as popular saying goes, "Garbage In - Garbage Out." \cite[p.~61]{Roberts2022}
 
 \section{Methods for Interpretability Analysis}
-Techniques to asses the interpretability of advanced models are also called model-agnostic explainability methods. They are algorithm independent, usually applied after model development and applied on global or local level, which means on dataset or data observation level respectively. Depending on which aspect should be analysed, the techniques can be allocated into  
-five categories: feature importance, input variable impact, specific prediction analysis, output analysis and robustness check.
+Techniques to asses the interpretability of advanced models are also called model-agnostic explainability methods. They are algorithm independent, usually applied after model development and assess on global or local level, which means on dataset or data observation level. Depending on the objective, the techniques can be allocated into five categories: feature importance, input variable impact, specific prediction analysis, output analysis and robustness check. \cite[p.~62]{Roberts2022}
 
 \subsection{Feature Importance}
-Feature importance measures the contribution of each variable in a predictive model to the overall model performance. If the performance drops significantly while changing the value of a variable while holding other risk factors constant implies the importance of that feature. Relative feature importance compares the importance of features relative to each other w, which helps prioritize features based on their impact on the model's predictions. The ranges of each variable has to be normalized to the same scale, which allows a direct comparison of the impact.
+Feature importance measures the contribution of each variable in a predictive model to the overall model performance. If the performance drops significantly when changing the value of a variable while keeping other risk factors constant, implies the importance of that particular feature. Relative feature importance compares the importance of features relative to each other, which helps in prioritizing features based on their influence on the model's predictions. To facilitate a meaningful comparison, the ranges of each variable need to be normalized to the same scale, enabling a direct assessment of their impact. \cite[p.~63]{Roberts2022}
 
 \begin{figure}[H]
 	\centering
@@ -32,42 +33,26 @@ Feature importance measures the contribution of each variable in a predictive mo
     \label{fig:in_featureimp}
 \end{figure}
 
-\subsection{Input variable impact}
-Techniques to analyse the impact of different variables are Partial Dependence Plots (PDP), Individual Conditional Expectation (ICE) and saliency maps. An illustration is visible in Fig. \ref{fig:in_pdp} - \ref{fig:in_salmaps}. PDP visualises the relationship between a specific feature and the model's predictions while holding other variables constant. PDPs provide insights into the direction and magnitude of the feature's effect on default probability. ICE is an extension of PDP, where it illustrates how predictions change for an individual data point as a specific feature varies. Saliency maps highlight regions in the feature map, which contributes to the prediction. 
+\subsection{Input Variable Impact}
+Exploring the impact of individual variables is carried out through techniques like Partial Dependence Plots (PDP) and Individual Conditional Expectation (ICE), illustrated in Figure \ref{fig:in_pdp}. PDP visualises the relationship between a specific feature and the model's predictions while holding other variables constant. They provide insights into the direction and magnitude of the feature's effect on default probability. ICE is an extension of PDP, where it illustrates how predictions change for an individual data point as a specific feature varies. \cite[p.~63]{Roberts2022}
 
 \begin{figure}[H]
 \begin{minipage}{.5\textwidth}
 	\centering
-	\includegraphics[width=0.9\textwidth]{./IN__PDP.png}
+	\includegraphics[width=0.9\textwidth]{./plot/ML/PDP_fico.png}
     \caption{Partial Dependence Plots}
     \label{fig:in_pdp}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
 	\centering
-	\includegraphics[width=0.9\textwidth]{./IN__ice.jpeg}
+	\includegraphics[width=0.9\textwidth]{./plot/ML/ICE_fico.png}
     \caption{Individual Conditional Expectation}
     \label{fig:in_ice}
 \end{minipage}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.625\textwidth]{./IN__saliencymaps.jpg}
-    \caption{Saliency maps}
-    \label{fig:in_salmaps}
-\end{figure}
+\subsection{Individual Prediction Analysis}
+For the interpretation of specific predictions, tools such as Local Interpretable Model-Agnostic Explanations (LIME) and Local rule-based explanations can be utilized. In the LIME process, a local interpretable surrogate model is estimated. A small sample with similar variable values is selected and used to estimate a sparse linear regression model while using the predictions of the machine learning models as target. Similarly, the Local rule-based explanations method builds a set of decision rules to act as a surrogate model in the interpretation process. \cite[p.~65-67]{Roberts2022}
 
-\subsection{Specific prediction analysis}
-To interpret specific predictions, Local Interpretable Model-Agnostic Explanations (LIME, Fig. \ref{fig:in_lime}) and Local rule-based explanations can be utilized. For the LIME process, a local interpretable surrogate model is estimated. A small sample with similar variable values is selected and used to create a sparse linear regression model while using the predictions of the machine learning models as target. Similarly, the Local rule-based explanations method builds a set of decision rules as a surrogate model instead. 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.625\textwidth]{./IN__lime.jpg}
-    \caption{Local Interpretable Model-Agnostic Explanations}
-    \label{fig:in_lime}
-\end{figure}
-
-\subsection{Output analysis and robustness check}
-During Counterfactual analysis the feature values are slowly changed to assess, which total changes are necessary to receive a specific prediction. Adversial testing is performed to analyse how the machine learning model reacts to adversial attacks. Those are input data deliberately selected with the goal of causing misclassification or incorrect output. Internal layers of Deep Neural Networks can be computed to detect adversial data to respond accordingly. Alternatively, adversial data can be incorporated in the development sample to include them in the training phase. 
-
-During the sensitivity test, data with value ranges not captured by the training sample are used to analyse the model predictions and their performance. 
+\subsection{Output Analysis and Robustness Check}
+During Counterfactual analysis, the feature values are slowly changed to assess, which total changes are necessary to receive a specific prediction. Adversial testing is performed to analyze, how the machine learning model reacts to adversial attacks, which are input data deliberately designed with the aim of causing misclassification or incorrect output. Internal layers of Deep Neural Networks can be computed to detect adversial data to respond accordingly. Alternatively, adversial data can be incorporated in the development sample to include them during the training phase. In a sensitivity test, data with value ranges not captured by the training sample are used to analyze the model predictions and their performance beyond its training scope. \cite[p.~65-67]{Roberts2022}

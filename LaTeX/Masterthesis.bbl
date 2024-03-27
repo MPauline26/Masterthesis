@@ -1,0 +1,106 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname doi\endcsname\relax
+  \def\doi#1{\burlalt{doi:#1}{http://dx.doi.org/#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2}\fi
+\expandafter\ifx\csname burlalt\endcsname\relax
+  \def\burlalt#1#2{\href{#2}{#1}}\fi
+
+\bibitem{Witzany:2017}
+J.~Witzany.
+\newblock {\em Credit Risk Management: Pricing, Measurement, and Modeling}.
+\newblock Springer International Publishing, 2017.
+\newblock \urlprefix\url{https://books.google.at/books?id=YQ5cvgAACAAJ}.
+
+\bibitem{BCBS:2004}
+{Basel Committee on Banking Supervision}.
+\newblock {\em International Convergence of Capital Measurement and Capital
+  Standards}.
+\newblock \urlprefix\url{https://www.bis.org/publ/bcbs107.pdf}.
+
+\bibitem{FDIC:2023}
+{Federal Deposit Insurance Corporation}.
+\newblock {\em Economic Capital and the Assessment of Capital Adequacy}.
+\newblock
+  \urlprefix\url{https://www.fdic.gov/regulations/examinations/supervisory/insights/siwin04/siwinter2004-article01.html}.
+\newblock Accessed: 2021-11-13.
+
+\bibitem{EBA:2023}
+{European Banking Authority}.
+\newblock {\em Follow-Up Report from the Consultation on the Discussion Paper
+  on Machine Learning for IRB Models}.
+\newblock
+  \urlprefix\url{https://www.eba.europa.eu/sites/default/documents/files/document_library/Publications/Reports/2023/1061483/Follow-up%20report%20on%20machine%20learning%20for%20IRB%20models.pdf}.
+
+\bibitem{Roberts2022}
+T.~Roberts and S.~Tonna.
+\newblock {\em Risk Modeling: Practical Applications of Artificial
+  Intelligence, Machine Learning, and Deep Learning}.
+\newblock Wiley and SAS Business Series. Wiley, 2022.
+\newblock \urlprefix\url{https://books.google.at/books?id=tqdvzgEACAAJ}.
+
+\bibitem{Python:2022}
+T.~Atwan.
+\newblock {\em Time Series Analysis with Python Cookbook: Practical Recipes for
+  Exploratory Data Analysis, Data Preparation, Forecasting, and Model
+  Evaluation}.
+\newblock Packt Publishing, 2022.
+\newblock \urlprefix\url{https://books.google.at/books?id=MmE6zwEACAAJ}.
+
+\bibitem{Boxplot:2019}
+M.~Galarnyk.
+\newblock {\em Understanding Boxplots}.
+\newblock
+  \urlprefix\url{https://www.kdnuggets.com/2019/11/understanding-boxplots.html}.
+\newblock Accessed: 2021-11-13.
+
+\bibitem{BDT}
+Y.~Coadou.
+\newblock {\em Boosted Decision Trees and Applications}.
+\newblock EPJ Web of Conferences, 55:02004--, 07 2013.
+\newblock \doi{10.1051/epjconf/20135502004}.
+
+\bibitem{RanFor:2023}
+Simplilearn.
+\newblock {\em Random Forest Algorithm}.
+\newblock
+  \urlprefix\url{https://www.simplilearn.com/tutorials/machine-learning-tutorial/random-forest-algorithm}.
+\newblock Accessed: 2021-11-13.
+
+\bibitem{AUC:2023}
+Y.~E. Khal.
+\newblock {\em Confusion matrix, AUC and ROC curve and Gini clearly explained}.
+\newblock
+  \urlprefix\url{https://yassineelkhal.medium.com/confusion-matrix-auc-and-roc-curve-and-gini-clearly-explained-221788618eb2}.
+\newblock Accessed: 2021-11-13.
+
+\bibitem{FreddieMac:2023}
+P.~Chism.
+\newblock {\em Freddie Mac: What Is The Federal Home Loan Mortgage Corporation
+  (FHLMC)?}
+\newblock \urlprefix\url{https://www.rocketmortgage.com/learn/freddie-mac}.
+\newblock Accessed: 2021-11-13.
+
+\bibitem{SecMortMark:2023}
+A.~Dehan.
+\newblock {\em What Is The Secondary Mortgage Market And How Does It Work?}
+\newblock
+  \urlprefix\url{https://www.rocketmortgage.com/learn/secondary-mortgage-market}.
+\newblock Accessed: 2021-11-13.
+
+\bibitem{FreddieMacData:2023}
+{Federal Home Loan Mortgage Corporation}.
+\newblock {\em Single Family Loan-Level Dataset}.
+\newblock
+  \urlprefix\url{https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset}.
+
+\bibitem{FreddieMacUG:2023}
+{Federal Home Loan Mortgage Corporation}.
+\newblock {\em Single-Family Loan Level Dataset General User Guide}.
+\newblock
+  \urlprefix\url{https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset}.
+
+\end{thebibliography}

@@ -1,8 +1,12 @@
-\chapter{Modelling process}
+\chapter{Modeling process}
 
 \section{Data Preparation}
 \label{sec:dataprep}
-Explanatory factors can be split into numerical and categorical variables. They are mostly numerical variables in the corporate segment like financial ratios and macroeconomic conditions, while in the retail sector there are usually categorical factors, for example profession, marital status and residential status. Even numerical values like age or employment duration are often represented as categories after a binning process (e.g., "20-25 years", "25-25 years"). If there are too many categories or one category contains a very low portion of observations (rule of thumb: at least 5\% per bucket), a merge of categories might be beneficial. One approach is to merge categories with a similar default rate or using measures like Weight of Evidence (WoE) or Information Value (IV). The formulas are given in Eq. \ref{dp_woe} and \ref{dp_iv}. WoE measures the discriminatory power of each value of a risk factor - a positive WoE means a relative low risk and a negative Woe indicates a relative high risk. The IV indicates the ability of a variable to differentiate between default and non-default events - a higher IV relates to a higher discriminatory power and vice versa. As a final step, categorical variables need to be transformed into dummy variables to be used in the modelling process, meaning if the variable contains n distinct values, n-1 dummy variables will be created, illustrated in Fig. \ref{fig:dp_dumenc}. One dummy variable is omitted or else a linear combination is introduced during the modelling process.
+Explanatory factors can be split into numerical, categorical and indicator variables. Within the corporate segment, these risk factors mostly take the form of numerical variables, such as financial ratios and macroeconomic conditions. The retail sector typically involves categorical factors, including profession, marital status and residential status. Even numerical values like age or employment duration often undergo a binning process, transforming them into categories (e.g., "20-25 years," "25-30 years"). If a categorical variable assumes too many distinct values or one category comprises a minimal proportion of observations (adhering to a rule of thumb of at least 5\% per bucket), merging categories might be beneficial.
+
+One effective approach is to consolidate categories with similar default rates or utilizing measures like Weight of Evidence (WoE) and Information Value (IV), as outlined in Equations \ref{dp_woe} and \ref{dp_iv}. WoE measures the discriminatory power of each value of a risk factor - a positive WoE means a relative low risk and a negative Woe indicates a relative high risk. Meanwhile, IV assesses the whole variable's capability to distinguish between default and non-default events; a higher IV corresponds to better discriminatory power and vice versa.
+
+As a final step, categorical variables must be transformed into dummy variables for use in the modeling process. In this context, if a variable encompasses n distinct values, n-1 dummy variables are generated, as illustrated in Figure \ref{fig:dp_dumenc}. Omitting one dummy variable is crucial to prevent the introduction of a linear combination during the modeling process. \cite[pp.~47-51]{Witzany:2017}
 
 \begin{equation}
 \text{WoE} = \ln\left(\frac{\text{Distribution of Non-Default}}{\text{Distribution of Default}}\right) \label{dp_woe}
@@ -15,14 +19,23 @@ where:
 n  	& number of categories or buckets 
 \end{conditions}
 
-\subsection{Handling Missing Treatment}
-A common problem in real datasets are missing information, which need to be appropriately handled during the modelling process. One approach is to replace the missing values using statistical methods like mean, median or algorithm-based imputation, for example k-nearest neighbour Imputer. In this case the value is imputed with an average value of their k-nearest neighbours. The process of the kNN-algorithm is described in chapter \ref{sec:kNN}. Data entries with missing information may also be removed from the data set, but this process can lead to information loss and bias. For categorical variables the missing information may also be viewed as separate category "Missing", therefore no adaption is necessary. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.625\textwidth]{./MP__encoding.png}
+    \caption{Dummy encoding}
+    \label{fig:dp_dumenc}
+\end{figure}
+
+\subsection{Missing Data Handling}
+A common problem in real datasets is missing information, which need to be appropriately handled during the modeling process. Popular approaches involve replacing missing values through statistical methods such as mean and median or algorithm-based imputation, such as the k-nearest neighbor Imputer. In the latter case,  the missing value gets imputed with the average value of its k-nearest neighbors, a process detailed in Chapter \ref{sec:kNN}. While another option is to eliminate data entries with missing information, this approach comes with potential drawbacks like information loss and bias. In the case of categorical variables, an alternative method is to treat missing information as a distinct category labeled "Missing", which removes the need for additional adaptations. \cite[p.~207]{Python:2022}
 
 \subsection{Erroneous Data Handling}
-Erroneous data, such as data entry mistakes or inconsistencies, can introduce noise and bias into the PD modelling process. Expert knowledge is crucial to detect erroneous data. The best way to reduce incorrect data are control procedures implemented in the data entry systems and data quality frameworks, where data validation rules are applied to identify inconsistent or illogical data. Those invalid information should then be corrected or removed by the associated expert using domain knowledge.
+Erroneous data originating from data entry mistakes or inconsistencies, have the potential to introduce noise and bias into the PD modeling process. Expert knowledge is crucial in identifying and rectifying such erroneous data. The best way to reduce incorrect data are control procedures implemented in the data entry systems and a data quality framework, where data validation rules are applied to identify inconsistent or illogical data. These data entries can be treated as missing information for the data preparation process.
+
 
 \subsection{Outlier Detection and Treatment}
-Extreme values, also called Outliers, in the dataset, can significantly impact the estimated PD model. Expert knowledge is crucial in this domain as well. Variables resulting from ratio calculation are especially prone to outliers due to division with small numbers. A simple technique for outlier detection is the visual inspection, where the distribution is plotted and analysed (Fig. \ref{fig:dp_outlier}), however, this would become strenuous with increasing number of variables. A quantitative approach is the utilisation of statistical measures such as Interquartile-range (IQR), box plots or Z-scores to detect outliers, depicted in Eq. \ref{eq:dp_iqr_boxpl} - \ref{eq:dp_zscore}. A boxplot is also called box-and-whisker plot and it is a visual representation of the distribution and the spread of the variable. The box displays the IQR and the whiskers are the upper and lower limit. Z-Score is a measure of how many standard deviations a data point is from the mean of a dataset. After the detection, the problem can be handled using winsorisation, where all values above a certain threshold are set to the upper limit and all values below the lower limit are caped to that value to minimize the impact of outliers.
+\label{sec:OutlTr}
+Extreme values, also called Outliers, can significantly impact the estimated PD model, making expert knowledge crucial in this domain as well. Variables resulting from ratio calculations are especially sensible to outliers, particularly when dealing with division by small numbers. A simple technique for outlier detection is the visual inspection, but this would become impractical with the increasing number of variables. To address this, quantitative approaches become invaluable, utilizing statistical measures such as Interquartile Range (IQR), box plots or Z-scores to identify outliers. A boxplot, also known as a box-and-whisker plot, is a visual representation of the distribution and the spread of the variable, with the box representing the IQR and the whiskers denoting the upper and lower limits. An example is displayed in Figure \ref{fig:dp_iqr_boxpl}. The Z-Score, on the other hand, shows how many standard deviations a data point deviates from the mean of a dataset. After the detection, a popular method to treat outliers is winsorization, where all values above or below a certain threshold are capped to the upper and lower limit, thereby minimizing the impact of outliers on the PD model. \cite[p.~250]{Python:2022}
 
 \begin{figure}[H]
 \begin{minipage}{.5\textwidth}
@@ -39,17 +52,21 @@ Extreme values, also called Outliers, in the dataset, can significantly impact t
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
 	\centering
-	\includegraphics[width=0.9\textwidth]{./MP__boxplot.jpg}
+	\includegraphics[width=0.9\textwidth]{./MP__boxplot.png}
 \end{minipage}
-    \caption{Interquartile range and boxplot}
+    \caption{Interquartile range and boxplot, Source: \cite{Boxplot:2019}}
     \label{fig:dp_iqr_boxpl}
 \end{figure}
 
-\section{Variable selection}
-During the modelling process, the goal is to estimate a model, which shows the best performance on in-sample as well as out-sample data. While using all available information in the scoring function will lead to a high discriminatory power on the trained sample, usually result to multiple variables showing insignificant coefficients, meaning the p-value is below the confidence level and the null hypothesis that the coefficient = 0 cannot be rejected. This would also mean, that the confidence level may be too wide and the sign of the coefficient might be incorrect. Therefore, the model will likely show a worse performance on a different data set, as well as on the newest data, leading to unstable predictions. This problem is handled by considerate selection of variables depending on their discriminatory power, correlation and expert judgement. 
+\section{Modeling process: Logistic Regression}
 
-\subsection{Univariate Analysis}
-All available variables should be considered for the modelling process. Then the missing rate, number of outliers and plausible values is assessed. If the variable complies with all data quality requirements, the discriminatory power will be determined. This can be performed using the univariate Gini coefficient or Information value, a more detailed explanation for both measures are in chapter \ref{sec:gini} and \ref{sec:dataprep}. The remaining risk factors with satisfying discriminatory power make up the long list. Example thresholds for each measure are:
+\subsection{Variable selection}
+During the modeling process, the aim is to estimate a model that shows the best performance not only within an in-sample and out-sample data set as well. An approach that incorporates all available information into the scoring function may indeed yield a high discriminatory power within the trained sample. However, this method usually result in multiple variables exhibiting insignificant coefficients: their p-values fall below the designated confidence level, making it impossible to reject the null hypothesis asserting that the coefficient is, in fact, zero. This outcome not only widens the confidence level but also raises concerns about the accuracy of the coefficient's sign. Therefore, the model's performance on a different data set, especially on more recent data, will most likely deteriorate, leading to unstable predictions. To address this challenge, an extensive analysis of variable performance, considerate selection processes and expert knowledge becomes crucial. \cite[p.~44]{Witzany:2017}
+
+\subsubsection{Univariate Analysis}
+As a first step, all available variables should be considered for the modeling process. Then, an assessment of the missing rate, detection of outliers and the plausibility of values is conducted. If the variable complies with all data quality requirements, its discriminatory power is then evaluated. This evaluation can be executed using either the univariate Gini coefficient or Information value. Detailed explanations for both measures are provided in Chapters \ref{sec:gini} and \ref{sec:dataprep}, respectively. The remaining risk factors exhibiting satisfactory discriminatory power form the basis of the long list. \cite[p.~45]{Witzany:2017}
+
+Example thresholds for each measure are:
 \begin{itemize}
 	\item \textbf{Missing rate}: < 20\%
 	\item \textbf{Number of outliers}: < 5\%
@@ -59,8 +76,8 @@ All available variables should be considered for the modelling process. Then the
 	\item \textbf{Variance Inflation Factor}: 5
 \end{itemize}
 
-\subsection{Multivariate Analysis}
-The model variables should not be highly correlated because this can lead to multicollinearity issues and therefore in unstable coefficient estimates in the modelling process. Correlation between two variables can be measured using the Pearson or Spearman correlation coefficient (Eq. \ref{eq:dp_pears}, \ref{eq:dp_spear}). The Pearson correlation coefficient is more appropriate if a linear relationship is present. Spearman correlation coefficient is able to detect non-linear, monotonic interactions and is also more robust against outliers. The coefficient ranges from -1 (perfect negative correlation) to 1 (perfect positive correlation), with 0 indicating no correlation. After calculating all coefficients between each variable pair, all values can be arranged to a correlation matrix. An example is visible in Fig. \ref{fig:dp_corrmatrix}. 
+\subsubsection{Multivariate Analysis}
+Maintaining a low level of correlation among model variables is essential to avoid issues related to multicollinearity, which can lead to unstable coefficient estimates in the modeling process. The correlation between two variables can be measured using the Pearson or Spearman correlation coefficient as detailed in Equations \ref{eq:dp_pears} and \ref{eq:dp_spear}. The Pearson correlation coefficient is more appropriate, if a linear relationship is present, while the Spearman correlation coefficient excels in detecting non-linear, monotonic interactions and is more robust against outliers. The coefficient ranges from -1 (perfect negative correlation) to 1 (perfect positive correlation), with 0 indicating no correlation. After computing the coefficients for each variable pair, all values can be arranged into a correlation matrix. An example is visible in Figure \ref{fig:dp_corrmatrix}. If two variables are highly correlated with a correlation coefficient above a pre-defined threshold, the variable with the lower discriminatory power should be removed from the model list. \cite[p.~45]{Witzany:2017}
 
 \begin{equation}
 \hat{\rho} = \frac{\sum_{i=1}^{n} (x_i - \hat{y}_X)(y_i - \hat{y}_Y)}{\sqrt{\sum_{i=1}^{n} (x_i - \hat{x}_X)^2 \sum_{i=1}^{n} (y_i - \hat{y}_Y)}} \label{eq:dp_pears}
@@ -88,7 +105,8 @@ where:
     \label{fig:dp_corrmatrix}
 \end{figure}
 
-If two variables are highly correlated with a correlation coefficient above a certain threshold, the variable with the lower discriminatory power should be removed from the model list. For categorical variables, the correlation statistic Variance Inflation Factor (VIF) can be utilised (Eq. \ref{eq:dp_vif}), which measures the collinearity in the regression analysis. Finally, adjustments based on expert judgement should be applied, where disqualified variables are forced into the list or variables, even if they meet all requirements, are removed. Especially the relationship between the explanatory factor and default rate should be analysed. If the behaviour contradicts the economic reasoning or experience, the variable should be eliminated from the model list, also called short list. 
+In the case of categorical variables, the Variance Inflation Factor (VIF, Equation \ref{eq:dp_vif}) can be utilised, which measures the collinearity in the regression analysis. As a final refinement, adjustments based on expert judgment should be applied, allowing disqualified variables into the list or removing variables, even if they meet all criteria. Particular attention should be given to analyzing the relationship between explanatory factors and default rates. If the observed behavior contradicts economic rationale, the variable should be excluded from the model list, also known as the shortlist. \cite[pp.~45, 53, 54]{Witzany:2017}
+
 
 \begin{equation}
 \text{VIF}_{i} = \frac{1}{1 - R_{i}^2} \label{eq:dp_vif}
@@ -104,9 +122,30 @@ Example thresholds for the mentioned measures are:
 	\item \textbf{Variance Inflation Factor}: 5
 \end{itemize}
 
+\subsection{Modeling steps}
+Upon identifying the  most promising key factors, there are different approaches to determine the final model variables, specifically, the forward, backward, forward stepwise and backward stepwise selection procedure. The forward approach starts with an empty model and step by step, the variable with the highest discriminatory power is incorporated contingent upon the significance of its coefficient (p-value below a specified threshold). This process continues until no variable satisfies the condition.
 
-\section{Modelling steps}
-After selecting the most promising key factors, there are different approaches to determine the final model variables - the forward, backward, forward stepwise and backward stepwise selection procedure. In the first approach there are no variables in the model at the beginning and step by step the variable with the highest discriminatory power is added if the coefficient is significant (p-value below threshold). This step is repeated until no variable meets the condition. In the backward selection procedure, all variables are put into the model and then removed one by one depending on the coefficients' p-value, until all coefficients left in the model are significant. The forward stepwise procedure is a combination of both, where the model is first empty and variables are added successively, but after each addition, variables, which became insignificant, will be removed and the backward stepwise procedure is the opposite process. An procedures are illustrated in Figure \ref{fig:dp_fw_bw_proc} - \ref{fig:dp_fw_bw_step_proc}.
+Conversely, in the backward selection procedure, the model starts with all variables and they are iteratively removed one by one based on the p-values of their coefficients, until only significant coefficients remain. The forward stepwise procedure combines elements of both, with an initially empty model that progressively incorporates variables. However, after each addition, any variable losing significance will be removed. The backward stepwise procedure is the opposite process, starting with all variables and then eliminating those with non-significant coefficients. If, upon exclusion, any variables fulfill the significance condition once more, they are reintroduced into the model. \cite[p.~45]{Witzany:2017}
 
-\section{Rating grades}
-It is common to group the PDs into different rating bands such as investment and non-investment grade. The simplest approach is to use fixed ranges per grade. Another approach is to define PD intervals. An example is displayed in Fig. \ref{fig:dp_ratgrade}.
+\section{Modeling Process: Random Forest}
+
+\subsection{Variable selection and Modeling steps}
+
+During the variable selection process of a normal decision tree, all available features are considered for a split. The evaluation involves assessing  the information gain or Gini impurity improvement for each value of a categorical or indicator variable, as well as for every possible split of a numerical risk factor. A split is executed for the maximum improvement and this process iterates for each resulting subsegment until a stopping condition is fulfilled. Variables that have already been used for a splitting condition may be considered for a split again. Stopping conditions include achieving homogeneous subgroups, detecting no significant improvement, reaching the minimum leaf size, completing the maximum allowed splits or attaining the maximum depth of the tree. \cite[pp.~2,4]{BDT}
+
+As described in Chapter \ref{sec:dectrees}, a Random Forest model is built out of individually trained smaller decision trees and the prediction is a combination of the results of all decision trees, either by calculating the average or using the majority vote. During the training process, only a fraction of all possible features may be selected for the split and optionally, a fraction of the training sample can be used to prevent overfitting. This method is known as Bootstrap Aggregating or Bagging. These steps contribute to a more robust model by avoiding to rely on only a few specific features, which leads to a better generalization. The algorithm demonstrates reduced sensitivity to outliers, as individual decision trees may be affected, but the ensemble tends to mitigate their impact on the overall model. Missing values can still contribute to training the tree by considering other available features or may be randomly removed during the bagging process. A Random Forest model is also relatively robust compared to the logistic regression, because, at each split, it selects a random subset of features and this helps in reducing the correlation between a set of features. \cite{RanFor:2023} 
+
+\subsection{Hyperparameter Tuning}
+Hyperparameters are pre-set configurations of a machine learning algorithm, which are not trained but actually set prior to the training process. Examples are the number of neighbors for the kNN-algorithm, the count of layers in a neural network model or the number of trees in a random forest. An optimal configuration of the parameters is crucial, because it directly impacts the models performance to distinguish between the classes as well as influences overfitting. Adjusting these parameters is an individualized task, dependent on the unique characteristics of each problem, encompassing factors like the number and type of features, data size and data quality. With increasing number of hyperparameters, the combination possibilities become extensive, making the search for the optimal configuration time-consuming. Therefore, the objective is to quickly identify a good configuration and subsequently search for potentially better settings.
+
+Initially, a wide range of hyperparameter values is defined and the model's performance is assessed through randomly chosen combinations for a predefined number of iterations. The best combination is then utilized for the subsequent grid search. In this phase, a more constrained range for each hyperparameter, centered around the optimized configuration, is defined. All possible combinations within this scope are evaluated and the superior outcome from both approaches forms the final model configuration. \cite[p.~465]{Python:2022} \cite{RanFor:2023}
+
+\subsection{k-Fold Cross Validation}
+To further avoid overfitting, a cross-validation can be incorporated during the hyperparameter tuning process. The data set is randomly split into equally sized k subsamples, also called folds. The model with the tested hyperparameters is then trained on k-1 subsets and their performance is evaluated on the unused data set. This step is repeated k-times, with a different fold used for evaluation each time. The overall performance is calculated by averaging the metrics across all subsamples. This comprehensive process will be performed for each configuration setting during the random or grid search, contributing to a more robust model. An illustrative sketch is provided in Figure \ref{fig:re_wholesample}. \cite[p.~470]{Python:2022}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\textwidth]{./MP__kFold.png}
+    \caption{k-Fold Cross Validation}
+    \label{fig:re_wholesample}
+\end{figure}

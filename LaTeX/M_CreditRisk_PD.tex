@@ -1,14 +1,14 @@
 \chapter{Credit Risk}
 
-\section{Credit risk management}
-Part of the daily business of a financial institution is the credit risk assessment of existing and new customers. The result will then be used to decide if they want to decline or grant a credit application and among other things, for setting the required regulatory capital. Credit risk assessment is performed during the whole lifetime of an exposure. It starts with the approval of a transaction and is continuously monitored afterwards. Corporate clients usually need to submit financial reports regularly, which is then analysed by their bank advisor and credit analyst, while for retail customers it is done automatically via behaviour scoring. The information used during the application scoring is limited because it is mainly provided by the applicant and generally covers variables about their financial health, e.g., income, outstanding debt. For the behaviour scoring model, internal historical data is used, for example the borrower's payment history and credit utilization. The behaviour model show a better predictive performance than the application model. If a decline of financial health or behaviour rating is detected, the bank may try to decrease the overdraft limit to regulate the credit risk. In the case of delayed payments, early collection process starts, where affected customers are contacted and an alternative payment plan will be negotiated. If all interventions fail, defaulted exposures may be sold or outsourced to collection companies for further processing like the sale of collateral. 
+\section{Credit Risk management}
+Part of the daily business of a financial institution is the credit risk assessment of existing and new customers. The result is used to decide if they want to decline or grant a credit application and, among other things, to set the required regulatory capital. Credit risk assessment is performed during the whole lifetime of an exposure. It starts with the approval of a transaction and is continuously monitored afterward. Corporate clients usually need to submit financial reports regularly, which are then analyzed by their bank advisor and credit analyst, while it is done automatically for retail customers via behavior scoring. The information used during the application scoring is limited because the applicant mainly provides it at the start of a new contract. It generally covers variables about their financial health, e.g., income and outstanding debt. For the behavior scoring model, internal historical data is used, for example, the borrower's payment history and credit utilization. The behavior model generally shows a better predictive performance than the application model. If a decline in financial health or behavior rating is detected, the bank may try to decrease the overdraft limit to regulate the credit risk. In the case of delayed payments, the early collection process starts, where affected customers are contacted and an alternative payment plan will be negotiated. If all interventions fail, defaulted exposures may be sold or outsourced to collection companies for further processing, like the sale of collateral. \cite[p.~7]{Witzany:2017}
 
 \section{Default Rate and Probability of Default}
 \label{sec:dr_pd}
-An important risk measure is the probability of default (PD), which is an estimate for the likelihood of a borrower failing to pay back their financial obligations in a given time period. Depending on the analysed portfolio, the expected number of defaults can vary. In the corporate segment, individual defaults can already be seen an indicator for a bank's failing credit assessment process and decision, while in the retail sector a higher number of default can be expected. In contrary, profit can be generated if the income gained from non-defaulted customers covers the loss from the defaulted portion of the portfolio.
+A critical risk measure is the probability of default (PD), which is an estimate of the likelihood of a borrower failing to pay back their financial obligations in a given time period. Depending on the analyzed portfolio, the expected number of defaults can vary. In the corporate segment, individual defaults might already be seen as an indicator of a bank's failing credit assessment process and decision. In contrast, a higher number of defaults can be expected in the retail sector. On the contrary, profit is generated if the income gained from non-defaulted customers covers the loss from the defaulted portion of the portfolio. \cite[p.~2]{Witzany:2017}
 
 \medskip
-In the Capital Requirements Regulation (Capital Requirements Regulation, Article 178(1):), the definition of default is stated as:
+In the Capital Requirements Regulation (Capital Requirements Regulation, Article 178(1)), the definition of default is stated as:
 
 \begin{quote}
 
@@ -23,7 +23,7 @@ In the case of retail exposures, institutions may apply the definition of defaul
 
 \end{quote}
 
-A time period has to be defined in which a default event is observed. A common observation window is one year, a portrayal is visible in Fig. \ref{fig:cr_timeperiod}. The default rate per category (e.g., month, rating grade; given in Fig. \ref{fig:cr_defrate_year}. and \ref{fig:cr_defrate_ratgrade}.) is then calculated as the number of defaults divided by the total number of customers (Eq. \ref{eq:cr_dr}).
+A time period has to be defined in which a default event is observed. A common observation window is one year; an illustration is visible in Figure \ref{fig:cr_timeperiod}. The default rate per category (e.g., month, rating grade) is then calculated as the number of defaults divided by the total number of customers (Eq. \ref{eq:cr_dr}). \cite[pp.~20-21]{Witzany:2017}
 
 \begin{equation}
 DR_{i} = \frac{d_{i}}{n_{i}} \label{eq:cr_dr}
@@ -36,30 +36,46 @@ where:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.625\textwidth]{./CR__timeperiod.jpeg}
+	\includegraphics[width=.625\textwidth]{./CR__ObservationPeriod.png}
     \caption{Observation period after reference point}
     \label{fig:cr_timeperiod}
 \end{figure}
 
 \section{Regulatory Framework}
 
-\subsection{History of regulatory framework}
+\subsection{History of Regulatory Framework}
 
-The regulatory framework is set by the Basel Committee on Banking Supervision, which consists all regulators of the most developed countries. The goal is to define a high standard for risk management and internal controls, and establish a risk-sensitive calculation process of the regulatory capital for banks all over the world. The first Capital Accord was published in 1988 and since then was adapted and reformed numerous times. The New Capital Accord, also known as Basel II, was first issued in 2004 and underwent multiple amendments especially, after the financial crisis until July 2009. The European Union motivated the integration of these regulations by the Implementation Directive CAD 2006. In the end of 2010, a new reform called Basel III was  approved. 
+The Basel Committee on Banking Supervision sets the regulatory framework, which consists of all regulators of the most developed countries. The goal is to define a high standard for risk management and internal controls and establish a risk-sensitive calculation process of the regulatory capital for banks worldwide. The First Capital Accord was published in 1988 and has been adapted and reformed numerous times. The New Capital Accord, also known as Basel II, was first issued in 2004 and underwent multiple amendments, especially after the financial crisis until July 2009. The European Union motivated the integration of these regulations by the Implementation Directive CAD 2006. At the end of 2010, a new reform called Basel III was approved. \cite[p.~13]{Witzany:2017}
 
-\subsection{Credit risk regulatory capital}
+\subsection{Credit Risk Regulatory Capital}
 
-The calculation of credit risk capital requirement was significantly improved compared to the first Capital Accord. Total loss of a bank can be split into expected and unexpected loss (Fig. \ref{fig:cr_elul}). The former should be covered by revenue and for the latter a bank is obligated to allocate an appropriate level of capital. The formula is given in Fig. \ref{fig:cr_capital_req} In the original approach, each exposure has been assigned into one of four risk categories and then a multiplier ranging 0-100\% was applied. Regulations now allow the Standardized (SA), Foundation or Advanced Internal Rating Based (IRBF, IRBA) Approach (Fig. \ref{fig:cr_reg_approaches}). In the SA five risk buckets are defined to calculate the regulatory capital and the Standard Approach also allows the use of external ratings. For the IRB, internal models estimate input parameters of the regulatory formulas, which then result in risk weights for each exposure. The IRBF approach only allows the estimation of the PD, while for the IRBA the risk parameters Loss Given Default, Exposure at Default, Conversion Factor and Effective Maturity are additionally derived from internal models. The corporate segment permit both IRBF and IRBA approaches, but for the retail portfolio, only the IRBA is possible.
+The credit risk capital requirement calculation was significantly improved compared to the First Capital Accord. The total loss of a bank is split into expected and unexpected loss (Figure \ref{fig:cr_elul}). The former should be covered by revenue; for the latter, a bank must allocate an appropriate level of capital. In the original approach, each exposure was assigned to one of four risk categories and then a multiplier ranging from 0-100\% was applied. Regulations now allow the Standardized (SA), Foundation or Advanced Internal Rating Based (IRB-F, IRB-A) Approach. The Standard Approach defines five risk buckets for calculating regulatory capital, and it also allows the use of external ratings. For the IRB approach, internal models estimate input parameters of the regulatory formulas, which then result in risk weights for each exposure used in the calculation of the regulatory capital. The formulas are given in Eq. \ref{eq:PD_cap1}-\ref{eq:PD_cap4}. The IRB-F approach only permits the estimation of the PD. In contrast, for the IRB-A approach, the risk parameters Loss Given Default, Exposure at Default, Conversion Factor and Effective Maturity are additionally derived from internal models. While the corporate segment allows for both IRB-F and IRB-A approaches, the retail portfolio is limited to the IRB-A approach. \cite[15-17]{Witzany:2017} \cite[p.~59]{BCBS:2004}
+
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.625\textwidth]{./CR__EL_UL_capital.png}
-    \caption{Economical Capital, Expected and Unexpected Losses}
+    \caption{Economical Capital, Expected and Unexpected Losses, Source: \cite{FDIC:2023}}
     \label{fig:cr_elul}
 \end{figure}
 
+\begin{align} 
+\rho &= \rho_{min} \times \frac{1 - e^{-k \times PD}}{1 - e^{-k}} +  \rho_{max} \times \left((1 - \frac{1 - e^{-k \times PD}}{1 - e^{- k}}\right) \label{eq:PD_cap1}\\[15pt]
+\text{b} &= (0.11852 - 0.05478 \times ln(PD))^2 \\[15pt]
+\text{MA} &= \frac{1 + (Maturity - 2.5) \times b}{1 - 1.5 \times b} \\[15pt]
+\text{K} &= \left(\Phi \left[\frac{\Phi^{-1}(PD) + \sqrt{\rho} \times \Phi^{-1}(0.999)}{\sqrt{1 - \rho}}\right] - PD\right) \times LGD \times MA \label{eq:PD_cap4}
+\end{align}
+where:
+\begin{conditions}
+\rho 					& Correlation \\
+\rho_{min}, \rho_{max}  & minimum and maximum correlation per class \\
+k  						& rise coefficient per class \\
+b 						& Maturity adjustment \\
+MA						& Residual Maturity Adjustment Factor \\
+K						& Capital requirement
+\end{conditions}
+
 \subsection{Challenges and Limitations}
+Good data is of utmost importance for the credit risk assessment. While it will be used for modeling purposes, it is also essential that already-known negative information about customers is available and considered. Examples include internal information, such as a client with a history of fraudulent activity during a credit application or credit bureau data, where negative credit information is made available for all participants. Institutions in Austria providing these kinds of information are Kreditschutzverband (KSV) and CRIF.
 
-Good data is of utmost importance for the credit risk assessment. While it will be used for modelling purposes, it is also important that already known negative information of customers is available  and taken into consideration. Examples are internal information, for example a client already has a history of fraudulent activity during a credit application, or credit bureau information, where negative credit information is made available for all participants. In Austria, institutions are Kreditschutzverband (KSV) and CRIF. 
-
-Other possible challenges are the constant change in economic conditions and regulatory frameworks, which have an influence on the PD estimates. In addition, during the PD estimation the default event of individual borrowers are assumed to be independent, which does not adequately capture behavioural risks (e.g., strategic default) or systemic risks (e.g., market-wide shocks) that can affect multiple borrowers simultaneously. It is therefore important that PD models are continuously refined and adapted to accurately reflect current economic situation.
+Other possible challenges are the constant change in economic conditions and regulatory frameworks, which influence the PD estimates. In addition, during the PD estimation process, the default events of individual borrowers are assumed to be independent, which does not adequately capture behavioral risks (e.g., strategic default) or systemic risks (e.g., market-wide shocks) that can affect multiple borrowers simultaneously. Therefore, PD models must be continuously refined and adapted to accurately reflect the current economic situation. \cite[p.~8]{Witzany:2017}

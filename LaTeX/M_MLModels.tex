@@ -1,17 +1,27 @@
-\chapter{Machine Learning Models}
-\section{Overview}
+\chapter{Advanced Models}
+
+Stimulated by the surge in data availability and advancements in computational power, alongside the growing popularity of advanced machine learning models, financial institutions are increasingly motivated to leverage advanced models for predicting the probability of default. The objectives include enhancing model performance and uncovering previously unseen interactions among risk factors. However, challenges such as limited transparency in explaining individual predictions and constraints imposed by regulatory requirements and data protection laws, as discussed in Chapter \ref{sec:ref_leg}, force financial institutions to be hesitant to implement these algorithms in the calculation of regulatory capital. \cite[p. 4]{EBA:2023}
+
+These advanced models can be broadly classified into three categories \cite[p. 43-45]{Roberts2022}:
+
+\begin{enumerate}
+  \item Supervised Learning: In this category, a target variable is provided and utilized during the training process. Boosting methods are employed to improve the classification of misidentified observations. Decision Trees and Random Forests are prominent examples.
+\item Unsupervised Learning: Here, unlabeled data is used for training, relying solely on features to uncover underlying patterns or relationships within the data without explicit guidance. Examples include the kNN algorithm and Clustering.
+\item Unsupervised Learning: In this paradigm, an "agent" learns to make decisions by interacting with an environment. It receives feedback in the form of rewards or punishments based on the actions it takes, allowing it to learn the optimal strategy to maximize cumulative rewards over time.
+\end{enumerate}
 
 \section{Decision Trees}
-Classification trees are used to separate the categories (default, non-default) as best as possible using explanatory factors. The split is determine by maximising the homogeneity of the resulting subgroups (branch). For numeric variables, the algorithm calculates the measure for each possible threshold, while for categorical variables, it determines the value for each possible split. This step is repeated until a stopping condition is met and the final subgroup is called leaf. To avoid overfitting, the Decision Tree may be "pruned", where some branches are removed. The preliminary decision tree is applied on a separate data set, i.e. the validation sample, and to improve its performance, redundant splits are cut off. An example of a decision tree and the pruning process is visible in Fig. \ref{fig:ml_dectree}. A Separate validation should then be performed on a third test data set, since the validation sample became part of the modelling process. 
+\label{sec:dectrees}
+Classification trees are used to separate the categories (default, non-default) as best as possible using explanatory factors. The split is determined by maximizing the homogeneity of the resulting subgroups, so-called branches. The algorithm calculates the measure for each possible threshold for numeric variables, while for categorical variables, it determines it for each unique value. This step is repeated until a stopping condition is met and the final subgroup is called a leaf. To avoid overfitting, the Decision Tree may be "pruned", where some branches are removed. The preliminary decision tree is applied on a separate data set, i.e., the validation sample, and to improve its performance, redundant splits are cut off. An example of a decision tree and the pruning process is visible in Figure \ref{fig:ml_dectree}. A Separate validation should then be performed on a third data set since the validation sample became part of the modeling process. 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.625\textwidth]{./ML__DecTree.jpg}
+	\includegraphics[width=0.625\textwidth]{./ML__DecTree.png}
     \caption{Decision Tree incl. Pruning}
     \label{fig:ml_dectree}
 \end{figure}
 
-Examples for stopping conditions are that the resulting subgroups are homogeneous, no significant improvement is detected, the minimum leafsize is reached, maximum splits are performed or maximum depth of the tree is achieved. The estimated PD is the average default rate per leaf and each terminal node can be classified into default or non-default using a defined threshold. Popular statistics to measure the homogeneity are Gini index, Kolmogorov-Smirnov statisic or Entropy index. The Gini index assumes a value between 0 and 1, where 0 means complete purity, 0.5 represents an equal distribution of all classes and 1 shows a random distribution across all classes. The formula is given in \ref{eq:ml_gini}. Decision trees usually perform worse than logistic regression models and are rather used to assess the best variables or segmentation possibilities. 
+The estimated PD is the average default rate per leaf and each terminal node can be classified into default or non-default class using a defined threshold. Popular statistics to measure homogeneity are the Gini index and Entropy index. The Gini index assumes a value between 0 and 1, where 0 means complete purity, 0.5 represents an equal distribution of all classes and 1 shows a random distribution across all classes. The formula is given in \ref{eq:ml_gini}. Decision trees usually perform worse than logistic regression models and are rather used to assess the best variables or segmentation possibilities. \cite[pp.~75-76]{Witzany:2017}
 
 \begin{equation}
 GINI = \sum_{i=1}^{n}  p_i \times (1 - p_i) \label{eq:ml_gini}
@@ -23,16 +33,9 @@ where:
 \end{conditions}
 
 \subsection{Boosted Decision Trees and Random Forests} 
-Boosted Decision Trees (BDT), also known as Gradient Boosted Decision Trees combine decision trees with boosting techniques to achieve higher predictive performance. This algorithm iteratively build decision trees, placing more weight on misclassified observations in each iteration, resulting in a strong ensemble model, seen in Fig. \ref{fig:ml_bdt}. BDT are able to capture complex interactions and non-linear relationships in PD modelling. 
+Boosted Decision Trees (BDT) or Gradient Boosted Decision Trees combine decision trees with boosting techniques to achieve higher predictive performance. This algorithm iteratively builds decision trees, placing more weight on misclassified observations in each iteration, resulting in a better model. BDT can capture complex interactions and non-linear relationships in PD modeling. 
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.625\textwidth]{./ML__BDT.png}
-    \caption{Boosted Decision Tree}
-    \label{fig:ml_bdt}
-\end{figure}
-
-Random forests are an ensemble learning method that combines multiple decision trees to make predictions. However, unlike boosted decision trees, random forests build each tree independently, without sequential corrections (Fig. \ref{fig:ml_ranforest}). This approach reduce the risk of overfitting and the variance of predictions. Random forests are known for their robustness, scalability, and ability to handle high-dimensional data.
+Random forests are an ensemble learning method that combines multiple decision trees to make predictions. However, unlike boosted decision trees, random forests build each tree independently, without sequential corrections (Figure \ref{fig:ml_ranforest}). This approach reduces the risk of overfitting and the variance of predictions. Random forests are known for their robustness, scalability and ability to handle high-dimensional data. \cite[p.~88]{Witzany:2017}
 
 \begin{figure}[H]
 	\centering
@@ -41,12 +44,12 @@ Random forests are an ensemble learning method that combines multiple decision t
     \label{fig:ml_ranforest}
 \end{figure}
 
-\section{Other models}
+\section{Other Models}
 
 \subsection{Neural Networks}
-Neural networks, inspired by the structure and function of the human brain, can learn intricate patterns and nonlinear relationships in data. They consist of multiple layers of interconnected nodes, also called neurons, where each neuron is assigned a simple computation and use activation functions to pass along a value. The result of the model is a numerical or classification value. Commonly used activation functions are logistic function, threshold function or tangent hyperbolic function, listed in Eq. \ref{fig:ml_logfunc} - \ref{fig:ml_tanhfunc}. 
+Neural networks, inspired by the structure and function of the human brain, can learn intricate patterns and nonlinear relationships in data. They consist of multiple layers of interconnected nodes, also called neurons, where each neuron is assigned a simple computation and uses activation functions to pass along a value. The result of the model is a numerical or classification value. Commonly used activation functions are logistic, threshold and tangent hyperbolic functions.
 
-The first and last layer is called the input and output layer respectively, and the layers in-between are hidden layers. An illustration is visible in Figure \ref{fig:ml_neurnet}. Due to the virtually endless possibility of configurations, there is a possibility of over-parametrization, especially with increasing number of hidden layers and nodes, also called deep neural networks. With the ongoing advancements in computational power and data collection capabilities, neural network algorithms have become highly successful in various AI domains.
+The initial layer is referred to as the input layer, the final layer as the output layer and those in-between are known as hidden layers. An illustration is visible in Figure \ref{fig:ml_neurnet}. Due to the virtually endless possibility of configurations, there is a possibility of over-parametrization, especially with an increasing number of hidden layers and nodes, also called deep neural networks. \cite[pp.~79-80]{Witzany:2017}
 
 \begin{figure}[H]
 	\centering
@@ -57,6 +60,11 @@ The first and last layer is called the input and output layer respectively, and 
 
 \subsection{k-Nearest Neighbour}
 \label{sec:kNN}
-Using a data set with explanatory factors and known default events, the unknown PD of a new data entry can be determined by taking the nearest data points determined via their risk factors and calculating the average default rate of the new data point. For the definition of distance the Euclidean metric or Manhattan Distance as defined in formula \ref{fig:ml_eucldist} and \ref{fig:ml_manhdist} can be used. The Euclidean distance measures the straight-line distance between two points, while the Manhattan distance is the sum of the absolute differences between two points in a space, where it is only allowed to move along coordinate axes. The number of nearest neighbours k is a hyper-parameter. Advantages of this model is the simple approach and the possibility to dynamically update new and outdated data entries and, if k is set as a low number, individual scorings can be viewed manually by a credit analyst. 
+Based on a data set with explanatory factors and observed default events, the unknown PD of a new data entry can be estimated by taking the nearest data points determined via their risk factors and calculating the average default rate of the new data point. The Euclidean metric or Manhattan Distance can be used: The Euclidean distance measures the straight-line distance between two points. In comparison, the Manhattan distance is the sum of the absolute differences between two points in a space, where it can only move along coordinate axes. The number of nearest neighbors "k" is a hyper-parameter. The advantages of this model are the simple approach and the possibility to update new and outdated data entries dynamically and if k is set as a low number, a credit analyst can view individual scorings manually. \cite[p.~83]{Witzany:2017}
 
-\subsection{Ensamble models}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.3\textwidth]{./ML__kNN.png}
+    \caption{k-nearest Neighbour with k = 3}
+    \label{fig:ml_neurnet}
+\end{figure}
