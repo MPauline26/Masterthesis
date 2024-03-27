@@ -1,11 +1,53 @@
 ODS GRAPHICS ON;
 
-DATA TRAIN_SAMPLE;
-SET final.TRAIN_SAMPLE;
-RUN;
+DATA TRAIN_SAMPLE TEST_SAMPLE;
+SET final.&USED_DATASET._FINAL;
 
-DATA TEST_SAMPLE;
-SET final.TEST_SAMPLE;
+KEEP 
+	SELECTED
+	DATUM
+	id_loan
+	loan_age_noMod
+	KEEP_FLAG
+	DEFAULT_12M
+	GROUP1
+	GROUP2
+	fico
+	flag_fthb
+	cltv
+	cltv_adj
+	dti
+	ltv
+	ltv_adj
+	orig_upb
+	channel__9
+	channel__B
+	channel__C
+	channel__R
+	channel__T
+	loan_purpose__C
+	loan_purpose__N
+	loan_purpose__P
+	cnt_borr
+	cd_ppty_val_type__1
+	cd_ppty_val_type__2
+	cd_ppty_val_type__3
+	cd_ppty_val_type__9
+	us_reg__Midwest
+	us_reg__Northeast
+	us_reg__Other
+	us_reg__South
+	us_reg__West
+	flag_mi
+	flag_orig_loan_term_HEQ_360M
+	cnt_units
+	occpy_sts__S
+	occpy_sts__P
+	occpy_sts__I;
+
+IF &SELECTED_SPLIT. = 1 THEN OUTPUT TRAIN_SAMPLE;
+ELSE OUTPUT TEST_SAMPLE;
+
 RUN;
 
 PROC LOGISTIC DATA = TRAIN_SAMPLE DESCENDING OUTEST=MODEL_COEFF;

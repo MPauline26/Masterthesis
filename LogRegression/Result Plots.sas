@@ -12,6 +12,8 @@ PROC SQL;
 			, miss.MISS_PERCENT
 			, gini.GINI
 			, gini.AUC
+			, woe_iv.WoE
+			, woe_iv.IV
 			, gini.KS_STAT
 			, gini.CORR
 			, giniadj.GINI AS GINI_adj
@@ -56,113 +58,9 @@ PROC SQL;
 		LEFT JOIN OUTLIER_PERC pct_perc
 		ON miss.VARIABLE = pct_perc.VARIABLE
 
+		LEFT JOIN plot.WOE_IV_FIN woe_iv
+		ON gini.VARIABLE = woe_iv.VARIABLE
+
 	ORDER BY TYPE DESC, VARIABLE, GROUP;
 
 QUIT;
-
-%MACRO PLOT_GINI_TS(DATA, STAT, COND, TITLE);
-
-ods graphics / imagename="&STAT. dev through years &TITLE." reset=index imagefmt=png width = 20cm height = 15cm;
-	proc sgplot data=&DATA.(WHERE=(&COND.));
-	    series x=GROUP y=&STAT. / group=VARIABLE_SUBTYPE;
-		xaxis values=('2017' '2018' '2019' '2020' '2021' 'ALL') ;
-		TITLE "&STAT. Development 2017-2021 of &TITLE.";
-	run;
-
-	PROC SQL; TITLE; QUIT;
-
-%MEND;
-
-%MACRO PLOT_ALL(DATA, STAT, FLAG);
-
-%IF &FLAG. = ALL_VAR %THEN %DO;
-
-	%IF &STAT. = MISS_PERCENT %THEN %DO;
-		PROC SORT DATA=&DATA. OUT=TEMP;
-		BY DESCENDING TYPE VARIABLE GROUP;
-
-		PROC SORT DATA=TEMP OUT=TEMP NODUPKEY;
-		BY TYPE VARIABLE GROUP;
-
-		DATA TEMP;
-		SET TEMP;
-			VARIABLE_SUBTYPE = VARIABLE;
-		RUN;
-
-		%LET DATA = TEMP;
-
-		%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = TYPE="NUM", TITLE=numeric variables);
-		%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = (TYPE="CAT" AND VARIABLE NOT IN ("ind_afdl")), TITLE=categorical variables);
-		%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = (TYPE="CAT" AND VARIABLE = "ind_afdl"), TITLE=categorical variable ind_afdl);
-		%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = TYPE="IND", TITLE=indicator variables);
-
-		PROC SQL; DROP TABLE TEMP; QUIT;
-
-	%END;
-	%ELSE %DO;
-
-		%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = TYPE="NUM", TITLE=numeric variables);
-		%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = VARIABLE="occpy_sts", TITLE=categorical variable occpy_sts);
-		%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = VARIABLE="channel", TITLE=categorical variable channel);
-		%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = VARIABLE="amrtzn_type", TITLE=categorical variable amrtzn_type);
-		%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = VARIABLE="prop_type", TITLE=categorical variable prop_type);
-		%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = VARIABLE="loan_purpose", TITLE=categorical variable loan_purpose);
-		%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = VARIABLE="ind_afdl", TITLE=categorical variable ind_afdl);
-		%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = VARIABLE="us_reg", TITLE=categorical variable us_reg);
-		%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = TYPE="IND", TITLE=indicator variables);
-
-	%END;
-
-%END;
-%ELSE %IF &FLAG. = NUM_VAR %THEN %DO;
-
-	%PLOT_GINI_TS(DATA=&DATA., STAT=&STAT., COND = TYPE="NUM", TITLE=numeric variables);
-
-%END;
-%ELSE %IF &FLAG. = PCTLS %THEN %DO;
-
-PROC SQL NOPRINT;
-
-	SELECT COUNT(*) INTO :TOTAL_NUM TRIMMED FROM VARIABLELIST WHERE TYPE = "NUM";
-	SELECT VARIABLE INTO :VAR1-:VAR&TOTAL_NUM. FROM VARIABLELIST WHERE TYPE = "NUM";
-
-QUIT;
-
-	%DO N = 1 %TO &TOTAL_NUM.;
-	%PUT ------------ &N. OF &TOTAL_NUM.: &&VAR&N.;
-	ods graphics / imagename="pctls dev through years &&VAR&N." reset=index imagefmt=png width = 20cm height = 15cm;
-		proc sgplot data=&DATA.(WHERE=(VARIABLE="&&VAR&N."));
-		    series x=GROUP y=Mean;
-			series X=GROUP Y=StdDev;
-			series X=GROUP Y=Min;
-			series X=GROUP Y=P1;
-			series X=GROUP Y=P5;
-			series X=GROUP Y=P25;
-			series X=GROUP Y=Median;
-			series X=GROUP Y=P75;
-			series X=GROUP Y=P95;
-			series X=GROUP Y=P99;
-			series X=GROUP Y=Max;
-			xaxis values=('2017' '2018' '2019' '2020' '2021' 'ALL') ;
-			TITLE "PCTLS Development 2017-2021 of &&VAR&N.";
-		run;
-
-		PROC SQL; TITLE; QUIT;
-	%END;
-%END;
-
-%MEND;
-
-ODS GRAPHICS ON / MAXOBS=10929045;
-ODS LISTING GPATH='C:\Users\meikee.pagsinohin\Documents\MA\plot' IMAGE_DPI = 300 STYLE=JOURNAL;
-ODS GRAPHICS / IMAGENAME="image" RESET=INDEX IMAGEFMT=PNG WIDTH = 20CM HEIGHT = 15CM ;
-
-%PLOT_ALL(DATA=UNIV_ANALYSIS_RESULT,STAT=MISS_PERCENT, FLAG=ALL_VAR);
-%PLOT_ALL(DATA=UNIV_ANALYSIS_RESULT,STAT=GINI, FLAG=ALL_VAR);
-
-%PLOT_ALL(DATA=UNIV_ANALYSIS_RESULT,STAT=KS_STAT, FLAG=NUM_VAR);
-%PLOT_ALL(DATA=UNIV_ANALYSIS_RESULT,STAT=CORR, FLAG=NUM_VAR);
-
-%PLOT_ALL(DATA=UNIV_ANALYSIS_RESULT,STAT=, FLAG=PCTLS);
-
-ODS GRAPHICS OFF;

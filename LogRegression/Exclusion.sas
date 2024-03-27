@@ -132,6 +132,36 @@ QUIT;
 
 PROC SQL;
 
+CREATE TABLE final.DEV_SAMPLE_3Y AS
+	SELECT
+		ct.*
+		, Region AS us_reg
+	FROM final.CT_SAMPLE ct
+	LEFT JOIN USregions reg
+	ON ct.st = reg.'State Code'n
+	WHERE ct.dt_first_pi >= &START_DATE_DEV_3Y. 
+	AND ct.dt_first_pi <= &END_DATE_DEV_3Y.;
+;
+
+QUIT;
+
+PROC SQL;
+
+CREATE TABLE final.OOT_SAMPLE_1Y AS
+	SELECT
+		ct.*
+		, Region AS us_reg
+	FROM final.CT_SAMPLE ct
+	LEFT JOIN USregions reg
+	ON ct.st = reg.'State Code'n
+	WHERE ct.dt_first_pi >= &START_DATE_VAL_1Y. 
+	AND ct.dt_first_pi <= &END_DATE_VAL_1Y.;
+;
+
+QUIT;
+
+PROC SQL;
+
 	SELECT
 		YEAR(DATUM) AS YEAR
 		, KEEP_FLAG
