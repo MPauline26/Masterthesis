@@ -1,7 +1,9 @@
 OPTIONS COMPRESS=YES REUSE=YES;
 OPTION ERRORS=0;
+OPTION MSGLEVEL=I;
 
 libname final 'C:\Users\meikee.pagsinohin\Documents\MA\data_fin';
+libname plot 'C:\Users\meikee.pagsinohin\Documents\MA\plot';
 
 %LET START_DATE = 199903;
 %LET START_DATE_DEV = 201701;
@@ -17,7 +19,15 @@ RUN;
 
 DATA DEV_SAMPLE_5Y;
 SET final.DEV_SAMPLE_5Y;
+
+GROUP1 = "ALL";
+GROUP2 = PUT(YEAR(DATUM),4.);
+
 RUN;
+
+PROC SQL;
+  CREATE INDEX GROUP2 ON DEV_SAMPLE_5Y(GROUP2);
+QUIT;
 
 /* add the labels */
 %macro label_data(data_set, library, ds_labels, column_name, column_label);
